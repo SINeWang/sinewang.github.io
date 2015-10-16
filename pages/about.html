@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-        <meta charset="utf-8" />
-        <title>About</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <title>About</title>
+        <meta charset="utf-8" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
 </head>
 
 <body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Dr. Wang YanJiong </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/pages/about.html">About</a></li>
-                    <li><a href="/category/utility.html">Utility</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-    <h1 class="entry-title">About</h1>
+
+
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href="/">Dr. Wang YanJiong <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href="/">Home</a></li>
+
+                <li class="active"><a href="/pages/about.html">About</a></li>
+
+              </ul>
+            </div>
+
+    <h1>About</h1>
     
+
     <p>我曾经历了许许多多，现在，我似乎明白了什么是幸福，在乡下恬静的隐居，尽可能对人们做些简单而有用的善事，尽管那些人们并不习惯我为他们做了这些，做一份真正有用的工作，最后休息，享受大自然，读书，听音乐，爱周围的每一个人。这就是我对幸福的诠释。在这些之上，有你为伴，也许还有我们的孩子，一个男人还能再渴望些什么呢？ ——列夫 托尔斯泰《家庭幸福》</p>
 <hr />
 <ul>
@@ -63,30 +87,44 @@
 <p><a href="https://www.evernote.com/shard/s28/sh/69ddc522-404f-4a21-acee-83ee4d7c674a/b62f62955e79737bc2e782c9348042bb">新民晚报 2012年9月24日</a></p>
 <p><a href="https://www.evernote.com/shard/s28/sh/6c20c066-9c09-4ced-bf71-55c8ec5143b1/5d1fd31109615d30b1ab604874fa3c17">解放日报 2013年4月14日</a></p>
 <p><a href="http://wangyanjiong.info/wp-content/uploads/2014/07/wechat.jpeg"><img src="http://wangyanjiong.info/wp-content/uploads/2014/07/wechat-300x300.jpeg" alt="wechat" width="300" height="300" class="alignnone size-medium wp-image-292" /></a></p>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://wangyanjiong.info/">Dr.Wang,YanJiong</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
 
-                            <li><a href="https://www.linkedin.com/pub/yanjiong-wang/35/28a/356">LinkedIn</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+       </div><!-- /.row -->
+    </div><!-- /.container -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+       <div class="container.nopad bg">
 
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+
+
+
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
 </body>
 </html>
