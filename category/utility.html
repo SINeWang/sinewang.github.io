@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>Dr. Wang YanJiong</title>
+        <title>Dr. Wang YanJiong - Utility</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,17 +14,44 @@
         <header id="banner" class="body">
                 <h1><a href="/">Dr. Wang YanJiong </a></h1>
                 <nav><ul>
-                    <li><a href="/category/utility.html">Utility</a></li>
+                    <li class="active"><a href="/category/utility.html">Utility</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-<section id="content" class="body">
-<h1>Archives for Dr. Wang YanJiong</h1>
 
-<dl>
-    <dt>Sun 14 October 2012</dt>
-    <dd><a href="/zai-macos-x-zhong-an-zhuang-qrfcview.html">在MacOS X 中安装qRFCView</a></dd>
-</dl>
-</section>
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/zai-macos-x-zhong-an-zhuang-qrfcview.html">在MacOS X 中安装qRFCView</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2012-10-14T00:00:00+08:00">
+                Published: Sun 14 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/wang-yanjiong.html">Wang YanJiong</a>
+        </address>
+<p>In <a href="/category/utility.html">Utility</a>.</p>
+
+</footer><!-- /.post-info --><h3>环境</h3>
+<ul>
+<li>Mac OS X 10.8.2</li>
+<li><a href="http://www.macports.org/">Macports</a> 2.1.2</li>
+<li><a href="http://sourceforge.net/projects/qrfcview.berlios/">qRFCView 0.62</a></li>
+</ul>
+<h3>条件</h3>
+<ul>
+<li>必须先安装Qt环境</li>
+</ul>
+<h3>步骤</h3>
+<ol>
+<li>download <a href="http://sourceforge.net/projects/qrfcview.berlios/">qRFCView</a></li>
+<li><code>$sudo port install qt4-mac</code>（安装Qt4）</li>
+<li><code>$cd &lt;path/to/qrfcview-0.62&gt;</code></li>
+<li><code>$qmake rfcview.pro</code></li>
+<li><code>$make</code></li>
+<li>编译后在<code>&lt;path/to/qrfcview-0.62/bin&gt;</code>下生成 <code>qRFCView.app</code></li>
+<li>运行<code>$open qRFCView.app</code></li>
+</ol>                </article>
+            </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
