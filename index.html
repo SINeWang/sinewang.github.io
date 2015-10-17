@@ -1,197 +1,104 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Wang YanJiong" />
+        <meta name="copyright" content="Wang YanJiong" />
 
-        <title>Dr. Wang YanJiong</title>
-        <meta charset="utf-8" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
-
-        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
-
-        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
-
-
-
-
-</head>
-
-<body id="index" class="home">
-
-
-    <div class="container">
-
-        <div class="row">
-
-          <header id="banner" class="body">
-                  <h1><a href="/">Dr. Wang YanJiong <strong></strong></a></h1>
-          </header><!-- /#banner -->
-
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="/">Home</a></li>
-
-                <li><a href="/pages/about.html">About</a></li>
-
-              </ul>
+<meta property="og:title" content="Dr. Wang YanJiong"/>
+<meta name="twitter:title" content="Dr. Wang YanJiong">
+<meta property="og:url" content="http://yanjiong.wang" />
+<meta property="og:site_name" content="Dr. Wang YanJiong" />
+<meta property="og:article:author" content="Wang YanJiong" />
+        <title>Dr. Wang YanJiong
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/css/custom.css" media="screen">
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://yanjiong.wang/"><span class=site-name>Dr. Wang YanJiong</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li  class="active"><a href="http://yanjiong.wang">Home</a></li>
+                            <li ><a href="http://yanjiong.wang/pages/about.html">About</a></li>
+                            <li ><a href="http://yanjiong.wang/categories.html">Categories</a></li>
+                            <li ><a href="http://yanjiong.wang/tags.html">Tags</a></li>
+                            <li ><a href="http://yanjiong.wang/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://yanjiong.wang/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
 
-<section id="content">
-
-
-
-   <div class="row">
-
-
-        <div class="eleven columns">
-                 <ol id="post-list">
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="/pelican-toc-plugin.html" rel="bookmark" title="Permalink to Pelican TOC Plugin">Pelican TOC Plugin</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2015-10-16T00:00:00+08:00"> Fri 16 October 2015 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="/author/wang-yanjiong.html"> Wang YanJiong</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> 
-<h3 id="_1">插件准备</h3>
-<ul>
-<li>
-<p>使用 <a href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc">extract_toc</a></p>
-</li>
-<li>
-<p>执行<code>git clone https://github.com/getpelican/pelican-plugins.git</code></p>
-</li>
-</ul>
-<h3 id="_2">修改配置文件</h3>
-<ul>
-<li>
-<p>文件：<code>pelicanconf.py</code></p>
-</li>
-<li>
-<p>指定插件目录</p>
-</li>
-</ul>
-<p><code>PLUGIN_PATHS = ['&lt;your_path&gt;/getpelican/pelican-plugins']</code></p>
-<ul>
-<li>启用插件</li>
-</ul>
-<p><code>PLUGINS = ['extract_toc']</code></p>
-<h3 id="markdown">Markdown标记</h3>
-<ul>
-<li>插入<code>[TOC]</code>标签，例如：</li>
-</ul>
-<pre>
-    title: Pelican TOC Plugin
-    date: 2015-10-16
-    modified: 2015-10-17
-    tags: pelican
-    category: pelican
-    [TOC]
-    ### 插件准备
-</pre> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="/pelican-toc-plugin.html" rel="bookmark" title="Permalink to Pelican TOC Plugin">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="/tag/pelican.html">pelican</a>
-                                </div>
-
-
-
-                        </article></li>
-                </ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-<h4>Pages</h4>
-
- <ul>
-      <li><a href="/pages/about.html">About</a></li>
-  </ul>
-
-<h4>Categories</h4>
-<ul class="blank">
-		<li><a href="/category/pelican.html">pelican</a></li>
-</ul>
-
-
-<h4>Tags</h4>
-	<ul class="blank">
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul class="blank">
-    <li><a href="https://www.linkedin.com/pub/yanjiong-wang/35/28a/356">LinkedIn</a></li>
-  </ul>
-</nav>
-
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-
-
-
-
-              </ul>
-            </div>
-          </div>
-        </footer>
+    <div class="row-fluid">
 
     </div>
 
-
-<script type="text/javascript">
-    var disqus_shortname = 'wangyanjiong';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="/theme/js/libs/gumby.min.js"></script>
-  <script src="/theme/js/plugins.js"></script>
-</body>
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="http://yanjiong.wang/archives.html">all posts</a></h1>
+            </header>
+        <div class="recent-posts">
+            <article>
+                <a href="http://yanjiong.wang/pelican-toc-plugin.html">Pelican TOC Plugin  </a>
+                <section>
+                    posted in
+                <a href="http://yanjiong.wang/categories.html#pelican-ref">pelican</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2015-10-16T00:00:00+08:00">Fri 16 October 2015</time>
+                </div>
+                </section>
+            </article>
+        </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
