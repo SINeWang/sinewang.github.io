@@ -10,19 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="pelican, Pelican, " />
+<meta name="keywords" content=", Knowledge, " />
 
-<meta property="og:title" content="Pelican TOC Plugin "/>
-<meta property="og:url" content="http://yanjiong.wang/pelican-toc-plugin.html" />
-<meta property="og:description" content="插件准备 使用 extract_toc 执行git clone https://github.com/getpelican/pelican-plugins.git 修改配置文件 文件：pelicanconf.py 指定插件目录 PLUGIN_PATHS = [&#39;&lt;your_path&gt;/getpelican/pelican-plugins&#39;] 启用插件 PLUGINS = [&#39;extract_toc&#39;] Markdown标记 插入[TOC]标签，例如： title: Pelican TOC Plugin date: 2015-10-16 modified: 2015-10-17 tags: pelican category: pelican [TOC] ### 插件准备" />
+<meta property="og:title" content="Mac OS X环境 "/>
+<meta property="og:url" content="http://yanjiong.wang/posts/2015/Oct/18/MacOSXEnvironment/" />
+<meta property="og:description" content="Mail Mail.app Browser Chrome (Extensions) SwitchyOmega 1Password AdBlock Plus Evernote Chrome (App) Postman Gliffy ProcessOn Firefox (Adds-on) Firebug FoxyProxy Firegesture 1Password AdBlock Plus Evernote RSS Reeder 3 Editor &amp; IDE Sublime Text Mou / MacDown BBEditor IntelliJ IDEA PyCharm Version Contrl SourceTree Cornerstone DataBase Navicat Notebook Evernote Security 1password Efficiency Alfred ..." />
 <meta property="og:site_name" content="Dr. Wang YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
-<meta property="og:article:published_time" content="2015-10-16T00:00:00+08:00" />
-<meta property="" content="2015-10-17T00:00:00+08:00" />
-<meta name="twitter:title" content="Pelican TOC Plugin ">
-<meta name="twitter:description" content="插件准备 使用 extract_toc 执行git clone https://github.com/getpelican/pelican-plugins.git 修改配置文件 文件：pelicanconf.py 指定插件目录 PLUGIN_PATHS = [&#39;&lt;your_path&gt;/getpelican/pelican-plugins&#39;] 启用插件 PLUGINS = [&#39;extract_toc&#39;] Markdown标记 插入[TOC]标签，例如： title: Pelican TOC Plugin date: 2015-10-16 modified: 2015-10-17 tags: pelican category: pelican [TOC] ### 插件准备">
+<meta property="og:article:published_time" content="2015-10-18T00:00:00+08:00" />
+<meta name="twitter:title" content="Mac OS X环境 ">
+<meta name="twitter:description" content="Mail Mail.app Browser Chrome (Extensions) SwitchyOmega 1Password AdBlock Plus Evernote Chrome (App) Postman Gliffy ProcessOn Firefox (Adds-on) Firebug FoxyProxy Firegesture 1Password AdBlock Plus Evernote RSS Reeder 3 Editor &amp; IDE Sublime Text Mou / MacDown BBEditor IntelliJ IDEA PyCharm Version Contrl SourceTree Cornerstone DataBase Navicat Notebook Evernote Security 1password Efficiency Alfred ...">
 
-        <title>Pelican TOC Plugin  · Dr. Wang YanJiong
+        <title>Mac OS X环境  · Dr. Wang YanJiong
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -62,7 +61,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://yanjiong.wang/pelican-toc-plugin.html"> Pelican TOC Plugin  </a></h1>
+    <h1><a href="http://yanjiong.wang/posts/2015/Oct/18/MacOSXEnvironment/"> Mac OS X环境  </a></h1>
     </header>
 </div>
 
@@ -72,9 +71,23 @@
         <h4>Contents</h4>
         <div class="toc">
 <ul>
-<li><a href="#_1">插件准备</a></li>
-<li><a href="#_2">修改配置文件</a></li>
-<li><a href="#markdown">Markdown标记</a></li>
+<li><a href="#mail">Mail</a></li>
+<li><a href="#browser">Browser</a><ul>
+<li><a href="#chrome-extensions">Chrome (Extensions)</a></li>
+<li><a href="#chrome-app">Chrome (App)</a></li>
+<li><a href="#firefox-adds-on">Firefox (Adds-on)</a></li>
+</ul>
+</li>
+<li><a href="#rss">RSS</a></li>
+<li><a href="#editor-ide">Editor &amp; IDE</a></li>
+<li><a href="#version-contrl">Version Contrl</a></li>
+<li><a href="#database">DataBase</a></li>
+<li><a href="#notebook">Notebook</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#efficiency">Efficiency</a></li>
+<li><a href="#synchronize">Synchronize</a></li>
+<li><a href="#calendar">Calendar</a></li>
+<li><a href="#remote">Remote</a></li>
 </ul>
 </div>
         </nav>
@@ -83,49 +96,100 @@
 
             
             
-<h3 id="_1">插件准备</h3>
+<h1 id="mail">Mail</h1>
 <ul>
-<li>
-<p>使用 <a href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc">extract_toc</a></p>
+<li>Mail.app</li>
+</ul>
+<h1 id="browser">Browser</h1>
+<h2 id="chrome-extensions">Chrome (Extensions)</h2>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">SwitchyOmega</a></li>
+<li>1Password</li>
+<li>AdBlock Plus</li>
+<li>Evernote</li>
+</ul>
+<h2 id="chrome-app">Chrome (App)</h2>
+<ul>
+<li><a href="https://www.getpostman.com/">Postman</a></li>
+<li><a href="https://www.gliffy.com/">Gliffy</a></li>
+<li><a href="http://processon.com">ProcessOn</a></li>
+</ul>
+<h2 id="firefox-adds-on">Firefox (Adds-on)</h2>
+<ul>
+<li>Firebug</li>
+<li>FoxyProxy</li>
+<li>Firegesture</li>
+<li>1Password</li>
+<li>AdBlock Plus</li>
+<li>Evernote</li>
+</ul>
+<h1 id="rss">RSS</h1>
+<ul>
+<li><a href="http://reederapp.com/mac/">Reeder 3</a></li>
+</ul>
+<h1 id="editor-ide">Editor &amp; IDE</h1>
+<ul>
+<li><a href="http://sublimetext.com">Sublime Text</a></li>
+<li><a href="25.io/mou">Mou</a> / <a href="http://macdown.uranusjr.com">MacDown</a></li>
+<li><a href="http://www.barebones.com/products/bbedit">BBEditor</a></li>
+<li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a></li>
+<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+</ul>
+<h1 id="version-contrl">Version Contrl</h1>
+<ul>
+<li><a href="https://www.sourcetreeapp.com/">SourceTree</a></li>
+<li><a href="https://www.zennaware.com/cornerstone/index.php">Cornerstone</a></li>
+</ul>
+<h1 id="database">DataBase</h1>
+<ul>
+<li><a href="http://www.navicat.com">Navicat</a></li>
+</ul>
+<h1 id="notebook">Notebook</h1>
+<ul>
+<li><a href="http://evernote.com">Evernote</a></li>
+</ul>
+<h1 id="security">Security</h1>
+<ul>
+<li><a href="https://agilebits.com/onepassword">1password</a></li>
+</ul>
+<h1 id="efficiency">Efficiency</h1>
+<ul>
+<li><a href="https://www.alfredapp.com/powerpack/">Alfred Powerpack</a></li>
+<li><a href="https://www.spectacleapp.com/">Spectacle</a></li>
+<li><a href="https://www.iterm2.com/">iTerm2</a></li>
+<li><a href="http://www.zsh.org/">zsh</a> + <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></li>
+<li><a href="http://brew.sh">Homebrew</a> + <a href="https://github.com/caskroom/homebrew-cask">homebrew cask</a></li>
+<li>RamDisk<ul>
+<li>Automator</li>
+<li>Shell</li>
+</ul>
 </li>
-<li>
-<p>执行<code>git clone https://github.com/getpelican/pelican-plugins.git</code></p>
+<li>Socks5<ul>
+<li>socat / netcat</li>
+</ul>
 </li>
 </ul>
-<h3 id="_2">修改配置文件</h3>
+<h1 id="synchronize">Synchronize</h1>
 <ul>
-<li>
-<p>文件：<code>pelicanconf.py</code></p>
-</li>
-<li>
-<p>指定插件目录</p>
-</li>
+<li><a href="https://dropbox.com">Dropbox</a></li>
 </ul>
-<p><code>PLUGIN_PATHS = ['&lt;your_path&gt;/getpelican/pelican-plugins']</code></p>
+<h1 id="calendar">Calendar</h1>
 <ul>
-<li>启用插件</li>
+<li><a href="www.galaworks.com/lunarcal/">LunarCal</a></li>
+<li><a href="https://flexibits.com/fantastical">Fantastical</a></li>
 </ul>
-<p><code>PLUGINS = ['extract_toc']</code></p>
-<h3 id="markdown">Markdown标记</h3>
+<h1 id="remote">Remote</h1>
 <ul>
-<li>插入<code>[TOC]</code>标签，例如：</li>
+<li><a href="https://www.vandyke.com/products/securecrt/mac_osx.html">SecureCRT</a></li>
+<li><a href="http://cord.sourceforge.net/">CoRD</a></li>
 </ul>
-<pre>
-    title: Pelican TOC Plugin
-    date: 2015-10-16
-    modified: 2015-10-17
-    tags: pelican
-    category: pelican
-    [TOC]
-    ### 插件准备
-</pre>
             
             <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://yanjiong.wang/pelican-toc-plugin.html#disqus_thread">
+                href="http://yanjiong.wang/posts/2015/Oct/18/MacOSXEnvironment/#disqus_thread">
                 Comments
             </a>
         </div>
@@ -135,8 +199,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'wangyanjiong';
-        var disqus_identifier = 'http://yanjiong.wang/pelican-toc-plugin.html';
-    var disqus_url = 'http://yanjiong.wang/pelican-toc-plugin.html';
+        var disqus_identifier = 'http://yanjiong.wang/posts/2015/Oct/18/MacOSXEnvironment/';
+    var disqus_url = 'http://yanjiong.wang/posts/2015/Oct/18/MacOSXEnvironment/';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -159,19 +223,9 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-10-16T00:00:00+08:00">Oct 16, 2015</time>
-
-<h4>Last Updated</h4>
-<time datetime="2015-10-17T00:00:00+08:00">Oct 17, 2015</time>
-
+            <time pubdate="pubdate" datetime="2015-10-18T00:00:00+08:00">Oct 18, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://yanjiong.wang/categories.html#pelican-ref">Pelican</a>
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article">
-                <li><a href="http://yanjiong.wang/tags.html#pelican-ref">pelican
-                    <span>1</span>
-</a></li>
-            </ul>
+            <a class="category-link" href="http://yanjiong.wang/categories.html#knowledge-ref">Knowledge</a>
 <h4>Contact</h4>
     <a href="https://www.linkedin.com/pub/yanjiong-wang/35/28a/356" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-linkedin sidebar-social-links"></i></a>
