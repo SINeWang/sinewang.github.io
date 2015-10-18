@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
+<meta name="keywords" content=", knowledge, " />
 
-<meta property="og:title" content="About "/>
-<meta property="og:url" content="http://yanjiong.wang/pages/about.html" />
-<meta property="og:description" content="我曾经历了许许多多，现在，我似乎明白了什么是幸福，在乡下恬静的隐居，尽可能对人们做些简单而有用的善事，尽管那些人们并不习惯我为他们做了这些，做一份真正有用的工作，最后休息，享受大自然，读书，听音乐，爱周围的每一个人。这就是我对幸福的诠释。在这些之上，有你为伴，也许还有我们的孩子，一个男人还能再渴望些什么呢？ ——列夫 托尔斯泰《家庭幸福》 教育 2002-2006(学士) 北京邮电大学, 理学院, 数学与应用数学专业 北京邮电大学, 电信工程院, 通信工程专业 2006-2011(博士) 北京邮电大学, 网络技术研究院/网络与交换技术国家重点实验室, 密码学专业 工作 2006-2011 西门子（中国）有限公司, 西门子中国研究院 2012-2014（博士后） 上海交通大学，电子信息与电气工程学院，计算机科学与技术专业 2011-2014 普元信息技术股份有限公司, 资深架构师（云计算大数据方向 ..." />
+<meta property="og:title" content="Mac OS X环境 "/>
+<meta property="og:url" content="http://yanjiong.wang/mac-os-xhuan-jing.html" />
+<meta property="og:description" content="Mail Mail.app Browser Chrome (Extensions) SwitchyOmega 1Password AdBlock Plus Evernote Chrome (App) Postman Gliffy ProcessOn Firefox (Adds-on) Firebug FoxyProxy Firegesture 1Password AdBlock Plus Evernote VPN/Socks RSS Reeder 3 Editor Sublime Text Mou / MacDown BBEditor Version Contrl SourceTree Cornerstone DataBase Navicat Notebook Evernote Security 1password Efficiency Alfred Powerpack Spectacle ..." />
 <meta property="og:site_name" content="Dr. Wang YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
-<meta property="og:article:published_time" content="2012-09-14T00:00:00+08:00" />
-<meta property="" content="2015-09-11T00:00:00+08:00" />
-<meta name="twitter:title" content="About ">
-<meta name="twitter:description" content="我曾经历了许许多多，现在，我似乎明白了什么是幸福，在乡下恬静的隐居，尽可能对人们做些简单而有用的善事，尽管那些人们并不习惯我为他们做了这些，做一份真正有用的工作，最后休息，享受大自然，读书，听音乐，爱周围的每一个人。这就是我对幸福的诠释。在这些之上，有你为伴，也许还有我们的孩子，一个男人还能再渴望些什么呢？ ——列夫 托尔斯泰《家庭幸福》 教育 2002-2006(学士) 北京邮电大学, 理学院, 数学与应用数学专业 北京邮电大学, 电信工程院, 通信工程专业 2006-2011(博士) 北京邮电大学, 网络技术研究院/网络与交换技术国家重点实验室, 密码学专业 工作 2006-2011 西门子（中国）有限公司, 西门子中国研究院 2012-2014（博士后） 上海交通大学，电子信息与电气工程学院，计算机科学与技术专业 2011-2014 普元信息技术股份有限公司, 资深架构师（云计算大数据方向 ...">
+<meta property="og:article:published_time" content="2015-10-18T00:00:00+08:00" />
+<meta name="twitter:title" content="Mac OS X环境 ">
+<meta name="twitter:description" content="Mail Mail.app Browser Chrome (Extensions) SwitchyOmega 1Password AdBlock Plus Evernote Chrome (App) Postman Gliffy ProcessOn Firefox (Adds-on) Firebug FoxyProxy Firegesture 1Password AdBlock Plus Evernote VPN/Socks RSS Reeder 3 Editor Sublime Text Mou / MacDown BBEditor Version Contrl SourceTree Cornerstone DataBase Navicat Notebook Evernote Security 1password Efficiency Alfred Powerpack Spectacle ...">
 
-        <title>About  · Dr. Wang YanJiong
+        <title>Mac OS X环境  · Dr. Wang YanJiong
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://yanjiong.wang">Home</a></li>
-                            <li  class="active"><a href="http://yanjiong.wang/pages/about.html">About</a></li>
+                            <li ><a href="http://yanjiong.wang/pages/about.html">About</a></li>
                             <li ><a href="http://yanjiong.wang/categories.html">Categories</a></li>
                             <li ><a href="http://yanjiong.wang/tags.html">Tags</a></li>
                             <li ><a href="http://yanjiong.wang/archives.html">Archives</a></li>
@@ -61,7 +61,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://yanjiong.wang/pages/about.html"> About  </a></h1>
+    <h1><a href="http://yanjiong.wang/mac-os-xhuan-jing.html"> Mac OS X环境  </a></h1>
     </header>
 </div>
 
@@ -71,10 +71,19 @@
         <h4>Contents</h4>
         <div class="toc">
 <ul>
-<li><a href="#_1">教育</a></li>
-<li><a href="#_2">工作</a></li>
-<li><a href="#_3">专利</a></li>
-<li><a href="#_4">媒体</a></li>
+<li><a href="#mail">Mail</a></li>
+<li><a href="#browser">Browser</a></li>
+<li><a href="#vpnsocks">VPN/Socks</a></li>
+<li><a href="#rss">RSS</a></li>
+<li><a href="#editor">Editor</a></li>
+<li><a href="#version-contrl">Version Contrl</a></li>
+<li><a href="#database">DataBase</a></li>
+<li><a href="#notebook">Notebook</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#efficiency">Efficiency</a></li>
+<li><a href="#synchronize">Synchronize</a></li>
+<li><a href="#calendar">Calendar</a></li>
+<li><a href="#remote">Remote</a></li>
 </ul>
 </div>
         </nav>
@@ -82,52 +91,106 @@
     <div class="span8 article-content">
 
             
-<p>我曾经历了许许多多，现在，我似乎明白了什么是幸福，在乡下恬静的隐居，尽可能对人们做些简单而有用的善事，尽管那些人们并不习惯我为他们做了这些，做一份真正有用的工作，最后休息，享受大自然，读书，听音乐，爱周围的每一个人。这就是我对幸福的诠释。在这些之上，有你为伴，也许还有我们的孩子，一个男人还能再渴望些什么呢？ ——列夫 托尔斯泰《家庭幸福》</p>
-<h3 id="_1">教育</h3>
+            
+<h1 id="mail">Mail</h1>
 <ul>
-<li>2002-2006(学士)</li>
+<li>Mail.app</li>
 </ul>
-<p>北京邮电大学, 理学院, 数学与应用数学专业</p>
-<p>北京邮电大学, 电信工程院, 通信工程专业</p>
+<h1 id="browser">Browser</h1>
 <ul>
-<li>2006-2011(博士)</li>
+<li>Chrome (Extensions)<ul>
+<li><a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">SwitchyOmega</a></li>
+<li>1Password</li>
+<li>AdBlock Plus</li>
+<li>Evernote</li>
 </ul>
-<p>北京邮电大学, 网络技术研究院/网络与交换技术国家重点实验室, 密码学专业</p>
-<h3 id="_2">工作</h3>
+</li>
+<li>
+<p>Chrome (App)</p>
 <ul>
-<li>2006-2011</li>
+<li><a href="https://www.getpostman.com/">Postman</a></li>
+<li><a href="https://www.gliffy.com/">Gliffy</a></li>
+<li><a href="http://processon.com">ProcessOn</a></li>
 </ul>
-<p>西门子（中国）有限公司, 西门子中国研究院</p>
+</li>
+<li>
+<p>Firefox (Adds-on)</p>
 <ul>
-<li>2012-2014（博士后）</li>
+<li>Firebug</li>
+<li>FoxyProxy</li>
+<li>Firegesture</li>
+<li>1Password</li>
+<li>AdBlock Plus</li>
+<li>Evernote</li>
 </ul>
-<p>上海交通大学，电子信息与电气工程学院，计算机科学与技术专业</p>
+</li>
+</ul>
+<h1 id="vpnsocks">VPN/Socks</h1>
+<h1 id="rss">RSS</h1>
 <ul>
-<li>2011-2014</li>
+<li><a href="reederapp.com/mac/">Reeder 3</a></li>
 </ul>
-<p>普元信息技术股份有限公司, 资深架构师（云计算大数据方向）</p>
+<h1 id="editor">Editor</h1>
 <ul>
-<li>2014-2015</li>
+<li><a href="http://sublimetext.com">Sublime Text</a></li>
+<li><a href="25.io/mou">Mou</a> / <a href="macdown.uranusjr.com">MacDown</a></li>
+<li><a href="www.barebones.com/products/bbedit">BBEditor</a></li>
 </ul>
-<p>平安健康保险股份有限公司, 资深架构师</p>
+<h1 id="version-contrl">Version Contrl</h1>
 <ul>
-<li>2015-Now</li>
+<li><a href="https://www.sourcetreeapp.com/">SourceTree</a></li>
+<li><a href="https://www.zennaware.com/cornerstone/index.php">Cornerstone</a></li>
 </ul>
-<p>普元信息技术股份有限公司, 技术总监（持续交付、云计算、实时流数据处理方向）</p>
-<h3 id="_3">专利</h3>
-<p><a href="https://www.evernote.com/shard/s28/sh/adb84a12-f2bc-4cf4-a393-a14dbca98934/7f82e587a43d6d85d4386b58e39ba065">ZL200610081402</a> / 采用小区动态划分技术的对等网络系统实现方法 (由于申请人主动放弃，夭折)</p>
-<p><a href="https://www.evernote.com/shard/s28/sh/4d3417fe-6cf2-4f6b-8cb0-e40eae1ecb77/83b9b0146612dd3f7c35285adb044a15">CN201210555384</a> / 基于云计算架构实现复杂事件处理的系统及其方法 (已授权)</p>
-<p>[CN201310713949] / 复杂事件处理云平台事件分析引擎容量评估的系统及方法 (已申请)</p>
-<p>[CN201410279588] / 基于在线计费环境实现模拟收发设备信令的系统及方法 (已申请)</p>
-<h3 id="_4">媒体</h3>
-<p><a href="https://www.evernote.com/shard/s28/sh/69ddc522-404f-4a21-acee-83ee4d7c674a/b62f62955e79737bc2e782c9348042bb">新民晚报 2012年9月24日</a></p>
-<p><a href="https://www.evernote.com/shard/s28/sh/6c20c066-9c09-4ced-bf71-55c8ec5143b1/5d1fd31109615d30b1ab604874fa3c17">解放日报 2013年4月14日</a></p>
+<h1 id="database">DataBase</h1>
+<ul>
+<li><a href="http://www.navicat.com">Navicat</a></li>
+</ul>
+<h1 id="notebook">Notebook</h1>
+<ul>
+<li><a href="http://evernote.com">Evernote</a></li>
+</ul>
+<h1 id="security">Security</h1>
+<ul>
+<li><a href="https://agilebits.com/onepassword">1password</a></li>
+</ul>
+<h1 id="efficiency">Efficiency</h1>
+<ul>
+<li><a href="https://www.alfredapp.com/powerpack/">Alfred Powerpack</a></li>
+<li><a href="https://www.spectacleapp.com/">Spectacle</a></li>
+<li><a href="https://www.iterm2.com/">iTerm2</a></li>
+<li><a href="www.zsh.org/">zsh</a> + <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></li>
+<li><a href="http://brew.sh">Homebrew</a> + <a href="https://github.com/caskroom/homebrew-cask">homebrew cask</a></li>
+<li>RamDisk<ul>
+<li>Automator</li>
+<li>Shell</li>
+</ul>
+</li>
+<li>Socks5<ul>
+<li>socat / netcat</li>
+</ul>
+</li>
+</ul>
+<h1 id="synchronize">Synchronize</h1>
+<ul>
+<li><a href="https://dropbox.com">Dropbox</a></li>
+</ul>
+<h1 id="calendar">Calendar</h1>
+<ul>
+<li><a href="www.galaworks.com/lunarcal/">LunarCal</a></li>
+<li><a href="https://flexibits.com/fantastical">Fantastical</a></li>
+</ul>
+<h1 id="remote">Remote</h1>
+<ul>
+<li><a href="https://www.vandyke.com/products/securecrt/mac_osx.html">SecureCRT</a></li>
+<li><a href="cord.sourceforge.net/">CoRD</a></li>
+</ul>
+            
             <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://yanjiong.wang/pages/about.html#disqus_thread">
+                href="http://yanjiong.wang/mac-os-xhuan-jing.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -137,8 +200,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'wangyanjiong';
-        var disqus_identifier = 'http://yanjiong.wang/pages/about.html';
-    var disqus_url = 'http://yanjiong.wang/pages/about.html';
+        var disqus_identifier = 'http://yanjiong.wang/mac-os-xhuan-jing.html';
+    var disqus_url = 'http://yanjiong.wang/mac-os-xhuan-jing.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -156,16 +219,21 @@
 </div>
 </section>
 
+            <hr/>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2015-10-18T00:00:00+08:00">Oct 18, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="http://yanjiong.wang/categories.html#knowledge-ref">knowledge</a>
 <h4>Contact</h4>
     <a href="https://www.linkedin.com/pub/yanjiong-wang/35/28a/356" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-linkedin sidebar-social-links"></i></a>
         </div>
         </section>
-    </div>
-    </article>
+</div>
+</article>
                 </div>
                 <div class="span1"></div>
             </div>
