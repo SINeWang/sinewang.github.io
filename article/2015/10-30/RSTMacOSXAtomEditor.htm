@@ -134,19 +134,17 @@ brew cask install atom
 <ol class="arabic simple">
 <li><tt class="docutils literal"><span class="pre">rst-preview</span></tt> <a class="reference external" href="https://github.com/lsegal/atom-rst-preview/issues/33">Live preview not working Atom 1.0.11</a></li>
 </ol>
-<blockquote>
 <p><tt class="docutils literal"><span class="pre">~/.atom/packages/rst-preview/lib/rst-preview.coffee</span></tt></p>
 <pre class="literal-block">
 # line 76-77
 # grammars = atom.config.get('rst-preview.grammars') ? []
 # return unless editor.getGrammar().scopeName in grammars
 </pre>
-</blockquote>
 <ol class="arabic simple" start="2">
 <li>Workaround on OSX for pandoc could not be spawned error</li>
 </ol>
-<blockquote>
 <p><tt class="docutils literal"><span class="pre">~/.atom/init.coffee</span></tt></p>
+<blockquote>
 <pre class="literal-block">
 process.env.PATH = ["/usr/bin",
             "/usr/local/bin",
