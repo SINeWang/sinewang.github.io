@@ -10,19 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="reStructuredText, Atom, Mac OS X, 效率, Efficiency, " />
+<meta name="keywords" content="企业架构, EnterpriceArchitect, " />
 
-<meta property="og:title" content="用Atom在Mac OS X 下编辑reStructuredText "/>
-<meta property="og:url" content="http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor" />
-<meta property="og:description" content="基础环境 brew cask brew install caskroom/cask/brew-cask pandoc brew install pandoc 工具 Atom brew cask install atom Atom 插件 language-restructuredtext (预览首选) rst-preview-pandoc (预览备选) rst-preview 设置 rst-preview-pandoc 设置 pandoc path , 通过 brew install 的工具，一般都位于 /usr/local/bin 采用 rst-preview-pandoc 时，可以忽略 Bugfix 1 在设置 pandoc path 后，应当不会出现 Bugfix ..." />
+<meta property="og:title" content="从元宵节煮汤圆看架构识别与设计 "/>
+<meta property="og:url" content="http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture" />
+<meta property="og:description" content="老一辈交代的煮汤圆方法 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，和煮汤圆的人有关，等等等等。 煮熟汤圆的目标 煮熟汤圆的核心要素 温度 时间 剖析传统煮汤圆的架构 平台和工具 锅 水 火 判断依据 上浮 胖了 技术革新 锅升级 火力控制" />
 <meta property="og:site_name" content="王延炯 博士|Dr. Wang, YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
-<meta property="og:article:published_time" content="2015-10-30T23:33:00+08:00" />
-<meta property="" content="2015-10-31T16:13:00+08:00" />
-<meta name="twitter:title" content="用Atom在Mac OS X 下编辑reStructuredText ">
-<meta name="twitter:description" content="基础环境 brew cask brew install caskroom/cask/brew-cask pandoc brew install pandoc 工具 Atom brew cask install atom Atom 插件 language-restructuredtext (预览首选) rst-preview-pandoc (预览备选) rst-preview 设置 rst-preview-pandoc 设置 pandoc path , 通过 brew install 的工具，一般都位于 /usr/local/bin 采用 rst-preview-pandoc 时，可以忽略 Bugfix 1 在设置 pandoc path 后，应当不会出现 Bugfix ...">
+<meta property="og:article:published_time" content="2016-02-22T16:33:00+08:00" />
+<meta name="twitter:title" content="从元宵节煮汤圆看架构识别与设计 ">
+<meta name="twitter:description" content="老一辈交代的煮汤圆方法 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，和煮汤圆的人有关，等等等等。 煮熟汤圆的目标 煮熟汤圆的核心要素 温度 时间 剖析传统煮汤圆的架构 平台和工具 锅 水 火 判断依据 上浮 胖了 技术革新 锅升级 火力控制">
 
-        <title>用Atom在Mac OS X 下编辑reStructuredText  · 王延炯 博士|Dr. Wang, YanJiong
+        <title>从元宵节煮汤圆看架构识别与设计  · 王延炯 博士|Dr. Wang, YanJiong
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -63,7 +62,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor"> 用Atom在Mac OS X 下编辑reStructuredText  </a></h1>
+    <h1><a href="http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture"> 从元宵节煮汤圆看架构识别与设计  </a></h1>
     </header>
 </div>
 
@@ -74,11 +73,11 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#id1" id="id5">基础环境</a></li>
-<li><a class="reference internal" href="#id2" id="id6">工具</a></li>
-<li><a class="reference internal" href="#id3" id="id7">设置</a></li>
-<li><a class="reference internal" href="#bugfix" id="id8">Bugfix</a></li>
-<li><a class="reference internal" href="#id4" id="id9">效果</a></li>
+<li><a class="reference internal" href="#id2" id="id7">老一辈交代的煮汤圆方法</a></li>
+<li><a class="reference internal" href="#id3" id="id8">煮熟汤圆的目标</a></li>
+<li><a class="reference internal" href="#id4" id="id9">煮熟汤圆的核心要素</a></li>
+<li><a class="reference internal" href="#id5" id="id10">剖析传统煮汤圆的架构</a></li>
+<li><a class="reference internal" href="#id6" id="id11">技术革新</a></li>
 </ul>
 </div>
         </nav>
@@ -88,75 +87,46 @@
             
             
 <!-- -->
-<div class="section" id="id1">
-<h2><a class="toc-backref" href="#id5">基础环境</a></h2>
-<ul>
-<li><p class="first"><a class="reference external" href="https://github.com/caskroom/homebrew-cask">brew cask</a></p>
-<pre class="literal-block">
-brew install caskroom/cask/brew-cask
-</pre>
-</li>
-<li><p class="first">pandoc</p>
-<pre class="literal-block">
-brew install pandoc
-</pre>
-</li>
-</ul>
-</div>
 <div class="section" id="id2">
-<h2><a class="toc-backref" href="#id6">工具</a></h2>
-<ul>
-<li><p class="first"><a class="reference external" href="http://atom.io">Atom</a></p>
-<pre class="literal-block">
-brew cask install atom
-</pre>
-</li>
-<li><p class="first">Atom 插件</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/Lukasa/language-restructuredtext">language-restructuredtext</a></li>
-<li>(预览首选) <a class="reference external" href="https://github.com/tohosokawa/rst-preview-pandoc">rst-preview-pandoc</a></li>
-<li>(预览备选) <a class="reference external" href="https://github.com/lsegal/atom-rst-preview">rst-preview</a></li>
-</ul>
-</li>
-</ul>
+<h2><a class="toc-backref" href="#id7">老一辈交代的煮汤圆方法</a></h2>
+<p>这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下</p>
+<ol class="arabic simple">
+<li>取一锅干净的冷水</li>
+<li>把冷水煮开</li>
+<li>把适量的汤圆放入锅中</li>
+<li>等水再次烧开</li>
+<li>加入冷水，以保持汤圆不被煮破</li>
+<li>重复第5步若干次</li>
+<li>汤圆变熟，捞出享用</li>
+</ol>
+<p>一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，和煮汤圆的人有关，等等等等。</p>
 </div>
 <div class="section" id="id3">
-<h2><a class="toc-backref" href="#id7">设置</a></h2>
-<p><tt class="docutils literal"><span class="pre">rst-preview-pandoc</span></tt></p>
-<ul class="simple">
-<li>设置 <tt class="docutils literal">pandoc path</tt> , 通过 <tt class="docutils literal">brew install</tt> 的工具，一般都位于 <tt class="docutils literal">/usr/local/bin</tt></li>
-<li>采用 <tt class="docutils literal"><span class="pre">rst-preview-pandoc</span></tt> 时，可以忽略 <tt class="docutils literal">Bugfix 1</tt></li>
-<li>在设置 <tt class="docutils literal">pandoc path</tt> 后，应当不会出现 <tt class="docutils literal">Bugfix 2</tt></li>
-</ul>
-</div>
-<div class="section" id="bugfix">
-<h2><a class="toc-backref" href="#id8">Bugfix</a></h2>
-<ol class="arabic simple">
-<li><tt class="docutils literal"><span class="pre">rst-preview</span></tt> <a class="reference external" href="https://github.com/lsegal/atom-rst-preview/issues/33">Live preview not working Atom 1.0.11</a></li>
-</ol>
-<blockquote>
-<p><tt class="docutils literal"><span class="pre">~/.atom/packages/rst-preview/lib/rst-preview.coffee</span></tt></p>
-<pre class="literal-block">
-# line 76-77
-# grammars = atom.config.get('rst-preview.grammars') ? []
-# return unless editor.getGrammar().scopeName in grammars
-</pre>
-</blockquote>
-<ol class="arabic simple" start="2">
-<li>Workaround on OSX for pandoc could not be spawned error</li>
-</ol>
-<blockquote>
-<p><tt class="docutils literal"><span class="pre">~/.atom/init.coffee</span></tt></p>
-<pre class="literal-block">
-process.env.PATH = ["/usr/bin",
-            "/usr/local/bin",
-            ].join(":")
-</pre>
-</blockquote>
+<h2><a class="toc-backref" href="#id8">煮熟汤圆的目标</a></h2>
 </div>
 <div class="section" id="id4">
-<h2><a class="toc-backref" href="#id9">效果</a></h2>
-<img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png"/>
+<h2><a class="toc-backref" href="#id9">煮熟汤圆的核心要素</a></h2>
+<ul class="simple">
+<li>温度</li>
+<li>时间</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id10">剖析传统煮汤圆的架构</a></h2>
+<ul class="simple">
+<li>平台和工具
+锅 水 火</li>
+<li>判断依据
+上浮
+胖了</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id11">技术革新</a></h2>
+<ul class="simple">
+<li>锅升级</li>
+<li>火力控制</li>
+</ul>
 </div>
 
             
@@ -165,7 +135,7 @@ process.env.PATH = ["/usr/bin",
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor#disqus_thread">
+                href="http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture#disqus_thread">
                 Comments
             </a>
         </div>
@@ -175,8 +145,8 @@ process.env.PATH = ["/usr/bin",
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'wangyanjiong';
-        var disqus_identifier = 'http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor';
-    var disqus_url = 'http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor';
+        var disqus_identifier = 'http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture';
+    var disqus_url = 'http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -199,26 +169,13 @@ process.env.PATH = ["/usr/bin",
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-10-30T23:33:00+08:00">Oct 30, 2015</time>
-
-<h4>Last Updated</h4>
-<time datetime="2015-10-31T16:13:00+08:00">Oct 31, 2015</time>
-
+            <time pubdate="pubdate" datetime="2016-02-22T16:33:00+08:00">Feb 22, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://yanjiong.wang/categories.html#efficiency-ref">Efficiency</a>
+            <a class="category-link" href="http://yanjiong.wang/categories.html#enterpricearchitect-ref">EnterpriceArchitect</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://yanjiong.wang/tags.html#atom-ref">Atom
-                    <span>2</span>
-</a></li>
-                <li><a href="http://yanjiong.wang/tags.html#mac-os-x-ref">Mac OS X
-                    <span>3</span>
-</a></li>
-                <li><a href="http://yanjiong.wang/tags.html#restructuredtext-ref">reStructuredText
-                    <span>1</span>
-</a></li>
-                <li><a href="http://yanjiong.wang/tags.html#xiao-lu-ref">效率
-                    <span>3</span>
+                <li><a href="http://yanjiong.wang/tags.html#qi-ye-jia-gou-ref">企业架构
+                    <span>4</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
