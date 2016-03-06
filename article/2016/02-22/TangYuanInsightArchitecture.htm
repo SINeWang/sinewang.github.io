@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="企业架构, EnterpriceArchitect, " />
+<meta name="keywords" content="生活与架构, EnterpriceArchitect, " />
 
-<meta property="og:title" content="从元宵节煮汤圆看架构识别与设计 "/>
+<meta property="og:title" content="从元宵节煮汤圆看架构的识别与设计 "/>
 <meta property="og:url" content="http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture" />
-<meta property="og:description" content="老一辈交代的煮汤圆方法 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，和煮汤圆的人有关，等等等等。 煮熟汤圆的目标 煮熟汤圆的核心要素 温度 时间 剖析传统煮汤圆的架构 平台和工具 锅 水 火 判断依据 上浮 胖了 技术革新 锅升级 火力控制" />
+<meta property="og:description" content="什么是架构 所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。 采用什么办法解决问题，和客观的条件有关，也和当事人有关。 因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。 什么是「好」架构 「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。 「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。 老一辈交代的煮汤圆方法（煮汤圆的传统架构） 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第4/5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关 ..." />
 <meta property="og:site_name" content="王延炯博士 | Dr. Wang, YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
 <meta property="og:article:published_time" content="2016-02-22T16:33:00+08:00" />
-<meta name="twitter:title" content="从元宵节煮汤圆看架构识别与设计 ">
-<meta name="twitter:description" content="老一辈交代的煮汤圆方法 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，和煮汤圆的人有关，等等等等。 煮熟汤圆的目标 煮熟汤圆的核心要素 温度 时间 剖析传统煮汤圆的架构 平台和工具 锅 水 火 判断依据 上浮 胖了 技术革新 锅升级 火力控制">
+<meta name="twitter:title" content="从元宵节煮汤圆看架构的识别与设计 ">
+<meta name="twitter:description" content="什么是架构 所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。 采用什么办法解决问题，和客观的条件有关，也和当事人有关。 因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。 什么是「好」架构 「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。 「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。 老一辈交代的煮汤圆方法（煮汤圆的传统架构） 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第4/5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关 ...">
 
-        <title>从元宵节煮汤圆看架构识别与设计  · 王延炯博士 | Dr. Wang, YanJiong
+        <title>从元宵节煮汤圆看架构的识别与设计  · 王延炯博士 | Dr. Wang, YanJiong
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture"> 从元宵节煮汤圆看架构识别与设计  </a></h1>
+    <h1><a href="http://yanjiong.wang/article/2016/02-22/TangYuanInsightArchitecture"> 从元宵节煮汤圆看架构的识别与设计  </a></h1>
     </header>
 </div>
 
@@ -73,11 +73,16 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#id2" id="id7">老一辈交代的煮汤圆方法</a></li>
-<li><a class="reference internal" href="#id3" id="id8">煮熟汤圆的目标</a></li>
-<li><a class="reference internal" href="#id4" id="id9">煮熟汤圆的核心要素</a></li>
-<li><a class="reference internal" href="#id5" id="id10">剖析传统煮汤圆的架构</a></li>
-<li><a class="reference internal" href="#id6" id="id11">技术革新</a></li>
+<li><a class="reference internal" href="#id2" id="id9">什么是架构</a></li>
+<li><a class="reference internal" href="#id3" id="id10">什么是「好」架构</a></li>
+<li><a class="reference internal" href="#id4" id="id11">老一辈交代的煮汤圆方法（煮汤圆的传统架构）</a></li>
+<li><a class="reference internal" href="#id5" id="id12">老一辈交代的煮汤圆方法好不好（煮汤圆的传统架构好不好）</a></li>
+<li><a class="reference internal" href="#why" id="id13">煮汤圆的目标（Why,好吃有卖相）</a></li>
+<li><a class="reference internal" href="#what" id="id14">把煮熟汤圆「好吃」的关键要素（What,根据现象看本质, 什么是煮汤圆）</a></li>
+<li><a class="reference internal" href="#how" id="id15">到底要如何煮汤圆（How,重新架构煮汤圆）</a></li>
+<li><a class="reference internal" href="#id6" id="id16">又快又好把汤圆煮熟（最佳实践）</a></li>
+<li><a class="reference internal" href="#id7" id="id17">非常规的花式煮汤圆秘籍（聪明人秀才艺）</a></li>
+<li><a class="reference internal" href="#id8" id="id18">智能煮汤圆产品设计（延伸阅读）</a></li>
 </ul>
 </div>
         </nav>
@@ -88,7 +93,18 @@
             
 <!-- -->
 <div class="section" id="id2">
-<h2><a class="toc-backref" href="#id7">老一辈交代的煮汤圆方法</a></h2>
+<h2><a class="toc-backref" href="#id9">什么是架构</a></h2>
+<p>所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。</p>
+<p>采用什么办法解决问题，和客观的条件有关，也和当事人有关。</p>
+<p>因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id10">什么是「好」架构</a></h2>
+<p>「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。</p>
+<p>「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id11">老一辈交代的煮汤圆方法（煮汤圆的传统架构）</a></h2>
 <p>这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下</p>
 <ol class="arabic simple">
 <li>取一锅干净的冷水</li>
@@ -96,36 +112,171 @@
 <li>把适量的汤圆放入锅中</li>
 <li>等水再次烧开</li>
 <li>加入冷水，以保持汤圆不被煮破</li>
-<li>重复第5步若干次</li>
+<li>重复第4/5步若干次</li>
 <li>汤圆变熟，捞出享用</li>
 </ol>
-<p>一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，和煮汤圆的人有关，等等等等。</p>
-</div>
-<div class="section" id="id3">
-<h2><a class="toc-backref" href="#id8">煮熟汤圆的目标</a></h2>
-</div>
-<div class="section" id="id4">
-<h2><a class="toc-backref" href="#id9">煮熟汤圆的核心要素</a></h2>
-<ul class="simple">
-<li>温度</li>
-<li>时间</li>
-</ul>
+<p>一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，不可避免的煮汤圆的人有关，等等等等。</p>
 </div>
 <div class="section" id="id5">
-<h2><a class="toc-backref" href="#id10">剖析传统煮汤圆的架构</a></h2>
+<h2><a class="toc-backref" href="#id12">老一辈交代的煮汤圆方法好不好（煮汤圆的传统架构好不好）</a></h2>
+<p>好。理由是：</p>
+<ol class="arabic simple">
+<li>对于汤圆怎么被熟的质变过程不需要了解（不需要了解物理原理）</li>
+<li>可视化的温度，水煮沸了，就说明温度到达100摄氏度（一个标准的大气压条件下）</li>
+<li>对于煮汤圆的设备不需要额外添置（常见的水、锅、煤气灶就可以）</li>
+<li>整体过程容易理解，实际操作性强（烧开加水的重复过程，三岁小孩也许都会）</li>
+</ol>
+</div>
+<div class="section" id="why">
+<h2><a class="toc-backref" href="#id13">煮汤圆的目标（Why,好吃有卖相）</a></h2>
 <ul class="simple">
-<li>平台和工具
-锅 水 火</li>
-<li>判断依据
-上浮
-胖了</li>
+<li>直接目标是煮熟（基本前提）</li>
 </ul>
+<p>问题是，熟是一个定性非定量的修饰词。熟，需要能够被量化，量化之后才能被管理。</p>
+<p>于是熟的量化标准之一常常会被提及：汤圆至少要浮于水面之上。</p>
+<p>可问题又来了，浮在水面之上的汤圆不一定能保证在咬开之后，里面的馅料也是熟的。</p>
+<p>于是前辈们，还会告诉我们，等待汤圆略微发胖，这是提高汤圆馅料变熟的有效量化标准之一。因为胖，是肉眼可见，是可被量化管理的对象。</p>
+<ul class="simple">
+<li>间接目标是不煮破不煮糊（还得有卖相）</li>
+</ul>
+<p>由于汤圆的外部材料主要是糯米，糯米遇到水之后，尤其是沸水，会发生结构分解（是不是分子，因为作者不是食品和高分子学专家，不能细讲，也不能乱讲），其最终结果就是煮糊了，也就是糯米和水完全融合了在一起，汤圆已经没有了型。</p>
+<p>因为怕煮烂，所以老一辈会特别强调，加入反复加入冷水，让水保持在似开非开的状态。</p>
+<p>这种方法，一方面是保持煮汤圆所需要的温度，一方面是降低沸水所造成的汤圆不必要的翻动，避免加速汤圆煮烂。</p>
+</div>
+<div class="section" id="what">
+<h2><a class="toc-backref" href="#id14">把煮熟汤圆「好吃」的关键要素（What,根据现象看本质, 什么是煮汤圆）</a></h2>
+<ul class="simple">
+<li>热能</li>
+</ul>
+<p>热能，是使汤圆从生到熟发生变化的核心、必要条件。没有变熟所需要的热能，并保持在合理的温度，汤圆静静的放在那里，永远不会变熟（但可能会变质）。</p>
+<ul class="simple">
+<li>时间</li>
+</ul>
+<p>时间，是控制汤圆发生质变的必要条件。时间需要和温度配合，才能达到让汤圆变熟的目的。</p>
+<ul class="simple">
+<li>潜意识的基本假设</li>
+</ul>
+<p>不管多少类型的汤圆，大小基本固定，一般条件下，手工汤圆的大小，要比速冻机械制作的汤圆大一圈。</p>
+<ul class="simple">
+<li>被忽视的核心要素</li>
+</ul>
+<p>汤圆在被煮前的基本物理条件，是直接从冷冻室内取出，还是常温。</p>
+<p>需要注意的是，沸水和汤圆糯米外皮的物理接触，是热能的第一道传导方式。汤圆的糯米外皮和馅料，是第二道传导方式。</p>
+<p>糯米外皮与馅料的热传导方式相比把水煮沸是缓慢的，换句话说，糯米皮和馅料，是热的不良导体，导热性能比水差。</p>
+<p>同时，冰冻的馅料变熟所需要的热能要比常温馅料的多，但热传导的效率基本不变。</p>
+<p>在冰冻的状态下进行直接加热，势必造成加热的时间变长，这样一来，汤圆的糯米更容易发生煮烂，如果还采用翻滚的沸水煮，很难避免汤圆煮烂、馅刚熟的情况发生。</p>
+<p>所以，在煮汤圆之前，最好把冰冻的汤圆从冰箱取出，在室温下放置一段时间。</p>
+</div>
+<div class="section" id="how">
+<h2><a class="toc-backref" href="#id15">到底要如何煮汤圆（How,重新架构煮汤圆）</a></h2>
+<ul class="simple">
+<li>煮汤圆的基本概念</li>
+</ul>
+<p>汤圆本身、一次煮汤圆的总体数量、锅的容量、热源功率、热源功率的可条件范围。</p>
+<ul class="simple">
+<li>煮汤圆的领域分解</li>
+</ul>
+<ol class="arabic simple" start="0">
+<li>原材料供应商（汤圆）</li>
+<li>煮汤圆平台-热能供应商（天然气灶、煤气灶、电磁炉、电陶炉、煤球炉、煤油炉、烧柴火的灶等等）</li>
+</ol>
+<p>需要注意的是：这些热提供商的性能指标并不相同。比如，热功率（单位时间所提供的热能）提供热能可调节的范围。</p>
+<p>作者直观感受是：现代化的天然气灶、煤气灶、电磁炉，热功率可调节范围要大于煤球炉和烧柴火的灶。</p>
+<ol class="arabic simple" start="2">
+<li>煮汤圆平台-恒温水容器供应商（水和锅）</li>
+</ol>
+<p>高中物理，告诉我们，水的比热容是很高的。所谓比热容，说的通俗一点，就是温度升高一度，所需要的（热）能量。</p>
+<p>所以，一个大锅里盛满的沸水，要比一个小锅盛满的沸水，所储藏的（热）能量多。</p>
+<ol class="arabic simple" start="3">
+<li>煮汤圆平台-熟汤圆交付集成商（煮汤圆的人）</li>
+</ol>
+<p>煮汤圆的人，首先要评估要煮的汤圆有多少，热能的获得方式是什么、可调节性有多强，锅有多大、里面可以放多少水。</p>
+<ul class="simple">
+<li>煮汤圆的基本流程</li>
+</ul>
+<ol class="arabic simple">
+<li>用锅把水烧开</li>
+<li>下生汤圆，以最快的速度把水加热并接近沸点（接近水的沸点）</li>
+<li>在一段时间，保持一定的水温（接近沸点，避免沸水翻滚以保持汤圆卖相），直至变熟（汤圆上浮和变胖）</li>
+</ol>
 </div>
 <div class="section" id="id6">
-<h2><a class="toc-backref" href="#id11">技术革新</a></h2>
+<h2><a class="toc-backref" href="#id16">又快又好把汤圆煮熟（最佳实践）</a></h2>
 <ul class="simple">
-<li>锅升级</li>
-<li>火力控制</li>
+<li>找尽可能大的锅</li>
+</ul>
+<p>大锅，意味着可以放更多的水。在把一批汤圆放入到沸水中之后，由于汤圆和水会直接发生热交换，导致水温降低，水的温度直接从沸点下降。</p>
+<p>举个极端的例子，在正在煮沸的一锅沸水中加入一滴常温的水，那么整个锅里的水，还将是煮沸的状态。原因是：</p>
+<ol class="arabic simple">
+<li>一滴常温水，变成沸水的所需要的热量，热能提供商（比如煤气灶）可以快速提供。</li>
+<li>沸水的流动性，使得沸水和常温水的物理接触面增多，热交换速度变快。</li>
+</ol>
+<p>这个极端的例子告诉我们，由于一滴水加热至沸点的能量，远小于蒸锅沸水的能量，所以蒸锅水在此过程中，水温基本不变。</p>
+<p>回到煮汤圆的场景，大锅意味着加入常温的汤圆水温下降会变少。</p>
+<p>持续的高水温，有利于提高热传导的进行（势能差越大，能量交换越快），有利于缩短煮熟汤圆的时间，保持汤圆的卖相。</p>
+<ul class="simple">
+<li>把热源的功率发挥到最大</li>
+</ul>
+<p>快速提供热能，使放入生冷汤圆的之后水温迅速提高，需要两方面的配合:</p>
+<ol class="arabic simple">
+<li>把热源开到最大（例如，把煤气灶开大火）</li>
+<li>增加火和锅的接触面积（选择平底锅和煤气灶，并把锅底放在煤气灶的火焰温度最高的外焰位置）</li>
+</ol>
+<ul class="simple">
+<li>保持准沸水的水温</li>
+</ul>
+<p>保持略接近于沸水的水温，获得最高效率的热传递同时，避免水的翻动导致汤圆解体。</p>
+<ol class="arabic simple">
+<li>煮汤圆的锅，自身是具备一定散热功能的（在没有热源加热的情况下，水会停止沸腾和逐渐冷却至常温）</li>
+<li>在热源最小输出热能的情况下，需要加入冷水，才能保持水温在沸点以下，避免不必要的水沸腾动能释放，引起汤圆破相。</li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id17">非常规的花式煮汤圆秘籍（聪明人秀才艺）</a></h2>
+<ul class="simple">
+<li>在家煮汤圆不反复加水</li>
+</ul>
+<p>前文所提到的，保持水温似开非开，是达成快速、不破相煮汤圆的必要条件。</p>
+<p>在当煮汤圆的装备得到技术革新之后，我们可以做到把热源功率变小，平衡锅自身散热和热源供给的平衡。</p>
+<p>同时，可以把锅容器，替换为玻璃材质，例如采用全玻璃锅，采用热功率无级可变的燃气和电气炉具。</p>
+<p>这样整个煮汤圆过程全程关上盖子，水蒸气蒸发所带走的热能，也能看到水是否被煮开。</p>
+<p>在实际操作过程中，只要保持水微微有些被煮沸，不对汤圆产生结构性破坏力。温度的用肉眼量化，结合控制火力大小的闭环控制。</p>
+<p>这样做的好处是，增加了煮汤圆的机械化可能，减少了过程中，对于加水这一环节的依赖，减少了对水的需求，增加了能源利用率。</p>
+<ul class="simple">
+<li>饭店煮汤圆「生熟混煮」</li>
+</ul>
+<p>当然，控制水温的另外一个方法是，把加水，替换为加「生」汤圆。</p>
+<p>这种方法，对于执行人的个人素质和能力要求更高，需要相当的实际操作经验。</p>
+<p>其实，笔者相信，摄氏99度煮出来的汤圆，也是「熟」的。</p>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id18">智能煮汤圆产品设计（延伸阅读）</a></h2>
+<p>这里要表达的是，技术其实是可以给业务带来革新。</p>
+<p>煮了一辈子汤圆的人（业务方），可能一辈子都不会提出「智能」煮汤圆的技术需求。</p>
+<ol class="arabic simple">
+<li>设计理念: 煮汤圆应该是不需要操心的，我只要「好吃」和「卖相好」的汤圆。</li>
+</ol>
+<p>食客（吃汤圆的人）只要买来汤圆，把汤圆投进煮汤圆机里，在汤圆被煮好的情况下会自动提示食客来享用，甚至自动放到碗里。</p>
+<ol class="arabic simple" start="2">
+<li>突破技术限制</li>
+</ol>
+<p>技术限制: 识别汤圆馅变熟</p>
+<ul class="simple">
+<li>目前被传承的量化方法是「上浮」和「变胖」</li>
+<li>目前需要最佳实践帮助和知道的是：上浮之后再煮多久</li>
+</ul>
+<p>技术突破: 数字化汤圆馅变熟的技术指标</p>
+<ul class="simple">
+<li>定位汤圆（因为水和汤圆的混合物，密度不一样）</li>
+<li>判断汤圆馅料的温度（在前一步的基础上，采用热感应?超声波频谱?的方式(请原谅作者对于这一领域缺乏了解)）</li>
+<li>恒温控制，保持水温接近于沸点但未到达沸点，避免由水的沸腾导致破相（笔者相信「99度」也能煮「熟」汤圆，当然这是在一个标准大气压的条件下）</li>
+<li>降低数字化成本，以控制产品的整体成品，使其变为消费品而不是概念产品或者奢侈品。</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li>口碑营销</li>
+</ol>
+<ul class="simple">
+<li>消费者惊奇的发现，「智能煮汤圆机」其实还能煮馄饨、煮饺子...</li>
 </ul>
 </div>
 
@@ -174,8 +325,8 @@
             <a class="category-link" href="http://yanjiong.wang/categories.html#enterpricearchitect-ref">EnterpriceArchitect</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://yanjiong.wang/tags.html#qi-ye-jia-gou-ref">企业架构
-                    <span>4</span>
+                <li><a href="http://yanjiong.wang/tags.html#sheng-huo-yu-jia-gou-ref">生活与架构
+                    <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
