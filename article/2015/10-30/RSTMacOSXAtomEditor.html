@@ -10,18 +10,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="企业架构, EnterpriceArchitect, " />
+<meta name="keywords" content="reStructuredText, Atom, Mac OS X, 效率, Efficiency, " />
 
-<meta property="og:title" content="可运营的企业IT平台 "/>
-<meta property="og:url" content="http://yanjiong.wang/article/2015/11-09/TheOperationableEnterpriceITPlatform.htm" />
-<meta property="og:description" content="平台生产力 技术成本 学习成本 使用成本 维护成本 沟通成本 业务与技术团队沟通 技术团队内部沟通 业务价值 业务需求交付速度 业务创新力支撑 平台可运营评价维度 人员素质可发展 技术架构自主性 业务支撑连续性 上下游协作友好 管理制度平台化 平台产力提升途径 平台自动化程度 代码生成 文档生成 上下游协作流程 协作自助化程度 生产资料获得方式 社会化提问与答疑，质量与影响范围量化评估" />
+<meta property="og:title" content="用Atom在Mac OS X 下编辑reStructuredText "/>
+<meta property="og:url" content="http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor" />
+<meta property="og:description" content="基础环境 brew cask brew install caskroom/cask/brew-cask pandoc brew install pandoc 工具 Atom brew cask install atom Atom 插件 language-restructuredtext (预览首选) rst-preview-pandoc (预览备选) rst-preview 设置 rst-preview-pandoc 设置 pandoc path , 通过 brew install 的工具，一般都位于 /usr/local/bin 采用 rst-preview-pandoc 时，可以忽略 Bugfix 1 在设置 pandoc path 后，应当不会出现 Bugfix ..." />
 <meta property="og:site_name" content="王延炯博士 | Dr. Wang, YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
-<meta property="og:article:published_time" content="2015-11-09T11:24:00+08:00" />
-<meta name="twitter:title" content="可运营的企业IT平台 ">
-<meta name="twitter:description" content="平台生产力 技术成本 学习成本 使用成本 维护成本 沟通成本 业务与技术团队沟通 技术团队内部沟通 业务价值 业务需求交付速度 业务创新力支撑 平台可运营评价维度 人员素质可发展 技术架构自主性 业务支撑连续性 上下游协作友好 管理制度平台化 平台产力提升途径 平台自动化程度 代码生成 文档生成 上下游协作流程 协作自助化程度 生产资料获得方式 社会化提问与答疑，质量与影响范围量化评估">
+<meta property="og:article:published_time" content="2015-10-30T23:33:00+08:00" />
+<meta property="" content="2015-10-31T16:13:00+08:00" />
+<meta name="twitter:title" content="用Atom在Mac OS X 下编辑reStructuredText ">
+<meta name="twitter:description" content="基础环境 brew cask brew install caskroom/cask/brew-cask pandoc brew install pandoc 工具 Atom brew cask install atom Atom 插件 language-restructuredtext (预览首选) rst-preview-pandoc (预览备选) rst-preview 设置 rst-preview-pandoc 设置 pandoc path , 通过 brew install 的工具，一般都位于 /usr/local/bin 采用 rst-preview-pandoc 时，可以忽略 Bugfix 1 在设置 pandoc path 后，应当不会出现 Bugfix ...">
 
-        <title>可运营的企业IT平台  · 王延炯博士 | Dr. Wang, YanJiong
+        <title>用Atom在Mac OS X 下编辑reStructuredText  · 王延炯博士 | Dr. Wang, YanJiong
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -44,8 +45,8 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://yanjiong.wang">Home</a></li>
-                            <li ><a href="http://yanjiong.wang/page/about.htm">About</a></li>
-                            <li ><a href="http://yanjiong.wang/page/license.htm">License</a></li>
+                            <li ><a href="http://yanjiong.wang/about">About</a></li>
+                            <li ><a href="http://yanjiong.wang/license">License</a></li>
                             <li ><a href="http://yanjiong.wang/categories.html">Categories</a></li>
                             <li ><a href="http://yanjiong.wang/tags.html">Tags</a></li>
                             <li ><a href="http://yanjiong.wang/archives.html">Archives</a></li>
@@ -62,7 +63,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://yanjiong.wang/article/2015/11-09/TheOperationableEnterpriceITPlatform.htm"> 可运营的企业IT平台  </a></h1>
+    <h1><a href="http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor"> 用Atom在Mac OS X 下编辑reStructuredText  </a></h1>
     </header>
 </div>
 
@@ -73,9 +74,11 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#id1" id="id4">平台生产力</a></li>
-<li><a class="reference internal" href="#id2" id="id5">平台可运营评价维度</a></li>
-<li><a class="reference internal" href="#id3" id="id6">平台产力提升途径</a></li>
+<li><a class="reference internal" href="#id1" id="id5">基础环境</a></li>
+<li><a class="reference internal" href="#id2" id="id6">工具</a></li>
+<li><a class="reference internal" href="#id3" id="id7">设置</a></li>
+<li><a class="reference internal" href="#bugfix" id="id8">Bugfix</a></li>
+<li><a class="reference internal" href="#id4" id="id9">效果</a></li>
 </ul>
 </div>
         </nav>
@@ -86,51 +89,74 @@
             
 <!-- -->
 <div class="section" id="id1">
-<h2><a class="toc-backref" href="#id4">平台生产力</a></h2>
-<ul class="simple">
-<li>技术成本<ul>
-<li>学习成本</li>
-<li>使用成本</li>
-<li>维护成本</li>
-</ul>
+<h2><a class="toc-backref" href="#id5">基础环境</a></h2>
+<ul>
+<li><p class="first"><a class="reference external" href="https://github.com/caskroom/homebrew-cask">brew cask</a></p>
+<pre class="literal-block">
+brew install caskroom/cask/brew-cask
+</pre>
 </li>
-<li>沟通成本<ul>
-<li>业务与技术团队沟通</li>
-<li>技术团队内部沟通</li>
-</ul>
-</li>
-<li>业务价值<ul>
-<li>业务需求交付速度</li>
-<li>业务创新力支撑</li>
-</ul>
+<li><p class="first">pandoc</p>
+<pre class="literal-block">
+brew install pandoc
+</pre>
 </li>
 </ul>
 </div>
 <div class="section" id="id2">
-<h2><a class="toc-backref" href="#id5">平台可运营评价维度</a></h2>
+<h2><a class="toc-backref" href="#id6">工具</a></h2>
+<ul>
+<li><p class="first"><a class="reference external" href="http://atom.io">Atom</a></p>
+<pre class="literal-block">
+brew cask install atom
+</pre>
+</li>
+<li><p class="first">Atom 插件</p>
 <ul class="simple">
-<li>人员素质可发展</li>
-<li>技术架构自主性</li>
-<li>业务支撑连续性</li>
-<li>上下游协作友好</li>
-<li>管理制度平台化</li>
+<li><a class="reference external" href="https://github.com/Lukasa/language-restructuredtext">language-restructuredtext</a></li>
+<li>(预览首选) <a class="reference external" href="https://github.com/tohosokawa/rst-preview-pandoc">rst-preview-pandoc</a></li>
+<li>(预览备选) <a class="reference external" href="https://github.com/lsegal/atom-rst-preview">rst-preview</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2><a class="toc-backref" href="#id6">平台产力提升途径</a></h2>
+<h2><a class="toc-backref" href="#id7">设置</a></h2>
+<p><tt class="docutils literal"><span class="pre">rst-preview-pandoc</span></tt></p>
 <ul class="simple">
-<li>平台自动化程度<ul>
-<li>代码生成</li>
-<li>文档生成</li>
-<li>上下游协作流程</li>
+<li>设置 <tt class="docutils literal">pandoc path</tt> , 通过 <tt class="docutils literal">brew install</tt> 的工具，一般都位于 <tt class="docutils literal">/usr/local/bin</tt></li>
+<li>采用 <tt class="docutils literal"><span class="pre">rst-preview-pandoc</span></tt> 时，可以忽略 <tt class="docutils literal">Bugfix 1</tt></li>
+<li>在设置 <tt class="docutils literal">pandoc path</tt> 后，应当不会出现 <tt class="docutils literal">Bugfix 2</tt></li>
 </ul>
-</li>
-<li>协作自助化程度<ul>
-<li>生产资料获得方式</li>
-<li>社会化提问与答疑，质量与影响范围量化评估</li>
-</ul>
-</li>
-</ul>
+</div>
+<div class="section" id="bugfix">
+<h2><a class="toc-backref" href="#id8">Bugfix</a></h2>
+<ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">rst-preview</span></tt> <a class="reference external" href="https://github.com/lsegal/atom-rst-preview/issues/33">Live preview not working Atom 1.0.11</a></li>
+</ol>
+<blockquote>
+<p><tt class="docutils literal"><span class="pre">~/.atom/packages/rst-preview/lib/rst-preview.coffee</span></tt></p>
+<pre class="literal-block">
+# line 76-77
+# grammars = atom.config.get('rst-preview.grammars') ? []
+# return unless editor.getGrammar().scopeName in grammars
+</pre>
+</blockquote>
+<ol class="arabic simple" start="2">
+<li>Workaround on OSX for pandoc could not be spawned error</li>
+</ol>
+<blockquote>
+<p><tt class="docutils literal"><span class="pre">~/.atom/init.coffee</span></tt></p>
+<pre class="literal-block">
+process.env.PATH = ["/usr/bin",
+            "/usr/local/bin",
+            ].join(":")
+</pre>
+</blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id9">效果</a></h2>
+<img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png"/>
 </div>
 
             
@@ -139,7 +165,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://yanjiong.wang/article/2015/11-09/TheOperationableEnterpriceITPlatform.htm#disqus_thread">
+                href="http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor#disqus_thread">
                 Comments
             </a>
         </div>
@@ -149,8 +175,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'wangyanjiong';
-        var disqus_identifier = 'http://yanjiong.wang/article/2015/11-09/TheOperationableEnterpriceITPlatform.htm';
-    var disqus_url = 'http://yanjiong.wang/article/2015/11-09/TheOperationableEnterpriceITPlatform.htm';
+        var disqus_identifier = 'http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor';
+    var disqus_url = 'http://yanjiong.wang/article/2015/10-30/RSTMacOSXAtomEditor';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -173,12 +199,25 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-11-09T11:24:00+08:00">Nov 9, 2015</time>
+            <time pubdate="pubdate" datetime="2015-10-30T23:33:00+08:00">Oct 30, 2015</time>
+
+<h4>Last Updated</h4>
+<time datetime="2015-10-31T16:13:00+08:00">Oct 31, 2015</time>
+
             <h4>Category</h4>
-            <a class="category-link" href="http://yanjiong.wang/categories.html#enterpricearchitect-ref">EnterpriceArchitect</a>
+            <a class="category-link" href="http://yanjiong.wang/categories.html#efficiency-ref">Efficiency</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://yanjiong.wang/tags.html#qi-ye-jia-gou-ref">企业架构
+                <li><a href="http://yanjiong.wang/tags.html#atom-ref">Atom
+                    <span>2</span>
+</a></li>
+                <li><a href="http://yanjiong.wang/tags.html#mac-os-x-ref">Mac OS X
+                    <span>3</span>
+</a></li>
+                <li><a href="http://yanjiong.wang/tags.html#restructuredtext-ref">reStructuredText
+                    <span>1</span>
+</a></li>
+                <li><a href="http://yanjiong.wang/tags.html#xiao-lu-ref">效率
                     <span>3</span>
 </a></li>
             </ul>
