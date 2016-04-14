@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="唯一性标识的矛盾 "/>
 <meta property="og:url" content="http://yanjiong.wang/article/2016/04-14/TheConflictionOfID" />
-<meta property="og:description" content="唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。 唯一性标识的生成方法众多，典型的有 算法生成类 数据库的自动生成，例如MySQL的Auto Increment自增特性 分布式的生成算法，例如Twitter的64bit自增 SnowFlake2010 128bit长的`UUID &lt;https://en.wikipedia.org/wiki/Universally_unique_identifier&gt;`_ 基于具体场景，设计相关算法，在使用时自动生成 人工输入类 纯字母 字母数字组合 唯一性标识的生成结果有两种 可转换为全数字，例如SnowFlake 16进制字符，例如UUID 唯一性标识的可用性评价维度 隐私保护 整体可用容量 单位时间可用量 首次生成简便性 后期录入简便性 后期迁移简便性 人工阅读可预判性 分库分表可路由性 一些具体的潜在的易用性维度 最好能够反映一些和具体使用场景有关的信息 ..." />
+<meta property="og:description" content="唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。 唯一性标识的生成方法众多，典型的有 算法生成类 数据库的自动生成，例如MySQL的Auto Increment自增特性 分布式的生成算法，例如Twitter的64bit自增 SnowFlake2010 128bit长的 UUID 基于具体场景，设计相关算法，在使用时自动生成 人工输入类 纯字母 字母数字组合 唯一性标识的生成结果有两种 可转换为全数字，例如SnowFlake 16进制字符，例如UUID 唯一性标识的可用性评价维度 隐私保护 整体可用容量 单位时间可用量 首次生成简便性 后期录入简便性 后期迁移简便性 人工阅读可预判性 分库分表可路由性 一些具体的潜在的易用性维度 最好能够反映一些和具体使用场景有关的信息，例如身份证的前14位。 尽可能的短 简便的键盘输入，比如纯数字或纯小写字母" />
 <meta property="og:site_name" content="王延炯博士 | Dr. Wang, YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
 <meta property="og:article:published_time" content="2016-04-14T16:18:00+08:00" />
 <meta name="twitter:title" content="唯一性标识的矛盾 ">
-<meta name="twitter:description" content="唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。 唯一性标识的生成方法众多，典型的有 算法生成类 数据库的自动生成，例如MySQL的Auto Increment自增特性 分布式的生成算法，例如Twitter的64bit自增 SnowFlake2010 128bit长的`UUID &lt;https://en.wikipedia.org/wiki/Universally_unique_identifier&gt;`_ 基于具体场景，设计相关算法，在使用时自动生成 人工输入类 纯字母 字母数字组合 唯一性标识的生成结果有两种 可转换为全数字，例如SnowFlake 16进制字符，例如UUID 唯一性标识的可用性评价维度 隐私保护 整体可用容量 单位时间可用量 首次生成简便性 后期录入简便性 后期迁移简便性 人工阅读可预判性 分库分表可路由性 一些具体的潜在的易用性维度 最好能够反映一些和具体使用场景有关的信息 ...">
+<meta name="twitter:description" content="唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。 唯一性标识的生成方法众多，典型的有 算法生成类 数据库的自动生成，例如MySQL的Auto Increment自增特性 分布式的生成算法，例如Twitter的64bit自增 SnowFlake2010 128bit长的 UUID 基于具体场景，设计相关算法，在使用时自动生成 人工输入类 纯字母 字母数字组合 唯一性标识的生成结果有两种 可转换为全数字，例如SnowFlake 16进制字符，例如UUID 唯一性标识的可用性评价维度 隐私保护 整体可用容量 单位时间可用量 首次生成简便性 后期录入简便性 后期迁移简便性 人工阅读可预判性 分库分表可路由性 一些具体的潜在的易用性维度 最好能够反映一些和具体使用场景有关的信息，例如身份证的前14位。 尽可能的短 简便的键盘输入，比如纯数字或纯小写字母">
 
         <title>唯一性标识的矛盾  · 王延炯博士 | Dr. Wang, YanJiong
 </title>
@@ -78,7 +78,7 @@
 <dd><ul class="first last simple">
 <li>数据库的自动生成，例如MySQL的Auto Increment自增特性</li>
 <li>分布式的生成算法，例如Twitter的64bit自增 <a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010">SnowFlake2010</a></li>
-<li>128bit长的`UUID &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Universally_unique_identifier">https://en.wikipedia.org/wiki/Universally_unique_identifier</a>&gt;`_</li>
+<li>128bit长的 <a class="reference external" href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a></li>
 <li>基于具体场景，设计相关算法，在使用时自动生成</li>
 </ul>
 </dd>
