@@ -13,7 +13,7 @@
 <meta name="keywords" content="唯一性标识, Architecture, " />
 
 <meta property="og:title" content="唯一性标识的矛盾 "/>
-<meta property="og:url" content="http://yanjiong.wang/article/2016/04-14/TheConflictionOfID" />
+<meta property="og:url" content="/article/2016/04-14/TheConflictionOfID" />
 <meta property="og:description" content="唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。 唯一性标识的生成方法众多，典型的有 算法生成类 数据库的自动生成，例如MySQL的Auto Increment自增特性 分布式的生成算法，例如Twitter的64bit自增 SnowFlake2010 128bit长的 UUID 基于具体场景，设计相关算法，在使用时自动生成 人工输入类 纯字母 字母数字组合 唯一性标识的生成结果有两种 可转换为全数字，例如SnowFlake 16进制字符，例如UUID 唯一性标识的可用性评价维度 隐私保护 整体可用容量 单位时间可用量 首次生成简便性 后期录入简便性 后期迁移简便性 人工阅读可预判性 分库分表可路由性 一些具体的潜在的易用性维度 最好能够反映一些和具体使用场景有关的信息，例如身份证的前14位。 尽可能的短 简便的键盘输入，比如纯数字或纯小写字母" />
 <meta property="og:site_name" content="王延炯博士 | Dr. Wang, YanJiong" />
 <meta property="og:article:author" content="Wang YanJiong" />
@@ -25,10 +25,10 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://yanjiong.wang/theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
     </head>
     <body>
         <div id="content-sans-footer">
@@ -40,16 +40,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://yanjiong.wang/"><span class=site-name>王延炯博士 | Dr. Wang, YanJiong</span></a>
+                    <a class="brand" href="/"><span class=site-name>王延炯博士 | Dr. Wang, YanJiong</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://yanjiong.wang">Home</a></li>
-                            <li ><a href="http://yanjiong.wang/about">About</a></li>
-                            <li ><a href="http://yanjiong.wang/license">License</a></li>
-                            <li ><a href="http://yanjiong.wang/categories.html">Categories</a></li>
-                            <li ><a href="http://yanjiong.wang/tags.html">Tags</a></li>
-                            <li ><a href="http://yanjiong.wang/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://yanjiong.wang/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/about">About</a></li>
+                            <li ><a href="/license">License</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://yanjiong.wang/article/2016/04-14/TheConflictionOfID"> 唯一性标识的矛盾  </a></h1>
+    <h1><a href="/article/2016/04-14/TheConflictionOfID"> 唯一性标识的矛盾  </a></h1>
     </header>
 </div>
 
@@ -118,40 +118,7 @@
 </ul>
 
             
-            <section>
-<div class="accordion" id="accordion2">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://yanjiong.wang/article/2016/04-14/TheConflictionOfID#disqus_thread">
-                Comments
-            </a>
-        </div>
-        <div id="disqus_thread" class="accordion-body collapse">
-            <div class="accordion-inner">
-                <div class="comments">
-                    <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'wangyanjiong';
-        var disqus_identifier = 'http://yanjiong.wang/article/2016/04-14/TheConflictionOfID';
-    var disqus_url = 'http://yanjiong.wang/article/2016/04-14/TheConflictionOfID';
-
-    (function() {
-         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
+            
             <hr/>
         </div>
         <section>
@@ -159,15 +126,15 @@
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-04-14T16:18:00+08:00">Apr 14, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://yanjiong.wang/categories.html#architecture-ref">Architecture</a>
+            <a class="category-link" href="/categories.html#architecture-ref">Architecture</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://yanjiong.wang/tags.html#wei-yi-xing-biao-shi-ref">唯一性标识
+                <li><a href="/tags.html#wei-yi-xing-biao-shi-ref">唯一性标识
                     <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
-    <a href="https://www.linkedin.com/pub/yanjiong-wang/35/28a/356" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://cn.linkedin.com/in/wangyanjiong" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-linkedin sidebar-social-links"></i></a>
         </div>
         </section>
@@ -194,45 +161,7 @@
             }
         </script>
 
-            <script type="text/javascript">
-var disqus_shortname = 'wangyanjiong';
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
-<script  language="javascript" type="text/javascript">
-function uncollapse() {
-    if (window.location.hash.match(/^#comment-\d+$/)) {
-        $('#disqus_thread').collapse('show');
-    }
-}
-</script>
-<script type="text/javascript" language="JavaScript">
-uncollapse();
-window.onhashchange=function(){
-    if (window.location.hash.match(/^#comment-\d+$/))
-        window.location.reload(true);
-}
-</script>
-<script>
-$('#disqus_thread').on('shown', function () {
-    var link = document.getElementsByClassName('accordion-toggle');
-    var old_innerHTML = link[0].innerHTML;
-    $(link[0]).fadeOut(500, function() {
-        $(this).text('Click here to hide comments').fadeIn(500);
-    });
-    $('#disqus_thread').on('hidden', function () {
-        $(link[0]).fadeOut(500, function() {
-            $(this).text(old_innerHTML).fadeIn(500);
-        });
-    })
-})
-</script>
-
-
+    
     </body>
     <!-- Theme: Elegant built for Pelican
     License : http://oncrashreboot.com/pelican-elegant -->
