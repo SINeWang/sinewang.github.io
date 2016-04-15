@@ -1,96 +1,70 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Wang YanJiong" />
-        <meta name="copyright" content="Wang YanJiong" />
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>王延炯博士 | Dr. Wang, YanJiong - 从元宵节煮汤圆看架构的识别与设计</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
 
-<meta name="keywords" content="生活与架构, Architecture, " />
+    <!-- Le styles -->
+    <link href="/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="/theme/local.css" rel="stylesheet">
+    <link href="/theme/pygments.css" rel="stylesheet">
 
-<meta property="og:title" content="从元宵节煮汤圆看架构的识别与设计 "/>
-<meta property="og:url" content="/article/2016/02-22/TangYuanInsightArchitecture" />
-<meta property="og:description" content="什么是架构 所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。 采用什么办法解决问题，和客观的条件有关，也和当事人有关。 因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。 什么是「好」架构 「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。 「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。 老一辈交代的煮汤圆方法（煮汤圆的传统架构） 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第4/5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关 ..." />
-<meta property="og:site_name" content="王延炯博士 | Dr. Wang, YanJiong" />
-<meta property="og:article:author" content="Wang YanJiong" />
-<meta property="og:article:published_time" content="2016-02-22T16:33:00+08:00" />
-<meta name="twitter:title" content="从元宵节煮汤圆看架构的识别与设计 ">
-<meta name="twitter:description" content="什么是架构 所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。 采用什么办法解决问题，和客观的条件有关，也和当事人有关。 因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。 什么是「好」架构 「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。 「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。 老一辈交代的煮汤圆方法（煮汤圆的传统架构） 这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下 取一锅干净的冷水 把冷水煮开 把适量的汤圆放入锅中 等水再次烧开 加入冷水，以保持汤圆不被煮破 重复第4/5步若干次 汤圆变熟，捞出享用 一定还有更多方法，因为煮汤圆的过程，和锅有关 ...">
+    <!-- So Firefox can bookmark->"abo this site" -->
 
-        <title>从元宵节煮汤圆看架构的识别与设计  · 王延炯博士 | Dr. Wang, YanJiong
-</title>
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
-    </head>
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="/"><span class=site-name>王延炯博士 | Dr. Wang, YanJiong</span></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/about">About</a></li>
-                            <li ><a href="/license">License</a></li>
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="">王延炯博士 | Dr. Wang, YanJiong</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+            
+            <li><a href="/about">About</a></li>
+            <li><a href="/license">License</a></li>
+        </ul>
         </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1"></div>
-                <div class="span10">
-<article>
-<div class="row-fluid">
-    <header class="page-header span10 offset2">
-    <h1><a href="/article/2016/02-22/TangYuanInsightArchitecture"> 从元宵节煮汤圆看架构的识别与设计  </a></h1>
-    </header>
-</div>
-
-<div class="row-fluid">
-    <div class="span2 table-of-content">
-        <nav>
-        <h4>Contents</h4>
-        <div class="toc" id="">
-
-<ul class="simple">
-<li><a class="reference internal" href="#id2" id="id12">什么是架构</a></li>
-<li><a class="reference internal" href="#id3" id="id13">什么是「好」架构</a></li>
-<li><a class="reference internal" href="#id4" id="id14">老一辈交代的煮汤圆方法（煮汤圆的传统架构）</a></li>
-<li><a class="reference internal" href="#id5" id="id15">老一辈交代的煮汤圆方法好不好（煮汤圆的传统架构好不好）</a></li>
-<li><a class="reference internal" href="#id6" id="id16">煮汤圆的目标（好吃有卖相）</a></li>
-<li><a class="reference internal" href="#id7" id="id17">把煮熟汤圆「好吃」的关键要素（根据现象看本质）</a></li>
-<li><a class="reference internal" href="#id8" id="id18">到底要如何煮汤圆</a></li>
-<li><a class="reference internal" href="#id9" id="id19">又快又好把汤圆煮熟（最佳实践）</a></li>
-<li><a class="reference internal" href="#id10" id="id20">非常规的花式煮汤圆秘籍（聪明人秀才艺）</a></li>
-<li><a class="reference internal" href="#id11" id="id21">智能煮汤圆产品设计（延伸阅读）</a></li>
-</ul>
-</div>
-        </nav>
+        
     </div>
-    <div class="span8 article-content">
+    </div>
+</div>
 
-            
-            
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+    <div class='article'>
+        <div class="content-title">
+            <h1>从元宵节煮汤圆看架构的识别与设计</h1>
+Mon 22 February 2016
+
+by <a class="url fn" href="/author/wang-yanjiong.html">Wang YanJiong</a>
+ 
+
+
+        </div>
+	
+        <div>
 <!-- -->
 <div class="section" id="id2">
 <h2><a class="toc-backref" href="#id12">什么是架构</a></h2>
@@ -279,53 +253,84 @@
 <li>消费者惊奇的发现，「智能煮汤圆机」其实还能煮馄饨、煮饺子...</li>
 </ul>
 </div>
-
-            
-            
-            <hr/>
-        </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
-            <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-02-22T16:33:00+08:00">Feb 22, 2016</time>
-            <h4>Category</h4>
-            <a class="category-link" href="/categories.html#architecture-ref">Architecture</a>
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article">
-                <li><a href="/tags.html#sheng-huo-yu-jia-gou-ref">生活与架构
-                    <span>1</span>
-</a></li>
-            </ul>
-<h4>Contact</h4>
-    <a href="https://cn.linkedin.com/in/wangyanjiong" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-linkedin sidebar-social-links"></i></a>
-        </div>
-        </section>
 </div>
-</article>
-                </div>
-                <div class="span1"></div>
-            </div>
-        </div>
-        <div id="push"></div>
+	
+        <hr>
+
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wangyanjiong'; 
+    var disqus_title = '从元宵节煮汤圆看架构的识别与设计';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-<footer>
-<div id="footer">
-    <ul class="footer-content">
-        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
-    </ul>
-</div>
-</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
+        </div>
+        
+        <div class="span3">
 
-    
-    </body>
-    <!-- Theme: Elegant built for Pelican
-    License : http://oncrashreboot.com/pelican-elegant -->
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="/archives.html">Archives</a>
+                <li><a href="/tags.html">Tags</a>
+
+
+
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                <li><a href="/category/architecture.html">Architecture</a></li>
+                <li><a href="/category/bookreview.html">BookReview</a></li>
+                <li><a href="/category/efficiency.html">Efficiency</a></li>
+                <li><a href="/category/idea.html">Idea</a></li>
+                <li><a href="/category/pelican.html">Pelican</a></li>
+                   
+            </ul>
+            </div>
+
+
+
+
+            <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Social
+                </li>
+           
+                <li><a href="https://cn.linkedin.com/in/wangyanjiong">LinkedIn</a></li>
+            </ul>
+            </div>
+            </div>
+
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="">王延炯博士 | Dr. Wang, YanJiong</a> &copy; Wang YanJiong 2016</p>
+</footer>
+
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/theme/bootstrap-collapse.js"></script>
+ 
+</body>
 </html>
