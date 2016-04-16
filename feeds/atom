@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 看世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/atom" rel="self"></link><id>/</id><updated>2016-04-14T16:18:00+08:00</updated><entry><title>唯一性标识的矛盾</title><link href="/article/2016/04-14/TheConflictionOfID" rel="alternate"></link><updated>2016-04-14T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-14:article/2016/04-14/TheConflictionOfID</id><summary type="html">&lt;p&gt;唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 看世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/atom" rel="self"></link><id>/</id><updated>2016-04-14T16:18:00+08:00</updated><entry><title>唯一性标识的矛盾</title><link href="/articles/TheConflictionOfID" rel="alternate"></link><updated>2016-04-14T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-14:articles/TheConflictionOfID</id><summary type="html">&lt;p&gt;唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。&lt;/p&gt;
 &lt;p&gt;唯一性标识的生成方法众多，典型的有&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
@@ -45,7 +45,7 @@
 &lt;li&gt;尽可能的短&lt;/li&gt;
 &lt;li&gt;简便的键盘输入，比如纯数字或纯小写字母&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="唯一性标识"></category></entry><entry><title>变是永远不变的现实情况</title><link href="/article/2016/03-30/Changing" rel="alternate"></link><updated>2016-03-30T08:41:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-30:article/2016/03-30/Changing</id><summary type="html">&lt;p&gt;系统的上线就意味着给业务带上了手铐。（已经忘了是从哪听来的这句话了）&lt;/p&gt;
+</summary><category term="唯一性标识"></category></entry><entry><title>变是永远不变的现实情况</title><link href="/articles/Changing" rel="alternate"></link><updated>2016-03-30T08:41:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-30:articles/Changing</id><summary type="html">&lt;p&gt;系统的上线就意味着给业务带上了手铐。（已经忘了是从哪听来的这句话了）&lt;/p&gt;
 &lt;p&gt;变是永远不变的现实情况，因为变是源自于认知的升级。&lt;/p&gt;
 &lt;p&gt;变有哪几种类型呢？假设以纯人工方式进行一项业务：&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -63,13 +63,13 @@
 &lt;p&gt;一个微服务 ( Actor ) 应该是一个职能在虚拟世界中的投影，一组微服务构成的能力域 ( Domain ) 就应该是一个部门在虚拟世界中的投影。&lt;/p&gt;
 &lt;p&gt;一个职能对应于一个微服务 ( Actor ) ，是合理的。&lt;/p&gt;
 &lt;p&gt;微服务有多少种不同结构上的拓扑形态，应该是取决于自然社会的业务形态。&lt;/p&gt;
-</summary><category term="架构"></category><category term="微服务"></category></entry><entry><title>信息系统和平行宇宙</title><link href="/article/2016/03-18/ITTheMirrorOfParallelUniverses" rel="alternate"></link><updated>2016-03-18T21:26:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-18:article/2016/03-18/ITTheMirrorOfParallelUniverses</id><summary type="html">&lt;p&gt;信息系统（软件和硬件）就是从自然世界向虚拟世界的映射。&lt;/p&gt;
+</summary><category term="架构"></category><category term="微服务"></category></entry><entry><title>信息系统和平行宇宙</title><link href="/articles/ITTheMirrorOfParallelUniverses" rel="alternate"></link><updated>2016-03-18T21:26:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-18:articles/ITTheMirrorOfParallelUniverses</id><summary type="html">&lt;p&gt;信息系统（软件和硬件）就是从自然世界向虚拟世界的映射。&lt;/p&gt;
 &lt;p&gt;每个企业，每个行业，都以唯心的方式（意识决定形态，用自己的意识决定自己虚拟世界的形态）向虚拟世界映射。&lt;/p&gt;
 &lt;p&gt;于是，这个自然世界形成了若干个、无数个虚拟世界，也就是自然世界的若干个平行宇宙。&lt;/p&gt;
 &lt;p&gt;每个IT系统的所有者，都在想尽办法，更快、更精准的去刻画自己的平行宇宙，并在自己的宇宙里，分析自然世界，并把结果反作用于自然世界。&lt;/p&gt;
 &lt;p&gt;任何一种依靠人类体力劳动和脑力劳动的方式，最终都会比不过以「智能信息系统」自己作为映射工具的方式。&lt;/p&gt;
 &lt;p&gt;也许，正在打开的是一扇门，通往平行宇宙的一扇门。&lt;/p&gt;
-</summary><category term="信息系统"></category><category term="平行宇宙"></category></entry><entry><title>好的架构师，挖空心思偷懒</title><link href="/article/2016/03-11/ArchitectArchitecture" rel="alternate"></link><updated>2016-03-11T21:11:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-11:article/2016/03-11/ArchitectArchitecture</id><summary type="html">&lt;p&gt;架构，是解决问题的模式。&lt;/p&gt;
+</summary><category term="信息系统"></category><category term="平行宇宙"></category></entry><entry><title>好的架构师，挖空心思偷懒</title><link href="/articles/ArchitectArchitecture" rel="alternate"></link><updated>2016-03-11T21:11:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-11:articles/ArchitectArchitecture</id><summary type="html">&lt;p&gt;架构，是解决问题的模式。&lt;/p&gt;
 &lt;p&gt;架构师，是这个模式的设计者。&lt;/p&gt;
 &lt;p&gt;问题的出现，是因为人的贪婪。&lt;/p&gt;
 &lt;p&gt;架构的出现，是因为人的偷懒。&lt;/p&gt;
@@ -81,7 +81,7 @@
 &lt;p&gt;好的架构，省时省力省心。&lt;/p&gt;
 &lt;p&gt;好的架构，折射人的贪婪。&lt;/p&gt;
 &lt;p&gt;好的架构师，挖空心思偷懒。&lt;/p&gt;
-</summary><category term="架构师"></category><category term="架构"></category></entry><entry><title>从元宵节煮汤圆看架构的识别与设计</title><link href="/article/2016/02-22/TangYuanInsightArchitecture" rel="alternate"></link><updated>2016-02-22T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-02-22:article/2016/02-22/TangYuanInsightArchitecture</id><summary type="html">
+</summary><category term="架构师"></category><category term="架构"></category></entry><entry><title>从元宵节煮汤圆看架构的识别与设计</title><link href="/articles/TangYuanInsightArchitecture" rel="alternate"></link><updated>2016-02-22T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-02-22:articles/TangYuanInsightArchitecture</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;什么是架构&lt;/a&gt;&lt;/h2&gt;
@@ -270,7 +270,7 @@
 &lt;li&gt;消费者惊奇的发现，「智能煮汤圆机」其实还能煮馄饨、煮饺子...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="生活与架构"></category></entry><entry><title>用Atom在Mac OS X 下编辑PlantUML</title><link href="/article/2016/01-29/PUMLMacOSXAtomEditor" rel="alternate"></link><updated>2016-01-30T10:39:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-01-29:article/2016/01-29/PUMLMacOSXAtomEditor</id><summary type="html">
+</summary><category term="生活与架构"></category></entry><entry><title>用Atom在Mac OS X 下编辑PlantUML</title><link href="/articles/PUMLMacOSXAtomEditor" rel="alternate"></link><updated>2016-01-30T10:39:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-01-29:articles/PUMLMacOSXAtomEditor</id><summary type="html">
 &lt;!-- --&gt;
 &lt;p&gt;Atom的插件: plantuml-viewer 它支持&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -331,7 +331,7 @@ brew cask install atom
 &lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;效果&lt;/a&gt;&lt;/h2&gt;
 &lt;img alt="AutoWithPlantUML ScreenShot" src="/images/2016/01-29/AtomWithPlantUML.png"/&gt;
 &lt;/div&gt;
-</summary><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>从「差评级汽车4S店维修服务」看汽车服务行业的企业软件发展空间</title><link href="/article/2015/12-31/AutoRepair4SEnterpriseSoftwareEvolution" rel="alternate"></link><updated>2015-12-31T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-12-31:article/2015/12-31/AutoRepair4SEnterpriseSoftwareEvolution</id><summary type="html">
+</summary><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>从「差评级汽车4S店维修服务」看汽车服务行业的企业软件发展空间</title><link href="/articles/AutoRepair4SEnterpriseSoftwareEvolution" rel="alternate"></link><updated>2015-12-31T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-12-31:articles/AutoRepair4SEnterpriseSoftwareEvolution</id><summary type="html">
 &lt;!-- --&gt;
 &lt;p&gt;汽车已经成为中国大城市家庭出行主要方式之一，随之出现的大大小小事故，可能每位车主都会经历。&lt;/p&gt;
 &lt;p&gt;如果出现一次多方事故，责任方，交警，保险公司，一定会成为事故处理的必要成员，很多时候定损中心也是大概率出现的主角。&lt;/p&gt;
@@ -365,7 +365,7 @@ brew cask install atom
 &lt;p&gt;云计算与移动化，企业内部多系统实时数据互通，内部系统与互联网社交平台的集成，已经成为改善传统服务行业客户体验的必然之路。&lt;/p&gt;
 &lt;p&gt;传统企业的软件架构，背后折射的是企业整体的业务管理水平；企业业务的升级，需要背后企业软件架构的升级。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="企业架构"></category></entry><entry><title>可运营的企业IT平台</title><link href="/article/2015/11-09/TheOperationableEnterpriceITPlatform" rel="alternate"></link><updated>2015-11-09T11:24:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-11-09:article/2015/11-09/TheOperationableEnterpriceITPlatform</id><summary type="html">
+</summary><category term="企业架构"></category></entry><entry><title>可运营的企业IT平台</title><link href="/articles/TheOperationableEnterpriceITPlatform" rel="alternate"></link><updated>2015-11-09T11:24:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-11-09:articles/TheOperationableEnterpriceITPlatform</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;平台生产力&lt;/a&gt;&lt;/h2&gt;
@@ -414,7 +414,7 @@ brew cask install atom
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="企业架构"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/article/2015/10-30/RSTMacOSXAtomEditor" rel="alternate"></link><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-30:article/2015/10-30/RSTMacOSXAtomEditor</id><summary type="html">
+</summary><category term="企业架构"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/articles/RSTMacOSXAtomEditor" rel="alternate"></link><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-30:articles/RSTMacOSXAtomEditor</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
@@ -486,7 +486,7 @@ process.env.PATH = ["/usr/bin",
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;效果&lt;/a&gt;&lt;/h2&gt;
 &lt;img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png"/&gt;
 &lt;/div&gt;
-</summary><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>传统企业与互联网企业的软件价值观</title><link href="/article/2015/10-19/TraditionalVsInternetEnterpriseSoftwareValues" rel="alternate"></link><updated>2015-10-20T22:52:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-19:article/2015/10-19/TraditionalVsInternetEnterpriseSoftwareValues</id><summary type="html">
+</summary><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>传统企业与互联网企业的软件价值观</title><link href="/articles/TraditionalVsInternetEnterpriseSoftwareValues" rel="alternate"></link><updated>2015-10-20T22:52:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-19:articles/TraditionalVsInternetEnterpriseSoftwareValues</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;从单个计算机到互联网&lt;/a&gt;&lt;/h2&gt;
@@ -561,7 +561,7 @@ process.env.PATH = ["/usr/bin",
 &lt;p&gt;直观的做法是以劳动人口数量直接来弥补社会劳动力的缺失，以创造足够的财富供养老人。&lt;/p&gt;
 &lt;p&gt;中国劳动人口基数庞大，如果信息化手段能够提高社会生产效率，也许能够降低延迟退休政策所引起的群体排斥心理。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="企业架构"></category><category term="互联网+"></category><category term="工业4.0"></category><category term="软件价值观"></category></entry><entry><title>Mac OS X环境</title><link href="/article/2015/10-18/MacOSXEnvironment" rel="alternate"></link><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-18:article/2015/10-18/MacOSXEnvironment</id><summary type="html">
+</summary><category term="企业架构"></category><category term="互联网+"></category><category term="工业4.0"></category><category term="软件价值观"></category></entry><entry><title>Mac OS X环境</title><link href="/articles/MacOSXEnvironment" rel="alternate"></link><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-18:articles/MacOSXEnvironment</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="mail"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Mail&lt;/a&gt;&lt;/h2&gt;
@@ -694,7 +694,7 @@ process.env.PATH = ["/usr/bin",
 &lt;li&gt;&lt;a class="reference external" href="http://cord.sourceforge.net/"&gt;CoRD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/article/2015/10-16/pelican-toc-plugin" rel="alternate"></link><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-16:article/2015/10-16/pelican-toc-plugin</id><summary type="html">
+</summary><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-16:articles/pelican-toc-plugin</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
@@ -729,7 +729,7 @@ category: pelican
 ### 插件准备
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="Pelican"></category></entry><entry><title>把时间当做朋友</title><link href="/article/2014/05-31/TakeTimeAsAFriend" rel="alternate"></link><updated>2014-05-31T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2014-05-31:article/2014/05-31/TakeTimeAsAFriend</id><summary type="html">&lt;!--  --&gt;
+</summary><category term="Pelican"></category></entry><entry><title>把时间当做朋友</title><link href="/articles/TakeTimeAsAFriend" rel="alternate"></link><updated>2014-05-31T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2014-05-31:articles/TakeTimeAsAFriend</id><summary type="html">&lt;!--  --&gt;
 &lt;p&gt;李笑来：《把时间当做朋友》&lt;/p&gt;
 &lt;p&gt;能力：&lt;strong&gt;我们要努力，我们要坚持，我们要学习，我们要有志向，即使不是那么远大&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;欲望：守住自己的心&lt;/p&gt;
