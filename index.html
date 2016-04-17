@@ -78,7 +78,7 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
  -->
         </div>
 
-        <div><p>唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。</p>
+        <!-- <div><p>唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。</p>
 <p>唯一性标识的生成方法众多，典型的有</p>
 <ul>
 <li><dl class="first docutils">
@@ -124,7 +124,16 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 <li>尽可能的短</li>
 <li>简便的键盘输入，比如纯数字或纯小写字母</li>
 </ul>
-</div>
+</div> -->
+        <div class="summary"><p>唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。</p>
+<p>唯一性标识的生成方法众多，典型的有</p>
+<ul>
+<li><dl class="first docutils">
+<dt>算法生成类</dt>
+<dd><ul class="first last simple">
+<li>数据库的自动生成，例如MySQL的Auto Increment自增特性</li>
+<li>分布式的生成算法，例如Twitter的64bit自增 <a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010">SnowFlake2010</a></li>
+<li>128bit长的 ...</li></ul></dd></dl></li></ul> <a class="btn btn-info xsmall" href="/articles/TheConflictionOfID">read more</a></div>
         <hr />
     </div>
 
@@ -144,14 +153,7 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 <ul class="simple">
 <li>个体变了（单个职责 [ 功能 ] 变了，不影响他人）</li>
 <li>流程变了（分工界面 [ 接口 ] 变了，会影响他人）</li>
-<li>流量变了（功能分工都没变，就是要多安排人手 [ 水平扩容 ] ）</li>
-</ul>
-<p>一般来说，一个信息系统的交付，一定是以整体需求为基础，按照瀑布或敏捷方式进行交付的。</p>
-<p>在这个交付过程中，工程师们在落地形态上，会把一些「功能」和「接口」在物理形态上进行集成。</p>
-<p>这样高聚合的实现设计，一方面是由于过往硬件成本过高，另一方面也是由于担心跨进程所引起的不必要性能开销。</p>
-<p>高聚合的设计，为将来系统进行业务进化，种下了许多「技术债务」的种子。</p>
-<p>技术债务中的很大一部分，来自于后人对「业务逻辑」的不理解，没有文档，晦涩难懂的接口名称，一团乱麻的逻辑......</p>
-<p>在微服务落地的过程中，当系统落地方，接手一个完整的、冗长的业务需求说明 ...</p> <a class="btn btn-info xsmall" href="/articles/Changing">read more</a></div>
+<li>流量变了（功能分工都没变，就是要多安排人手 [ 水平扩容 ...</li></ul> <a class="btn btn-info xsmall" href="/articles/Changing">read more</a></div>
     </div>
 
 
@@ -167,10 +169,7 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
         <div class="summary"><p>信息系统（软件和硬件）就是从自然世界向虚拟世界的映射。</p>
 <p>每个企业，每个行业，都以唯心的方式（意识决定形态，用自己的意识决定自己虚拟世界的形态）向虚拟世界映射。</p>
 <p>于是，这个自然世界形成了若干个、无数个虚拟世界，也就是自然世界的若干个平行宇宙。</p>
-<p>每个IT系统的所有者，都在想尽办法，更快、更精准的去刻画自己的平行宇宙，并在自己的宇宙里，分析自然世界，并把结果反作用于自然世界。</p>
-<p>任何一种依靠人类体力劳动和脑力劳动的方式，最终都会比不过以「智能信息系统」自己作为映射工具的方式。</p>
-<p>也许，正在打开的是一扇门，通往平行宇宙的一扇门。</p>
- <a class="btn btn-info xsmall" href="/articles/ITTheMirrorOfParallelUniverses">read more</a></div>
+<p>每个IT系统的所有者，都在想尽办法，更快、更精准的去刻画自己的平行宇宙，并在自己的宇宙里，分析自然世界，并把结果反作用于自然世界 ...</p> <a class="btn btn-info xsmall" href="/articles/ITTheMirrorOfParallelUniverses">read more</a></div>
     </div>
 
 
@@ -192,10 +191,7 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 <p>架构的多变，是因为万物多变。</p>
 <p>架构的不变，是因为万物相通。</p>
 <p>好的架构，以不变应万变。</p>
-<p>好的架构，省时省力省心。</p>
-<p>好的架构，折射人的贪婪。</p>
-<p>好的架构师，挖空心思偷懒。</p>
- <a class="btn btn-info xsmall" href="/articles/ArchitectArchitecture">read more</a></div>
+<p>好的架构，省时省力省心 ...</p> <a class="btn btn-info xsmall" href="/articles/ArchitectArchitecture">read more</a></div>
     </div>
 
 
@@ -218,22 +214,7 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 </div>
 <div class="section" id="id3">
 <h2><a class="toc-backref" href="#id13">什么是「好」架构</a></h2>
-<p>「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。</p>
-<p>「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。</p>
-</div>
-<div class="section" id="id4">
-<h2><a class="toc-backref" href="#id14">老一辈交代的煮汤圆方法（煮汤圆的传统架构）</a></h2>
-<p>这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下</p>
-<ol class="arabic simple">
-<li>取一锅干净的冷水</li>
-<li>把冷水煮开</li>
-<li>把适量的汤圆放入锅中</li>
-<li>等水再次烧开</li>
-<li>加入冷水，以保持汤圆不被煮破</li>
-<li>重复第4/5步若干次</li>
-<li>汤圆变熟，捞出享用</li>
-</ol>
-<p>一定还有更多方法，因为煮汤圆的过程，和锅有关 ...</p></div></!--> <a class="btn btn-info xsmall" href="/articles/TangYuanInsightArchitecture">read more</a></div>
+<p>「好」架构，应当是对架构使用人「简单 ...</p></div></!--> <a class="btn btn-info xsmall" href="/articles/TangYuanInsightArchitecture">read more</a></div>
     </div>
 
 <div class="pagination">

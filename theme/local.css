@@ -53,9 +53,9 @@ h3 { margin-top: 2.5em; }
     margin: 0;
 }
 .list-of-tags a {
-    background: #EEE;
+    background: #2E435E;
     border-radius: 3px;
-    color: #222;
+    color: #FFFFFF;
     margin: 2px;
     padding: 3px 6px;
     text-decoration: none;
@@ -68,16 +68,14 @@ h3 { margin-top: 2.5em; }
     float: none;
     line-height: 28px;
 }
-.tag-title {
-    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Sans-Serif;
-}
-.articles-in-tag li {
-    font: 1.1em/1.6em 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Sans-Serif;
-}
 
 /* category */
 a.category-link {
-    color: #333;
+    background: #2E435E;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 3px 6px;
+    color: #FFFFFF;
 }
 a.category-link:hover {
     text-decoration: none;
