@@ -76,6 +76,7 @@ a.category-link {
     margin: 2px;
     padding: 3px 6px;
     color: #FFFFFF;
+    line-height: 28px;
 }
 a.category-link:hover {
     text-decoration: none;
