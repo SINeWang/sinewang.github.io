@@ -37,8 +37,8 @@ A standards group or individual outside the &lt;a class="reference external" hre
 是一类被新的 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments"&gt;RFC&lt;/a&gt; 替换了的 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments"&gt;RFC&lt;/a&gt; ，
 被替换不代表已经根据这些 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments"&gt;RFC&lt;/a&gt; 所实现的软件按照新的 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments"&gt;RFC&lt;/a&gt; 都进行了更新升级。&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.ietf.org/rfc/rfc2068.txt"&gt;RFC-2068&lt;/a&gt; , January 1997&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.ietf.org/rfc/rfc2616.txt"&gt;RFC-2616&lt;/a&gt; , June 1999&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ietf.org/rfc/rfc2068.txt"&gt;RFC-2068&lt;/a&gt; : Hypertext Transfer Protocol -- HTTP/1.1, January 1997&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ietf.org/rfc/rfc2616.txt"&gt;RFC-2616&lt;/a&gt; : Hypertext Transfer Protocol -- HTTP/1.1, June 1999&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </summary><category term="HTTP"></category><category term="IETF"></category><category term="RFC"></category></entry><entry><title>唯一性标识的矛盾</title><link href="/articles/TheConflictionOfID" rel="alternate"></link><updated>2016-04-14T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-14:articles/TheConflictionOfID</id><summary type="html">&lt;p&gt;唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。&lt;/p&gt;
