@@ -65,12 +65,12 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="/articles/TheConflictionOfID">
-              <h1>唯一性标识的矛盾
-                <small>2016-04-14</small>
+            <a href="/articles/HTTPSpecsOverview">
+              <h1><a class="reference external" href="http://www.ietf.org/">IETF</a> HTTP 规范概览
+                <small>2016-04-18</small>
               </h1>
             </a>
-            <!-- Thu 14 April 2016
+            <!-- Mon 18 April 2016
 
 by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
  
@@ -79,53 +79,70 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
  -->
         </div>
 
-        <!-- <div><p>唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。</p>
-<p>唯一性标识的生成方法众多，典型的有</p>
-<ul>
-<li><dl class="first docutils">
-<dt>算法生成类</dt>
-<dd><ul class="first last simple">
-<li>数据库的自动生成，例如MySQL的Auto Increment自增特性</li>
-<li>分布式的生成算法，例如Twitter的64bit自增 <a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010">SnowFlake2010</a></li>
-<li>128bit长的 <a class="reference external" href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a></li>
-<li>基于具体场景，设计相关算法，在使用时自动生成</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>人工输入类</dt>
-<dd><ul class="first last simple">
-<li>纯字母</li>
-<li>字母数字组合</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<p>唯一性标识的生成结果有两种</p>
+        <!-- <div>
+<!-- -->
+<div class="section" id="infomation">
+<h2><a class="toc-backref" href="#id1">Infomation</a></h2>
+<p><em>Infomation</em>
+(include all kinds of information about the Internet including historical data, tutorials, etc.
+A standards group or individual outside the <a class="reference external" href="https://en.wikipedia.org/wiki/Internet_Engineering_Steering_Group">IESG</a> produces these informational RFCs.)
+一定程度上是一类「还债」类的 <a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments">RFC</a></p>
 <ul class="simple">
-<li>可转换为全数字，例如SnowFlake</li>
-<li>16进制字符，例如UUID</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc1945.txt">RFC-1945</a> Hypertext Transfer Protocol—HTTP/1.0, May 1996</li>
 </ul>
-<p>唯一性标识的可用性评价维度</p>
+</div>
+<div class="section" id="standards-track">
+<h2><a class="toc-backref" href="#id2">Standards Track</a></h2>
+<p><em>Standards Track</em> (expected to become <em>Internet standards</em>)
+是一类被期待成为互联网标准的 <a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments">RFC</a></p>
 <ul class="simple">
-<li>隐私保护</li>
-<li>整体可用容量</li>
-<li>单位时间可用量</li>
-<li>首次生成简便性</li>
-<li>后期录入简便性</li>
-<li>后期迁移简便性</li>
-<li>人工阅读可预判性</li>
-<li>分库分表可路由性</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc6265.txt">RFC-6265</a> HTTP State Management Mechanism, April 2011</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc6797.txt">RFC-6797</a> HTTP Strict Transport Security (HSTS), November 2012</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7230.txt">RFC-7230</a> HTTP/1.1 : Message Syntax and Routing, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7231.txt">RFC-7231</a> HTTP/1.1 : Semantics and Content, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7232.txt">RFC-7232</a> HTTP/1.1 : Conditional Requests, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7233.txt">RFC-7233</a> HTTP/1.1 : Range Requests, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7234.txt">RFC-7234</a> HTTP/1.1 : Caching, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7235.txt">RFC-7235</a> HTTP/1.1 : Authentication, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7236.txt">RFC-7236</a> Initial HTTP Authentication Scheme Registrations, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7237.txt">RFC-7237</a> Initial HTTP Method Registrations, June 2014</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7469.txt">RFC-7469</a> Public Key Pinning Extension for HTTP, April 2015</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7540.txt">RFC-7540</a> Hypertext Transfer Protocol Version 2 (HTTP/2), May 2015</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7541.txt">RFC-7541</a> HPACK: Header Compression for HTTP/2, May 2015</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc7725.txt">RFC-7725</a> An HTTP Status Code to Report Legal Obstacles, December 2015</li>
 </ul>
-<p>一些具体的潜在的易用性维度</p>
+</div>
+<div class="section" id="obsoletes">
+<h2><a class="toc-backref" href="#id3">Obsoletes</a></h2>
+<p><em>Obsoletes</em>
+是一类被新的 <a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments">RFC</a> 替换了的 <a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments">RFC</a> ，
+被替换不代表已经根据这些 <a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments">RFC</a> 所实现的软件按照新的 <a class="reference external" href="https://en.wikipedia.org/wiki/Request_for_Comments">RFC</a> 都进行了更新升级。</p>
 <ul class="simple">
-<li>最好能够反映一些和具体使用场景有关的信息，例如身份证的前14位。</li>
-<li>尽可能的短</li>
-<li>简便的键盘输入，比如纯数字或纯小写字母</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc2068.txt">RFC-2068</a> , January 1997</li>
+<li><a class="reference external" href="http://www.ietf.org/rfc/rfc2616.txt">RFC-2616</a> , June 1999</li>
 </ul>
+</div>
 </div> -->
+        <div class="summary">
+<!-- -->
+<div class="section" id="infomation">
+<h2><a class="toc-backref" href="#id1">Infomation</a></h2>
+<p><em>Infomation</em>
+(include all kinds of information about the Internet including historical data, tutorials, etc.
+A standards group or individual ...</p></div></!--> <a class="btn btn-info xsmall" href="/articles/HTTPSpecsOverview">read more</a></div>
+        <hr />
+    </div>
+
+
+ 
+
+
+    <div class='article'>
+        <a href="/articles/TheConflictionOfID">
+          <h2>唯一性标识的矛盾
+            <small>2016-04-14</small>
+          </h2>
+        </a>
         <div class="summary"><p>唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。</p>
 <p>唯一性标识的生成方法众多，典型的有</p>
 <ul>
@@ -135,7 +152,6 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 <li>数据库的自动生成，例如MySQL的Auto Increment自增特性</li>
 <li>分布式的生成算法，例如Twitter的64bit自增 <a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010">SnowFlake2010</a></li>
 <li>128bit长的 ...</li></ul></dd></dl></li></ul> <a class="btn btn-info xsmall" href="/articles/TheConflictionOfID">read more</a></div>
-        <hr />
     </div>
 
 
@@ -195,29 +211,6 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 <p>好的架构，省时省力省心 ...</p> <a class="btn btn-info xsmall" href="/articles/ArchitectArchitecture">read more</a></div>
     </div>
 
-
- 
-
-
-    <div class='article'>
-        <a href="/articles/TangYuanInsightArchitecture">
-          <h2>从元宵节煮汤圆看架构的识别与设计
-            <small>2016-02-22</small>
-          </h2>
-        </a>
-        <div class="summary">
-<!-- -->
-<div class="section" id="id2">
-<h2><a class="toc-backref" href="#id12">什么是架构</a></h2>
-<p>所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。</p>
-<p>采用什么办法解决问题，和客观的条件有关，也和当事人有关。</p>
-<p>因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。</p>
-</div>
-<div class="section" id="id3">
-<h2><a class="toc-backref" href="#id13">什么是「好」架构</a></h2>
-<p>「好」架构，应当是对架构使用人「简单 ...</p></div></!--> <a class="btn btn-info xsmall" href="/articles/TangYuanInsightArchitecture">read more</a></div>
-    </div>
-
 <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#"> &larr; </a></li>
@@ -241,7 +234,7 @@ by <a class="url fn" href="/authors/wang-yanjiong/">Wang YanJiong</a>
 </div> <!-- /container -->
 
 <footer>
-<div align="center">&copy; <a href="/">王延炯博士</a> 2011-2016
+<div align="center">&copy; <a href="//yanjiong.wang/">王延炯博士</a> 2011-2016
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/license/cc-by-nc-nd-40-80x15.png" /></a>
   <a href="https://cn.linkedin.com/in/wangyanjiong"><img src=/theme/images/icons/linkedin.png/></a>
   <a href="/feeds/all.atom.xml"><img src=/theme/images/icons/rss.png/></a>
