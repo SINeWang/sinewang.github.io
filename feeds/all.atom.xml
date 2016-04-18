@@ -41,6 +41,13 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;li&gt;&lt;a class="reference external" href="http://www.ietf.org/rfc/rfc2616.txt"&gt;RFC-2616&lt;/a&gt; : Hypertext Transfer Protocol -- HTTP/1.1, June 1999&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/List_of_RFCs"&gt;List of RFCs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ipv6.com/articles/organizations/IETF-History-IPv6.htm"&gt;IPv6.com - The role of the Internet Engineering Task Force in IPv6 development.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </summary><category term="HTTP"></category><category term="IETF"></category><category term="RFC"></category></entry><entry><title>唯一性标识的矛盾</title><link href="/articles/TheConflictionOfID" rel="alternate"></link><updated>2016-04-14T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-14:articles/TheConflictionOfID</id><summary type="html">&lt;p&gt;唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。&lt;/p&gt;
 &lt;p&gt;唯一性标识的生成方法众多，典型的有&lt;/p&gt;
 &lt;ul&gt;
