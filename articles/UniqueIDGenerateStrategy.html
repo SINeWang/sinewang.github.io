@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>企业信息安全极简概述  @ 王延炯 · 看世界 | World Insight
+    <title>唯一性标识的生成策略  @ 王延炯 · 看世界 | World Insight
 </title>
     <meta name="description" content="">
     <meta name="author" content="Wang YanJiong">
@@ -64,39 +64,74 @@
         <div class="span9">
     <div class='article'>
         <div class="content-title">
-            <h1>企业信息安全极简概述</h1>
+            <h1>唯一性标识的生成策略</h1>
         </div>
 
         <div>
 <!-- -->
+<div class="section" id="id">
+<h2><a class="toc-backref" href="#id3">面向「主数据」类型的对象ID生成策略</a></h2>
+<p>主数据是一类和客观对象产生较为紧密映射关系的数据。例如:「客户」，「产品」等等。</p>
+<p>这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。</p>
+<p>使用ID来表述这一类数据的主要侧重点有:</p>
+<ul>
+<li><p class="first">隐私保护 - 权重5</p>
+</li>
+<li><p class="first">整体可用容量 - 权重5</p>
+</li>
+<li><p class="first">单位时间可用量 - 权重2</p>
+</li>
+<li><p class="first">首次生成简便性 - 权重2</p>
+</li>
+<li><p class="first">后期录入简便性 - 权重4</p>
+</li>
+<li><p class="first">后期迁移简便性 - 权重4</p>
+</li>
+<li><p class="first">人工阅读可预判性 - 权重5</p>
+<blockquote>
+<ul class="simple">
+<li>包含分类特征</li>
+<li>使用定长编码</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">分库分表可路由性 - 权重5</p>
+</li>
+</ul>
+<p>例如, 身份证号「310109190001011235」,18个数字字母字符（18字节=144bit）, 最后一位为校验位
+前6位为地域分类，7至14位为生日。</p>
+</div>
 <div class="section" id="id2">
-<h2><a class="toc-backref" href="#id7">走出企业信息安全的认识误区</a></h2>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id8">安全不仅只是加解密</a></h3>
-</div>
-</div>
-<div class="section" id="id4">
-<h2><a class="toc-backref" href="#id9">企业信息安全层次划分</a></h2>
-<ol class="arabic simple">
-<li>法律与道德</li>
-<li>责任与风险</li>
-<li>商业秘密</li>
-<li>信息安全</li>
-<li>应用密码学/现代密码学</li>
-<li>抽象代数/数论</li>
-</ol>
-</div>
-<div class="section" id="id5">
-<h2><a class="toc-backref" href="#id10">企业信息安全标准与规范</a></h2>
-<div class="section" id="iso27001">
-<h3><a class="toc-backref" href="#id11">ISO27001</a></h3>
-</div>
-</div>
-<div class="section" id="id6">
-<h2><a class="toc-backref" href="#id12">参考</a></h2>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?csnumber=54534">ISO/IEC_27001:2013</a></li>
-</ol>
+<h2><a class="toc-backref" href="#id4">面向「交易数据」类型的对象ID生成策略</a></h2>
+<p>交易数据是一类和某个活动或者行为对象相关的数据。例如「订单」，「消息」。</p>
+<p>这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。</p>
+<p>使用ID来表述这一类数据的主要侧重点有:</p>
+<ul>
+<li><p class="first">隐私保护 - 权重4</p>
+</li>
+<li><p class="first">整体可用容量 - 权重5</p>
+</li>
+<li><p class="first">单位时间可用量 - 权重5</p>
+</li>
+<li><p class="first">首次生成简便性 - 权重4</p>
+</li>
+<li><p class="first">后期录入简便性 - 权重3</p>
+</li>
+<li><p class="first">后期迁移简便性 - 权重2</p>
+</li>
+<li><p class="first">人工阅读可预判性 - 权重2</p>
+<blockquote>
+<ul class="simple">
+<li>包含时间特征</li>
+<li>包含源与目标特征</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">分库分表可路由性 - 权重5</p>
+</li>
+</ul>
+<p>例如, 淘宝订单号「1799508888858080」,16个数字（16字节=128bit）, 后四位数字为分库分表策略,
+前12位与时间相关。</p>
 </div>
 </div>
 
@@ -106,7 +141,7 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'wangyanjiong'; 
-    var disqus_title = '企业信息安全极简概述';
+    var disqus_title = '唯一性标识的生成策略';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -123,16 +158,8 @@
       <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#id2" id="id7">走出企业信息安全的认识误区</a><ul>
-<li><a class="reference internal" href="#id3" id="id8">安全不仅只是加解密</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id4" id="id9">企业信息安全层次划分</a></li>
-<li><a class="reference internal" href="#id5" id="id10">企业信息安全标准与规范</a><ul>
-<li><a class="reference internal" href="#iso27001" id="id11">ISO27001</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id6" id="id12">参考</a></li>
+<li><a class="reference internal" href="#id" id="id3">面向「主数据」类型的对象ID生成策略</a></li>
+<li><a class="reference internal" href="#id2" id="id4">面向「交易数据」类型的对象ID生成策略</a></li>
 </ul>
 </div>
 
@@ -141,19 +168,18 @@
       <time pubdate="pubdate" datetime="2016-04-19T16:18:00+08:00">Apr 19, 2016</time>
 
       <h3>主题</h3>
-      <a class="category-link" href="/categories/an-quan">安全</a>
+      <a class="category-link" href="/categories/jia-gou">架构</a>
 
       <h3>标签</h3>
       <ul class="list-of-tags tags-in-article">
-          <li><a href="/tags/an-quan-guan-li">安全管理
+          <li><a href="/tags/jiao-yi-shu-ju">交易数据
+              <span>1</span>
 </a></li>
-          <li><a href="/tags/jia-jie-mi">加解密
+          <li><a href="/tags/wei-yi-xing-biao-shi">唯一性标识
+              <span>2</span>
 </a></li>
-          <li><a href="/tags/ruan-jian-lou-dong">软件漏洞
-</a></li>
-          <li><a href="/tags/wang-luo-gong-ji">网络攻击
-</a></li>
-          <li><a href="/tags/xin-xi-an-quan">信息安全
+          <li><a href="/tags/zhu-shu-ju">主数据
+              <span>1</span>
 </a></li>
       </ul>
 </div>

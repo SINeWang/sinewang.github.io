@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 看世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-04-18T12:26:00+08:00</updated><entry><title>IETF HTTP 规范概览</title><link href="/articles/HTTPSpecsOverview" rel="alternate"></link><updated>2016-04-18T12:26:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-18:articles/HTTPSpecsOverview</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 看世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-04-19T16:18:00+08:00</updated><entry><title>唯一性标识的生成策略</title><link href="/articles/UniqueIDGenerateStrategy" rel="alternate"></link><updated>2016-04-19T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-19:articles/UniqueIDGenerateStrategy</id><summary type="html">
+&lt;!-- --&gt;
+&lt;div class="section" id="id"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;面向「主数据」类型的对象ID生成策略&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;主数据是一类和客观对象产生较为紧密映射关系的数据。例如:「客户」，「产品」等等。&lt;/p&gt;
+&lt;p&gt;这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。&lt;/p&gt;
+&lt;p&gt;使用ID来表述这一类数据的主要侧重点有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;隐私保护 - 权重5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;整体可用容量 - 权重5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;单位时间可用量 - 权重2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;首次生成简便性 - 权重2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;后期录入简便性 - 权重4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;后期迁移简便性 - 权重4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;人工阅读可预判性 - 权重5&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;包含分类特征&lt;/li&gt;
+&lt;li&gt;使用定长编码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;分库分表可路由性 - 权重5&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如, 身份证号「310109190001011235」,18个数字字母字符（18字节=144bit）, 最后一位为校验位
+前6位为地域分类，7至14位为生日。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;面向「交易数据」类型的对象ID生成策略&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;交易数据是一类和某个活动或者行为对象相关的数据。例如「订单」，「消息」。&lt;/p&gt;
+&lt;p&gt;这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。&lt;/p&gt;
+&lt;p&gt;使用ID来表述这一类数据的主要侧重点有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;隐私保护 - 权重4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;整体可用容量 - 权重5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;单位时间可用量 - 权重5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;首次生成简便性 - 权重4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;后期录入简便性 - 权重3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;后期迁移简便性 - 权重2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;人工阅读可预判性 - 权重2&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;包含时间特征&lt;/li&gt;
+&lt;li&gt;包含源与目标特征&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;分库分表可路由性 - 权重5&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如, 淘宝订单号「1799508888858080」,16个数字（16字节=128bit）, 后四位数字为分库分表策略,
+前12位与时间相关。&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="唯一性标识"></category><category term="主数据"></category><category term="交易数据"></category></entry><entry><title>IETF HTTP 规范概览</title><link href="/articles/HTTPSpecsOverview" rel="alternate"></link><updated>2016-04-18T12:29:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-18:articles/HTTPSpecsOverview</id><summary type="html">
 &lt;!-- --&gt;
 &lt;p&gt;IETF 从1996年至今，关于HTTP协议的定义超过17个，涵盖HTTP 1.0/1.1/2&lt;/p&gt;
 &lt;p&gt;基于HTTP的RESTFul风格，是对HTTP协议的一次功能挖掘。&lt;/p&gt;
