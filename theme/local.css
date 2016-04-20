@@ -35,7 +35,11 @@ li { line-height: 1.6em; }
 h3 { margin-top: 1em; }
 .table th, .table td { line-height: 1.3em; }
 
-
+.slogan {
+  float: right;
+  padding: 10px 10px 11px;
+  color: #FFFFFF;
+}
 .sidebar {
     float:left;
     position: fixed;
