@@ -1,13 +1,20 @@
-/* Styling for Nav bar. Bg color, link color etc */
-
-/*.navbar .nav > li > a { color: #D6EDF4; }
-.navbar .divider-vertical { border-right: 1px solid #4D4D4D; }
-.navbar { margin-bottom: 4em; }*/
-
-.navbar-default {
-    background-color: #F1F8FC;
-    color: #FFFFFF;
+body{
+  background-color: #F4F2ED;
 }
+.navbar-default {
+    background-color: #7A7976;
+}
+
+#top > div > div.navbar-header > a {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li> a:hover {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li> a {
+  color: #DEDEDD;
+}
+
 
 h1 {
   font-size: 1.8em;
