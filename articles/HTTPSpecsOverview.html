@@ -14,10 +14,10 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/theme/bootstrap.min.css" rel="stylesheet">
-    <link href="/theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="/theme/local.css" rel="stylesheet">
-    <link href="/theme/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
 
     <!-- So Firefox can bookmark->"abo this site" -->
         <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 看世界 | World Insight" type="application/atom+xml">
@@ -26,44 +26,41 @@
 
 <body>
 
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<header class="navbar navar-static-top navbar-default" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-             </a>
-
-            <a class="brand" href="/">王延炯 · 看世界 | World Insight</a>
-
-            <div class="nav-collapse">
-                <ul class="nav">
-
-                    <li><a href="/categories">主题</a></li>
-                    <li><a href="/tags">标签</a></li>
-                    <li><a href="/archives">归档</a></li>
-
-                    <li><a href="/about">关于</a></li>
-                    <li><a href="/license">版权</a></li>
-
-
-
-                </ul>
-            </div>
-
-            <div class="slogan">作文是研究的开始</div>
-
-        </div>
+      <a class="navbar-brand" href="/">王延炯 · 看世界 | World Insight</a>
     </div>
-</div>
+
+    <div id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+
+            <li><a href="/categories">主题</a></li>
+            <li><a href="/tags">标签</a></li>
+            <li><a href="/archives">归档</a></li>
+
+            <li><a href="/about">关于</a></li>
+            <li><a href="/license">版权</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#slogan">作文是研究的开始</a></li>
+        </ul>
+    </div>
+  </div>
+</header>
 
 <div class="container">
-    <div class="content">
+
     <div class="row">
 
-        <div class="span9">
+        <div class="col-md-8">
     <div class='article'>
         <div class="content-title">
             <h1>IETF HTTP 规范概览</h1>
@@ -141,9 +138,9 @@ A standards group or individual outside the <a class="reference external" href="
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
         </div>
-        <div class="span3">
+        <div class="col-md-4">
 <div class="sidebar">
-  <h3>目录</h3>
+    <h2>目录</h2>
 
   <div class="toc" id="">
 
@@ -155,29 +152,30 @@ A standards group or individual outside the <a class="reference external" href="
 </ul>
 </div>
 
-    <h3>发布于</h3>
+    <h2>发布于</h2>
     <time pubdate="pubdate" datetime="2016-04-18T12:29:00+08:00">Apr 18, 2016</time>
 
-    <h3>主题</h3>
+    <h2>主题</h2>
     <a class="category-link" href="/categories/http">HTTP</a>
 
-    <h3>标签</h3>
+    <h2>标签</h2>
     <ul class="list-of-tags tags-in-article">
-        <li><a href="/tags/http">HTTP
-            <span>1</span>
-</a></li>
-        <li><a href="/tags/ietf">IETF
-            <span>1</span>
-</a></li>
-        <li><a href="/tags/rfc">RFC
-            <span>1</span>
-</a></li>
+        <li><a href="/tags/http">HTTP</a>
+            <span style="vertical-align:super;">1</span>
+</li>
+        <li><a href="/tags/ietf">IETF</a>
+            <span style="vertical-align:super;">1</span>
+</li>
+        <li><a href="/tags/rfc">RFC</a>
+            <span style="vertical-align:super;">1</span>
+</li>
     </ul>
 </div>
 
         </div>
 
-    </div>     </div> 
+    </div> 
+
 
 </div> <!-- /container -->
 
