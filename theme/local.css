@@ -35,6 +35,20 @@ li { line-height: 1.6em; }
 h3 { margin-top: 2.5em; }
 .table th, .table td { line-height: 1.3em; }
 
+.slogan {
+  float: right;
+  padding: 10px 10px 11px;
+  color: #FFFFFF;
+}
+.sidebar {
+    float:left;
+    position: fixed;
+    font-size: .8em;
+}
+.reference.internal{
+  font-size: .8em;
+}
+
 /* Styling for articles */
 .article { padding-bottom:20px; padding-right: 40px; }
 .content-title { margin-bottom: 30px; }
