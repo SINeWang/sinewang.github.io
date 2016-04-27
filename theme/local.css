@@ -40,13 +40,11 @@ h3 { margin-top: 2.5em; }
   padding: 10px 10px 11px;
   color: #FFFFFF;
 }
+
 .sidebar {
     float:left;
     position: fixed;
     font-size: .8em;
-}
-.reference.internal{
-  font-size: .8em;
 }
 
 /* Styling for articles */
