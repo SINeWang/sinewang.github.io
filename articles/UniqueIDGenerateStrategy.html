@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>唯一性标识的生成策略  @ 王延炯 · 看世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 看世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<header class="navbar navar-static-top navbar-default" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 看世界 | World Insight</a>
+    </div>
+
+    <div id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+
+            <li><a href="/categories">主题</a></li>
+            <li><a href="/tags">标签</a></li>
+            <li><a href="/archives">归档</a></li>
+
+            <li><a href="/about">关于</a></li>
+            <li><a href="/license">版权</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#slogan">作文是研究的开始</a></li>
+        </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-8">
+    <div class='article'>
+        <div class="content-title">
+            <h1>唯一性标识的生成策略</h1>
+        </div>
+
+        <div>
+<!-- -->
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id4">「主数据」类型的生成策略</a></h2>
+<p>主数据是一类和客观对象产生较为紧密映射关系的数据。例如:「客户」，「产品」等等。</p>
+<p>这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。</p>
+<p>使用ID来表述这一类数据的主要侧重点有:</p>
+<ul>
+<li><p class="first">隐私保护 - 权重5</p>
+</li>
+<li><p class="first">整体可用容量 - 权重5</p>
+</li>
+<li><p class="first">单位时间可用量 - 权重2</p>
+</li>
+<li><p class="first">首次生成简便性 - 权重2</p>
+</li>
+<li><p class="first">后期录入简便性 - 权重4</p>
+</li>
+<li><p class="first">后期迁移简便性 - 权重4</p>
+</li>
+<li><p class="first">人工阅读可预判性 - 权重5</p>
+<blockquote>
+<ul class="simple">
+<li>包含分类特征</li>
+<li>使用定长编码</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">分库分表可路由性 - 权重5</p>
+</li>
+</ul>
+<p>例如, 身份证号「310109190001011235」,18个数字字母字符（18字节=144bit）, 最后一位为校验位
+前6位为地域分类，7至14位为生日。</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id5">「交易数据」类型的生成策略</a></h2>
+<p>交易数据是一类和某个活动或者行为对象相关的数据。例如「订单」，「消息」。</p>
+<p>这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。</p>
+<p>使用ID来表述这一类数据的主要侧重点有:</p>
+<ul>
+<li><p class="first">隐私保护 - 权重4</p>
+</li>
+<li><p class="first">整体可用容量 - 权重5</p>
+</li>
+<li><p class="first">单位时间可用量 - 权重5</p>
+</li>
+<li><p class="first">首次生成简便性 - 权重4</p>
+</li>
+<li><p class="first">后期录入简便性 - 权重3</p>
+</li>
+<li><p class="first">后期迁移简便性 - 权重2</p>
+</li>
+<li><p class="first">人工阅读可预判性 - 权重2</p>
+<blockquote>
+<ul class="simple">
+<li>包含时间特征</li>
+<li>包含源与目标特征</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">分库分表可路由性 - 权重5</p>
+</li>
+</ul>
+<p>例如, 淘宝订单号「1799508888858080」,16个数字（16字节=128bit）, 后四位数字为分库分表策略,
+前12位与时间相关。</p>
+</div>
+</div>
+
+        <hr>
+
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wangyanjiong'; 
+    var disqus_title = '唯一性标识的生成策略';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+        </div>
+        <div class="col-md-4">
+<div class="sidebar">
+    <h2>目录</h2>
+
+  <div class="toc" id="">
+
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id4">「主数据」类型的生成策略</a></li>
+<li><a class="reference internal" href="#id3" id="id5">「交易数据」类型的生成策略</a></li>
+</ul>
+</div>
+
+    <h2>发布于</h2>
+    <time pubdate="pubdate" datetime="2016-04-19T16:18:00+08:00">Apr 19, 2016</time>
+
+    <h2>主题</h2>
+    <a class="category-link" href="/categories/jia-gou">架构</a>
+
+    <h2>标签</h2>
+    <ul class="list-of-tags tags-in-article">
+        <li><a href="/tags/jiao-yi-shu-ju">交易数据</a>
+            <span style="vertical-align:super;">1</span>
+</li>
+        <li><a href="/tags/wei-yi-xing-biao-shi">唯一性标识</a>
+            <span style="vertical-align:super;">2</span>
+</li>
+        <li><a href="/tags/zhu-shu-ju">主数据</a>
+            <span style="vertical-align:super;">1</span>
+</li>
+    </ul>
+</div>
+
+        </div>
+
+    </div> 
+
+
+</div> <!-- /container -->
+
+<footer>
+<div align="center">&copy; <a href="/">王延炯博士</a> 2011-2016
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/license/cc-by-nc-nd-40-80x15.png" /></a>
+  <a href="https://cn.linkedin.com/in/wangyanjiong"><img src=/theme/images/icons/linkedin.png/></a>
+  <a href="/feeds/all.atom.xml"><img src=/theme/images/icons/rss.png/></a>
+</div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+<script src="//twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

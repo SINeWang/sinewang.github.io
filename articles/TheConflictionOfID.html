@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>唯一性标识的矛盾  @ 王延炯 · 看世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 看世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<header class="navbar navar-static-top navbar-default" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 看世界 | World Insight</a>
+    </div>
+
+    <div id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+
+            <li><a href="/categories">主题</a></li>
+            <li><a href="/tags">标签</a></li>
+            <li><a href="/archives">归档</a></li>
+
+            <li><a href="/about">关于</a></li>
+            <li><a href="/license">版权</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#slogan">作文是研究的开始</a></li>
+        </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-8">
+    <div class='article'>
+        <div class="content-title">
+            <h1>唯一性标识的矛盾</h1>
+        </div>
+
+        <div><p>唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。</p>
+<p>唯一性标识的生成方法众多，典型的有</p>
+<ul>
+<li><dl class="first docutils">
+<dt>算法生成类</dt>
+<dd><ul class="first last simple">
+<li>数据库的自动生成，例如MySQL的Auto Increment自增特性</li>
+<li>分布式的生成算法，例如Twitter的64bit自增 <a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010">SnowFlake2010</a></li>
+<li>128bit长的 <a class="reference external" href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a></li>
+<li>基于具体场景，设计相关算法，在使用时自动生成</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>人工输入类</dt>
+<dd><ul class="first last simple">
+<li>纯字母</li>
+<li>字母数字组合</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>唯一性标识的生成结果有两种</p>
+<ul class="simple">
+<li>可转换为全数字，例如SnowFlake</li>
+<li>16进制字符，例如UUID</li>
+</ul>
+<p>唯一性标识的可用性评价维度</p>
+<ul class="simple">
+<li>隐私保护</li>
+<li>整体可用容量</li>
+<li>单位时间可用量</li>
+<li>首次生成简便性</li>
+<li>后期录入简便性</li>
+<li>后期迁移简便性</li>
+<li>人工阅读可预判性</li>
+<li>分库分表可路由性</li>
+</ul>
+<p>一些具体的潜在的易用性维度</p>
+<ul class="simple">
+<li>最好能够反映一些和具体使用场景有关的信息，例如身份证的前14位。</li>
+<li>尽可能的短</li>
+<li>简便的键盘输入，比如纯数字或纯小写字母</li>
+</ul>
+</div>
+
+        <hr>
+
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wangyanjiong'; 
+    var disqus_title = '唯一性标识的矛盾';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+        </div>
+        <div class="col-md-4">
+<div class="sidebar">
+
+    <h2>发布于</h2>
+    <time pubdate="pubdate" datetime="2016-04-14T16:18:00+08:00">Apr 14, 2016</time>
+
+    <h2>主题</h2>
+    <a class="category-link" href="/categories/jia-gou">架构</a>
+
+    <h2>标签</h2>
+    <ul class="list-of-tags tags-in-article">
+        <li><a href="/tags/wei-yi-xing-biao-shi">唯一性标识</a>
+            <span style="vertical-align:super;">2</span>
+</li>
+    </ul>
+</div>
+
+        </div>
+
+    </div> 
+
+
+</div> <!-- /container -->
+
+<footer>
+<div align="center">&copy; <a href="/">王延炯博士</a> 2011-2016
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/license/cc-by-nc-nd-40-80x15.png" /></a>
+  <a href="https://cn.linkedin.com/in/wangyanjiong"><img src=/theme/images/icons/linkedin.png/></a>
+  <a href="/feeds/all.atom.xml"><img src=/theme/images/icons/rss.png/></a>
+</div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+<script src="//twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

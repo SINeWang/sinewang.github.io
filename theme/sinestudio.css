@@ -1,0 +1,43 @@
+.navbar-default {
+    background-color: #040F48;
+}
+
+body{
+  background-color: #E5E5E5;
+}
+
+
+#top > div > div.navbar-header > a {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li> a:hover {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li> a {
+  color: #DEDEDD;
+}
+
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+a.toc-backref {
+  text-decoration: none;
+}
+
+div.content-title > h1 > a {
+  text-decoration: none;
+}
+
+.sidebar {
+  font-size: 0.9em;
+  position: fixed;
+  border-color: #FB0000;
+  border-radius: 15px;
+  border-width: medium;
+}
