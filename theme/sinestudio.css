@@ -18,7 +18,7 @@ body{
 
 
 h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 h2 {
@@ -39,4 +39,23 @@ div.content-title > h1 > a {
   border-color: #FB0000;
   border-radius: 15px;
   border-width: medium;
+}
+
+.list-of-tags {
+    /* list-style: none; */
+    margin: 0;
+    overflow: hidden;
+}
+.list-of-tags a {
+    padding: 3px 6px;
+    margin: 2px;
+    color: #222;
+    background: #EEE;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
 }
