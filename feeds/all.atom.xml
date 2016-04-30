@@ -248,7 +248,6 @@
 &lt;/div&gt;
 </summary><category term="唯一性标识"></category><category term="主数据"></category><category term="交易数据"></category></entry><entry><title>IETF HTTP 规范概览</title><link href="/articles/HTTPSpecsOverview" rel="alternate"></link><updated>2016-04-18T12:29:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-18:articles/HTTPSpecsOverview</id><summary type="html">
 &lt;!-- --&gt;
-&lt;p&gt;IETF 从1996年至今，关于HTTP协议的定义超过17个，涵盖HTTP 1.0/1.1/2&lt;/p&gt;
 &lt;p&gt;基于HTTP的RESTFul风格，是对HTTP协议的一次功能挖掘。&lt;/p&gt;
 &lt;div class="section" id="infomation"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Infomation类&lt;/a&gt;&lt;/h2&gt;
