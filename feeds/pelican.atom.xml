@@ -5,7 +5,7 @@
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;使用 &lt;a class="reference external" href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc"&gt;extract_toc&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;执行``git clone &lt;a class="reference external" href="https://github.com/getpelican/pelican-plugins"&gt;https://github.com/getpelican/pelican-plugins&lt;/a&gt;.git``&lt;/li&gt;
+&lt;li&gt;执行 &lt;tt class="docutils literal"&gt;git clone &lt;span class="pre"&gt;https://github.com/getpelican/pelican-plugins.git&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id2"&gt;
