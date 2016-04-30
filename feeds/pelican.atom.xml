@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 看世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/pelican.atom.xml" rel="self"></link><id>/</id><updated>2015-10-17T00:00:00+08:00</updated><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-16:articles/pelican-toc-plugin</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/pelican.atom.xml" rel="self"></link><id>/</id><updated>2015-10-17T00:00:00+08:00</updated><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-16:articles/pelican-toc-plugin</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
