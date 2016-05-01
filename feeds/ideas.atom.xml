@@ -331,18 +331,19 @@
 </summary><category term="架构师"></category><category term="架构"></category></entry><entry><title>从元宵节煮汤圆看架构的识别与设计</title><link href="/articles/TangYuanInsightArchitecture" rel="alternate"></link><updated>2016-02-22T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-02-22:articles/TangYuanInsightArchitecture</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;什么是架构&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;架构定义&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。&lt;/p&gt;
 &lt;p&gt;采用什么办法解决问题，和客观的条件有关，也和当事人有关。&lt;/p&gt;
 &lt;p&gt;因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;什么是「好」架构&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;好架构的定义&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。&lt;/p&gt;
 &lt;p&gt;「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;老一辈交代的煮汤圆方法（煮汤圆的传统架构）&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;煮汤圆的传统架构&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;煮汤圆的传统架构就是老一辈交代的煮汤圆方法。&lt;/p&gt;
 &lt;p&gt;这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;取一锅干净的冷水&lt;/li&gt;
@@ -356,7 +357,7 @@
 &lt;p&gt;一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，不可避免的煮汤圆的人有关，等等等等。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id5"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;老一辈交代的煮汤圆方法好不好（煮汤圆的传统架构好不好）&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;煮汤圆的传统架构好不好&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;好。理由是：&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;对于汤圆怎么被熟的质变过程不需要了解（不需要了解物理原理）&lt;/li&gt;
@@ -366,7 +367,7 @@
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id6"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;煮汤圆的目标（好吃有卖相）&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;好吃有卖相是煮汤圆的目标&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;直接目标是煮熟（基本前提）&lt;/li&gt;
 &lt;/ul&gt;
