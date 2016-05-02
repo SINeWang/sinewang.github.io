@@ -36,7 +36,10 @@
 
     <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
         <ul class="nav navbar-nav">
-            <li><a href="/articles">文章</a></li>
+            <li><a href="/categories/moments">瞬间</a></li>
+            <li><a href="/categories/ideas">观点</a></li>
+            <li><a href="/categories/practices">实践</a></li>
+            <li><a href="/categories/photos">摄影</a></li>
 
             <li><a href="/about">关于</a></li>
             <li><a href="/license">版权</a></li>
@@ -51,51 +54,51 @@
   <div id="homeCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#homeCarousel" data-slide-to="1"></li>
-        <li data-target="#homeCarousel" data-slide-to="2"></li>
-        <li data-target="#homeCarousel" data-slide-to="3"></li>
+              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#homeCarousel" data-slide-to="1"></li>
+              <li data-target="#homeCarousel" data-slide-to="2"></li>
+              <li data-target="#homeCarousel" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item active" onclick="#">
-          <img src="/theme/images/moments.png" class="slide-img">
-          <div class="container">
-            <div class="carousel-caption">
-              <p>
-                <span class="pull-left"><i class="glyphicon glyphicon-flash"></i> 闪念</span>
-              </p>
+        <div class="item active" onclick="/categories/moments">
+            <img src="/images/carousel/moments.png" class="slide-img">
+            <div class="container">
+              <div class="carousel-caption">
+                <p>
+                  <span class="pull-left"><i class="glyphicon glyphicon-flash"></i> 瞬间</span>
+                </p>
+              </div>
             </div>
-          </div>
         </div>
-        <div class="item" onclick="location.href='/categories/ideas'">
-          <img src="/theme/images/ideas.png" class="slide-img">
-          <div class="container">
-            <div class="carousel-caption">
-              <p>
-                <span class="pull-left"><i class="glyphicon glyphicon-flag"></i> 观点</span>
-              </p>
+        <div class="item" onclick="/categories/ideas">
+            <img src="/images/carousel/ideas.png" class="slide-img">
+            <div class="container">
+              <div class="carousel-caption">
+                <p>
+                  <span class="pull-left"><i class="glyphicon glyphicon-flag"></i> 观点</span>
+                </p>
+              </div>
             </div>
-          </div>
         </div>
-        <div class="item" onclick="location.href='/categories/practices'">
-          <img src="/theme/images/practices.png" class="slide-img">
-          <div class="container">
-            <div class="carousel-caption">
-              <p>
-                <span class="pull-left"><i class="glyphicon glyphicon-wrench"></i>  实践</span>
-              </p>
+        <div class="item" onclick="/categories/practices">
+            <img src="/images/carousel/practices.png" class="slide-img">
+            <div class="container">
+              <div class="carousel-caption">
+                <p>
+                  <span class="pull-left"><i class="glyphicon glyphicon-wrench"></i> 实践</span>
+                </p>
+              </div>
             </div>
-          </div>
         </div>
-        <div class="item">
-          <img src="/theme/images/documentaries.png" class="slide-img">
-          <div class="container">
-            <div class="carousel-caption">
-              <p>
-                <span class="pull-left">纪实  <i class="glyphicon glyphicon-camera"></i></span>
-              </p>
+        <div class="item" onclick="/categories/photos">
+            <img src="/images/carousel/photos.png" class="slide-img">
+            <div class="container">
+              <div class="carousel-caption">
+                <p>
+                  <span class="pull-left"><i class="glyphicon glyphicon-camera"></i> 摄影</span>
+                </p>
+              </div>
             </div>
-          </div>
         </div>
       </div>
       <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
