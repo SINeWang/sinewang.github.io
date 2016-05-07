@@ -1,38 +1,45 @@
-.navbar-default {
-    background-color: #040F48;
-}
-
 body{
-  background-color: #E5E5E5;
+  background-color: #ddd;
 }
+.navbar-brand {font-size: 1.2em;}
 
+h1 {font-size: 1.8em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 0.9em;}
+h5 {font-size: 0.6em;}
+h6 {font-size: 0.3em;}
 
-#top > div > div.navbar-header > a {
-  color: #FFFFFF;
-}
-.navbar-default .navbar-nav > li> a:hover {
-  color: #FFFFFF;
-}
-.navbar-default .navbar-nav > li> a {
-  color: #DEDEDD;
-}
-
-
-h1 {
-  font-size: 1.5em;
-}
-
-h2 {
-  font-size: 1.3em;
-}
-
-a.toc-backref {
+div.article-title {
+  text-align: center;
   text-decoration: none;
 }
+.article  {counter-reset: h2}
+.article-title > h1 {padding: 0 0 20px 0;}
+.article-metadata {padding: 10 0 20 0px;}
+.article-summary {padding: 10px 30px 0 30px;}
+.article-content {padding: 30px 0 0 0;}
 
-div.content-title > h1 > a {
-  text-decoration: none;
-}
+.section > h2 {counter-reset: h3}
+.section > h3 {counter-reset: h4}
+.section > h4 {counter-reset: h5}
+.section > h5 {counter-reset: h6}
+
+.section > h2 :before {counter-increment: h2; content: counter(h2) ". "}
+.section > h3 :before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+.section > h4 :before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
+.section > h5 :before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+.section > h6 :before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
+.section > img {width: 100%}
+
+div.toc > {padding-left: -10px;}
+.toc ul {counter-reset: section; padding-left:0}
+.toc ul li {list-style-type: none;}
+.toc ul li:before {counter-increment: section; content: counters(section, ".") ". "}
+
+
+a.toc-backref {text-decoration: none;}
+
 
 .sidebar {
   font-size: 0.9em;
@@ -40,4 +47,45 @@ div.content-title > h1 > a {
   border-color: #FB0000;
   border-radius: 15px;
   border-width: medium;
+}
+
+.list-of-tags {
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+    display: inline-block;
+}
+.list-of-tags li {
+  margin: 0px;
+  float: left;
+  list-style:none;
+}
+.list-of-tags a {
+  padding: 3px 6px;
+  margin: 2px;
+  color: #222;
+  background: #E5E5E5;
+  border-radius: 5px;
+  float: center;
+  text-decoration: none;
+}
+
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 0 20px;
+}
+
+blockquote {
+  font-size: 1em;
+}
+
+.footer {
+  position: relative;;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }

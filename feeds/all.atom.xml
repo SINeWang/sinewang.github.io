@@ -1,34 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 看世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-04-19T16:18:00+08:00</updated><entry><title>唯一性标识的生成策略</title><link href="/articles/UniqueIDGenerateStrategy" rel="alternate"></link><updated>2016-04-19T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-19:articles/UniqueIDGenerateStrategy</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-02T18:45:00+08:00</updated><entry><title>CSDN Blog 页面注入</title><link href="/articles/csdn-blog-page-injection" rel="alternate"></link><updated>2016-05-02T18:45:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-02:articles/csdn-blog-page-injection</id><summary type="html"></summary></entry><entry><title>比装备更重要的是照相机背后的脑袋</title><link href="/articles/head-is-more-important-than-camera" rel="alternate"></link><updated>2016-05-02T18:45:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-02:articles/head-is-more-important-than-camera</id><summary type="html">&lt;p&gt;这是只是一个测试。&lt;/p&gt;
+</summary></entry><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-29:articles/digitization-essence-and-foundation</id><summary type="html">
+&lt;!-- --&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id18"&gt;数字化的概念&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;「企业数字化」是目前媒体、市场上的热点关键词。&lt;/p&gt;
+&lt;p&gt;很多人都会困惑「数字化」、「信息化」、「自动化」、「标准化」这些概念的相互关系，好像时间又进行了一次轮回。&lt;/p&gt;
+&lt;p&gt;「数字化」给人直观的感受是与「智能设备」、「物联网」、「移动互联」、「云计算」、「大数据」等等等等，这些强IT概念联系紧密。&lt;/p&gt;
+&lt;p&gt;企业似乎只要把它们捏在一起，好像就实现了时髦的数字化转型，公司就可以和互联网、物联网联系在一起。&lt;/p&gt;
+&lt;p&gt;在这里，也许没有办法给出直接的「数字化定义」，个人对于数字化的观点，是把「数字化」理解成一种现象，一种市场语言。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;数字化的本质&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;透过现实看本质，「数字化」战略的表象，其背后实质性的动作是「连接」。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;连接产生交换&lt;/li&gt;
+&lt;li&gt;交换产生交易&lt;/li&gt;
+&lt;li&gt;交易产生市场&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id20"&gt;比较实体与虚拟连接&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;早在大秦帝国，秦始皇做的最了不起的事情是「书同文、车同轨、统一度量衡」。&lt;/p&gt;
+&lt;p&gt;这几件事情，是在整个国家之内统一了标准，降低了社会的沟通成本、协作成本，促进了社会的发展效率。&lt;/p&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id21"&gt;实体世界的连接&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;现实世界的实体连接，已经通过长时间的工业化得到了沉淀，比如把插头插到插座就可以使用电能。&lt;/p&gt;
+&lt;p&gt;工业标准定义了插头与插座的形状、交流电压的高低和频率。
+即便是世界上没有完全统一，依然存在中国标准、美国标准、英国标准等等标准，市场上也提供了各种各样的转换适配器。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id22"&gt;软件世界的连接&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;为了便于理解，对 &lt;strong&gt;交流电&lt;/strong&gt; 这个概念进行展开。如果用 &lt;tt class="docutils literal"&gt;java&lt;/tt&gt; 来描述一个 &lt;strong&gt;交流电&lt;/strong&gt; 的最基本属性，
+比如电的 &lt;strong&gt;伏特&lt;/strong&gt; ，以及 &lt;strong&gt;频率&lt;/strong&gt; ，那么两个不同的程序员，会产生两种不同的描述。&lt;/p&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id23"&gt;概念的代码实现&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;比如下面这两个代码对 &lt;strong&gt;交流电&lt;/strong&gt; 实现：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;我的实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic.Volt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic.Frequency&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;AlternatingCurrent&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+  &lt;span class="n"&gt;Volt&lt;/span&gt; &lt;span class="nf"&gt;getVolt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+  &lt;span class="n"&gt;Frequency&lt;/span&gt; &lt;span class="nf"&gt;getFrequency&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+
+  &lt;span class="o"&gt;....&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;其他人的实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;other.people.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;AC&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;getVolt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;getFrequency&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+
+  &lt;span class="o"&gt;....&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;可以看到两者都通过代码描述了 &lt;strong&gt;交流电&lt;/strong&gt; 这个概念，但在IT这个虚拟世界内，是截然不同的两个概念代码实现。&lt;/p&gt;
+&lt;p&gt;在第一种 &lt;tt class="docutils literal"&gt;wang.yanjiong.electronic&lt;/tt&gt; 这种实现方法，是对电压 ( &lt;tt class="docutils literal"&gt;Volt&lt;/tt&gt; ) 和 电流 ( &lt;tt class="docutils literal"&gt;Frequency&lt;/tt&gt; ) 进行了更为复杂的定义。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id24"&gt;连接的代码实现&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;任何一个连接，都会有两方或者三方以上的出现。在两方的情况下，一般有：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;提供方&lt;/li&gt;
+&lt;li&gt;使用方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在三方的情况下，一般有：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;提供方&lt;/li&gt;
+&lt;li&gt;使用方&lt;/li&gt;
+&lt;li&gt;监管方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为例了便于表述，以两方为例：&lt;/p&gt;
+&lt;p&gt;提供方用 &lt;tt class="docutils literal"&gt;java&lt;/tt&gt; 代码声明了一个接口 (API, Applicaion Programming Interface)， 便于使用方获得全世界的各种 &lt;strong&gt;交流电&lt;/strong&gt; 信息：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.connect&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic.AlternatingCurrent&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;ProviderAPI&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+  &lt;span class="n"&gt;AlternatingCurrent&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="nf"&gt;getAlternatingCurrents&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+  &lt;span class="o"&gt;....&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;使用方同样用 &lt;tt class="docutils literal"&gt;java&lt;/tt&gt; 完成了使用代码的编写：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;other.people.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ConsumerService&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+  &lt;span class="n"&gt;AC&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;acs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ProviderAPI&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAlternatingCurrents&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+  &lt;span class="o"&gt;....&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;很显然，使用方的代码，在编译的过程中就会出现错误，因为使用方没有 &lt;tt class="docutils literal"&gt;引用&lt;/tt&gt; 提供方关于 &lt;tt class="docutils literal"&gt;ProviderAPI&lt;/tt&gt; 的相关定义。&lt;/p&gt;
+&lt;p&gt;通过对这个例子的分析，提供方和使用方不在同一个虚拟世界里，两者无法进行「连接」。&lt;/p&gt;
+&lt;p&gt;进一步的，假设提供方与使用方分属于两个不同的企业，部署于两个完全物理隔离的机房，那这两者要进行一次有效的「连接」是完全不可能实现的。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id25"&gt;数字化的基础&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id10"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id26"&gt;分领域统一标准&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="id11"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id27"&gt;标准制定&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;通过上述两个例子的对比，在软件层面实现数字化，第一要务是实现统一「标准」。在前文的例子里，对于 &lt;strong&gt;电流&lt;/strong&gt; 的描述，就应该首先被统一。&lt;/p&gt;
+&lt;p&gt;「标准」根据个人的实践和理解，包含两个要素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;概念&lt;/p&gt;
+&lt;p&gt;对于一个现象，给定一个便于理解的名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;关系&lt;/p&gt;
+&lt;p&gt;不同概念之间的关联关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要注意的是，概念来自于人的认知，而人的认知又受制于人的知识、人的经历。&lt;/p&gt;
+&lt;p&gt;标准的建立，应该是根据的目标适用领域以及对外影响范围进行。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id12"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id28"&gt;领域划分&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;越是抽象的概念、越是抽象的标准，包容的万物越多，难度也越大。&lt;/p&gt;
+&lt;p&gt;某种意义下，领域的划分，也是因为一种抽象无法覆盖多个领域。现实的例子，就是社会的行业划分。&lt;/p&gt;
+&lt;p&gt;对于企业而言，标准的统一是一件相当困难的事，因为短期内效益没有体现，并且使用标准规范企业内部和外部的行为，需要有执行力的保障。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id13"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id29"&gt;重要性评价&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;标准的重要性和影响面，可以通过对标准的引用次数来确定。这种模型类似于 &lt;a class="reference internal" href="#page-rank"&gt;Page Rank&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;标准的引用包含两个方面：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;领域内部&lt;/li&gt;
+&lt;li&gt;领域外部&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id14"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id30"&gt;适应变化的机制&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;变化，来自于人的认知，来自于社会的进步，来自于科技进步对人类产生的影响，来自于对本质的深入理解，来自于方方面面。&lt;/p&gt;
+&lt;p&gt;企业信息系统，是一个高精度匹配的机器，任何一行关键代码的变更，都可能会导致整个系统无法正常工作。&lt;/p&gt;
+&lt;p&gt;一旦标准中的概念或者关系发生变化，需要有快速发现影响范围，并迅速制定有效的应对方案。&lt;/p&gt;
+&lt;p&gt;企业建立一套适应变化的机制，应当包含以下要素：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;概念的文字性描述&lt;/li&gt;
+&lt;li&gt;概念的多语言代码的生成和快速引用&lt;/li&gt;
+&lt;li&gt;概念代码对应在不同视角、不同领域之间的转换和适配&lt;/li&gt;
+&lt;li&gt;变化的影响面分析&lt;/li&gt;
+&lt;li&gt;适应性变更的快速交付&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mofmtl"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id31"&gt;MOF与MTL&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="id15"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id32"&gt;概念模型&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;模型是表述一个领域内部概念之间关系的方法。&lt;/p&gt;
+&lt;p&gt;概念模型是在一个系统交付过程中，设计的核心之一。&lt;/p&gt;
+&lt;p&gt;根据 &lt;a class="reference internal" href="#mof"&gt;MOF&lt;/a&gt; (Meta-Object Facility) 的概念以及 &lt;tt class="docutils literal"&gt;ISO/IEC 19508:2014&lt;/tt&gt; 的 &lt;tt class="docutils literal"&gt;Object Management Group Meta Object Facility (MOF) Core&lt;/tt&gt; 国际标准，一个「概念」在信息系统落地的过程，可以包含层结构：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;实例 -- 一个概念（在计算机系统中）的具体实例化对象&lt;/li&gt;
+&lt;li&gt;模型 -- 描述一个概念的结构的定义，类似于上文的 &lt;tt class="docutils literal"&gt;AlternatingCurrent&lt;/tt&gt; 这个 &lt;tt class="docutils literal"&gt;Java class&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;元模型 -- 描述模型的模型，例如 &lt;a class="reference internal" href="#uml"&gt;UML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;元元模型 -- 描述模型的模型的模型，例如 &lt;a class="reference internal" href="#mof"&gt;MOF&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id16"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id33"&gt;模型转换&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;正因为概念是标准的一部分、模型是描述概念的方法，所以模型的转换会同时发生在宏观和微观两个层面：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;在宏观层面：当一个模型从一个领域走进另外一个领域&lt;/li&gt;
+&lt;li&gt;在微观层面：当一个模型从领域中的一个视角转换为另外一个视角&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;描述模型转换这件事，有专门的语言: MTL ( &lt;a class="reference internal" href="#model-transformation-language"&gt;Model transformation language&lt;/a&gt; )。
+&lt;a class="reference internal" href="#atlas-transformation-language"&gt;ATLAS Transformation Language&lt;/a&gt; 是 MTL 的一个实现。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id17"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id34"&gt;扩展阅读&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;span class="target" id="page-rank"&gt;Page Rank&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/PageRank"&gt;https://en.wikipedia.org/wiki/PageRank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="mof"&gt;MOF&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Meta-Object_Facility"&gt;https://en.wikipedia.org/wiki/Meta-Object_Facility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="mof-2-5"&gt;MOF 2.5&lt;/span&gt;: &lt;a class="reference external" href="http://www.omg.org/spec/MOF/2.5/"&gt;http://www.omg.org/spec/MOF/2.5/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="iso-iec-19508-2014"&gt;ISO/IEC 19508:2014&lt;/span&gt;: &lt;a class="reference external" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=61844"&gt;http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=61844&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="uml"&gt;UML&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Unified_Modeling_Language"&gt;https://en.wikipedia.org/wiki/Unified_Modeling_Language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="model-transformation-language"&gt;Model transformation language&lt;/span&gt; : &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Model_transformation_language"&gt;https://en.wikipedia.org/wiki/Model_transformation_language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="atlas-transformation-language"&gt;ATLAS Transformation Language&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/ATLAS_Transformation_Language"&gt;https://en.wikipedia.org/wiki/ATLAS_Transformation_Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="数字化"></category><category term="标准"></category><category term="概念"></category><category term="MOF"></category><category term="MTL"></category></entry><entry><title>唯一性标识的生成策略</title><link href="/articles/UniqueIDGenerateStrategy" rel="alternate"></link><updated>2016-04-19T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-19:articles/UniqueIDGenerateStrategy</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;「主数据」类型的生成策略&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;主数据是一类和客观对象产生较为紧密映射关系的数据。例如:「客户」，「产品」等等。&lt;/p&gt;
 &lt;p&gt;这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。&lt;/p&gt;
 &lt;p&gt;使用ID来表述这一类数据的主要侧重点有:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;隐私保护 - 权重5&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;整体可用容量 - 权重5&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;单位时间可用量 - 权重2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;首次生成简便性 - 权重2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;后期录入简便性 - 权重4&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;后期迁移简便性 - 权重4&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;人工阅读可预判性 - 权重5&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;隐私保护 - 权重5&lt;/li&gt;
+&lt;li&gt;整体可用容量 - 权重5&lt;/li&gt;
+&lt;li&gt;单位时间可用量 - 权重2&lt;/li&gt;
+&lt;li&gt;首次生成简便性 - 权重2&lt;/li&gt;
+&lt;li&gt;后期录入简便性 - 权重4&lt;/li&gt;
+&lt;li&gt;后期迁移简便性 - 权重4&lt;/li&gt;
+&lt;li&gt;人工阅读可预判性 - 权重5&lt;/li&gt;
+&lt;li&gt;分库分表可路由性 - 权重5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中，人工阅读可预判性包含&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;包含分类特征&lt;/li&gt;
 &lt;li&gt;使用定长编码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;分库分表可路由性 - 权重5&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;例如, 身份证号「310109190001011235」,18个数字字母字符（18字节=144bit）, 最后一位为校验位
 前6位为地域分类，7至14位为生日。&lt;/p&gt;
@@ -38,36 +229,26 @@
 &lt;p&gt;交易数据是一类和某个活动或者行为对象相关的数据。例如「订单」，「消息」。&lt;/p&gt;
 &lt;p&gt;这一类的数据会随着时间不但进行完善和修正，整体的数据生命周期较长。&lt;/p&gt;
 &lt;p&gt;使用ID来表述这一类数据的主要侧重点有:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;隐私保护 - 权重4&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;整体可用容量 - 权重5&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;单位时间可用量 - 权重5&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;首次生成简便性 - 权重4&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;后期录入简便性 - 权重3&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;后期迁移简便性 - 权重2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;人工阅读可预判性 - 权重2&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;隐私保护 - 权重4&lt;/li&gt;
+&lt;li&gt;整体可用容量 - 权重5&lt;/li&gt;
+&lt;li&gt;单位时间可用量 - 权重5&lt;/li&gt;
+&lt;li&gt;首次生成简便性 - 权重4&lt;/li&gt;
+&lt;li&gt;后期录入简便性 - 权重3&lt;/li&gt;
+&lt;li&gt;后期迁移简便性 - 权重2&lt;/li&gt;
+&lt;li&gt;人工阅读可预判性 - 权重2&lt;/li&gt;
+&lt;li&gt;分库分表可路由性 - 权重5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中，人工阅读可预判性包含&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;包含时间特征&lt;/li&gt;
 &lt;li&gt;包含源与目标特征&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;分库分表可路由性 - 权重5&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;例如, 淘宝订单号「1799508888858080」,16个数字（16字节=128bit）, 后四位数字为分库分表策略,
 前12位与时间相关。&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="唯一性标识"></category><category term="主数据"></category><category term="交易数据"></category></entry><entry><title>IETF HTTP 规范概览</title><link href="/articles/HTTPSpecsOverview" rel="alternate"></link><updated>2016-04-18T12:29:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-18:articles/HTTPSpecsOverview</id><summary type="html">
 &lt;!-- --&gt;
-&lt;p&gt;IETF 从1996年至今，关于HTTP协议的定义超过17个，涵盖HTTP 1.0/1.1/2&lt;/p&gt;
 &lt;p&gt;基于HTTP的RESTFul风格，是对HTTP协议的一次功能挖掘。&lt;/p&gt;
 &lt;div class="section" id="infomation"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Infomation类&lt;/a&gt;&lt;/h2&gt;
@@ -203,18 +384,19 @@ A standards group or individual outside the &lt;a class="reference external" hre
 </summary><category term="架构师"></category><category term="架构"></category></entry><entry><title>从元宵节煮汤圆看架构的识别与设计</title><link href="/articles/TangYuanInsightArchitecture" rel="alternate"></link><updated>2016-02-22T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-02-22:articles/TangYuanInsightArchitecture</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;什么是架构&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;架构定义&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;所谓架构，就是解决「人所遇到的问题」(简称问题)的办法。&lt;/p&gt;
 &lt;p&gt;采用什么办法解决问题，和客观的条件有关，也和当事人有关。&lt;/p&gt;
 &lt;p&gt;因此，办法会有很多种，背后所体现的理念会有不同，折射出的是不同的价值观。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;什么是「好」架构&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;好架构的定义&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;「好」架构，应当是对架构使用人「简单」并且「通用性强」，可以解决「很多」人的类似问题。&lt;/p&gt;
 &lt;p&gt;「好」架构，应当因地制宜，不要求额外的增加使用人的负担（比如额外采购设备，学习新的知识），增加使用人的使用成本。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;老一辈交代的煮汤圆方法（煮汤圆的传统架构）&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;煮汤圆的传统架构&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;煮汤圆的传统架构就是老一辈交代的煮汤圆方法。&lt;/p&gt;
 &lt;p&gt;这里所描述的煮汤圆的方法，可能只是传统煮汤圆的方法之一，大致过程描述如下&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;取一锅干净的冷水&lt;/li&gt;
@@ -228,7 +410,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;p&gt;一定还有更多方法，因为煮汤圆的过程，和锅有关，和水有关，和火力有关，和被煮的汤圆数量和大小有关，不可避免的煮汤圆的人有关，等等等等。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id5"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;老一辈交代的煮汤圆方法好不好（煮汤圆的传统架构好不好）&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;煮汤圆的传统架构好不好&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;好。理由是：&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;对于汤圆怎么被熟的质变过程不需要了解（不需要了解物理原理）&lt;/li&gt;
@@ -238,7 +420,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id6"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;煮汤圆的目标（好吃有卖相）&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;好吃有卖相是煮汤圆的目标&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;直接目标是煮熟（基本前提）&lt;/li&gt;
 &lt;/ul&gt;
@@ -819,7 +1001,7 @@ process.env.PATH = ["/usr/bin",
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;使用 &lt;a class="reference external" href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc"&gt;extract_toc&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;执行``git clone &lt;a class="reference external" href="https://github.com/getpelican/pelican-plugins"&gt;https://github.com/getpelican/pelican-plugins&lt;/a&gt;.git``&lt;/li&gt;
+&lt;li&gt;执行 &lt;tt class="docutils literal"&gt;git clone &lt;span class="pre"&gt;https://github.com/getpelican/pelican-plugins.git&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id2"&gt;
@@ -1011,4 +1193,4 @@ category: pelican
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;表情和神态是一个人内心的折射，几十年积累足以是一个人的内心变得“不俗”，于是，表情跟着“从容”、神态跟着“睿智”。&lt;/p&gt;
 &lt;p&gt;//所以，与新人接触，第一要看面相。#面相很重要#&lt;/p&gt;
-</summary><category term="时间管理"></category><category term="价值观"></category></entry></feed>
+</summary><category term="时间管理"></category><category term="价值观"></category><category term="书评"></category></entry></feed>
