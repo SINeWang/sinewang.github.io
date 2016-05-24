@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-04-29T11:01:00+08:00</updated><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-29:articles/digitization-essence-and-foundation</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T15:01:00+08:00</updated><entry><title>DevOps对于企业IT的价值</title><link href="/articles/devops-value-towards-enterprise-it" rel="alternate"></link><updated>2016-05-19T15:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-19:articles/devops-value-towards-enterprise-it</id><summary type="html">
+&lt;!-- --&gt;
+&lt;div class="section" id="devops"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;DevOps 概念的发展历史&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;现在是2016年5月下旬，&lt;em&gt;DevOps&lt;/em&gt; 作为一个IT圈的热词，几乎已经是无人不知，无人不晓。&lt;/p&gt;
+&lt;p&gt;如果你是一个有心人的话，可能会好奇DevOps这个概念到底是在什么情况下诞生的。&lt;/p&gt;
+&lt;p&gt;在 &lt;a class="reference internal" href="#wikipedia-devops"&gt;Wikipedia: Devops&lt;/a&gt; 的词条里，可以发现 &lt;em&gt;DevOps&lt;/em&gt; 相关概念已经早在2008年就被提出了。&lt;/p&gt;
+&lt;blockquote&gt;
+At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "Agile Infrastructure". The term "DevOps" was popularized through a series of devopsdays starting in 2009 in Belgium. Since then, there have been devopsdays conferences held in many countries worldwide.&lt;/blockquote&gt;
+&lt;p&gt;即便是在2006年Amazon发布了ECS, 微软在2008年和2010年提出和发布了Azure，&lt;em&gt;DevOps&lt;/em&gt; 的重要性似乎没那么强烈。&lt;/p&gt;
+&lt;p&gt;可是在8年前的那个时候，为什么 &lt;em&gt;DevOps&lt;/em&gt; 没有迅速走红呢，第一个很重要的原因是因为那时候 &lt;em&gt;云计算&lt;/em&gt; （ &lt;a class="reference internal" href="#wikipeida-cloud-computing"&gt;Wikipeida: Cloud computing&lt;/a&gt; ） 还是小众产品，更多的与虚拟化相关。
+第二个很重要的原因是 &lt;a class="reference internal" href="#wikipedia-docker"&gt;Wikipedia: Docker&lt;/a&gt; 还没有横空出世，直到2013年7月。第三个很重要的原因是，Martin Fowler 在2014年3月提出了 &lt;a class="reference internal" href="#microservices"&gt;Microservices&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;可以看出，当前 &lt;em&gt;DevOps&lt;/em&gt; 概念的深入人心，离不开云计算、容器/Docker、微服务、敏捷等相关概念和实施的成熟发展。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="it"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;企业IT对于企业的价值&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;谈到企业IT，就没有办法回避两种迥然不同的企业，一种是以传统制造业或者服务业为基础的，对生产资料进行加工的「传统企业」；
+另一种是以「信息互联」为基础的，对「人与人关系、人与物关系、物与物关系」进行信息加工的「互联网企业」。&lt;/p&gt;
+&lt;p&gt;这两类，是两类极端的企业，一类企业的日常运行，可以没有信息系统；另一类企业，完全离不开信息系统。&lt;/p&gt;
+&lt;p&gt;一般的信息系统，对于企业的价值，主要有三类渐进过度的典型类型。&lt;/p&gt;
+&lt;p&gt;第一类，是将信息系统定位于「辅助和支撑」企业的产品制造以及企业运营部门，因为这类企业的生产资料系、生产力、生产关，都以实体制造为主，不以信息加工和处理作为企业产品核心。&lt;/p&gt;
+&lt;p&gt;第二类，是将信息系统作为数据加工、传输作为主体，但业务模式来自于传统行业，信息系统主要完成已有业务规则的虚拟化，例如金融、电信行业。这类企业的信息或者数据，主要来自于业务受理，或者说数据的生产者和使用者是企业自身。&lt;/p&gt;
+&lt;p&gt;第三类，是将信息系统作为企业唯一生产工具，并将企业的客户（个人或企业）所自发贡献的信息、数据，作为生产资料，形成新兴的业务模式。这里企业的典型，就是互联网企业。&lt;/p&gt;
+&lt;p&gt;随着又一轮「数字化」的概念席卷全球，非互联网企业所面临的更多针对用户和客户的思考和探索，都需要有更快交付能力的信息系统进行支撑，这也是传统企业互联网化，打开企业边界围栏迈出的第一步。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="devops-it"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;DevOps 对于企业IT的价值&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;通过前文的分析，可以看到，企业IT对于三类不一样的企业价值体现各有不同。&lt;/p&gt;
+&lt;p&gt;对于互联网企业，信息系统是企业产品的命脉，企业对于软件的价值观以及投资组合，对于其他两类企业要高出很多。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;DevOps&lt;/em&gt; 的核心价值，是能够帮助企业快速交付变更，以便于快速响应企业对于市场的变化、用户的需求。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;代码&lt;/li&gt;
+&lt;li&gt;构建&lt;/li&gt;
+&lt;li&gt;测试&lt;/li&gt;
+&lt;li&gt;打包&lt;/li&gt;
+&lt;li&gt;发布&lt;/li&gt;
+&lt;li&gt;配置&lt;/li&gt;
+&lt;li&gt;监控&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上7个过程，是 &lt;em&gt;DevOps&lt;/em&gt; 站在软件生命周期平台化运营的视角，为企业IT所建立的一个「IT for IT / &lt;a class="reference internal" href="#it4it"&gt;IT4IT&lt;/a&gt; 」的业务平台。&lt;/p&gt;
+&lt;p&gt;如果说，软件开发、交付、运维是一个传统行业，那么 &lt;em&gt;DevOps&lt;/em&gt; 就是映射了这个传统行业的一个软件平台。&lt;/p&gt;
+&lt;p&gt;通过 &lt;em&gt;DevOps&lt;/em&gt; 可以助理企业软件交付的效率提升，帮助企业IT实现数字化运营。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;DevOps 在企业中的实践&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;和众多源于互联网的理念一样，在 &lt;em&gt;DevOps&lt;/em&gt; 的概念被炒热之前，众多互联网公司其实已经实践了 &lt;em&gt;DevOps&lt;/em&gt; 。
+其中的原因也正是因为信息系统，是这些公司的生产工具，没有人比互联网公司的人更明白提高自身的办公效率，提高团队、企业的生产力，就是为提高企业产品的生产力进行有效的保障。&lt;/p&gt;
+&lt;p&gt;除了前文提的 &lt;em&gt;DevOps&lt;/em&gt; 覆盖企业软件生命周期中的7个过程， &lt;em&gt;DevOps&lt;/em&gt; 在企业落地过程中，传统企业或多或少都已经建设了一部分配套系统，尤其是AAAA与监控系统，其他的代码管理、持续集成工具也或多或少的有所积累。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;DevOps&lt;/em&gt; 更多的是把IT服务产品化的平台，企业中的任何一个IT能力，都应当能够在 &lt;em&gt;DevOps&lt;/em&gt; 中面向其用户提供自服务的的能力。
+例如，系统的开发者，能够自主的在 &lt;em&gt;DevOps&lt;/em&gt; 上联机分析生产环境的日志，而不必经过层层壁垒，一台台登录生产环境的主机，检索日志。
+再例如，项目组的快速变更、员工的快速入、离职，都应当能够在 &lt;em&gt;DevOps&lt;/em&gt; 中实现自动化的账号开通和注销。&lt;/p&gt;
+&lt;p&gt;需要注意的是，相比传统企业尤其是制造业的产品制造工艺和制造流程，软件产品的制造，IT服务的交付，更多的是交付一些无形的软件产品和知识工作。
+正因为这些无形产品受制于不同的人认知所产生的多变，其管理复杂度远比制造业来的复杂，企业软件的设计、开发、发布、上线，缺乏标准化的管理过程。&lt;/p&gt;
+&lt;p&gt;对于如今的非互联网企业而言，能够快速见效的 &lt;em&gt;DevOps&lt;/em&gt; 时间，应当从（环境）配置的管理，以及自动化部署。
+在实施难度上，配置的管理要低于自动化部署。因为非互联网企业的技术路线由于供应商的竞争（甚至是恶意竞争），变得极其多样，架构离散化程度也很高。&lt;/p&gt;
+&lt;p&gt;对比互联网企业，（环境）配置管理和自动化部署，由于IT技术从硬件到虚拟化/容器的自助可控，企业整体技术架构的收敛性就比较理想。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;当前 DevOps 对于企业架构支撑的不足&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;从 &lt;em&gt;代码&lt;/em&gt; 到 &lt;em&gt;监控&lt;/em&gt; , 可以看出 &lt;em&gt;DevOps&lt;/em&gt; 对于企业尚有以下不足（或者说 &lt;em&gt;DevOps&lt;/em&gt; 本来就不考虑这些）:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;缺少对企业IT战略规划、企业IT业务架构规划、企业IT系统架构设计、企业IT系统需求管理以及IT项目管理进行有效的平台化、数字化支撑。&lt;/li&gt;
+&lt;li&gt;缺少对企业IT部门、信息系统运营效能的系统性评估和优化模型&lt;/li&gt;
+&lt;li&gt;缺少对企业不同IT系统供应商的技术架构、IT产品的标准化、基线化管理。&lt;/li&gt;
+&lt;li&gt;缺少对企业数据类应用的支撑，更偏于交易型应用的交付。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于第 1,2 两点 任何企业都有这方面的需求，但由于企业在投资组合上对这个领域投资较少，投资规模较大、实施难度较大，企业主更愿意进行面向企业产品「开源」投资。&lt;/p&gt;
+&lt;p&gt;对于第 3 点，几乎不会在秉承「自朱建设」互联网公司存在，但在其他企业中也逐步会通过精益运营的方式进行落地实施。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;参考资料&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;span class="target" id="wikipedia-devops"&gt;Wikipedia: Devops&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/DevOps"&gt;https://en.wikipedia.org/wiki/DevOps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="wikipeida-cloud-computing"&gt;Wikipeida: Cloud Computing&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Cloud_computing"&gt;https://en.wikipedia.org/wiki/Cloud_computing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="wikipedia-docker"&gt;Wikipedia: Docker&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Docker_(software"&gt;https://en.wikipedia.org/wiki/Docker_(software&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="microservices"&gt;Microservices&lt;/span&gt;: &lt;a class="reference external" href="http://martinfowler.com/articles/microservices.html"&gt;http://martinfowler.com/articles/microservices.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="target" id="it4it"&gt;IT4IT&lt;/span&gt;: &lt;a class="reference external" href="http://www.opengroup.org/IT4IT"&gt;http://www.opengroup.org/IT4IT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="DevOps"></category><category term="微服务"></category><category term="软件价值观"></category><category term="企业架构"></category><category term="云计算"></category></entry><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-29:articles/digitization-essence-and-foundation</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id18"&gt;数字化的概念&lt;/a&gt;&lt;/h2&gt;
