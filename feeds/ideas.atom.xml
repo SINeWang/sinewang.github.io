@@ -10,7 +10,7 @@
 At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "Agile Infrastructure". The term "DevOps" was popularized through a series of devopsdays starting in 2009 in Belgium. Since then, there have been devopsdays conferences held in many countries worldwide.&lt;/blockquote&gt;
 &lt;p&gt;即便是在2006年Amazon发布了ECS, 微软在2008年和2010年提出和发布了Azure，&lt;em&gt;DevOps&lt;/em&gt; 的重要性似乎没那么强烈。&lt;/p&gt;
 &lt;p&gt;可是在8年前的那个时候，为什么 &lt;em&gt;DevOps&lt;/em&gt; 没有迅速走红呢，第一个很重要的原因是因为那时候 &lt;em&gt;云计算&lt;/em&gt; （ &lt;a class="reference internal" href="#wikipeida-cloud-computing"&gt;Wikipeida: Cloud computing&lt;/a&gt; ） 还是小众产品，更多的与虚拟化相关。
-第二个很重要的原因是 &lt;a class="reference internal" href="#wikipedia-docker"&gt;Wikipedia: Docker&lt;/a&gt; 还没有横空出世，直到2013年7月。第三个很重要的原因是，Martin Fowler 在2014年3月提出了 &lt;a class="reference internal" href="#microservices"&gt;Microservices&lt;/a&gt; 。&lt;/p&gt;
+第二个很重要的原因是 Docker 还没有横空出世，直到2013年7月。第三个很重要的原因是，Martin Fowler 在2014年3月提出了 &lt;a class="reference internal" href="#microservices"&gt;Microservices&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;可以看出，当前 &lt;em&gt;DevOps&lt;/em&gt; 概念的深入人心，离不开云计算、容器/Docker、微服务、敏捷等相关概念和实施的成熟发展。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="it"&gt;
@@ -73,7 +73,6 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;span class="target" id="wikipedia-devops"&gt;Wikipedia: Devops&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/DevOps"&gt;https://en.wikipedia.org/wiki/DevOps&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="target" id="wikipeida-cloud-computing"&gt;Wikipeida: Cloud Computing&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Cloud_computing"&gt;https://en.wikipedia.org/wiki/Cloud_computing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="target" id="wikipedia-docker"&gt;Wikipedia: Docker&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Docker_(software"&gt;https://en.wikipedia.org/wiki/Docker_(software&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;span class="target" id="microservices"&gt;Microservices&lt;/span&gt;: &lt;a class="reference external" href="http://martinfowler.com/articles/microservices.html"&gt;http://martinfowler.com/articles/microservices.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="target" id="it4it"&gt;IT4IT&lt;/span&gt;: &lt;a class="reference external" href="http://www.opengroup.org/IT4IT"&gt;http://www.opengroup.org/IT4IT&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
