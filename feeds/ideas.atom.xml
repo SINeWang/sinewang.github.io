@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T15:01:00+08:00</updated><entry><title>DevOps对于企业IT的价值</title><link href="/articles/devops-value-towards-enterprise-it" rel="alternate"></link><updated>2016-05-19T15:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-19:articles/devops-value-towards-enterprise-it</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-06-01T09:32:00+08:00</updated><entry><title>DevOps对于企业IT的价值</title><link href="/articles/devops-value-towards-enterprise-it" rel="alternate"></link><updated>2016-06-01T09:32:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-19:articles/devops-value-towards-enterprise-it</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="devops"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;DevOps 概念的发展历史&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;DevOps 概念的发展历史&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;现在是2016年5月下旬，&lt;em&gt;DevOps&lt;/em&gt; 作为一个IT圈的热词，几乎已经是无人不知，无人不晓。&lt;/p&gt;
 &lt;p&gt;如果你是一个有心人的话，可能会好奇DevOps这个概念到底是在什么情况下诞生的。&lt;/p&gt;
 &lt;p&gt;在 &lt;a class="reference internal" href="#wikipedia-devops"&gt;Wikipedia: Devops&lt;/a&gt; 的词条里，可以发现 &lt;em&gt;DevOps&lt;/em&gt; 相关概念已经早在2008年就被提出了。&lt;/p&gt;
@@ -14,7 +14,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;p&gt;可以看出，当前 &lt;em&gt;DevOps&lt;/em&gt; 概念的深入人心，离不开云计算、容器/Docker、微服务、敏捷等相关概念和实施的成熟发展。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="it"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;企业IT对于企业的价值&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;企业IT对于企业的价值&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;谈到企业IT，就没有办法回避两种迥然不同的企业，一种是以传统制造业或者服务业为基础的，对生产资料进行加工的「传统企业」；
 另一种是以「信息互联」为基础的，对「人与人关系、人与物关系、物与物关系」进行信息加工的「互联网企业」。&lt;/p&gt;
 &lt;p&gt;这两类，是两类极端的企业，一类企业的日常运行，可以没有信息系统；另一类企业，完全离不开信息系统。&lt;/p&gt;
@@ -25,7 +25,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;p&gt;随着又一轮「数字化」的概念席卷全球，非互联网企业所面临的更多针对用户和客户的思考和探索，都需要有更快交付能力的信息系统进行支撑，这也是传统企业互联网化，打开企业边界围栏迈出的第一步。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="devops-it"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;DevOps 对于企业IT的价值&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;DevOps 对于企业IT的价值&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;通过前文的分析，可以看到，企业IT对于三类不一样的企业价值体现各有不同。&lt;/p&gt;
 &lt;p&gt;对于互联网企业，信息系统是企业产品的命脉，企业对于软件的价值观以及投资组合，对于其他两类企业要高出很多。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;DevOps&lt;/em&gt; 的核心价值，是能够帮助企业快速交付变更，以便于快速响应企业对于市场的变化、用户的需求。&lt;/p&gt;
@@ -41,9 +41,19 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;p&gt;以上7个过程，是 &lt;em&gt;DevOps&lt;/em&gt; 站在软件生命周期平台化运营的视角，为企业IT所建立的一个「IT for IT / &lt;a class="reference internal" href="#it4it"&gt;IT4IT&lt;/a&gt; 」的业务平台。&lt;/p&gt;
 &lt;p&gt;如果说，软件开发、交付、运维是一个传统行业，那么 &lt;em&gt;DevOps&lt;/em&gt; 就是映射了这个传统行业的一个软件平台。&lt;/p&gt;
 &lt;p&gt;通过 &lt;em&gt;DevOps&lt;/em&gt; 可以助理企业软件交付的效率提升，帮助企业IT实现数字化运营。&lt;/p&gt;
+&lt;p&gt;可以用一句话定位以下三者在价值链上的关系&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;「信息」（数据）&lt;/li&gt;
+&lt;li&gt;「信息系统」（处理数据的工具）&lt;/li&gt;
+&lt;li&gt;「DevOps」（制造与维护处理数据的工具的工具）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在「信息」（数据）成为企业「生产资料」一部分的条件下，信息系统快速演进的业务驱动力、DevOps的价值，才能够清晰的得到体现。&lt;/p&gt;
+&lt;p&gt;企业IT系统的从「业务支撑型」走向「业务驱动型」的转折点，是由企业产品的最终用户，直接以低成本为企业提供生产资料——信息（数据）——并使之成为企业产品的一部分
+。&lt;/p&gt;
+&lt;p&gt;如果信息是企业产品的全部，那么这种类型的企业就是第三类——互联网企业。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id1"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;DevOps 在企业中的实践&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;DevOps 在企业中的实践&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;和众多源于互联网的理念一样，在 &lt;em&gt;DevOps&lt;/em&gt; 的概念被炒热之前，众多互联网公司其实已经实践了 &lt;em&gt;DevOps&lt;/em&gt; 。
 其中的原因也正是因为信息系统，是这些公司的生产工具，没有人比互联网公司的人更明白提高自身的办公效率，提高团队、企业的生产力，就是为提高企业产品的生产力进行有效的保障。&lt;/p&gt;
 &lt;p&gt;除了前文提的 &lt;em&gt;DevOps&lt;/em&gt; 覆盖企业软件生命周期中的7个过程， &lt;em&gt;DevOps&lt;/em&gt; 在企业落地过程中，传统企业或多或少都已经建设了一部分配套系统，尤其是AAAA与监控系统，其他的代码管理、持续集成工具也或多或少的有所积累。&lt;/p&gt;
@@ -57,7 +67,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;p&gt;对比互联网企业，（环境）配置管理和自动化部署，由于IT技术从硬件到虚拟化/容器的自主可控，企业整体技术架构的收敛性就比较理想。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;当前 DevOps 对于企业架构支撑的不足&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;当前 DevOps 对于企业架构支撑的不足&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;从 &lt;em&gt;代码&lt;/em&gt; 到 &lt;em&gt;监控&lt;/em&gt; , 可以看出 &lt;em&gt;DevOps&lt;/em&gt; 对于企业尚有以下不足（或者说 &lt;em&gt;DevOps&lt;/em&gt; 本来就不考虑这些）:&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;缺少对企业IT战略规划、企业IT业务架构规划、企业IT系统架构设计、企业IT系统需求管理以及IT项目管理进行有效的平台化、数字化支撑。&lt;/li&gt;
@@ -69,13 +79,19 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;p&gt;对于第 3 点，几乎不会在秉承「自朱建设」互联网公司存在，但在其他企业中也逐步会通过精益运营的方式进行落地实施。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;参考资料&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;参考资料&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;span class="target" id="wikipedia-devops"&gt;Wikipedia: Devops&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/DevOps"&gt;https://en.wikipedia.org/wiki/DevOps&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="target" id="wikipeida-cloud-computing"&gt;Wikipeida: Cloud Computing&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Cloud_computing"&gt;https://en.wikipedia.org/wiki/Cloud_computing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="target" id="microservices"&gt;Microservices&lt;/span&gt;: &lt;a class="reference external" href="http://martinfowler.com/articles/microservices.html"&gt;http://martinfowler.com/articles/microservices.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="target" id="it4it"&gt;IT4IT&lt;/span&gt;: &lt;a class="reference external" href="http://www.opengroup.org/IT4IT"&gt;http://www.opengroup.org/IT4IT&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;修订历史&lt;/a&gt;&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;2016-06-01 09:51 补充价值链上的关系&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </summary><category term="DevOps"></category><category term="微服务"></category><category term="软件价值观"></category><category term="企业架构"></category><category term="云计算"></category></entry><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-29:articles/digitization-essence-and-foundation</id><summary type="html">
 &lt;!-- --&gt;
