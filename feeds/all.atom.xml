@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-21T11:18:00+08:00</updated><entry><title>平台运营的关键</title><link href="/articles/key-of-platform-operation" rel="alternate"></link><updated>2016-06-21T11:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-21:articles/key-of-platform-operation</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-22T15:16:00+08:00</updated><entry><title>API不适合做数据同步</title><link href="/articles/api-is-not-suitable-for-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-data-sync</id><summary type="html">&lt;!--  --&gt;
+&lt;p&gt;API SPI 的调用，有很大的一部分比例，都是为了做数据同步。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;API / Application Programming Interface（应用程序接口）&lt;/li&gt;
+&lt;li&gt;SPI / Service Provider Interface (服务提供者接口)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件要解决的是两部分的事情：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;信息的共享&lt;/li&gt;
+&lt;li&gt;信息的加工&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;信息的加工时会对信息产生「增值的效果」，最终导致信息在形态上发生「形变」。&lt;/p&gt;
+&lt;p&gt;API和SPI的设计，如果没有进行任何加工（就是进行了业务逻辑，导致信息在结构上发生改变，变成另外一类的信息），那么之类的数据本质上是应该进行同步的操作。&lt;/p&gt;
+&lt;p&gt;导致不对数据进行直接同步的原因，有这些：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;信息的一侧没有持久化能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如，浏览器侧是不提供持久化的能力的，那么就需要另外一方（有持久化能力的）提供API（一般也就是服务端），方便浏览器实时获取信息。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;避免出现多份数据的一致性问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个数据实体，映射的是一个物理上的实体，物理实体的复制是困难的，但相比之下，数据实体的映射是简单的，特别特别简单的。这也导致了，数据在经过多个处理环节的时候，每个环节都可以对其进行持久化（这里不考虑安全性的问题）。&lt;/p&gt;
+</summary><category term="API"></category><category term="SPI"></category><category term="数据同步"></category></entry><entry><title>平台运营的关键</title><link href="/articles/key-of-platform-operation" rel="alternate"></link><updated>2016-06-22T15:16:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-21:articles/key-of-platform-operation</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;平台要服务于内容&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;平台要服务于内容&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;「平台」，在感官视觉上是一个「平的台子」，发音也有一部分也来自于英语的「Platform」，不管怎样，时下的平台自身应当包含两个基本能力：&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;承载内容&lt;/li&gt;
@@ -14,7 +36,7 @@
 &lt;p&gt;事物是普遍联系的，不同种类的内容之间，会存在潜在的联系。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;平台形态的多边性&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;以内容为核心的多边关系平台&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;一个健康的平台，应该是三边或者多边的，会包含：&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;平台运营方&lt;/li&gt;
@@ -25,9 +47,6 @@
 &lt;ul class="simple"&gt;
 &lt;li&gt;平台监管方&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;以内容为核心的平台生态环境&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;正因为平台是服务于内容的、平台是由多边参与的，平台能够体现两个维度的关系：&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;横向上，平台体现的是供给和需求的关系&lt;/li&gt;
@@ -37,16 +56,16 @@
 &lt;p&gt;所以，平台本质上应当是多边市场化的。在横向上，供给与需求的在数量上的平衡，是决定某个内容市场能否持续繁荣的决定性因素。&lt;/p&gt;
 &lt;p&gt;市场犹如天平，架起的是某个内容的「供给」和「需求」两端。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;平台运营的核心理念&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;平台运营的核心理念&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;平台运营首先需要帮助每个用户弥补短板，鼓励每个平台的参与者向平台贡献内容并得到广泛的认可、体现他们的价值，从而重点激发平台上的每个用户的自身潜力，同时也需要严格监管平台上的不良用户，保障一个健康、有序的生态环境。&lt;/p&gt;
-&lt;div class="section" id="id6"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id12"&gt;弥补短板&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id10"&gt;弥补短板&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;现如今，任何单个个体的能力是渺小的，向市场上不断提供内容，仅凭一己之力，难以、或者需要耗费大量时间来提供一个完整的内容，慢节奏的内容推陈出新是无法满足这个时代挑剔的眼光，更难以激起波澜，甚至是难以获得注意。&lt;/p&gt;
 &lt;p&gt;平台运营方，自身要懂得某个领域内容的特点，帮助小微个体使用平台上的综合能力，使其提供完整的内容。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id7"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id13"&gt;内容价值的多视角&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id11"&gt;内容价值的多视角&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;需求方视角&lt;/li&gt;
 &lt;/ul&gt;

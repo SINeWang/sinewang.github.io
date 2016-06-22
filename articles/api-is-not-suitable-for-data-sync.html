@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主题 @ 王延炯 · 观世界 | World Insight
+    <title>API不适合做数据同步  @ 王延炯 · 观世界 | World Insight
 </title>
     <meta name="description" content="">
     <meta name="author" content="Wang YanJiong">
@@ -52,47 +52,82 @@
     <div class="row">
 
         <div class="col-md-9">
-<h2 class="content-title nocount">主题</h2>
-<ul>
-		<li>experiences ( 4 )</a></li>
-		<ul>
-			<li><span class="small">2016-01-29</span>	<a href="/articles/PUMLMacOSXAtomEditor">用Atom在Mac OS X 下编辑PlantUML</a></li>
-			<li><span class="small">2015-10-30</span>	<a href="/articles/RSTMacOSXAtomEditor">用Atom在Mac OS X 下编辑reStructuredText</a></li>
-			<li><span class="small">2015-10-18</span>	<a href="/articles/MacOSXEnvironment">Mac OS X环境</a></li>
-			<li><span class="small">2015-10-16</span>	<a href="/articles/pelican-toc-plugin">Pelican TOC Plugin</a></li>
-		</ul>
-		<li>ideas ( 15 )</a></li>
-		<ul>
-			<li><span class="small">2016-06-22</span>	<a href="/articles/api-is-not-suitable-for-data-sync">API不适合做数据同步</a></li>
-			<li><span class="small">2016-06-21</span>	<a href="/articles/key-of-platform-operation">平台运营的关键</a></li>
-			<li><span class="small">2016-05-19</span>	<a href="/articles/devops-value-towards-enterprise-it">DevOps对于企业IT的价值</a></li>
-			<li><span class="small">2016-04-29</span>	<a href="/articles/digitization-essence-and-foundation">数字化的本质和基础</a></li>
-			<li><span class="small">2016-04-19</span>	<a href="/articles/UniqueIDGenerateStrategy">唯一性标识的生成策略</a></li>
-			<li><span class="small">2016-04-18</span>	<a href="/articles/HTTPSpecsOverview">IETF HTTP 规范概览</a></li>
-			<li><span class="small">2016-04-14</span>	<a href="/articles/TheConflictionOfID">唯一性标识的矛盾</a></li>
-			<li><span class="small">2016-03-30</span>	<a href="/articles/Changing">变是永远不变的现实情况</a></li>
-			<li><span class="small">2016-03-18</span>	<a href="/articles/ITTheMirrorOfParallelUniverses">信息系统和平行宇宙</a></li>
-			<li><span class="small">2016-03-11</span>	<a href="/articles/ArchitectArchitecture">好的架构师，挖空心思偷懒</a></li>
-			<li><span class="small">2016-02-22</span>	<a href="/articles/TangYuanInsightArchitecture">从元宵节煮汤圆看架构的识别与设计</a></li>
-			<li><span class="small">2015-12-31</span>	<a href="/articles/AutoRepair4SEnterpriseSoftwareEvolution">从「差评级汽车4S店维修服务」看汽车服务行业的企业软件发展空间</a></li>
-			<li><span class="small">2015-11-09</span>	<a href="/articles/TheOperationableEnterpriceITPlatform">可运营的企业IT平台</a></li>
-			<li><span class="small">2015-10-19</span>	<a href="/articles/TraditionalVsInternetEnterpriseSoftwareValues">传统企业与互联网企业的软件价值观</a></li>
-			<li><span class="small">2014-05-31</span>	<a href="/articles/TakeTimeAsAFriend">把时间当做朋友</a></li>
-		</ul>
-		<li>moments ( 2 )</a></li>
-		<ul>
-			<li><span class="small">2016-05-08</span>	<a href="/articles/moment-1130">Queue一定要可靠吗？</a></li>
-			<li><span class="small">2016-05-02</span>	<a href="/articles/csdn-blog-page-injection">CSDN Blog 页面注入</a></li>
-		</ul>
-		<li>photos ( 1 )</a></li>
-		<ul>
-			<li><span class="small">2016-05-02</span>	<a href="/articles/head-is-more-important-than-camera">比装备更重要的是照相机背后的脑袋</a></li>
-		</ul>
-</ul>
+    <div class='article'>
+        <div class="article-title">
+            <h1>API不适合做数据同步</h1>
+        </div>
+        <div class="article-metadata">
+<div class="text-center">
+  <p>
+    <span class="glyphicon">2016-06-22</span>
 
+          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/ideas">Idea</a>
+
+  </p>
+</div>
+<div class="text-center">
+  <ul class="list-of-tags tags-in-article">
+      <li><a href="/tags/api">API
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/shu-ju-tong-bu">数据同步
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/spi">SPI
+            <sup>1</sup></a>
+      </li>
+  </ul>
+</div>
+<div class="article-summary">
+  <p><p class="first last">API/SPI 的调用，有很大的一部分比例，都是为了做数据同步，很多场景这种用法是错误的。</p>
+</p>
+</div>
+        </div>
+
+
+        <div class="article-content"><!--  -->
+<p>API SPI 的调用，有很大的一部分比例，都是为了做数据同步。</p>
+<ul class="simple">
+<li>API / Application Programming Interface（应用程序接口）</li>
+<li>SPI / Service Provider Interface (服务提供者接口)</li>
+</ul>
+<p>软件要解决的是两部分的事情：</p>
+<ul class="simple">
+<li>信息的共享</li>
+<li>信息的加工</li>
+</ul>
+<p>信息的加工时会对信息产生「增值的效果」，最终导致信息在形态上发生「形变」。</p>
+<p>API和SPI的设计，如果没有进行任何加工（就是进行了业务逻辑，导致信息在结构上发生改变，变成另外一类的信息），那么之类的数据本质上是应该进行同步的操作。</p>
+<p>导致不对数据进行直接同步的原因，有这些：</p>
+<ul class="simple">
+<li>信息的一侧没有持久化能力</li>
+</ul>
+<p>比如，浏览器侧是不提供持久化的能力的，那么就需要另外一方（有持久化能力的）提供API（一般也就是服务端），方便浏览器实时获取信息。</p>
+<ul class="simple">
+<li>避免出现多份数据的一致性问题</li>
+</ul>
+<p>一个数据实体，映射的是一个物理上的实体，物理实体的复制是困难的，但相比之下，数据实体的映射是简单的，特别特别简单的。这也导致了，数据在经过多个处理环节的时候，每个环节都可以对其进行持久化（这里不考虑安全性的问题）。</p>
+</div>
+    </div>
         <hr>
+<h2>评论</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wangyanjiong';
+    var disqus_title = 'API不适合做数据同步';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
         <div class="col-md-3">
+<div class="sidebar">
+</div>
+
         </div>
 
     </div> </div>
