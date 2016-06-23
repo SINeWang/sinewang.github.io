@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-22T15:16:00+08:00</updated><entry><title>API不适合做数据同步</title><link href="/articles/api-is-not-suitable-for-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-data-sync</id><summary type="html">&lt;!--  --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-22T15:16:00+08:00</updated><entry><title>API不适合做微服务数据同步</title><link href="/articles/api-is-not-suitable-for-microservice-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-microservice-data-sync</id><summary type="html">&lt;!--  --&gt;
 &lt;p&gt;API SPI 的调用，有很大的一部分比例，都是为了做数据同步。&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;API / Application Programming Interface（应用程序接口）&lt;/li&gt;
