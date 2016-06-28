@@ -21,7 +21,7 @@
 &lt;li&gt;避免出现多份数据的一致性问题&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;一个数据实体，映射的是一个物理上的实体，物理实体的复制是困难的，但相比之下，数据实体的映射是简单的，特别特别简单的。这也导致了，数据在经过多个处理环节的时候，每个环节都可以对其进行持久化（这里不考虑安全性的问题）。&lt;/p&gt;
-</summary><category term="API"></category><category term="SPI"></category><category term="数据同步"></category></entry><entry><title>平台运营的关键</title><link href="/articles/key-of-platform-operation" rel="alternate"></link><updated>2016-06-22T15:16:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-21:articles/key-of-platform-operation</id><summary type="html">
+</summary><category term="API"></category><category term="SPI"></category><category term="数据同步"></category><category term="微服务"></category></entry><entry><title>平台运营的关键</title><link href="/articles/key-of-platform-operation" rel="alternate"></link><updated>2016-06-22T15:16:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-21:articles/key-of-platform-operation</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;平台要服务于内容&lt;/a&gt;&lt;/h2&gt;
