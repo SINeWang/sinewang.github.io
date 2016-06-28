@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>应用和服务的区别  @ 王延炯 · 观世界 | World Insight
+    <title>应用与服务的区别和联系  @ 王延炯 · 观世界 | World Insight
 </title>
     <meta name="description" content="">
     <meta name="author" content="Wang YanJiong">
@@ -54,7 +54,7 @@
         <div class="col-md-9">
     <div class='article'>
         <div class="article-title">
-            <h1>应用和服务的区别</h1>
+            <h1>应用与服务的区别和联系</h1>
         </div>
         <div class="article-metadata">
 <div class="text-center">
@@ -76,14 +76,12 @@
         </div>
 
 
-        <div class="article-content"><!-- :code::
-A.App = A.UI + A.SPI + A.Data -->
-<!-- :code::
-S.Service = S.API + S.SPI + S.Data -->
-<!-- :code::
-(A.SPI, A.Data) = S2A.Adapter(S.API, S.DATA) -->
-<!-- :code::
-(S1.SPI, S1.Data) = S2S.Adapter(S2.API, S2.DATA) -->
+        <div class="article-content"><pre class="literal-block">
+A.App = A.UI + A.SPI + A.Data
+S.Service = S.API + S.SPI + S.Data
+(A.SPI, A.Data) = S2A.Adapter(S.API, S.DATA)
+(S1.SPI, S1.Data) = S2S.Adapter(S2.API, S2.DATA)
+</pre>
 </div>
     </div>
         <hr>
@@ -91,7 +89,7 @@ S.Service = S.API + S.SPI + S.Data -->
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'wangyanjiong';
-    var disqus_title = '应用和服务的区别';
+    var disqus_title = '应用与服务的区别和联系';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

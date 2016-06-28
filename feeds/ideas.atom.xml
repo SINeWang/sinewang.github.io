@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-06-28T10:04:00+08:00</updated><entry><title>应用和服务的区别</title><link href="/articles/app-provides-ui-service-provides-api" rel="alternate"></link><updated>2016-06-28T10:04:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-28:articles/app-provides-ui-service-provides-api</id><summary type="html">&lt;!-- :code::
-A.App = A.UI + A.SPI + A.Data --&gt;
-&lt;!-- :code::
-S.Service = S.API + S.SPI + S.Data --&gt;
-&lt;!-- :code::
-(A.SPI, A.Data) = S2A.Adapter(S.API, S.DATA) --&gt;
-&lt;!-- :code::
-(S1.SPI, S1.Data) = S2S.Adapter(S2.API, S2.DATA) --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-06-28T10:04:00+08:00</updated><entry><title>应用与服务的区别和联系</title><link href="/articles/app-provides-ui-service-provides-api" rel="alternate"></link><updated>2016-06-28T10:04:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-28:articles/app-provides-ui-service-provides-api</id><summary type="html">&lt;pre class="literal-block"&gt;
+A.App = A.UI + A.SPI + A.Data
+S.Service = S.API + S.SPI + S.Data
+(A.SPI, A.Data) = S2A.Adapter(S.API, S.DATA)
+(S1.SPI, S1.Data) = S2S.Adapter(S2.API, S2.DATA)
+&lt;/pre&gt;
 </summary></entry><entry><title>API不适合做微服务数据同步</title><link href="/articles/api-is-not-suitable-for-microservice-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-microservice-data-sync</id><summary type="html">&lt;!--  --&gt;
 &lt;p&gt;API SPI 的调用，有很大的一部分比例，都是为了做数据同步。&lt;/p&gt;
 &lt;ul class="simple"&gt;
