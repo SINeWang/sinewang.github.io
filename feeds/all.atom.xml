@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-28T10:04:00+08:00</updated><entry><title>应用与服务的区别和联系</title><link href="/articles/app-provides-ui-service-provides-api" rel="alternate"></link><updated>2016-06-28T10:04:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-28:articles/app-provides-ui-service-provides-api</id><summary type="html">&lt;pre class="literal-block"&gt;
-A.App = A.UI + A.SPI + A.Data
-S.Service = S.API + S.SPI + S.Data
-(A.SPI, A.Data) = S2A.Adapter(S.API, S.DATA)
-(S1.SPI, S1.Data) = S2S.Adapter(S2.API, S2.DATA)
-&lt;/pre&gt;
-</summary></entry><entry><title>API不适合做微服务数据同步</title><link href="/articles/api-is-not-suitable-for-microservice-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-microservice-data-sync</id><summary type="html">&lt;!--  --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-22T15:16:00+08:00</updated><entry><title>API不适合做微服务数据同步</title><link href="/articles/api-is-not-suitable-for-microservice-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-microservice-data-sync</id><summary type="html">&lt;!--  --&gt;
 &lt;p&gt;API SPI 的调用，有很大的一部分比例，都是为了做数据同步。&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;API / Application Programming Interface（应用程序接口）&lt;/li&gt;
@@ -186,7 +180,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;li&gt;2016-06-01 09:51 补充价值链上的关系&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</summary><category term="DevOps"></category><category term="微服务"></category><category term="软件价值观"></category><category term="企业架构"></category><category term="云计算"></category></entry><entry><title>Queue一定要可靠吗？</title><link href="/articles/moment-1130" rel="alternate"></link><updated>2016-05-08T11:30:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-08:articles/moment-1130</id><summary type="html"></summary></entry><entry><title>CSDN Blog 页面注入</title><link href="/articles/csdn-blog-page-injection" rel="alternate"></link><updated>2016-05-02T18:45:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-02:articles/csdn-blog-page-injection</id><summary type="html"></summary></entry><entry><title>比装备更重要的是照相机背后的脑袋</title><link href="/articles/head-is-more-important-than-camera" rel="alternate"></link><updated>2016-05-02T18:45:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-02:articles/head-is-more-important-than-camera</id><summary type="html">&lt;p&gt;这是只是一个测试。&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="微服务"></category><category term="软件价值观"></category><category term="企业架构"></category><category term="云计算"></category></entry><entry><title>比装备更重要的是照相机背后的脑袋</title><link href="/articles/head-is-more-important-than-camera" rel="alternate"></link><updated>2016-05-02T18:45:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-02:articles/head-is-more-important-than-camera</id><summary type="html">&lt;p&gt;这是只是一个测试。&lt;/p&gt;
 </summary></entry><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-29:articles/digitization-essence-and-foundation</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
