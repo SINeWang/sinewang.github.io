@@ -1,5 +1,492 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-08-16T13:05:00+08:00</updated><entry><title>架构是一种解决问题的能力</title><link href="/articles/arch-is-to-solve-the-problem" rel="alternate"></link><updated>2016-08-16T13:05:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-08-16:articles/arch-is-to-solve-the-problem</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-09-24T11:42:00+08:00</updated><entry><title>标识与唯一标识概览</title><link href="/articles/id-and-unique-id-overview" rel="alternate"></link><updated>2016-09-24T11:42:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-09-24:articles/id-and-unique-id-overview</id><summary type="html">
+&lt;!-- --&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id44"&gt;无处不在的标识&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id45"&gt;名称是一种相对唯一的标识&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;在世界里，「相对的唯一标识」是普遍存在，例如：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;每个人出生的时候，就获得了一个「相对的唯一标识」——姓名。&lt;/li&gt;
+&lt;li&gt;城市的道路，都基本上采用了唯一的命名（当然这也需要一个 &lt;a class="reference external" href="http://www.gov.cn/fwxx/sh/2006-10/26/content_424199.htm"&gt;过程&lt;/a&gt; ）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显然，对于每个标识，都需要有一个命名空间（namespace），来保证其相对唯一性。&lt;/p&gt;
+&lt;p&gt;可以说，在人的意识里，对于的实体的描述是基于名字进行的，人们并不希望同名的出现太多，这会在沟通过程中的产生理解困难。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id46"&gt;实体在不同命名空间的标识&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;对于人来说，在家庭里会有小名，在社会中会有正式名字，在社交过程中还会产生绰号。&lt;/p&gt;
+&lt;p&gt;在中国，对于企业来说，除了企业有名称之外，还有组织机构代码证、有税务登记证、有工商营业执照，并分别对应三个编号。（当然，目前三证合一也在进行中）。&lt;/p&gt;
+&lt;p&gt;回到计算机领域，围绕主机在网络上的地址，在不同的命名空间中，都会存在一个「相对的唯一标识」用来描述一个实体&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;每个以太网网卡，都有一个48-bit 的MAC地址&lt;/li&gt;
+&lt;li&gt;每个MAC地址，可能有一个或者多个IP地址&lt;/li&gt;
+&lt;li&gt;每个网卡，都可能有一个或者多个IP地址&lt;/li&gt;
+&lt;li&gt;每个IP地址，都可能有多个域名&lt;/li&gt;
+&lt;li&gt;当然，每个主机，都会有一个主机名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接续上面的例子，事实上，MAC地址是由 &lt;a class="reference external" href="https://regauth.standards.ieee.org/standards-ra-web/pub/view.html#registries"&gt;IEEE Standards Association Registration Authority&lt;/a&gt; 完成地址段的分配。&lt;/p&gt;
+&lt;p&gt;对于目前的 &lt;a class="reference external" href="https://www.iana.org/domains/root/db"&gt;1530&lt;/a&gt; 个顶级根域（gTLD），以及 IPv4 / IPv6 地址，都由IANA对其进行管理。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id47"&gt;小结&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;标识是从一个典型的场景，对客观事物进行统一编码的过程。&lt;/li&gt;
+&lt;li&gt;采用 &lt;strong&gt;半集中与半自主相结合&lt;/strong&gt; 的方法，是一种实现「分而治之」十分普遍和有效的设计模式。&lt;/li&gt;
+&lt;li&gt;标识的唯一性是根据命名空间紧密相关的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id48"&gt;标识的使用&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id49"&gt;在不同命名空间中实现标识的转换&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;在中国，对于人名，通常是由公安局出入境管理局完成中文至英文的翻译，同时，他们会把翻译结果写到数据库中，印到护照上。
+这中间的翻译规则，通常是根据中文与汉语拼音、汉语拼音与英文字母的两次转换关系完成的。&lt;/p&gt;
+&lt;p&gt;对于计算机网络，则会有 NAT完成IP地址间的转换，RAP/RARP完成IP地址与MAC地址的双向转换，DNS完成域名至IP地址的转换。&lt;/p&gt;
+&lt;p&gt;可是，为什么需要那么多不同命名空间的标识标识一个实体？可能最直观的回答通常是这样：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;域名为了方便人的记忆与使用&lt;/li&gt;
+&lt;li&gt;IP地址是为了更广范围的计算机互联&lt;/li&gt;
+&lt;li&gt;MAC则是为了在物理上保证唯一&lt;/li&gt;
+&lt;li&gt;OSI开放系统互联7层模型决定的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;人们会在不同的领域（也是命名空间）中定义自己的命名规范，这可以认为是领域主权的体现，同时伴生的会是一套与相关领域标识的转换协议。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id10"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id50"&gt;结构化与别名效应&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;结构化是把数据的元信息以位置的方式固化是数据中。也就是说，代表某个意义的信息，一定会出现在一个约定好的位置上。&lt;/p&gt;
+&lt;p&gt;由于标识是被人经常使用的，那么在使用过程中会对大脑形成一定的训练。&lt;/p&gt;
+&lt;p&gt;人在看到了010-XXXXXXXX，021-XXXXXXXX号码之后，自然而言会产生条件反射，认为两者分别代表了北京和上海；同样的人在看到了139和186之后，分别产生了中国移动以及中国联通的运营商联想。&lt;/p&gt;
+&lt;p&gt;对于使用者，这种场景，数字类似是一个名称别名。对于程序员，这十分接近「数据字典」的设计模式。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id11"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id51"&gt;标识转换过程的两面性&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;别名和正名，同样是来自于两个不同命名空间的标识，之间自然而然的会进行转换。&lt;/p&gt;
+&lt;p&gt;当然，人们也不会忘记去Hack这些转换协议的设计。&lt;/p&gt;
+&lt;p&gt;一些是有益的，是实现了更为便利的应用场景。例如：将不同的域名指向相同的IP地址（使用A或者CNAME记录），并结合相关软硬件实现「虚拟主机」，达到资源复用的目的。&lt;/p&gt;
+&lt;p&gt;一些却是有害的，例如，诈骗电话也经常采用改号的方法，让接听者误以为那是来自某个官方的外呼电话。&lt;/p&gt;
+&lt;p&gt;同样的，在计算机领域，一样有DNS劫持、DNS污染。&lt;/p&gt;
+&lt;p&gt;有矛就有盾，进行安全性扩展的 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions"&gt;DNSSEC&lt;/a&gt; 就是为了对DNS结果，验证不存在性和校验数据完整性验证，不过依然没有实现全面部署。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id12"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id52"&gt;小结&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;不同命名空间的标识，在互通时需要进行转换&lt;/li&gt;
+&lt;li&gt;转换的过程，可能是一个简单的规则，也可能是一个独立第三方服务&lt;/li&gt;
+&lt;li&gt;标识需要有数据标准的规范指导，以及辅助的易用性工具支撑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id13"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id53"&gt;标识的生成&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;标识的生成方法有很多，有集中式的，分布式的；有后端的，前端的，当然还有人工的。
+并没有一种通用的生成方法来适应各种应用场景。&lt;/p&gt;
+&lt;div class="section" id="id14"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id54"&gt;人工生成&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;人工生成的确是一种方式，比如电子邮箱，微信ID，各种论坛的账号。&lt;/p&gt;
+&lt;p&gt;在人想出标识的那一刻，是无法判断是否是唯一的，对这种生成方式的结果，显然在录入时都需要进行唯一性校验。&lt;/p&gt;
+&lt;p&gt;所以，下面描述的几种生成方式，是在生成的那一刻就在一个命名空间内唯一，而不再需要进行唯一性校验。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id15"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id55"&gt;基于数据库生成&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://dev.mysql.com/doc/refman/5.6/en/example-auto-increment.html"&gt;MySQL(5.6) AUTO_INCREMENT&lt;/a&gt; 特性&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/postgres/postgres/blob/REL9_6_STABLE/src/backend/commands/sequence.c"&gt;Postgres(REL 9.6 Stable) SEQUENCE&lt;/a&gt; 特性&lt;/li&gt;
+&lt;li&gt;Oracle 数据库的 &lt;a class="reference external" href="https://docs.oracle.com/cd/B28359_01/server.111/b28286/statements_6015.htm"&gt;SEQUENCE&lt;/a&gt; 特性，有知道这一特性如何实现的，可以在 &lt;a class="reference external" href="https://www.zhihu.com/question/50970990"&gt;知乎&lt;/a&gt; 做一下解答。&lt;/li&gt;
+&lt;li&gt;Flickr &lt;a class="reference external" href="http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/"&gt;Ticket Servers&lt;/a&gt; ，同时支持Sharding (文章发表于2010年2月8日，算法上线于2006年1月13日)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般地，这种类型的生成方案，都可以设置其实初始值，以及增量步长。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id17"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id56"&gt;基于协调器生成&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;在不使用数据库的情况下，通过一个后台服务对外提供高可用的、固定步长标识生成，则需要分布式的集群协调器进行。&lt;/p&gt;
+&lt;p&gt;一般的，主流协调器有两类：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;以强一致性为目标的：ZooKeeper为代表&lt;/li&gt;
+&lt;li&gt;以最终一致性为目标的：Consul为代表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ZooKeeper的强一致性，是由Paxos协议保证的；Consul的最终一致性，是由Gossip协议保证的。&lt;/p&gt;
+&lt;p&gt;在步长累计型生成算法中，最核心的就是保持一个累计值在整个集群中的「强一致性」。同时，这也会为唯一性标识的生成带来新的形成瓶颈。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id18"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id57"&gt;基于服务内置生成&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;似乎对于分布式的ID生成，以Twitter Snowflake为代表的， &lt;strong&gt;Flake&lt;/strong&gt; 系列算法，经常可以被搜索引擎找到，但似乎MongoDB的ObjectId算法，更早地采用了这种思路。MongoDB 1.0 是在2009年8月27日 &lt;a class="reference external" href="http://blog.mongodb.org/post/173107215/10-ga-released"&gt;发布&lt;/a&gt; 的，并且0.9.10(2009年8月24日发布)和1.0两个版本没有差异。&lt;/p&gt;
+&lt;p&gt;在StackOverflow上，&lt;a class="reference external" href="http://stackoverflow.com/questions/2138687/whats-mongodb-hashs-size/2146071"&gt;最早的一个关于ObjectId的问题&lt;/a&gt; ，时间是2010年1月27日。不知道Twitter的同学，是不是受此启发呢？&lt;/p&gt;
+&lt;div class="section" id="mongodb-objectid"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id58"&gt;MongoDB ObjectId&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;12-byte MongoDB &lt;a class="reference external" href="https://docs.mongodb.com/manual/reference/method/ObjectId/"&gt;ObjectId&lt;/a&gt; 的结构是：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a 4-byte value representing the seconds since the Unix epoch,&lt;/li&gt;
+&lt;li&gt;a 3-byte machine identifier,&lt;/li&gt;
+&lt;li&gt;a 2-byte process id, and&lt;/li&gt;
+&lt;li&gt;a 3-byte counter, starting with a random value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看出，这个方案所支持的最小划分粒度是「秒 * 进程实例」，单进程实例的每秒容量是 3-byte (24-bit)，也就是接近16777216个ID。&lt;/p&gt;
+&lt;p&gt;有兴趣的，还可以进一步 &lt;a class="reference external" href="https://github.com/mongodb/mongo-java-driver/blob/3.3.x/bson/src/main/org/bson/types/ObjectId.java"&gt;看代码（MonogoDB 3.3.x Java Driver）&lt;/a&gt; 研究：Timestamp, Machine Identifier、Process Identifier、计数器的初始值分别是如何获得的:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Timestamp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+private static int dateToTimestampSeconds(final Date time) {
+      return (int) (time.getTime() / 1000);
+}
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Machine Identifier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+StringBuilder sb = new StringBuilder();
+Enumeration&amp;lt;NetworkInterface&amp;gt; e = NetworkInterface.getNetworkInterfaces();
+while (e.hasMoreElements()) {
+    NetworkInterface ni = e.nextElement();
+    sb.append(ni.toString());
+    byte[] mac = ni.getHardwareAddress();
+    if (mac != null) {
+        ByteBuffer bb = ByteBuffer.wrap(mac);
+        try {
+            sb.append(bb.getChar());
+            sb.append(bb.getChar());
+            sb.append(bb.getChar());
+        } catch (BufferUnderflowException shortHardwareAddressException) { //NOPMD
+            // mac with less than 6 bytes. continue
+        }
+    }
+}
+machinePiece = sb.toString().hashCode();
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Process ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+try {
+    String processName = java.lang.management.ManagementFactory.getRuntimeMXBean().getName();
+    if (processName.contains("@")) {
+        processId = (short) Integer.parseInt(processName.substring(0, processName.indexOf('@')));
+    } else {
+        processId = (short) java.lang.management.ManagementFactory.getRuntimeMXBean().getName().hashCode();
+    }
+
+} catch (Throwable t) {
+    processId = (short) new SecureRandom().nextInt();
+    LOGGER.log(Level.WARNING, "Failed to get process identifier from JMX, using random number instead", t);
+}
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;COUNTER&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+private static final AtomicInteger NEXT_COUNTER = new AtomicInteger(new SecureRandom().nextInt());
+&lt;/pre&gt;
+&lt;p&gt;此处需要注意的是MongoDB的 &lt;tt class="docutils literal"&gt;NEXT_COUNTER&lt;/tt&gt; 其初始值是一个随机数，这是有利于分库分表的。因为在小并发的条件下，非随机数的初始值，容易产生 &lt;strong&gt;偏库偏表&lt;/strong&gt;， 不均匀的现象。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="twitter-snowflake"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id59"&gt;Twitter Snowflake&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Twitter在2010年6月1日（在Flickr那篇文章发布不到4个月之后），Ryan King 在Twitter的Blog &lt;a class="reference external" href="https://blog.twitter.com/2010/announcing-snowflake"&gt;撰文&lt;/a&gt; 写道：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ticket Servers方案缺乏顺序的保证&lt;/li&gt;
+&lt;li&gt;考虑过采用UUID，不过128-bit太长了&lt;/li&gt;
+&lt;li&gt;也考虑过采用ZooKeeper的 &lt;a class="reference external" href="https://zookeeper.apache.org/doc/r3.2.1/zookeeperProgrammers.html#Sequence+Nodes+--+Unique+Naming"&gt;Seq 所提供的 *Unique Naming* uence Nodes&lt;/a&gt; 所提供的 &lt;em&gt;Unique Naming&lt;/em&gt; 特性，但是性能不能满足。(个人认为，Sequence Nodes的设计目标是解决分布式锁的问题，但不解决性能要求极高的ID生成问题，直接应用是一种Hack行为)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这种情况下，Twitter给出了 64-bit 长的 &lt;a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010"&gt;Snowflake&lt;/a&gt; ，它的结构是：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;1-bit reserved&lt;/li&gt;
+&lt;li&gt;41-bit timestamp&lt;/li&gt;
+&lt;li&gt;10-bit machine id&lt;/li&gt;
+&lt;li&gt;12-bit sequence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在过了不到4年，2014年的5月31日，Twitter 更新了 Snowflake 的 README，其中陈述了两个容易被忽视的事实:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;"We have retired the initial release of Snowflake ..."&lt;/li&gt;
+&lt;li&gt;"... heavily relies on existing infrastructure at Twitter to run. "&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看出，这个方案所支持的最小划分粒度是「毫秒 * 线程」，单线程（Snowflake 里对应的概念是 Worker）的每秒容量是12-bit，也就是接近4096。&lt;/p&gt;
+&lt;p&gt;翻一下Snowflake的 &lt;a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010"&gt;归档代码 (Scala)&lt;/a&gt;，可以看到：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;关于初始化Sequence的处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+if (lastTimestamp == timestamp) {
+  sequence = (sequence + 1) &amp;amp; sequenceMask
+  if (sequence == 0) {
+    timestamp = tilNextMillis(lastTimestamp)
+  }
+} else {
+  sequence = 0
+}
+&lt;/pre&gt;
+&lt;p&gt;可以看到此处Snowflake对于 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;sequence``的赋值为&lt;/span&gt; ``0&lt;/tt&gt;。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;关于每秒超过4096个ID生成请求的处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+protected def tilNextMillis(lastTimestamp: Long): Long = {
+  var timestamp = timeGen()
+  while (timestamp &amp;lt;= lastTimestamp) {
+    timestamp = timeGen()
+  }
+  timestamp
+}
+
+protected def timeGen(): Long = System.currentTimeMillis()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="noeqd"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id60"&gt;noeqd&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;2011年11月23日，用Go语言实现的，基于Snowflake的 &lt;a class="reference external" href="https://github.com/bmizerany/noeqd"&gt;neoqd&lt;/a&gt; 出现了。&lt;/p&gt;
+&lt;p&gt;它的特点是，除了使用Go语言进行了实现，更是把ID生成做成了一个网络服务。支持客户端向ID生成服务申请ID。它还支持：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;简单预共享Token的客户端身份证认证（只是加强了那么一点点的安全性，可以忽略）&lt;/li&gt;
+&lt;li&gt;支持批量获取ID，最多256个（因为使用一个byte表示申请个数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时，作者还建议使用 &lt;a class="reference external" href="https://github.com/ha/doozerd"&gt;Doozerd&lt;/a&gt; 一个用Go语言写的 -- a highly-available, completely consistent store for small amounts of extremely important data. 进行Machine ID的分配。&lt;/p&gt;
+&lt;p&gt;(关于 ZooKeeper / Etcd / Consul / Doozerd 的比较，也是可以期待下)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="boundary-flake"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id61"&gt;Boundary Flake&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;2012年1月， &lt;a class="reference external" href="https://github.com/boundary/flake"&gt;Boundary Flake&lt;/a&gt; 同样的，用Erlang语言把Snowflake，变成了一个网络服务，提供128-bit长的ID生成服务。&lt;/p&gt;
+&lt;p&gt;不过，根据其RoadMap的描述，这个项目并没100%完成。例如，批量的ID生成，HTTP 接口，客户端Library都列在里面待实现。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cruftflake"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id62"&gt;CruftFlake&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;2012年7月， &lt;a class="reference external" href="https://github.com/davegardnerisme/cruftflake"&gt;CruftFlake&lt;/a&gt; 更显然的，是想以一个PHP变种身份出现。&lt;/p&gt;
+&lt;p&gt;它在结构上与Snowflake基本一致，存在两个区别：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;在timestamp上的取值略有区别&lt;/li&gt;
+&lt;li&gt;可以自行决定是否采用ZooKeeper作为协调器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lableorg-java-uniqueid"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id63"&gt;LableOrg/java-uniqueid&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;2014年7月18日，LableOrg 写了一个通过ZooKeeper进行协调的，128-bit长的算法 &lt;a class="reference external" href="https://github.com/LableOrg/java-uniqueid"&gt;java-uniqueid&lt;/a&gt;。其 &lt;a class="reference external" href="https://github.com/LableOrg/java-uniqueid/blob/master/doc/eight-byte-id-structure.md"&gt;结构组成&lt;/a&gt; 依然十分相似：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Timestamp&lt;/li&gt;
+&lt;li&gt;Sequence counter&lt;/li&gt;
+&lt;li&gt;Generator IDs&lt;/li&gt;
+&lt;li&gt;Cluster IDs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id25"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id64"&gt;前台浏览器生成&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这里的前台，主要是指以「浏览器」为代表的客户端。&lt;/p&gt;
+&lt;p&gt;2015年2月16日，&lt;a class="reference external" href="http://ignitersworld.com/"&gt;Sudhanshu Yadav&lt;/a&gt; (看面相像印度人)，用Javascript写了Flake的又一个变种实现 &lt;a class="reference external" href="https://github.com/s-yadav/FlakeId"&gt;FlakeId&lt;/a&gt; 。其核心代码是：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+if (this.lastTime == time) {
+    this.seq++;
+
+    if (this.seq &amp;gt; 4095) {
+        this.seq = 0;
+
+        //make system wait till time is been shifted by one milisecond
+        while (Date.now() &amp;lt;= time) {};
+    }
+} else {
+    this.seq = 0;
+}
+&lt;/pre&gt;
+&lt;p&gt;它的Machine Identifier则是作为构造函数的选项参数 &lt;tt class="docutils literal"&gt;options.mid&lt;/tt&gt; 传入。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+function FlakeId(options) {
+  options = options || {};
+  this.seq = 0;
+  this.mid = (options.mid || 1) % 1023;
+  this.timeOffset = options.timeOffset || 0;
+  this.lastTime = 0;
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id26"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id65"&gt;全自主随机生成&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;可以说，成熟的、全自主生成方案，可能只有 128-bit &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Universally_unique_identifier"&gt;UUID&lt;/a&gt; 一种，具体的说，是UUID Version 4。另外，微软对它实现，称之为 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Globally_unique_identifier"&gt;GUID&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;一般的，使用的最多的是UUID Version 4，很大程度上是因为其依赖的其他服务最少。&lt;/p&gt;
+&lt;p&gt;这里，通过python (2.5+) 对UUID的实现，体验一下UUID的生成效果：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ python
+Python 2.7.12 (default, Jun 29 2016, 14:05:02)
+[GCC 4.2.1 Compatible Apple LLVM 7.3.0 (clang-703.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+&amp;gt;&amp;gt;&amp;gt; import uuid
+&amp;gt;&amp;gt;&amp;gt; uuid.uuid1()
+UUID('d17c4397-830d-11e6-b62d-985aeb899615')
+&amp;gt;&amp;gt;&amp;gt; uuid.uuid3(uuid.NAMESPACE_DNS, 'yanjiong.wang')
+UUID('363053e8-e02d-3b9d-b18b-83da99d5a684')
+&amp;gt;&amp;gt;&amp;gt; uuid.uuid4()
+UUID('59cfe861-a6b1-45ff-9522-2e780adf491a')
+&amp;gt;&amp;gt;&amp;gt; uuid.uuid5(uuid.NAMESPACE_DNS, 'yanjiong.wang')
+UUID('25d4e194-0404-5c64-8695-c547f98ccde1')
+&lt;/pre&gt;
+&lt;p&gt;另外，我们看一下网卡的MAC地址&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ ifconfig
+lo0: flags=8049&amp;lt;UP,LOOPBACK,RUNNING,MULTICAST&amp;gt; mtu 16384
+      options=1203&amp;lt;RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP&amp;gt;
+      inet 127.0.0.1 netmask 0xff000000
+      inet6 ::1 prefixlen 128
+      inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1
+      nd6 options=201&amp;lt;PERFORMNUD,DAD&amp;gt;
+gif0: flags=8010&amp;lt;POINTOPOINT,MULTICAST&amp;gt; mtu 1280
+stf0: flags=0&amp;lt;&amp;gt; mtu 1280
+en1: flags=8863&amp;lt;UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST&amp;gt; mtu 1500
+      ether 98:5a:eb:89:96:15
+      inet6 fe80::8d7:fea6:2ec2:ea55%en1 prefixlen 64 secured scopeid 0x4
+      inet 10.0.3.22 netmask 0xffffff00 broadcast 10.0.3.255
+      nd6 options=201&amp;lt;PERFORMNUD,DAD&amp;gt;
+      media: autoselect
+      status: active
+&lt;/pre&gt;
+&lt;p&gt;(因为UUID Version 1会泄露网卡的MAC地址，所以我对MAC地址做了下小手术)&lt;/p&gt;
+&lt;p&gt;可以看到UUID Version 1 最后一组数值 &lt;tt class="docutils literal"&gt;985aeb899615&lt;/tt&gt; 与网卡的 MAC地址是一样一样的 &lt;tt class="docutils literal"&gt;98:5a:eb:89:96:15&lt;/tt&gt;。&lt;/p&gt;
+&lt;p&gt;个人一直认为，采用UUID Version 4是一种偷懒的，缺乏必要设计的做法。&lt;/p&gt;
+&lt;p&gt;一方面，它是依据概率确保无碰撞的，计算的过程与概率上的「生日问题」是一样的，不再展开。&lt;/p&gt;
+&lt;p&gt;另一方面，从使用的角度，UUID还有以下缺点：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;太长，即便是转换成36个字符，不利于输入&lt;/li&gt;
+&lt;li&gt;过于随机，没有规律，在开发调试、线上故障定位，都容易看花眼。&lt;/li&gt;
+&lt;li&gt;如果作为数据库主键，对索引不利。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id27"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id66"&gt;小结&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;人工生成的标识，在相同的命名空间里，需要后续唯一性验证才能保证唯一&lt;/li&gt;
+&lt;li&gt;由计算机生成，在低并发的场景下，适合通过一个服务集中生成，并保障此服务的高可用性&lt;/li&gt;
+&lt;li&gt;由计算机生成，在高并发的场景下，适合通过一个保障命名空间独立的命名规范下，由多个服务并行生成。&lt;/li&gt;
+&lt;li&gt;采用步长和增长相结合的生成算法，本质上都是对某个状态进行累积的结果。&lt;/li&gt;
+&lt;li&gt;对于取模进行分库分表的场景，初始化值随机有利于均匀分布。&lt;/li&gt;
+&lt;li&gt;（MongoDB 的 ObjectId 更是Flake系列算法的鼻祖，并在初始值上进行了随机化处理）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id28"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id67"&gt;设计一个「合适」的标识&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id29"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id68"&gt;区分实体和关系&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;实体是点，而关系是线。&lt;/p&gt;
+&lt;p&gt;一般而言，面向实体的标识生成速度，要小于面向关系的生成速度。&lt;/p&gt;
+&lt;p&gt;具体的例子，以电商为例：买家、卖家、商品这些实体的录入速度，要远比订单生成小的多。也因此，主数据要比交易数据稳定的多。&lt;/p&gt;
+&lt;p&gt;并且，关系还可能包含层次关系，进而体现为一个依赖树。&lt;/p&gt;
+&lt;div class="section" id="id30"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id69"&gt;面向实体的标识&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;面向实体的标识，更多的与概念相关（名称）、与形态相关（型号），有很多的人为因素参与，随机因素有限，命名的主体也来自于人。&lt;/p&gt;
+&lt;p&gt;对于实体制造，为任意一个产品进行标识，大致会分为六个方面：品牌、品类、品名，型号、批号、产品序列号。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;对于前四者，更多的是人为的进行命名。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如，给定中文，找到对应英文，再进行缩写。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;对于批号，则会增加一些时间因素，以关联到产品的生产时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如，采用20160925表示具体某一天，或者采用201640表示具体某一周。（一般来说，同一个批号的产品，所使用的原材料是也是同一批。）&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;对于产品序列号，最简单的是采用自然数法进行编号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这一类的标识，在分布式系统下，在系统并发量小，集群规模小的情况下，可以采用基于数据库或者协调器的生成方案。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id31"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id70"&gt;面向关系的标识&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;自然的，关系源于两个或两个以上的实体之间所进行的某一个活动，并且具有一定的时效性。&lt;/p&gt;
+&lt;p&gt;常见的关系的表现形式有：交易流水号，会话标识等等。&lt;/p&gt;
+&lt;p&gt;这一类的标识，在分布式系统下，在系统并发量大，应当采用基于服务的内置生成方案。唯一依赖的是在实例部署时、启动前，为期分配唯一的Machine Identifier。这个Machine Identifier可以交由以强一致性保证的协调器完成。&lt;/p&gt;
+&lt;p&gt;当然，在系统并发量小的情况下，任然可以采用基于数据库的生成方案，因为没有协调器集群的参与，系统整体的复杂度更低，更利于维护。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id32"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id71"&gt;标识的容量&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;任何采用文字所表达的标识，最终在计算机里，都会根据一定的格式，被转换为字节byte进行处理，这个过程称之为「序列化」。
+这种序列化方式，本质上是一种编码方式。&lt;/p&gt;
+&lt;div class="section" id="id33"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id72"&gt;变长编码&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;一般来说，采用变长的编码方式，主要的目的是为了应对不可预期大小的信息量。&lt;/p&gt;
+&lt;p&gt;常见的有 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Type-length-value"&gt;TLV(Type-Length-Value)&lt;/a&gt; 方式。
+Google的 &lt;a class="reference external" href="https://developers.google.com/protocol-buffers/docs/overview"&gt;Protocol Buffers&lt;/a&gt; 非常有意思地采用了 &lt;a class="reference external" href="https://developers.google.com/protocol-buffers/docs/encoding#varints"&gt;Base 128 Varints&lt;/a&gt; 的编码方式。&lt;/p&gt;
+&lt;p&gt;本质上，一个 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier"&gt;URI&lt;/a&gt; 也是对一个标识，它可以标识一个功能，也可以标识一个虚拟实体。&lt;/p&gt;
+&lt;p&gt;RESTful是对此类命名方式的一种实践方式，也是对 URI和HTTP协议组合之后，「表征力」的一个深入挖掘。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id34"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id73"&gt;定长编码&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;在回顾一下前文所提到的IPv4地址，它似乎、可能、或许会在2019年 &lt;a class="reference external" href="https://zh.wikipedia.org/wiki/IPv4%E4%BD%8D%E5%9D%80%E6%9E%AF%E7%AB%AD"&gt;完全枯竭&lt;/a&gt;，
+因为它只有32-bit。相比之下，MAC地址有48-bit，IPv6有128-bit。即便是它们都没那么容易枯竭，但也不代表由于人为因素，导致无法有效使用。&lt;/p&gt;
+&lt;p&gt;再回想下，每个人的身份证、手机号码，都是采用定长的形式进行编码。&lt;/p&gt;
+&lt;p&gt;选择定长有利于预先分配计算机资源，不管是内存、文件系统，还是数据库。同时，对于人的心理来说，可预期性大大增强了。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id36"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id74"&gt;标识的命名空间&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;命名空间有三个层面：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;异构切分：对于不同的场景和视角，以树形进行层次划分。&lt;/li&gt;
+&lt;li&gt;同构切分：对于异构切分的结果，切分出不同的分片。&lt;/li&gt;
+&lt;li&gt;时间切分：对于同一个分片，在不同时间点上的状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般地：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;首先，采用并行无状态的生成算法，一般都采用时间作为首要的命名空间，并且此命名空间的实效性小于生成者的重启时间&lt;/li&gt;
+&lt;li&gt;其次，采用生成器实例自身的标识作为次要命名空间，以保证各个生成器的时间即便是不同步也不会产生重复标识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时，需要注意的是，这可能导致唯一标识产生，大段跳跃，原因有：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;单位时间的并发量远小于子命名空间的容量&lt;/li&gt;
+&lt;li&gt;生成器重启&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id37"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id75"&gt;标识的冗余&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;不管标识是在运行时的内存出现，还是记录到数据库中或者文件里，它都需要占用硬件资源。&lt;/p&gt;
+&lt;p&gt;还是拿身份证举例，一方面，一个18个字符长度的身份证，那么需要18个字节进行存储。18个字节意味着144-bit，比IPv6的128bit还长。&lt;/p&gt;
+&lt;p&gt;如果简单的标识全世界每个人，以目前全地球60亿人口的总量，那么33个bit就足够了。&lt;/p&gt;
+&lt;p&gt;采用这种冗余设计的原因，一方面是「半集中，半自主」和现实的行政、地域结构对齐，另一方面是实现关联信息的集成。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id38"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id76"&gt;小结&lt;/a&gt;&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;标识编码后的长度，则决定了一个标识方案的整体容量。&lt;/li&gt;
+&lt;li&gt;在一个统一的命名空间内，有多个标识生成者并行生成时，需要划分独立的子命名空间，以保证生成的标识在整个命名空间内唯一。&lt;/li&gt;
+&lt;li&gt;单个命名空间的标识，承载的信息量有限，在标识的使用过程中，需要扩展与包含一些其他视角的信息以进行冗余。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id39"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id77"&gt;标识的文本兼容&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;和人工取名字不一样，自动生成ID的主体，是计算机本身，但使用这个ID的主体，有两个：人和计算机。&lt;/p&gt;
+&lt;p&gt;对于计算机，最擅长处理的是结构化数组、条形码或者二维码；而对人，最擅长使用的是文本、图形或者视频。&lt;/p&gt;
+&lt;p&gt;一般而言，在大量的RESTful设计的应用，其URI中会包含大量的ID，用来标识用户、商品、订单等等，它们经常会出现在URI中。&lt;/p&gt;
+&lt;p&gt;以ASCII编码为基础的各种文本化编码算法，从Base16开始，正常的有Base32，Base64，Base58，Base85等等，不太正常的，在本文最后的扩展阅读里有列举。&lt;/p&gt;
+&lt;p&gt;其中，Base16是最为「字节友好」的，因为不需要进行任何Padding操作，就可以以把 4-bit/half-byte 转换为 [0-9a-f] 这十六个字符，因此Base16还有别名：Hex。另外对于键盘输入，这16个英文字母，又是相对纯数字之外，最方便的。&lt;/p&gt;
+&lt;p&gt;而Base32, Base64等等，都需要Padding。因为Base32是每 5-bit 进行分组编码，Base64则是 6-bit ，都无法直接对齐一个 byte(8-bit)。&lt;/p&gt;
+&lt;p&gt;另外，Base16还对 URI 友好，不需要进行任何的 URLEncode/Decode操作。&lt;/p&gt;
+&lt;p&gt;以64-bit长的ID为例，它既可以转化为 &lt;tt class="docutils literal"&gt;long&lt;/tt&gt;，也可以Base16成为16个字符的``HexString``，同时它大小写不敏感。&lt;/p&gt;
+&lt;p&gt;相比之下，如果采用Base64的文本化方案，其长度虽然少了5个字符，为11个，但其大小写敏感，不利于人机交互的输入，还会包含URI不友好，还会被转义为「 &lt;tt class="docutils literal"&gt;%3D&lt;/tt&gt;」的符号「&lt;tt class="docutils literal"&gt;=&lt;/tt&gt;」。&lt;/p&gt;
+&lt;p&gt;一个精巧的标识文本化算法，并不应该简单的把一个二进制值转为HexString。在日志里，应该有相应的解码算法，解析出符合人类阅读的字符，比如：精确到秒、且带格式时间，生成改标识的主体，等等。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id40"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id78"&gt;标识的安全性&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="id41"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id79"&gt;标识的信息泄露&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;采用连续，或者固定步长的标识，容易从一个标识猜测其他标识的存在性。&lt;/p&gt;
+&lt;p&gt;常见的例子有：
+* 通过局域网扫描工具，扫描某个子网的活动的IP地址
+* 通过端口扫描工具，扫描一个目标主机开放的端口，以初步确定主机操作系统类型&lt;/p&gt;
+&lt;p&gt;另外，在物联网领域，如果采用的EPC编码，那么很容易通过连续编码，估计某个产品的具体产量。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id42"&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="#id80"&gt;标识的自校验能力&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;还是使用身份证号这个例子，根据国家标准（GB11643-1999），身份证号的前17位为本体码，最后1位为校验码。也就是说，它是通过前17位进行数学公式计算之后获得，主要目的是用于检验录入过程是否产生差错。&lt;/p&gt;
+&lt;p&gt;这样设计的好处是，每当输入完18位身份证号后，可以直接判断一个身份证号，是否在逻辑上是「合规的」，对于系统而言不用查询数据库，可以减少IO操作。不过，这不代表这个身份证号是有效的，也有可能是一个无效，但符合校验规则的身份证号。&lt;/p&gt;
+&lt;p&gt;由于标识的长度有限，能够加入的冗余信息较少，一般的基于公钥密码体制的签名机制，都难以在一个短标识中嵌入。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id43"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id81"&gt;扩展阅读&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://yellerapp.com/posts/2015-02-09-flake-ids.html"&gt;Distributed System Building Block: Flake Ids&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.academia.edu/download/33102775/Roughly_Sorting-Sequential_And_Parallel_Approach.pdf"&gt;Roughly sorting: Sequential and parallel approach&lt;/a&gt; , 1989&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/ferno/base1"&gt;Base1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/ferno/hexagram-encode"&gt;HexagramEncode (六十四卦编码)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/ferno/braille-encode"&gt;BrailleEncode (盲文编码)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="架构，唯一性标识，分布式系统"></category></entry><entry><title>架构是一种解决问题的能力</title><link href="/articles/arch-is-to-solve-the-problem" rel="alternate"></link><updated>2016-08-16T13:05:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-08-16:articles/arch-is-to-solve-the-problem</id><summary type="html">
 &lt;!-- --&gt;
 &lt;p&gt;计算机是个复杂的机器，相比普通的机器（比如小家电、汽车），它可以在使用过程中对其「工作行为」进行「再定义和场景适配」，以解决不同场景下的人的需求和问题，这种「定义的结果」，对于机器的最终用户来说，是「应用 / Application」。&lt;/p&gt;
 &lt;p&gt;对于非计算机相关的普通人而言，即便是有诸多对于职位头衔的描述：「程序员」、「软件工程师」、「架构师」、「首席技术官」，也离不开一个潜意识的印象：「做网站的」或者是「修电脑的」。&lt;/p&gt;
