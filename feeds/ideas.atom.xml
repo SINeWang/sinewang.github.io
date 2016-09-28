@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-09-28T11:42:00+08:00</updated><entry><title>标识与唯一标识概览</title><link href="/articles/id-and-unique-id-overview" rel="alternate"></link><updated>2016-09-28T11:42:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-09-28:articles/id-and-unique-id-overview</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-09-28T22:30:00+08:00</updated><entry><title>标识与唯一标识概览</title><link href="/articles/id-and-unique-id-overview" rel="alternate"></link><updated>2016-09-28T22:30:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-09-28:articles/id-and-unique-id-overview</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id44"&gt;无处不在的标识&lt;/a&gt;&lt;/h2&gt;
@@ -486,7 +486,7 @@ Google的 &lt;a class="reference external" href="https://developers.google.com/p
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/ferno/braille-encode"&gt;BrailleEncode (盲文编码)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="架构，唯一性标识，分布式系统"></category></entry><entry><title>架构是一种解决问题的能力</title><link href="/articles/arch-is-to-solve-the-problem" rel="alternate"></link><updated>2016-08-16T13:05:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-08-16:articles/arch-is-to-solve-the-problem</id><summary type="html">
+</summary><category term="架构"></category><category term="唯一性标识"></category><category term="分布式系统"></category></entry><entry><title>架构是一种解决问题的能力</title><link href="/articles/arch-is-to-solve-the-problem" rel="alternate"></link><updated>2016-08-16T13:05:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-08-16:articles/arch-is-to-solve-the-problem</id><summary type="html">
 &lt;!-- --&gt;
 &lt;p&gt;计算机是个复杂的机器，相比普通的机器（比如小家电、汽车），它可以在使用过程中对其「工作行为」进行「再定义和场景适配」，以解决不同场景下的人的需求和问题，这种「定义的结果」，对于机器的最终用户来说，是「应用 / Application」。&lt;/p&gt;
 &lt;p&gt;对于非计算机相关的普通人而言，即便是有诸多对于职位头衔的描述：「程序员」、「软件工程师」、「架构师」、「首席技术官」，也离不开一个潜意识的印象：「做网站的」或者是「修电脑的」。&lt;/p&gt;
