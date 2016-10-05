@@ -10,7 +10,8 @@
 &lt;p&gt;与硬件交互的代码，更多的是指挥硬件，如何进行逻辑运算、管理内存、读写硬盘——毫无面向普通人的「应用价值」。&lt;/p&gt;
 &lt;p&gt;与生活应用相关的代码，更多的解决人们的实际问题——社交、购物、出行等等等等。&lt;/p&gt;
 &lt;p&gt;软件和普通人，存在着巨大的鸿沟。&lt;/p&gt;
-&lt;p&gt;一般人无法理解，在软件领域里：架构，是骨架；场景，是肌肉；数据，是血液；界面，是皮肤；体验，是外衣。&lt;strong&gt;这一切，都需要代码表达。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一般人无法理解，在软件领域里：架构，是骨架；场景，是肌肉；数据，是血液；界面，是皮肤；体验，是外衣。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这一切，都需要代码表达。&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;跨越鸿沟的程序员&lt;/a&gt;&lt;/h2&gt;
