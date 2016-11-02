@@ -186,8 +186,10 @@
 <h3><a class="toc-backref" href="#id57">基于协调器生成</a></h3>
 <p>在不使用数据库的情况下，通过一个后台服务对外提供高可用的、固定步长标识生成，则需要分布式的集群协调器进行。</p>
 <p>一般的，主流协调器有两类：</p>
-<p>以Paxos为代表的：ZooKeeper</p>
-<p>以Raft为代表的：Consul / Etcd</p>
+<ul class="simple">
+<li>以Paxos为代表的：ZooKeeper</li>
+<li>以Raft为代表的：Consul / Etcd</li>
+</ul>
 <p>ZooKeeper的强一致性，是由Paxos协议保证的；Consul的一致性，官方用subtle(微妙的)来形容。它既采用了Gossip管理集群Membership，也采用了Raft管理Service Catalog。Consul的写一致性通过Raft保证，但Consul的读一致性有三种模式，default / consistent / stale， 其中consistent是强一致的。</p>
 <p>在步长累计型生成算法中，最核心的就是保持一个累计值在整个集群中的「强一致性」。同时，这也会为唯一性标识的生成带来新的形成瓶颈。</p>
 </div>
