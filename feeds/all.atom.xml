@@ -9,7 +9,7 @@
 &lt;h2&gt;光标移动组合键&lt;/h2&gt;
 &lt;p&gt;其实下面这些快捷键，都是macOS自带的快捷键&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;一上行 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;p&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;上一行 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;p&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;下一行 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;n&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;行首 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;a&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;行末 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;e&lt;/tt&gt;&lt;/li&gt;
