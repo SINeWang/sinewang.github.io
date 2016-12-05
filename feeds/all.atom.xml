@@ -9,13 +9,14 @@
 &lt;h2&gt;光标移动组合键&lt;/h2&gt;
 &lt;p&gt;其实下面这些快捷键，都是macOS自带的快捷键&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;上一行 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;p&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;一上行 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;p&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;下一行 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;n&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;行首 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;a&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;行末 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;e&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;删除后一个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;d&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;删除前一个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;h&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;删除光标之后的所有内容 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;k&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;交换光标左右两个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;t&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;移到下一个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;f&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;移到下一个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;b&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -24,6 +25,7 @@
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://kaochenlong.com/2013/06/29/about-hhkb-pro2/"&gt;http://kaochenlong.com/2013/06/29/about-hhkb-pro2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://support.apple.com/en-us/HT201236"&gt;https://support.apple.com/en-us/HT201236&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </summary><category term="HHKB"></category><category term="macOS"></category></entry><entry><title>软件结构的十个基本概念</title><link href="/articles/10-basic-concepts-of-software-structure" rel="alternate"></link><updated>2016-10-06T10:03:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-10-06:articles/10-basic-concepts-of-software-structure</id><summary type="html">
