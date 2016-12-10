@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-10-06T10:03:00+08:00</updated><entry><title>软件结构的十个基本概念</title><link href="/articles/10-basic-concepts-of-software-structure" rel="alternate"></link><updated>2016-10-06T10:03:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-10-06:articles/10-basic-concepts-of-software-structure</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-12-10T09:44:00+08:00</updated><entry><title>理解软件</title><link href="/articles/understanding-software" rel="alternate"></link><updated>2016-12-10T09:44:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-10:articles/understanding-software</id><summary type="html">
+&lt;!-- --&gt;
+&lt;p&gt;软件的出现，是为了解决计算机本身硬件无法快速适配实际应用场景所提供的扩展能力。（虽然有FPGA，可以对硬件进行重复性的烧录定制）&lt;/p&gt;
+&lt;p&gt;软件本质上是复杂的。&lt;/p&gt;
+&lt;p&gt;但，软件表象上「应该」是简单的。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;软件是工具&lt;/li&gt;
+&lt;li&gt;工具的出现，是为了解决某个特殊问题，并且高效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件 = 代码 + 数据&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;软件是处理数据的工具&lt;/li&gt;
+&lt;li&gt;数据需要通过代码表达&lt;/li&gt;
+&lt;li&gt;处理方法也需要通过代码表达&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;代码&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;代码，很多时候都是指源代码。也就是用某一种计算机语言，通过程序员手工编写的方式，阐述由计算机执行的指令的逻辑。&lt;/p&gt;
+&lt;p&gt;在一个混合的场景下，一段代码可能解决了多个方面的问题：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;现实中的实际问题&lt;/li&gt;
+&lt;li&gt;计算机运行时的问题&lt;/li&gt;
+&lt;li&gt;记录了整个处理过程&lt;/li&gt;
+&lt;li&gt;额外提供了事中、事后的监控审计能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这种场景下，编码对于程序员而言，是一个跨领域知识集成的过程。这些知识都通过代码的方式，被集成在一个个源代码文件里。程序员需要深入理解这些来自不同层面的知识，平衡相互之间的冲突，才能得到一个较为合适的程序。&lt;/p&gt;
+&lt;p&gt;这是一个制造虚拟世界的过程，由于制造水平和认知的限制，很容易造出一面面现实世界的哈哈镜。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;数据&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;很多时候，人们对于一个概念性名词的理解是不同的，也就是说，对于同一个概念，不同的人有各自不同的理解。概念是通过总结、抽象而得到的，反过来，理解概念的过程，是一个主体在其实际环境进行解释的过程。&lt;/p&gt;
+&lt;p&gt;实际上，人还热衷于给一些概念起新的别名，或者用简写的符号，方便自己的理解，或者体现一些与众不同的理念。这些行为，不但增加了其他人理解这些符号的难度，增加了产生误解的可能。&lt;/p&gt;
+&lt;p&gt;这一切，最终都会在数据上体现出来。&lt;/p&gt;
+&lt;p&gt;数据是结构化的信息。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;环境&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;软件，没有任何保存价值，只有使用价值。&lt;/p&gt;
+&lt;p&gt;软件需要运行环境才能发挥其使用价值，这从根本上还需要硬件设备以及电力。&lt;/p&gt;
+&lt;p&gt;操作系统，完成了软件运行环境差异化的第一层屏蔽与封装。&lt;/p&gt;
+&lt;p&gt;现如今，实际的应用软件，都需要需要依赖操作系统与其他第三方软件才能够工作。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;「缺陷」与「版本」&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;软件是知识的沉淀，是把已知的知识翻译为计算机语言的成果。&lt;/p&gt;
+&lt;p&gt;知识是一定是有局限性的，受制于人所在的环境、视野以及认知的方法，甚至还有文化和政治的因素。&lt;/p&gt;
+&lt;p&gt;知识的集成，有若干种选择，自然也受到价值观的影响。&lt;/p&gt;
+&lt;p&gt;因此，软件存在缺陷也是必然的。&lt;/p&gt;
+&lt;p&gt;软件，永远都不会到达一个没有缺陷的状态。未知相对应已知，太过于浩瀚。为此，为了使得现有的知识得以被使用，为软件标记一个「相对成熟」的稳定状态，人们采用了「版本」这个概念。&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="软件"></category></entry><entry><title>软件结构的十个基本概念</title><link href="/articles/10-basic-concepts-of-software-structure" rel="alternate"></link><updated>2016-10-06T10:03:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-10-06:articles/10-basic-concepts-of-software-structure</id><summary type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;概念的意义&lt;/a&gt;&lt;/h2&gt;

@@ -19,6 +19,7 @@
 &lt;li&gt;交换光标左右两个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;t&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;移到下一个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;f&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;移到下一个字符 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;b&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;括号匹配 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;m&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
