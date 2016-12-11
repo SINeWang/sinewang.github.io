@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-12-10T20:45:00+08:00</updated><entry><title>源代码与文章的知识产权</title><link href="/articles/intellectual-property-of-sourcecode-and-article" rel="alternate"></link><updated>2016-12-10T20:45:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-10:articles/intellectual-property-of-sourcecode-and-article</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2016-12-11T09:18:00+08:00</updated><entry><title>专业知识型产品的开发与价值体现</title><link href="/articles/the-development-of-professional-knowledge-products-and-value-representation" rel="alternate"></link><updated>2016-12-11T09:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-11:articles/the-development-of-professional-knowledge-products-and-value-representation</id><summary type="html">
 &lt;!-- --&gt;
-&lt;p&gt;（本文中的文章，主要是指学术论文或者发明专利。）&lt;/p&gt;
 &lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;知识的获得与使用&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;专业知识的形态&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;专业知识的形态包括：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;软件源代码&lt;/li&gt;
+&lt;li&gt;学术性论文&lt;/li&gt;
+&lt;li&gt;发明专利&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;软件源代码的特殊性是程序员进行编写（这需要专业知识），它的是使用方式是由计算机对其进行执行，自然人使用软件的过程是驱动软件的运行状态发生一系列的改变。&lt;/p&gt;
 &lt;p&gt;学术性论文或者发明专利（这也需要专业知识），都是以文章的形式编写，需要通过自然人对其进行直接使用——阅读与理解。&lt;/p&gt;
-&lt;p&gt;学术论文价值表现是对其进行引用，发明专利的价值是其融入到具体的商业产品之中，而代码的价值直接表现是被运行时依赖。&lt;/p&gt;
+&lt;p&gt;学术论文价值表现是对其进行引用，发明专利的价值是其融入到具体的商业产品之中，而代码的价值直接表现是被运行时依赖。它们都是知识工作的产品。&lt;/p&gt;
 &lt;p&gt;在形成有价值的知识成果之前，都需要经历入门训练的过程，对于普通人来说，需要18个月以上的初步学习与实践。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;知识工作的价值体现途径&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;专业知识型产品的开发&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;专业知识型产品，包含了三个方面：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;对先前知识的理解，成为了可利用的已有知识资源（旧知识）。&lt;/li&gt;
+&lt;li&gt;对未知的探索形成的知识型总结，成为了新的知识资源。知和识的过程，是一种对信息的非线性加工工艺，而这种工艺，应该叫智慧。&lt;/li&gt;
+&lt;li&gt;知识型产品中，一定包含了对新旧知识的集成方案，而方案本身，也是一种新的知识。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中，对于未知的定义，是相对于知识型产品制造者而言的，也就是相对来说是一个唯心主义的定义。也就是我不知道，等于不存在。&lt;/p&gt;
+&lt;p&gt;「重新发明轮子」的现象，是一个中性的现象。重新发明轮子的过程，是对旧知识的理解的过程，也是开发「新知识」的过程。&lt;/p&gt;
+&lt;p&gt;时间和智慧，是知识型产品的最原始和最必要的生产资料。&lt;/p&gt;
+&lt;p&gt;获得时间的方法，可以通过购买其他自然人的工作时间，也可以把没有创造性的脑力劳动交给计算机。&lt;/p&gt;
+&lt;p&gt;而获得智慧的方法是？&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;专业知识工作的价值体现&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;自然人个体或团体，是知识的原始获得者。这些个体，一般服务于四类组织：高校与科研机构、企业研究院、软件公司，以及独立个人或团体。&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;来自高校与科研院所的学术论文&lt;/li&gt;
@@ -32,8 +51,8 @@
 &lt;p&gt;源代码的作者，可能会获得某些开源软件基金会的部分资助，也可能自行设立收费渠道获得「善意的捐助」，再或者增强了在行业届的影响力，间接地获得经济利益。&lt;/p&gt;
 &lt;p&gt;而开源基金会的支撑着，往往来自商业公司。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;知识产权的商业保护&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;专业知识产权的商业保护&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;学术论文&lt;/li&gt;
 &lt;/ul&gt;
@@ -50,8 +69,9 @@
 &lt;p&gt;然而，具备这些特性的公有云，似乎还没有出现。&lt;/p&gt;
 &lt;p&gt;需要注意的是，Browser/Server的架构下的Browser侧的知识产权较难以保护，也许各大浏览器厂商正在努力，我却不知道。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;计算机的价值，知识价值放大器与知识开发器&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;从知识价值放大器到知识开发器&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;机器学习的价值，是讲计算机的定位，从知识放大器转变为了知识开发器&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;计算机，作为知识价值放大器&lt;/li&gt;
 &lt;/ul&gt;
@@ -64,7 +84,7 @@
 &lt;p&gt;通过机器学习所获得的模型，是一种如何集成现有「神经元」，广义上是任何资源进行使用的集成知识。&lt;/p&gt;
 &lt;p&gt;有意思的是，当计算机成为知识生成器之后，也需要通过「训练集数据」，进行入门的学习和实践，才能产生实际价值。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="软件"></category><category term="知识产权"></category></entry><entry><title>理解软件</title><link href="/articles/understanding-software" rel="alternate"></link><updated>2016-12-10T09:44:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-10:articles/understanding-software</id><summary type="html">
+</summary><category term="软件"></category><category term="知识型产品"></category><category term="机器学习"></category></entry><entry><title>理解软件</title><link href="/articles/understanding-software" rel="alternate"></link><updated>2016-12-10T09:44:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-10:articles/understanding-software</id><summary type="html">
 &lt;!-- --&gt;
 &lt;p&gt;软件的出现，是为了解决计算机本身硬件无法快速适配实际应用场景所提供的扩展能力。（虽然有FPGA，可以对硬件进行重复性的烧录定制）&lt;/p&gt;
 &lt;p&gt;软件本质上是复杂的。&lt;/p&gt;
