@@ -29,7 +29,7 @@
 &lt;p&gt;多方对多方，这就是像三明治一样夹在中间PaaS。&lt;/p&gt;
 &lt;p&gt;兼容性带来复杂，并且是「级数级的」也就是接入方的根据排列组合，产生若干总组合方式。&lt;/p&gt;
 &lt;p&gt;还记得高中的那个对于组合的定义吗？&lt;/p&gt;
-&lt;p&gt;从 &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; 个不同元素中，任取 &lt;tt class="docutils literal"&gt;m(m≤n&lt;/tt&gt; 个元素并成一组，叫做从 &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; 个不同元素中取出 &lt;tt class="docutils literal"&gt;m&lt;/tt&gt; 个元素的一个组合；从 &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; 个不同元素中取出 &lt;tt class="docutils literal"&gt;m(m≤n&lt;/tt&gt; 个元素的所有组合的个数，叫做从 &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; 个不同元素中取出 &lt;tt class="docutils literal"&gt;m&lt;/tt&gt; 个元素的组合数。用符号 &lt;tt class="docutils literal"&gt;C(n,m)&lt;/tt&gt; 表示。&lt;/p&gt;
+&lt;p&gt;从 &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; 个不同元素中取出 &lt;tt class="docutils literal"&gt;m(m≤n)&lt;/tt&gt; 个元素的所有组合的个数，叫做从 &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; 个不同元素中取出 &lt;tt class="docutils literal"&gt;m&lt;/tt&gt; 个元素的组合数。用符号 &lt;tt class="docutils literal"&gt;C(n,m)&lt;/tt&gt; 表示。&lt;/p&gt;
 &lt;p&gt;这就是PaaS所要面临的兼容性复杂度上限。&lt;/p&gt;
 &lt;p&gt;于是乎，PaaS总是找不到硬气的存在理由。对于任意的直接用户而言，为其兼容它用不着的某个技术，价值无法得到认可。&lt;/p&gt;
 &lt;p&gt;PaaS的复杂性，没有显而易见的价值。&lt;/p&gt;
