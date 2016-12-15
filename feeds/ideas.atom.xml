@@ -44,7 +44,7 @@
 &lt;ul class="simple"&gt;
 &lt;li&gt;运行在可控的虚拟硬件环境下&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;此处的可控，不代表自主建设，也可以选择一到两个差异性不到的公有云IaaS为基础。有条件的可以自行建设IaaS。&lt;/p&gt;
+&lt;p&gt;此处的可控，不代表自主建设，也可以选择一到两个差异性不大的公有云IaaS为基础。有条件的可以自行建设IaaS。&lt;/p&gt;
 &lt;p&gt;目的只有一个，降低底层兼容性的成本。&lt;/p&gt;
 &lt;p&gt;另外，从降低整个社会成本的角度出发，采用公有云的商业模式，也是最低的。&lt;/p&gt;
 &lt;ul class="simple"&gt;
