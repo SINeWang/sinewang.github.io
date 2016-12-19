@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）  @ 王延炯 · 观世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+    <link href="/theme/timeline.css" rel="stylesheet">
+
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+            <li><a href="/categories/ideas">观点</a></li>
+            <li><a href="/categories/experiences">经验</a></li>
+        </ul>
+        <p class="navbar-text navbar-right">基于本质·懂得人性</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9">
+    <div class='article'>
+        <div class="article-title">
+            <h1>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）</h1>
+        </div>
+        <div class="article-metadata">
+<div class="text-center">
+  <p>
+    <span class="glyphicon">2016-12-20</span>
+
+          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/ideas">观点</a>
+
+  </p>
+</div>
+<div class="text-center">
+  <ul class="list-of-tags tags-in-article">
+      <li><a href="/tags/http">HTTP
+            <sup>2</sup></a>
+      </li>
+      <li><a href="/tags/http11">HTTP/1.1
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/jia-gou">架构
+            <sup>7</sup></a>
+      </li>
+      <li><a href="/tags/rest">REST
+            <sup>1</sup></a>
+      </li>
+  </ul>
+</div>
+<div class="article-summary">
+  <p><p class="first last">REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文对REST的不足进行了分析，对复杂场景下的RPC协议与报文的要求进行了梳理。</p>
+</p>
+</div>
+        </div>
+
+
+        <div class="article-content">
+<!-- -->
+<div class="section" id="rest">
+<h2><a class="toc-backref" href="#id15">REST本身是风格，不是规范</a></h2>
+<p>对于 <a class="reference external" href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> 本身，以及它的四级的 <tt class="docutils literal">Uniform interface</tt> 的介绍，遍地开花，本文不作冗余的介绍。
+较为权威，但不一定公正的描述，可以通过前面的链接直达 Wikipedia。</p>
+<p>REST只是一种实现风格，不是一个强制规范，更连连RFC规范都算不上。 （ <a class="reference external" href="https://tools.ietf.org/html/rfc7231#ref-REST">RFC7231</a> 作为参考文献，提到了一下 ）</p>
+<p>由此，REST的历史可以追述到2000年，也就是那篇很多人听过，但可能很多人没读过的 <a class="reference external" href="http://roy.gbiv.com/pubs/dissertation/top.htm">博士论文</a> ，它来自Roy Thomas Fielding。</p>
+<p>2000年，离现在也有段时日了，如今REST怎么就突然走红了呢？几个正常人都能够想到的因素是：它借助了日益「完善的HTTP协议」、丰富的工具链，网络的日益发达。</p>
+<p>对于HTTP协议，最权威的描述，莫过于RFC对其制定的规范了，有兴趣的可以去这里看下我对它的 <a class="reference external" href="/articles/HTTPSpecsOverview">简要概览</a> 。</p>
+<p>可以说，REST对于HTTP协议的理解是比一般人要深入的，也使得URL的设计产生了「设计感」。</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id16">REST的优势</a></h2>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id17">丰富的工具与运行时环境</a></h3>
+<p>例如，<a class="reference external" href="https://curl.haxx.se/">cURL</a> (最好的「全能」URL处理命令行工具) , <a class="reference external" href="https://www.getpostman.com/">POSTMAN</a> （最好的GUI调试HTTP工具) , <a class="reference external" href="https://nginx.org/en/">NGINX</a> (最有希望成为市场第一的HTTP Server) , <a class="reference external" href="https://httpd.apache.org/">Apache HTTP Server</a> (稳居HTTP Server排名第一的常青树)</p>
+<p>由于HTTP协议，还能够非常好的通过部署SSL证书，实现HTTPS协议，REST的安全性也能够得到一定的提升，比如不安全链路下的内容防篡改。</p>
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id18">无状态</a></h3>
+<p>这看上去是REST的一个优势，但使用REST的大多数服务，都是有状态的。无状态的设计，则是把对状态管理的责任，甩给了第三方平台。</p>
+<p>也就是说，无状态，更多的是对RPC通信协议的「无状态化设计」。</p>
+<p>服务对于无状态化的处理，大致有三种方式：</p>
+<ol class="arabic simple">
+<li>状态信息通过请求，也就是入参传递</li>
+<li>状态信息通过外置的数据源存储，可能是缓存，也可能是数据库</li>
+<li>托管给运行时环境的容器，例如J2EE应用服务器集群</li>
+</ol>
+</div>
+<div class="section" id="uniform-interface">
+<h3><a class="toc-backref" href="#id19">Uniform interface</a></h3>
+<p>这一点，是REST最只管，最富设计感的特性，它可以使得一个URL表达一个客观对象，使得URL富有现实含义。</p>
+<p>并且能够借助于，HTTP 协议的4个基本Method对这个对象的状态进行维护。</p>
+<p>最常见、入门级的例子，是对于 <tt class="docutils literal">Order</tt> , 或是 <tt class="docutils literal">Book</tt> ，再或是 <tt class="docutils literal">Article</tt> 这样的实体进行维护，比如以下四个HTTP Method：</p>
+<ul class="simple">
+<li><tt class="docutils literal">POST</tt> : <tt class="docutils literal"><span class="pre">https://yanjing.wang/articles/</span></tt></li>
+<li><tt class="docutils literal">GET</tt> : <tt class="docutils literal"><span class="pre">https://yanjing.wang/articles/design-an-rest-like-rpc-over-http11</span></tt></li>
+<li><tt class="docutils literal">DELETE</tt> : <tt class="docutils literal"><span class="pre">https://yanjing.wang/article/design-an-rest-like-rpc-over-http11</span></tt></li>
+<li><tt class="docutils literal">PUT</tt> : <tt class="docutils literal"><span class="pre">https://yanjing.wang/article/design-an-rest-like-rpc-over-http11</span></tt></li>
+</ul>
+<p>URL一致性，使得这些URL看上去「几乎完美」，它及表达了目标对象的所述域，也表达了分类，还为目标对象分配了唯一性的标识。</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id20">REST的不足</a></h2>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id21">不支持分布式事务</a></h3>
+<p>关于REST的绝大多数文章里，都没有设计「分布式事务」，这个复杂、难解的问题。</p>
+<p>对于「分布式事务」，我的一个观点是——这是个伪命题。分布式事务并不存在，只存在本地事务。</p>
+<p>在分布式环境下，保障多个点数据一致的算法，有Paxos以及Raft。</p>
+<p>而要保障多个对一个事件所进行的操作都是「一致的」，则需要协调器的参与。
+这里的「一致的」，所指的并不一定是保证两个被操作数据的一致性，而是「同目标」。</p>
+<p>例如，对一篇 <tt class="docutils literal">Article</tt> 进行 <tt class="docutils literal">POST</tt> 动作时，常见的，还会更新这篇 <tt class="docutils literal">Article</tt> 所标注的 <tt class="docutils literal">Tags</tt> 和 <tt class="docutils literal">Category</tt> 索引。
+更新 <tt class="docutils literal">Tags</tt> 与 <tt class="docutils literal">Category</tt> 则是同目标，不同结果的两个子操作。</p>
+<p>在复杂场景下，对 <tt class="docutils literal">Article</tt> , <tt class="docutils literal">Tags</tt> , <tt class="docutils literal">Category</tt> 的维护，可能分属于三个独立的系统。
+这需要有一个协调器进行分布式协调，才能保障一篇新的 <tt class="docutils literal">Article</tt> 被正确发布，保障文章与两个索引的一致性。</p>
+</div>
+<div class="section" id="id9">
+<h3><a class="toc-backref" href="#id22">使用场景的自述型</a></h3>
+<p>HTTP协议是被广泛使用的，它经常出现在普通人的视野中，普通人可能不了解HTTP所代表的全称，但在记忆网址，也就是域名的时候，不会忘记HTTP这个「符号」。</p>
+<p>那么，一个HTTP地址，所代表的，是一个可被浏览器访问，并能够通过浏览器渲染出一个Web页面的地址，还是一个仅仅传输JSON格式报文的API地址呢？</p>
+<p>很显然，类似 <tt class="docutils literal"><span class="pre">https://yanjing.wang/articles/design-an-rest-like-rpc-over-http11</span></tt> 这样的地址，难以被分辨。
+一般都需要通过浏览器进行尝试，或者通过阅读配套的文档才能够了解其使用场景。</p>
+<p>在传统的软件工程项目中，在一个域名下的Application，经常会既提供用于浏览器访问的Page URL，也提供用于浏览器请求后端数据的API URL，这使得URL的设计更为复杂。</p>
+<p>另外常见的做法，是为Page以及数据提供不同的访问域名，例如用域名 <tt class="docutils literal"><span class="pre">https://api.yanjiong.wang/v1</span></tt> 专门提供API服务，用域名 <tt class="docutils literal"><span class="pre">https://yanjong.wang</span></tt> 专门提供Page服务。</p>
+<p>这些应用实践方法，都会为软件工程带来更多的复杂性，更高的集成难度。</p>
+</div>
+<div class="section" id="id10">
+<h3><a class="toc-backref" href="#id23">报文的承载能力</a></h3>
+<p>需要注意的是，一些HTTP方法，是不支持 <tt class="docutils literal">Request Body</tt> 进行数据传输的。</p>
+<p>虽然，作为客户端，可以在准备报文时，准备好 <tt class="docutils literal">Request Body</tt> 进行发送，但RFC规范，则对这种情况作出规定——服务端可以忽略这些不应该出现的 <tt class="docutils literal">Request Body</tt>。</p>
+<p>为人熟知的HTTP Method，就是 <tt class="docutils literal">GET</tt> , 它并不支持客户端发送 <tt class="docutils literal">Request Body</tt> , 而仅仅能够从 <tt class="docutils literal">Request URL</tt> 中传输请求数据。</p>
+<p>不太为人熟知的 <tt class="docutils literal">DELETE</tt> 也与 <tt class="docutils literal">GET</tt> 类似，不支持 <tt class="docutils literal">Request Body</tt>。</p>
+</div>
+</div>
+<div class="section" id="rpc">
+<h2><a class="toc-backref" href="#id24">复杂场景下的RPC协议与报文的要求</a></h2>
+<div class="section" id="url">
+<h3><a class="toc-backref" href="#id25">URL要求</a></h3>
+<ol class="arabic simple">
+<li>需要能够秉承 REST 风格的优势，也就是 <tt class="docutils literal">Uniform interface</tt></li>
+<li>能够直观的区分两次不同的请求，</li>
+<li>既能够表达对客观单个实体的操作，也能够表达对于一组实体的「事务性操作」</li>
+</ol>
+</div>
+<div class="section" id="id11">
+<h3><a class="toc-backref" href="#id26">报文要求</a></h3>
+<ol class="arabic simple">
+<li>以JSON为基础，在报文体较大时，不解析报文体保障性能。</li>
+<li>能够提供相关扩展机制，对参数进行非JSON的序列化</li>
+<li>能够快速的进行「回滚」，也就是撤销动作</li>
+</ol>
+</div>
+<div class="section" id="id12">
+<h3><a class="toc-backref" href="#id27">追踪要求</a></h3>
+<ol class="arabic simple">
+<li>能够在分布式条件下，对请求的调用链路进行跨系统无缝跟踪</li>
+<li>能够区分首次与重试不同的请求</li>
+<li>便于日志记录，还原故障现场的上下文环境</li>
+</ol>
+</div>
+<div class="section" id="id13">
+<h3><a class="toc-backref" href="#id28">版本要求</a></h3>
+<ol class="arabic simple">
+<li>能够区分不同的版本便于路由</li>
+<li>能够由客户端指定兼容版本区间</li>
+</ol>
+</div>
+<div class="section" id="id14">
+<h3><a class="toc-backref" href="#id29">查询要求</a></h3>
+<ol class="arabic simple">
+<li>提供处理过程中的状态查询能力</li>
+<li>提供处理结果的查询能力</li>
+<li>能够实时展示调用进度</li>
+</ol>
+</div>
+</div>
+</div>
+    </div>
+        <hr>
+        </div>
+        <div class="col-md-3">
+<div class="sidebar">
+    <h2>目录</h2>
+    <div class="toc" id="">
+
+<ul class="simple">
+<li><a class="reference internal" href="#rest" id="id15">REST本身是风格，不是规范</a></li>
+<li><a class="reference internal" href="#id4" id="id16">REST的优势</a><ul>
+<li><a class="reference internal" href="#id5" id="id17">丰富的工具与运行时环境</a></li>
+<li><a class="reference internal" href="#id6" id="id18">无状态</a></li>
+<li><a class="reference internal" href="#uniform-interface" id="id19">Uniform interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id20">REST的不足</a><ul>
+<li><a class="reference internal" href="#id8" id="id21">不支持分布式事务</a></li>
+<li><a class="reference internal" href="#id9" id="id22">使用场景的自述型</a></li>
+<li><a class="reference internal" href="#id10" id="id23">报文的承载能力</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rpc" id="id24">复杂场景下的RPC协议与报文的要求</a><ul>
+<li><a class="reference internal" href="#url" id="id25">URL要求</a></li>
+<li><a class="reference internal" href="#id11" id="id26">报文要求</a></li>
+<li><a class="reference internal" href="#id12" id="id27">追踪要求</a></li>
+<li><a class="reference internal" href="#id13" id="id28">版本要求</a></li>
+<li><a class="reference internal" href="#id14" id="id29">查询要求</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+        </div>
+
+    </div> </div>
+
+<div class="footer">
+  <p><a rel="license" href="//creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/images/icons/cc-by-nc-nd-40-80x15.png" /></a>
+    <a href="/feeds/all.atom.xml"><img src="/theme/images/icons/rss.png"/></a>
+  </p>
+  <p>&copy; 2011-2016 <a href="//yanjiong.wang">王延炯博士</a>
+      <a href="//cn.linkedin.com/in/wangyanjiong"><img src="/theme/images/icons/linkedin.png"/></a>
+      <a href="//github.com/sinewang"><img src="/theme/images/icons/github.png"/></a>
+      <a href="/images/qrcode/qrcode_for_drwangyanjiong.jpg"><img src="/theme/images/icons/wechat.png"/></a>
+      <a href="//weibo.com/sinewang"><img src="/theme/images/icons/weibo.png"/></a>
+      <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
+       · <a href="//smartea.org">SmartEA</a>
+       · <a href="//capareso.com">CAPARESO</a>
+       · <a href="//kii.science">Kii.Science</a>
+  </p>
+  <p>
+          <a href="/about">关于</a>
+          | <a href="/copyright">版权</a>
+  </p>
+  <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
+</body>
+</html>

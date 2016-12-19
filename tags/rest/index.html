@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>变是永远不变的现实情况  @ 王延炯 · 观世界 | World Insight
-</title>
+    <title> REST @ 王延炯 · 观世界 | World Insight</title>
     <meta name="description" content="">
     <meta name="author" content="Wang YanJiong">
 
@@ -50,62 +49,29 @@
     <div class="row">
 
         <div class="col-md-9">
-    <div class='article'>
-        <div class="article-title">
-            <h1>变是永远不变的现实情况</h1>
-        </div>
-        <div class="article-metadata">
-<div class="text-center">
-  <p>
-    <span class="glyphicon">2016-03-30</span>
+<h1 style="text-align:center;">REST</h1>
+<hr>
+<ul class="timeline">
+        <li class="timeline">
+<div class="timeline-badge"><i class="glyphicon glyphicon-tint"></i></div>
+  <div class="timeline-panel" onclick="location.href='/articles/design-an-rest-like-rpc-over-http11-part-1'">
+  <div class="timeline-heading">
+    <h4>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）</h4>
+  </div>
+  <div class="timeline-body">
+    <p class="first last">REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文对REST的不足进行了分析，对复杂场景下的RPC协议与报文的要求进行了梳理。</p>
 
-          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/ideas">观点</a>
-
-  </p>
-</div>
-<div class="text-center">
-  <ul class="list-of-tags tags-in-article">
-      <li><a href="/tags/jia-gou">架构
-            <sup>7</sup></a>
-      </li>
-      <li><a href="/tags/wei-fu-wu">微服务
-            <sup>3</sup></a>
-      </li>
-  </ul>
-</div>
-<div class="article-summary">
-  <p><p class="first last">不要抱怨变化，变化是人的认知、社会进步的结果。</p>
-</p>
-</div>
-        </div>
-
-
-        <div class="article-content"><p>系统的上线就意味着给业务带上了手铐。（已经忘了是从哪听来的这句话了）</p>
-<p>变是永远不变的现实情况，因为变是源自于认知的升级。</p>
-<p>变有哪几种类型呢？假设以纯人工方式进行一项业务：</p>
-<ul class="simple">
-<li>个体变了（单个职责 [ 功能 ] 变了，不影响他人）</li>
-<li>流程变了（分工界面 [ 接口 ] 变了，会影响他人）</li>
-<li>流量变了（功能分工都没变，就是要多安排人手 [ 水平扩容 ] ）</li>
+  </div>
+  <div class="timeline-footer">
+    <p class="text-right">2016-12-20</p>
+  </div>
+</div>        </li>
+     <li class="clearfix no-float"></li>
 </ul>
-<p>一般来说，一个信息系统的交付，一定是以整体需求为基础，按照瀑布或敏捷方式进行交付的。</p>
-<p>在这个交付过程中，工程师们在落地形态上，会把一些「功能」和「接口」在物理形态上进行集成。</p>
-<p>这样高聚合的实现设计，一方面是由于过往硬件成本过高，另一方面也是由于担心跨进程所引起的不必要性能开销。</p>
-<p>高聚合的设计，为将来系统进行业务进化，种下了许多「技术债务」的种子。</p>
-<p>技术债务中的很大一部分，来自于后人对「业务逻辑」的不理解，没有文档，晦涩难懂的接口名称，一团乱麻的逻辑......</p>
-<p>在微服务落地的过程中，当系统落地方，接手一个完整的、冗长的业务需求说明，就意味着99%的场景下，微服务不太可能实现，因为很有可能看不见拆分的原则。</p>
-<p>也许有一种视角，就是能够知道一个企业中的全部业务流程，并对业务流程进行优化和缩短，也许这种方式是业务和技术都愿意看到的情况。</p>
-<p>一个微服务 ( Actor ) 应该是一个职能在虚拟世界中的投影，一组微服务构成的能力域 ( Domain ) 就应该是一个部门在虚拟世界中的投影。</p>
-<p>一个职能对应于一个微服务 ( Actor ) ，是合理的。</p>
-<p>微服务有多少种不同结构上的拓扑形态，应该是取决于自然社会的业务形态。</p>
-</div>
-    </div>
+
         <hr>
         </div>
         <div class="col-md-3">
-<div class="sidebar">
-</div>
-
         </div>
 
     </div> </div>
