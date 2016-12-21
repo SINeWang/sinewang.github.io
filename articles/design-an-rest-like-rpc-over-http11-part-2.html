@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（下）  @ 王延炯 · 观世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+    <link href="/theme/timeline.css" rel="stylesheet">
+
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+            <li><a href="/categories/ideas">观点</a></li>
+            <li><a href="/categories/experiences">经验</a></li>
+        </ul>
+        <p class="navbar-text navbar-right">基于本质·懂得人性</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9">
+    <div class='article'>
+        <div class="article-title">
+            <h1>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（下）</h1>
+        </div>
+        <div class="article-metadata">
+<div class="text-center">
+  <p>
+    <span class="glyphicon">2016-12-21</span>
+
+          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/ideas">观点</a>
+
+  </p>
+</div>
+<div class="text-center">
+  <ul class="list-of-tags tags-in-article">
+      <li><a href="/tags/fen-bu-shi-shi-wu">分布式事务
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/http">HTTP
+            <sup>3</sup></a>
+      </li>
+      <li><a href="/tags/http11">HTTP/1.1
+            <sup>2</sup></a>
+      </li>
+      <li><a href="/tags/jia-gou">架构
+            <sup>8</sup></a>
+      </li>
+      <li><a href="/tags/rest">REST
+            <sup>2</sup></a>
+      </li>
+  </ul>
+</div>
+<div class="article-summary">
+  <p><p class="first last">REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文通过对HTTP/1.1协议的深入挖掘，设计一套设计REST-like的RPC通信协议。</p>
+</p>
+</div>
+        </div>
+
+
+        <div class="article-content">
+<!-- -->
+<div class="section" id="http-1-1">
+<h2><a class="toc-backref" href="#id7">HTTP/1.1 协议的潜力</a></h2>
+<img alt="" class="align-center" src="/images/2016/12-21/design-an-rest-like-rpc-over-http11-part-2-1.png" style="width: 400px; height: 400px;"/>
+<p>RFC对于HTTP/1.1的规范，主要以 <a class="reference external" href="https://tools.ietf.org/html/rfc2616">RFC2616</a> 为基础，在 <a class="reference external" href="https://tools.ietf.org/html/rfc7231">RFC7231</a> , <a class="reference external" href="https://tools.ietf.org/html/rfc5789">RFC5789</a> 进行了补充说明。</p>
+<p>HTTP/1.1 协议，主要有9大方法，其中主要考察的有：</p>
+<ul class="simple">
+<li><tt class="docutils literal">POST</tt> 写操作</li>
+<li><tt class="docutils literal">PUT</tt> 写操作</li>
+<li><tt class="docutils literal">PATCH</tt> 写操作</li>
+<li><tt class="docutils literal">DELETE</tt> 写操作</li>
+<li><tt class="docutils literal">HEAD</tt> 读操作</li>
+<li><tt class="docutils literal">GET</tt> 读操作</li>
+<li><tt class="docutils literal">TRACE</tt> 读操作（但可能会产生副作用）</li>
+</ul>
+<p>另外的 <tt class="docutils literal">CONNECT</tt> 方法主要处理与 HTTP Proxy 相关的事务 , <tt class="docutils literal">OPTIONS</tt> 方法用于对协议内容的协商。</p>
+<p>在2014年，RFC通过 RFC7230-7236 对RFC2616进了「Replace」。
+不过RFC2616应用实在是过于广泛，即便是被宣布「Dead」，运行在全世界各地的协议实现，仍然是主流。</p>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id8">幂等性考量</a></h3>
+<p>幂等的概念是，对于相同的请求，被处理任意次，对数据的操作结果，等同于处理一次。</p>
+<p>满足幂等性要求的Method，一般都是对于数据操作安全的。对于读操作，显然是满足幂等性要求的。</p>
+<ul class="simple">
+<li><tt class="docutils literal">PUT</tt></li>
+<li><tt class="docutils literal">DELETE</tt></li>
+<li><tt class="docutils literal">HEAD</tt></li>
+<li><tt class="docutils literal">GET</tt></li>
+</ul>
+<p>上述四个方法，HTTP/1.1 要求协以幂等的方式进行实现。其中 <tt class="docutils literal">HEAD</tt> 以及是 <tt class="docutils literal">GET</tt> 是明显的读操作，而 <tt class="docutils literal">PUT</tt> 和 <tt class="docutils literal">DELETE</tt> 是写操作。</p>
+<p>在实现层面，对于幂等性的实现，都要求由请求方提供唯一性标识，也经常称之为「流水号」。它的生成方法，可以参见之前写的这篇文章：<a class="reference external" href="/articles/id-and-unique-id-overview">标识与唯一标识概览</a> 。</p>
+<p>当然，标识也可以通过请求方提供的多个唯一性要素，类似以「联合主键」的方式，在服务端进行计算和判定一致性。</p>
+</div>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id9">承载性考量</a></h3>
+<div class="section" id="http-header">
+<h4><a class="toc-backref" href="#id10">HTTP Header</a></h4>
+<p>一般来说，Header部分的数据，都用来传输元数据。Header部分的数据结构，都以 Key-Value 的形式出现。</p>
+<p>对于复杂的Value，也就是Value中再嵌套数据结构，可以采用「;」对齐进一步 Key-Value 化。</p>
+<p>常见的 Request Header有：</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">User-Agent</span></tt> : <tt class="docutils literal">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36</tt></li>
+<li><tt class="docutils literal">Refer</tt> : <tt class="docutils literal"><span class="pre">https://www.google.com/</span></tt></li>
+</ul>
+<p><tt class="docutils literal"><span class="pre">User-Agent</span></tt>: 用于申明客户端的身份，其本意是用于声明「用户操作行为的代理者」。</p>
+<p><tt class="docutils literal">Refer</tt>: 用于申明引用的地址，也就是本次请求源于上一次请求的地址。在分布式架构下，这个字段本质上是可以很好地用于声明一个请求链路的「上一跳地址」。</p>
+<p>常见的 Response Header有：</p>
+<ul class="simple">
+<li><tt class="docutils literal">Status Code</tt> ：<tt class="docutils literal">200</tt></li>
+<li><tt class="docutils literal">Server</tt> ：<tt class="docutils literal">SimpleHTTP/0.6 Python/2.7.10</tt></li>
+<li><tt class="docutils literal">Date</tt> : <tt class="docutils literal">Mon, 19 Dec 2016 14:16:20 GMT</tt></li>
+<li><tt class="docutils literal">ETag</tt> : <tt class="docutils literal"><span class="pre">W/"5715dcfb-47e8"</span></tt></li>
+<li><tt class="docutils literal">Expires</tt> : <tt class="docutils literal"><span class="pre">W/"5715dcfb-47e8"</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">Content-Type</span></tt> : <tt class="docutils literal">application/json; <span class="pre">charset=UTF-8</span></tt></li>
+</ul>
+<p><tt class="docutils literal">Status Code</tt> ：是最为熟悉的响应头了。诸如 <tt class="docutils literal">401</tt> , <tt class="docutils literal">403</tt> , <tt class="docutils literal">404</tt> , <tt class="docutils literal">500</tt> , <tt class="docutils literal">503</tt> 等等响应码，RFC都对其进行了「业务化的定义」。</p>
+<p><tt class="docutils literal">Server</tt> : 默认都是以应用服务器的提供者和版本作为响应值。很多人都会把 <tt class="docutils literal">Server</tt> 的概念等同于 <tt class="docutils literal">Machine</tt> ，这是不正确的。</p>
+<p><tt class="docutils literal">Date</tt> ：指的是这一响应结果，在``Server``的响应时间，<tt class="docutils literal">Client</tt> 可以对这些数据进行加以利用。</p>
+<p><tt class="docutils literal">ETag</tt> ：则是对响应体进行的摘要Hash计算，设计的初衷是为了让 <tt class="docutils literal">Client</tt> 降低比较多个响应结果的差异，提高性能。</p>
+<p><tt class="docutils literal">Expires</tt> ：同样是提醒客户端，这一响应结果的有效期是多少，客户端可以自己根据过期时间，对所辖的缓存进行处理，或者出发其他时间。</p>
+<p><tt class="docutils literal"><span class="pre">Content-Type</span></tt> : 方便 <tt class="docutils literal">Client</tt> 对响应体进行反序列化的解析操作。</p>
+</div>
+<div class="section" id="http-body">
+<h4><a class="toc-backref" href="#id11">HTTP Body</a></h4>
+<p>HTTP Body 并不是想象中的那样，只有 <tt class="docutils literal">GET</tt> 方法不能够支持请求体的传输。</p>
+<p>7个方法的 Request Body 支持情况如下：</p>
+<ul class="simple">
+<li><tt class="docutils literal">POST</tt> 支持</li>
+<li><tt class="docutils literal">PUT</tt> 支持</li>
+<li><tt class="docutils literal">PATCH</tt> 支持</li>
+<li><tt class="docutils literal">DELETE</tt> 不支持</li>
+<li><tt class="docutils literal">HEAD</tt> 不支持</li>
+<li><tt class="docutils literal">GET</tt> 不支持</li>
+<li><tt class="docutils literal">TRACE</tt> 不支持</li>
+</ul>
+<p>需要注意的是，<tt class="docutils literal">DELETE</tt> 方法并不支持请求体的传输。</p>
+<p>再看一下7个方法对于 Response Body 的支持情况：</p>
+<ul class="simple">
+<li><tt class="docutils literal">POST</tt> 支持</li>
+<li><tt class="docutils literal">PUT</tt> 支持</li>
+<li><tt class="docutils literal">PATCH</tt> 支持</li>
+<li><tt class="docutils literal">DELETE</tt> 支持</li>
+<li><tt class="docutils literal">HEAD</tt> 不支持</li>
+<li><tt class="docutils literal">GET</tt> 支持</li>
+<li><tt class="docutils literal">TRACE</tt> 支持</li>
+</ul>
+<p>相比之下，Response Body的支持情况，只有 <tt class="docutils literal">HEAD</tt> 方法不支持了。</p>
+<p>整体而言，对于用户贡献内容的行为（User Generate Content），HTTP/1.1 协议明显有着不平等的倾向性。</p>
+<p>也就是说，只有 <tt class="docutils literal">POST</tt> , <tt class="docutils literal">PUT</tt> , <tt class="docutils literal">PATCH</tt> 三个方法支持用户侧「提供内容」。</p>
+<p>现如今，任何的一个互联网平台，都以 UGC 为核心，以用户提供的 <strong>内容</strong> 作为企业产品的生产资料，HTTP/1.1是不是有些落后了呢？</p>
+<p>另外，作为程序员，不了解 <tt class="docutils literal">PUT</tt> 以及 <tt class="docutils literal">PATCH</tt> 这两个幂等Method的正确方法，并且在前端生成「唯一性标识」，没有成熟框架的条件下，选择大面积使用 <tt class="docutils literal">POST</tt> 方法，似乎也得到了一个看似合理的解释。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id12">提交-补偿模式的处理分布式事务的协调方案</a></h2>
+<p>对于分布式事务，一共有三种典型的协调方案，分别是：</p>
+<ul class="simple">
+<li>提交 (Commit) - 补偿 (Compensation), C-C模式</li>
+<li>尝试 (Try) - 确认(Confirm) / 取消（Cancel）, T-C/C模式</li>
+<li>事件溯源 (Event Sourcing), ES模式</li>
+</ul>
+<p>此处，对 C-C 进行一个极为简单的概述。</p>
+<p>C-C 模式，也就是对数据进行正向操作的「反操作」，是在同步业务场景下，最简单的模式。</p>
+<p>分布式事务的参与者的模型，是 <tt class="docutils literal">1:n</tt> , 也就是分属于不同服务的 <tt class="docutils literal">1</tt> 个消费者( <tt class="docutils literal">Client</tt> )与 <tt class="docutils literal">n</tt> 个提供者( <tt class="docutils literal">Server</tt> )， 共同完成一次协调过程。</p>
+<p>在消费者内部，需要内置一个「协调器」。 每次协调过程，则对于一个「协调处理单」的实体概念。</p>
+<p>消费者，每次在进行「协调请求」前，除了需要准备好请求内容之外，还要准备好生成一个「协调处理单」的唯一性标识，记为 <tt class="docutils literal">RequestId</tt> 。
+消费者如果作为调用链中的一个中间环节，那么还需要附加携带 <tt class="docutils literal">TransactionId</tt> 作为全局流水号，为一次完整的全链路跟踪提供线索。</p>
+<p>提供者，每次在处理请求时，需要记录上游提供的 <tt class="docutils literal">RequestId</tt> ，同时还需要对响应结果，生成一个 <tt class="docutils literal">ResponseId</tt> ，并携带 <tt class="docutils literal">RequestId</tt> 作为关联标识。</p>
+</div>
+<div class="section" id="rest-like">
+<h2><a class="toc-backref" href="#id13">提交-补偿模式的REST-like实现示例</a></h2>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id14">消费方请求示例</a></h3>
+<ul class="simple">
+<li>C-C Commit Request cURL Syntax</li>
+</ul>
+<div class="highlight"><pre>curl -X PUT -H <span class="s2">"Content-Type: application/json"</span> -H <span class="s2">"User-Agent: &lt;ConsumerId&gt;"</span>  <span class="se">\\</span>
+ -H <span class="s2">"Referer: &lt;TransactionId&gt;"</span> -d &lt;RequestBody&gt; <span class="s2">"https://&lt;domain&gt;/&lt;path&gt;/&lt;RequestId&gt;[?v=&lt;Version&gt;]"</span>
+</pre></div>
+<ul class="simple">
+<li>C-C Commit Request cURL Example</li>
+</ul>
+<div class="highlight"><pre>curl -X PUT -H <span class="s2">"Content-Type: application/json"</span> -H <span class="s2">"User-Agent: REST-like-Consumer"</span> <span class="se">\\</span>
+ -H <span class="s2">"Referer: 0987654"</span> -d <span class="s1">'{ "title":"This is an request example." }'</span> <span class="s2">"https://api.yanjiong.wang/article/new/67890"</span>
+</pre></div>
+<ul class="simple">
+<li>C-C Commit Request HTTP/1.1 Example</li>
+</ul>
+<div class="highlight"><pre>PUT /article/new/67890 HTTP/1.1
+Host: yanjiong.wang
+Content-Type: application/json
+User-Agent: REST-like-Consumer
+Referer: 0987654
+
+<span class="o">{</span>
+    <span class="s2">"title"</span>:<span class="s2">"This is an request example."</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id15">提供方请求示例</a></h3>
+<ul class="simple">
+<li>C-C Commit Response HTTP/1.1 Syntax</li>
+</ul>
+<div class="highlight"><pre>HTTP/1.1 &lt;Status Code&gt;
+Server: &lt;Provider&gt;/&lt;Version&gt;
+Content-type: application/json
+<span class="o">[</span>Date: &lt;Date&gt;<span class="o">]</span>
+<span class="o">[</span>Last-Modified: &lt;Date&gt;<span class="o">]</span>
+<span class="o">[</span>ETag: &lt;Content Hash&gt;<span class="o">]</span>
+<span class="o">[</span>X-CC-RequestId: &lt;RequestId&gt;<span class="o">]</span>
+</pre></div>
+<ul class="simple">
+<li>C-C Commit Response HTTP/1.1 Example</li>
+</ul>
+<div class="highlight"><pre>HTTP/1.1 <span class="m">200</span> OK
+Server: REST-like-Provider/2.1
+Date: Wed, <span class="m">21</span> Dec <span class="m">2016</span> 15:03:33 GMT
+Last-Modified: Tue, <span class="m">20</span> Dec <span class="m">2016</span> 08:37:25 GMT
+ETag: W/<span class="s2">"ebf-1591b60c988"</span>
+X-CC-RequestId: 67890
+
+<span class="o">{</span>
+    <span class="s2">"title"</span>:<span class="s2">"This is an response example."</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+    </div>
+        <hr>
+        </div>
+        <div class="col-md-3">
+<div class="sidebar">
+    <h2>目录</h2>
+    <div class="toc" id="">
+
+<ul class="simple">
+<li><a class="reference internal" href="#http-1-1" id="id7">HTTP/1.1 协议的潜力</a><ul>
+<li><a class="reference internal" href="#id1" id="id8">幂等性考量</a></li>
+<li><a class="reference internal" href="#id3" id="id9">承载性考量</a><ul>
+<li><a class="reference internal" href="#http-header" id="id10">HTTP Header</a></li>
+<li><a class="reference internal" href="#http-body" id="id11">HTTP Body</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id12">提交-补偿模式的处理分布式事务的协调方案</a></li>
+<li><a class="reference internal" href="#rest-like" id="id13">提交-补偿模式的REST-like实现示例</a><ul>
+<li><a class="reference internal" href="#id5" id="id14">消费方请求示例</a></li>
+<li><a class="reference internal" href="#id6" id="id15">提供方请求示例</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+        </div>
+
+    </div> </div>
+
+<div class="footer">
+  <p><a rel="license" href="//creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/images/icons/cc-by-nc-nd-40-80x15.png" /></a>
+    <a href="/feeds/all.atom.xml"><img src="/theme/images/icons/rss.png"/></a>
+  </p>
+  <p>&copy; 2011-2016 <a href="//yanjiong.wang">王延炯博士</a>
+      <a href="//cn.linkedin.com/in/wangyanjiong"><img src="/theme/images/icons/linkedin.png"/></a>
+      <a href="//github.com/sinewang"><img src="/theme/images/icons/github.png"/></a>
+      <a href="/images/qrcode/qrcode_for_drwangyanjiong.jpg"><img src="/theme/images/icons/wechat.png"/></a>
+      <a href="//weibo.com/sinewang"><img src="/theme/images/icons/weibo.png"/></a>
+      <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
+       · <a href="//smartea.org">SmartEA</a>
+       · <a href="//capareso.com">CAPARESO</a>
+       · <a href="//kii.science">Kii.Science</a>
+  </p>
+  <p>
+          <a href="/about">关于</a>
+          | <a href="/copyright">版权</a>
+  </p>
+  <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
+</body>
+</html>
