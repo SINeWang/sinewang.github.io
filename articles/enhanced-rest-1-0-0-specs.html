@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnhancedREST 1.0.0 规范  @ 王延炯 · 观世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+    <link href="/theme/timeline.css" rel="stylesheet">
+
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+            <li><a href="/categories/ideas">观点</a></li>
+            <li><a href="/categories/experiences">经验</a></li>
+        </ul>
+        <p class="navbar-text navbar-right">基于本质·懂得人性</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9">
+    <div class='article'>
+        <div class="article-title">
+            <h1>EnhancedREST 1.0.0 规范</h1>
+        </div>
+        <div class="article-metadata">
+<div class="text-center">
+  <p>
+    <span class="glyphicon">2016-12-30</span>
+
+          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/ideas">观点</a>
+
+  </p>
+</div>
+<div class="text-center">
+  <ul class="list-of-tags tags-in-article">
+      <li><a href="/tags/enhancedrest">EnhancedREST
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/fen-bu-shi-xi-tong">分布式系统
+            <sup>2</sup></a>
+      </li>
+      <li><a href="/tags/rest">REST
+            <sup>3</sup></a>
+      </li>
+      <li><a href="/tags/shu-ju-yi-zhi-xing">数据一致性
+            <sup>1</sup></a>
+      </li>
+  </ul>
+</div>
+<div class="article-summary">
+  <p><p class="first last">RESTful 是一个将HTTP传输协议以及JSON报文体相结合的RPC通信风格，但目前并不存在一个得到普遍认可和约束的工业技术规范。由于RESTful风格形式简洁，工具链丰富，收到广大开发者的喜爱。同时也由于其落地实现的随意性，导致各大企业都有不同的落地实现方法，形成了不同形态的「方言」。无形之中增加了软件互联的成本，造成了有限的研发资源浪费。EnhancedREST规范了不同系统之间的技术标准，降低产品间的集成成本，提高研发效率。</p>
+</p>
+</div>
+        </div>
+
+
+        <div class="article-content">
+<!-- -->
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id16">阅读知识背景要求</a></h2>
+<blockquote>
+<ul class="simple">
+<li>熟悉HTTP/1.1协议以及MIME-types</li>
+<li>熟悉RESTful</li>
+<li>熟悉分布式事务处理模型</li>
+<li>了解OAuth2协议</li>
+<li>了解Kerberos (V5) 协议</li>
+<li>了解Hash单向函数</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id17">修订历史</a></h2>
+<ul class="simple">
+<li>1.0.0 首次发布</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id18">背景与目标</a></h2>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id19">编写背景</a></h3>
+<p>RESTful
+是一个将HTTP传输协议以及JSON报文体相结合的RPC通信风格，但目前并不存在一个得到普遍认可和约束的工业技术规范。</p>
+<p>由于RESTful风格形式简洁，工具链丰富，收到广大开发者的喜爱。同时也由于其落地实现的随意性，导致各大企业都有不同的落地实现方法，形成了不同形态的「方言」。无形之中增加了软件互联的成本，造成了有限的研发资源浪费。</p>
+</div>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id20">编写目标</a></h3>
+<p>「书同文车同轨」，规范不同系统之间的技术标准，降低产品间的集成成本，提高研发效率，促进各产品规范、有序发展。</p>
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id21">基本约定</a></h3>
+<ol class="arabic simple">
+<li>本规范中涉及大量对HTTP/1.1 协议的标准引用，对于HTTP
+Header中各项规范定义，本规范以<tt class="docutils literal"><span class="pre">”X-RL-”</span></tt>作为前缀进行扩展，未扩展的遵循RFC所定义的含义。</li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id22">限制条件</a></h3>
+<ol class="arabic simple">
+<li>本规范主要的使用范围，主要位于后端服务之间的RPC通信。</li>
+<li>对于每个Client/Server具有唯一性标识生成能力的要求。</li>
+</ol>
+</div>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id23">修订计划</a></h3>
+<ul class="simple">
+<li>补充TCC模式技术规范</li>
+<li>在对本规范进行实现之后，进行部分的内容修订</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id24">参考标准</a></h2>
+<div class="section" id="id10">
+<h3><a class="toc-backref" href="#id25">直接参考标准</a></h3>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc2616">RFC2616 Hypertext Transfer Protocol --
+HTTP/1.1</a></li>
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231">RFC7231 Hypertext Transfer Protocol (HTTP/1.1): Semantics and
+Content</a></li>
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc6919">RFC2119 Key words for use in RFCs to Indicate Requirement
+Levels</a></li>
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc2045">RFC2045 Multipurpose Internet Mail Extensions (MIME) Part One:
+Format of Internet Message
+Bodies</a></li>
+</ol>
+</div>
+<div class="section" id="id11">
+<h3><a class="toc-backref" href="#id26">间接参考标准</a></h3>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc4120">RFC4120 The Kerberos Network Authentication Service
+(V5)</a></li>
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc6749">RFC6749 The OAuth 2.0 Authorization
+Framework</a></li>
+</ol>
+</div>
+</div>
+<div class="section" id="rpc">
+<h2><a class="toc-backref" href="#id27">分布式事务的RPC模式简介</a></h2>
+<div class="section" id="commit-compensation-cc">
+<h3><a class="toc-backref" href="#id28">Commit-Compensation (CC)</a></h3>
+<p>「提交-补偿」模式：要求提供方提供对原请求的补偿（也称作撤销，反向）操作能力。</p>
+<p>双方可依照5个操作进行RPC通信： * Commit 提交 * Compensation 补偿 *
+Status 状态 * Fetch 获取 * Trace 跟踪</p>
+</div>
+<div class="section" id="try-confirm-cancel-tcc">
+<h3><a class="toc-backref" href="#id29">Try-Confirm/Cancel (TCC)</a></h3>
+<p>「尝试-确认/取消」模式：要求提供方提供资源预留、资源确认消费，资源预留取消的操作能力；要求提供方具备进行尝试操作后，自动针对「未确认操作」进行自动「取消」的能力。</p>
+<p>双方可依照6个操作进行RPC通信： * Try 尝试 * Confirm 确认 * Cancel
+取消 * Status 状态 * Fetch 获取 * Trace 跟踪</p>
+</div>
+<div class="section" id="event-sourcing-es">
+<h3><a class="toc-backref" href="#id30">Event Sourcing (ES)</a></h3>
+<p>「事件溯源」模式：要求事件产生方（事件源）对消息根据时间排序；要求事件消费方根据事件发生顺序有序处理；要求在事件消费方（也就是DDD模型中的聚合根）对来自多个事件源的事件进行处理时，具备复杂事件处理（CEP）的能力。</p>
+<p>由于事件产生方与事件消费方采用异步消息模式进行通信，因此本规范暂时不对ES模式进行技术规范的约束。</p>
+</div>
+</div>
+<div class="section" id="enhancedrest-cc">
+<h2><a class="toc-backref" href="#id31">EnhancedREST-CC模式</a></h2>
+<div class="section" id="client-side">
+<h3><a class="toc-backref" href="#id32">Client Side 技术标准</a></h3>
+<div class="section" id="id12">
+<h4><a class="toc-backref" href="#id33">Client Side 请求结构</a></h4>
+<ul class="simple">
+<li>Consumer-Agent<ul>
+<li>Client Group (MUST)</li>
+<li>Client Name (MUST)</li>
+<li>Client Version (SHOULD)</li>
+<li>Cluster Group (MUST)</li>
+<li>Cluster Name (MUST)</li>
+<li>InstanceId (MUST)</li>
+</ul>
+</li>
+<li>Request-Metadata<ul>
+<li>Consumer<ul>
+<li>Consumer Group (MUST)</li>
+<li>Consumer Name (MUST)</li>
+<li>Consumer Version (MUST)</li>
+</ul>
+</li>
+<li>MessageId (MUST)</li>
+<li>RequestId (MUST)</li>
+<li>TransactionId (SHOULD)</li>
+<li>Content-Type (SHOULD)<ul>
+<li>Serialization Method (MUST)</li>
+<li>Data Structure Version (SHOULD)</li>
+</ul>
+</li>
+<li>InstanceId (SHOULD)</li>
+<li>Accept (COULD)</li>
+<li>Access Token (Security Considerations)<ul>
+<li>Client Access Token</li>
+<li>Consumer Access Token</li>
+</ul>
+</li>
+<li>Request HMAC (Security Considerations)</li>
+<li>Timeout (COULD)</li>
+</ul>
+</li>
+<li>Consumer-Request<ul>
+<li>5 Types<ul>
+<li>Commit</li>
+<li>Compensation</li>
+<li>Status</li>
+<li>Fetch</li>
+<li>Trace</li>
+</ul>
+</li>
+<li>Request-Body</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h4><a class="toc-backref" href="#id34">Client Side 概念定义</a></h4>
+<ul class="simple">
+<li>Consumer Consumer</li>
+</ul>
+<p>是指请求的实际产生者，不包括自然人。</p>
+<ul class="simple">
+<li>Consumer Group Consumer Group</li>
+</ul>
+<p>是Consumer所属分组的唯一标识，一般为系统所属域。</p>
+<ul class="simple">
+<li>Consumer Name Consumer Name</li>
+</ul>
+<p>是Consumer的名称，在Consumer Group内具备唯一性，一般为系统名。</p>
+<ul class="simple">
+<li>Consumer Version Consumer Version</li>
+</ul>
+<p>指Consumer的所包含功能的具体介质发布版本，一般的Release版本在物理介质上必须保证唯一性。（发布版本、介质、介质SHA1/MD5/SHA256，需要保持一致，有条件的还需要进行代码签名）</p>
+<ul class="simple">
+<li>Consumer-Agent Consumer-Agent</li>
+</ul>
+<p>是指用户行为的代理执行者。</p>
+<ul class="simple">
+<li>Client 物理概念 Client</li>
+</ul>
+<p>是Consumer-Agent的物理实现，一般为承载请求的运行时容器。</p>
+<ul class="simple">
+<li>Client Group Client Group</li>
+</ul>
+<p>是Client所属分组的标识，一般为容器提供者的唯一标识。</p>
+<ul class="simple">
+<li>Client Name Client Name</li>
+</ul>
+<p>是Client的名称，在Client Group 内具备唯一性。</p>
+<ul class="simple">
+<li>Client Version Client Version</li>
+</ul>
+<p>指Client的具体发布版本，一般的Release版本在物理介质上必须保证唯一性。（发布版本、介质、介质SHA1/MD5/SHA256，需要保持一致，有条件的还需要进行代码签名）</p>
+<ul class="simple">
+<li>Cluster Group Cluster Group 是指Client
+和Consumer的可部署介质，在目标运行环境中所属分类，一般对应到域。</li>
+<li>Cluster Name Cluster Name 是指Client</li>
+</ul>
+<p>和Consumer的可部署介质，在目标运行环境中的具体集群名称，一般对应到一组相同功能实例，即集群。</p>
+<ul class="simple">
+<li>InstanceId InstanceId是指Client</li>
+</ul>
+<p>和Consumer的可部署介质，在目标运行环境中的具体集群中，被分配的唯一序列号。其唯一性的范围，至少在集群内部，也可以是全局。</p>
+<ul class="simple">
+<li>Request-Metadata</li>
+</ul>
+<p>逻辑概念Request-Metadata 是请求中元信息的总称。</p>
+<ul class="simple">
+<li>MessageId MessageId</li>
+</ul>
+<p>是每个消息(报文)的唯一标识，由Client运行期即时生成。对于Client或Consumer发起的重试行为，需要提供不同的MessageId。</p>
+<ul class="simple">
+<li>RequestId RequestId</li>
+</ul>
+<p>是每个请求的唯一标识，由Consumer运行期即时生成。</p>
+<ul class="simple">
+<li>TransactionId TransactionId</li>
+</ul>
+<p>是每个请求的全链路标识，用于关联最源端开始的完整调用过程。</p>
+<ul class="simple">
+<li>Content-Type</li>
+</ul>
+<p>逻辑概念Content-Type 是用于说明客户端请求的报文体序列化方法的总称。</p>
+<ul class="simple">
+<li>Serialization Method</li>
+</ul>
+<p>Serialization Method 是指请求报文的序列化方法。一般使用<tt class="docutils literal"><span class="pre">MIME-types</span></tt> (<a class="reference external" href="https://tools.ietf.org/html/rfc2045">RFC2045</a>)</p>
+<ul class="simple">
+<li>Data Structure Version Data Structure Version</li>
+</ul>
+<p>是请求报文内数据结构的版本。</p>
+<ul class="simple">
+<li>InstanceId InstanceId</li>
+</ul>
+<p>是指Client在物理部署后，进程在集群内的唯一标识。</p>
+<ul class="simple">
+<li>Access Token</li>
+</ul>
+<p>逻辑概念Access Token是访问令牌的总称。</p>
+<ul class="simple">
+<li>Client Access Token</li>
+</ul>
+<p>Client Access Token是表明客户端合法身份的标识，一般通过安全算法生成，并具备时效性。</p>
+<p>Consumer Access Token可以与<a class="reference external" href="https://web.mit.edu/kerberos/">Kerberos</a>协议相结合。</p>
+<ul class="simple">
+<li>Consumer Access Token</li>
+</ul>
+<p>Consumer Access Token是表明消费合法身份的标识，一般通过安全算法生成，并具备时效性。</p>
+<p>Consumer Access Token可以与<a class="reference external" href="https://tools.ietf.org/html/rfc6749">OAuth2</a>协议相结合。</p>
+<ul class="simple">
+<li>Request HMAC Request</li>
+</ul>
+<p>HMAC是通过Hash函数、Consumer持有的私有秘钥、请求报文内容的摘要、盐，所生成的安全校验码，具备放篡改能力。</p>
+<ul class="simple">
+<li>Timeout Timeout</li>
+</ul>
+<p>是指Consumer所限定的超时时间。</p>
+</div>
+<div class="section" id="http-1-1">
+<h4><a class="toc-backref" href="#id35">HTTP/1.1 协议映射</a></h4>
+<div class="section" id="http-method">
+<h5><a class="toc-backref" href="#id36">HTTP Method 概念映射</a></h5>
+<ul class="simple">
+<li>Commit —&gt; <tt class="docutils literal">HTTP PUT</tt></li>
+<li>Compensation —&gt; <tt class="docutils literal">HTTP PATCH</tt></li>
+<li>Status —&gt; <tt class="docutils literal">HTTP HEAD</tt></li>
+<li>Fetch —&gt; <tt class="docutils literal">HTTP GET</tt></li>
+<li>Trace —&gt; <tt class="docutils literal">HTTP TRACE</tt></li>
+</ul>
+</div>
+<div class="section" id="http-header">
+<h5><a class="toc-backref" href="#id37">HTTP Header 概念映射</a></h5>
+<ul class="simple">
+<li>User-Agent</li>
+</ul>
+<p><tt class="docutils literal">&lt;Consumer <span class="pre">Group&gt;-&lt;Consumer</span> Name&gt; / &lt;Consumer Version&gt; (&lt;Server <span class="pre">Group&gt;-&lt;Server</span> <span class="pre">Name&gt;/&lt;Server</span> Version&gt;)</tt></p>
+<ul class="simple">
+<li>From</li>
+</ul>
+<p><tt class="docutils literal"><span class="pre">&lt;MessageId&gt;@&lt;InstanceId&gt;.&lt;Cluster</span> <span class="pre">Name&gt;.&lt;Cluster</span> Group&gt;</tt></p>
+<ul class="simple">
+<li>Content-Type</li>
+</ul>
+<p><tt class="docutils literal">&lt;Serialization Method&gt; </tt></p>
+<ul class="simple">
+<li>Referer Upstream</li>
+</ul>
+<p><tt class="docutils literal">&lt;RequestId &amp; RequestURL&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-CC-C-TID</li>
+</ul>
+<p><tt class="docutils literal">&lt;TransactionId&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-C-DSV</li>
+</ul>
+<p><tt class="docutils literal">&lt;Data Structure Version&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-C-INST</li>
+</ul>
+<p><tt class="docutils literal">&lt;InstanceId&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-C-CLAT</li>
+</ul>
+<p><tt class="docutils literal">&lt;Client Access Token&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-C-COAT</li>
+</ul>
+<p><tt class="docutils literal">&lt;Consumer Access Token&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-C-HMAC</li>
+</ul>
+<p><tt class="docutils literal">Request HMAC</tt></p>
+<ul class="simple">
+<li>X-RL-C-TIMEOUT</li>
+</ul>
+<p><tt class="docutils literal">&lt;Timeout&gt;</tt></p>
+</div>
+<div class="section" id="url">
+<h5><a class="toc-backref" href="#id38">URL 概念映射</a></h5>
+<ul class="simple">
+<li>RequestId &amp; RequestURL <tt class="docutils literal"><span class="pre">http(s)://&lt;domain&gt;/&lt;path&gt;/&lt;RequestId&gt;</span></tt></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="server-side">
+<h3><a class="toc-backref" href="#id39">Server Side 技术标准</a></h3>
+<div class="section" id="id14">
+<h4><a class="toc-backref" href="#id40">Server Side 响应结构</a></h4>
+<ul class="simple">
+<li>Provider-Agent<ul>
+<li>Server Group (MUST) Server Name (MUST)</li>
+<li>Server Version (SHOULD)</li>
+</ul>
+</li>
+<li>Response-Metadata<ul>
+<li>Status Code (MUST)</li>
+<li>MessageId (MUST)</li>
+<li>ResponseId (MUST)</li>
+<li>RequestId (MUST)</li>
+<li>Content-Type (SHOULD)<ul>
+<li>Serialization Method (MUST)</li>
+<li>Data Version (SHOULD)</li>
+</ul>
+</li>
+<li>InstanceId (SHOULD)</li>
+<li>Response HMAC (Security Considerations)</li>
+<li>Message Date</li>
+<li>Response Date</li>
+<li>Retry-After</li>
+<li>Expires</li>
+</ul>
+</li>
+<li>Provider-Response<ul>
+<li>5 Types<ul>
+<li>Commit: Commit Result</li>
+<li>Commit: Compensation Result</li>
+<li>Status: Request Current Status only</li>
+<li>Fetch: Final Result</li>
+<li>Trace: Commit, Compensation &amp; Sub RPC call Trace</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Response-Body</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h4><a class="toc-backref" href="#id41">Server Side 概念定义</a></h4>
+<ul class="simple">
+<li>Provider Provider</li>
+</ul>
+<p>是指响应的实际产生者，不包括自然人。</p>
+<ul class="simple">
+<li>Server 物理概念 Server</li>
+</ul>
+<p>是Provider-Agent的物理实现，一般为处理请求、作出应答的运行时容器。</p>
+<ul class="simple">
+<li>Server Group Server Group</li>
+</ul>
+<p>是Server所属分组的标识，一般为容器提供者的唯一标识。</p>
+<ul class="simple">
+<li>Server Name Server Name</li>
+</ul>
+<p>是Server的名称，在Server Group 内具备唯一性。</p>
+<ul class="simple">
+<li>Server Version Server Version</li>
+</ul>
+<p>指Server的具体发布版本，一般的Release版本在物理介质上必须保证唯一性。（发布版本、介质、介质SHA1/MD5/SHA256，需要保持一致，有条件的还需要进行代码签名）</p>
+<ul class="simple">
+<li>Cluster Group Cluster Group</li>
+</ul>
+<p>是指Server 和Provider的可部署介质，在目标运行环境中所属分类，一般对应到域。</p>
+<ul class="simple">
+<li>Cluster Name Cluster Name</li>
+</ul>
+<p>是指Server和Provider的可部署介质，在目标运行环境中的具体集群名称，一般对应到一组相同功能实例，即集群。</p>
+<ul class="simple">
+<li>InstanceId InstanceId</li>
+</ul>
+<p>是指Server 和Provider的可部署介质，在目标运行环境中的具体集群中，被分配的唯一序列号。其唯一性的范围，至少在集群内部，也可以是全局。</p>
+<ul class="simple">
+<li>Response-Metadata</li>
+</ul>
+<p>逻辑概念Response-Metadata 是响应中元信息的总称。</p>
+<ul class="simple">
+<li>Status Code Status Code</li>
+</ul>
+<p>是每个响应的状态编码，一般情况下遵循HTTP/1.1协议的标准。</p>
+<ul class="simple">
+<li>MessageId MessageId</li>
+</ul>
+<p>是每个消息(报文)的唯一标识，由Server运行期即时生成。</p>
+<ul class="simple">
+<li>ResponseId RequestId</li>
+</ul>
+<p>是每个响应的唯一标识，由Provider运行期即时生成。</p>
+<ul class="simple">
+<li>Content-Type</li>
+</ul>
+<p>逻辑概念Content-Type是用于说明客户端请求的报文体序列化方法的总称。</p>
+<ul class="simple">
+<li>Serialization Method</li>
+</ul>
+<p>Serialization Method 是指响应报文的序列化方法。一般使用<tt class="docutils literal"><span class="pre">MIME-types</span></tt> (<a class="reference external" href="https://tools.ietf.org/html/rfc2045">RFC2045</a>)</p>
+<ul class="simple">
+<li>Data Structure Version</li>
+</ul>
+<p>Data Structure Version</p>
+<p>是响应报文内数据结构的版本。</p>
+<ul class="simple">
+<li>InstanceId InstanceId</li>
+</ul>
+<p>是指Server在物理部署后，进程在集群内的唯一标识。</p>
+<ul class="simple">
+<li>Response HMAC Response</li>
+</ul>
+<p>HMAC是通过Hash函数、Consumer持有的私有秘钥、请求报文内容的摘要、盐，所生成的安全校验码，具备放篡改能力。参见RFC对ETag的定义。</p>
+<ul class="simple">
+<li>Message Date Message</li>
+</ul>
+<p>Date是响应消息的生成时间，由Server给定。参见RFC对Date的定义。</p>
+<ul class="simple">
+<li>Response Date Response</li>
+</ul>
+<p>Date是响应内容的生成时间，由Server给定。参见RFC对Last-Modified的定义。</p>
+<ul class="simple">
+<li>Expire Date Expire</li>
+</ul>
+<p>Date是Commit操作结果的过期时间，由Provider给定。当Consumer在Expire
+Date时间之后提交Compensation操作，有可能得到的是Compensation操作失败的结果。其他内容，参见RFC对Expires的定义。</p>
+<ul class="simple">
+<li>Retry-After Expire</li>
+</ul>
+<p>Date是响应内容的过期时间，由Server给定。参见RFC对Retry-After的定义。</p>
+</div>
+<div class="section" id="http-1-1-header">
+<h4><a class="toc-backref" href="#id42">HTTP/1.1 Header 概念映射</a></h4>
+<ul class="simple">
+<li>Status Code</li>
+</ul>
+<p>参见上一节「HTTP Status Code 映射」</p>
+<ul class="simple">
+<li>Server</li>
+</ul>
+<p><tt class="docutils literal">&lt;Server <span class="pre">Group&gt;-&lt;Server</span> <span class="pre">Name&gt;/&lt;Server</span> Version&gt;  &lt;Provider <span class="pre">Group&gt;-&lt;Provider</span> Name&gt; / &lt;Provider Version&gt; &lt;Cluster <span class="pre">Group&gt;-&lt;Cluster</span> <span class="pre">Name&gt;/&lt;InstanceId&gt;</span></tt></p>
+<ul class="simple">
+<li>X-RL-CC-S-MID</li>
+</ul>
+<p><tt class="docutils literal">&lt;MessageId&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-S-RESID</li>
+</ul>
+<p><tt class="docutils literal">&lt;ResponseId&gt;</tt></p>
+<ul class="simple">
+<li>X-RL-S-REQID</li>
+</ul>
+<p><tt class="docutils literal">&lt;RequestId&gt;</tt></p>
+<ul class="simple">
+<li>Content-Type</li>
+</ul>
+<p><tt class="docutils literal">&lt;Serialization Method&gt; </tt></p>
+<ul class="simple">
+<li>X-RL-S-DSV</li>
+</ul>
+<p><tt class="docutils literal">&lt;Data Structure Version&gt;</tt></p>
+<ul class="simple">
+<li>ETag</li>
+</ul>
+<p><tt class="docutils literal">&lt;Response HMAC&gt;</tt></p>
+<ul class="simple">
+<li>Date</li>
+</ul>
+<p><tt class="docutils literal">&lt;Message Date&gt;</tt></p>
+<ul class="simple">
+<li>Last-Modified</li>
+</ul>
+<p><tt class="docutils literal">&lt;Response Date&gt;</tt></p>
+<ul class="simple">
+<li>Retry-After</li>
+</ul>
+<p><tt class="docutils literal"><span class="pre">HTTP-date</span> / <span class="pre">delay-seconds</span></tt></p>
+</div>
+<div class="section" id="commit">
+<h4><a class="toc-backref" href="#id43">响应 Commit 操作</a></h4>
+<p>针对Commit操作，允许返回以下响应码</p>
+<ul class="simple">
+<li><tt class="docutils literal">201</tt> Created 正常处理，并成功。</li>
+<li><tt class="docutils literal">400</tt> Bad Request 指Consumer提供的请求不符合约定的规格。</li>
+<li><tt class="docutils literal">401</tt> Unauthorized
+指Consumer未提供可供Provider进行合法性验证的身份信息。</li>
+<li><tt class="docutils literal">402</tt> Payment Required 指Consumer所执行的请求，超过约定的流量限额。</li>
+<li><tt class="docutils literal">403</tt> Forbidden 指Consumer没有权限执行这项操作。</li>
+<li><tt class="docutils literal">408</tt> Request Timeout
+指Consumer没有在Provider能够接受的请求报文接收时长内接收到完整报文。</li>
+<li><tt class="docutils literal">409</tt> Conflict
+指Server所接受到的报文存在冲突。即相同的RequestId，所对应的Request
+HMAC不一致。</li>
+<li><tt class="docutils literal">413</tt> Payload Too Large
+指Client对Consumer所提供的报文，在进行序列化之后的长度，超过Server能够接受的最大长度。</li>
+<li><tt class="docutils literal">414</tt> URI Too Long
+指Client所提供的URI，超过Server能够接受的最大长度。</li>
+<li><tt class="docutils literal">500</tt> Internal Server Error 指Server在处理过程中，发生了未知错误。</li>
+<li><tt class="docutils literal">503</tt> Service Unavailable 指Provider在处理过程中，发生了未知错误。</li>
+</ul>
+</div>
+<div class="section" id="compensation">
+<h4><a class="toc-backref" href="#id44">响应 Compensation 操作</a></h4>
+<p>针对Compensation操作，允许返回以下响应码</p>
+<ul class="simple">
+<li><tt class="docutils literal">400</tt> Bad Request</li>
+</ul>
+<p>指Consumer提供的请求不符合约定的规格。</p>
+<ul class="simple">
+<li><tt class="docutils literal">401</tt> Unauthorized</li>
+</ul>
+<p>指Consumer未提供可供Provider进行合法性验证的身份信息。</p>
+<ul class="simple">
+<li><tt class="docutils literal">402</tt> Payment Required</li>
+</ul>
+<p>指Consumer所执行的请求，超过约定的流量限额。</p>
+<ul class="simple">
+<li><tt class="docutils literal">403</tt> Forbidden</li>
+</ul>
+<p>指Consumer没有权限执行这项操作。</p>
+<ul class="simple">
+<li><tt class="docutils literal">404</tt> Not Found</li>
+</ul>
+<p>指Provider根据Consumer指定的RequestId没有找到相关的Commit请求。</p>
+<ul class="simple">
+<li><tt class="docutils literal">408</tt> Request Timeout</li>
+</ul>
+<p>指Consumer没有在Provider能够接受的请求报文接收时长内接收到完整报文。</p>
+<ul class="simple">
+<li><tt class="docutils literal">409</tt> Conflict</li>
+</ul>
+<dl class="docutils">
+<dt>指Server所接受到的报文存在冲突。即相同的RequestId，所对应的Request</dt>
+<dd>HMAC不一致。</dd>
+</dl>
+<ul class="simple">
+<li><tt class="docutils literal">410</tt> Gone</li>
+</ul>
+<p>处理补偿操作，并成功。</p>
+<ul class="simple">
+<li><tt class="docutils literal">413</tt> Payload Too Large</li>
+</ul>
+<p>指Client对Consumer所提供的报文，在进行序列化之后的长度，超过Server能够接受的最大长度。</p>
+<ul class="simple">
+<li><tt class="docutils literal">414</tt> URI Too Long</li>
+</ul>
+<p>指Client所提供的URI，超过Server能够接受的最大长度。</p>
+<ul class="simple">
+<li><tt class="docutils literal">500</tt> Internal Server Error</li>
+</ul>
+<p>指Server在处理过程中，发生了未知错误。</p>
+<ul class="simple">
+<li><tt class="docutils literal">503</tt> Service Unavailable</li>
+</ul>
+<p>指Provider在处理过程中，发生了未知错误。</p>
+</div>
+<div class="section" id="status">
+<h4><a class="toc-backref" href="#id45">响应 Status 操作</a></h4>
+<p>HTTP/1.1 不对HTTP Status Method提供请求体以及响应体的支撑。</p>
+<ul class="simple">
+<li><tt class="docutils literal">201</tt> Created</li>
+</ul>
+<p>处理提交操作，并成功。仅在Commit操作正常完整之后返回。</p>
+<ul class="simple">
+<li><tt class="docutils literal">410 </tt> Gone</li>
+</ul>
+<p>处理补偿操作，并成功。仅在Compensation操作正常完整之后返回。</p>
+</div>
+<div class="section" id="fetch">
+<h4><a class="toc-backref" href="#id46">响应 Fetch 操作</a></h4>
+<p>对于一个正常请求，以及后续可能出现的补偿请求，在Provider可能会产生多个响应结果，Fetch操作只会产生最后的操作结果。当Provider没有补偿操作进行时，返回的是Commit操作的结果；当Provider执行成功执行过Compensation操作时，返回的是Compensation操作结果。</p>
+<ul class="simple">
+<li><tt class="docutils literal">200</tt> OK</li>
+</ul>
+<p>返回Provider处理结果的内容。</p>
+<ul class="simple">
+<li><tt class="docutils literal">400</tt> Bad Request</li>
+</ul>
+<p>指Consumer提供的请求不符合约定的规格。</p>
+<ul class="simple">
+<li><tt class="docutils literal">401</tt> Unauthorized</li>
+</ul>
+<p>指Consumer未提供可供Provider进行合法性验证的身份信息。</p>
+<ul class="simple">
+<li><tt class="docutils literal">402</tt> Payment Required</li>
+</ul>
+<p>指Consumer所执行的请求，超过约定的流量限额。</p>
+<ul class="simple">
+<li><tt class="docutils literal">403</tt> Forbidden</li>
+</ul>
+<p>指Consumer没有权限执行这项操作。</p>
+<ul class="simple">
+<li><tt class="docutils literal">404</tt> Not Found</li>
+</ul>
+<p>指Provider根据Consumer指定的RequestId没有找到相关的Commit请求。</p>
+<ul class="simple">
+<li><tt class="docutils literal">408</tt> Request Timeout</li>
+</ul>
+<p>指Consumer没有在Provider能够接受的请求报文接收时长内接收到完整报文。</p>
+<ul class="simple">
+<li><tt class="docutils literal">414</tt> URI Too Long</li>
+</ul>
+<p>指Client所提供的URI，超过Server能够接受的最大长度。</p>
+<ul class="simple">
+<li><tt class="docutils literal">500</tt> Internal Server Error</li>
+</ul>
+<p>指Server在处理过程中，发生了未知错误。</p>
+<ul class="simple">
+<li><tt class="docutils literal">503</tt> Service Unavailable</li>
+</ul>
+<p>指Provider在处理过程中，发生了未知错误。</p>
+</div>
+<div class="section" id="trace">
+<h4><a class="toc-backref" href="#id47">响应 Trace 操作</a></h4>
+<p>对于一个Provider，在处理
+Commit操作的过程中，一方面可能依赖下游的其他Provider；另一方面后续可能还会出现
+Compensation操作。因此，对于一次请求，处理的结果会产生一系列的处理轨迹。</p>
+<p>Trace操作，需要使用HTTP/1.1 Multipart响应机制对结果进行返回。</p>
+<ul class="simple">
+<li>Content-Type</li>
+</ul>
+<p><tt class="docutils literal">&lt;Serialization Method&gt; </tt> (Multipart Content-Type)</p>
+<ul class="simple">
+<li><tt class="docutils literal">200</tt> OK</li>
+</ul>
+<p>返回Consumer处理结果的内容。</p>
+<ul class="simple">
+<li><tt class="docutils literal">400</tt> Bad Request</li>
+</ul>
+<p>指Consumer提供的请求不符合约定的规格。</p>
+<ul class="simple">
+<li><tt class="docutils literal">401</tt> Unauthorized</li>
+</ul>
+<p>指Consumer未提供可供Provider进行合法性验证的身份信息。</p>
+<ul class="simple">
+<li><tt class="docutils literal">402</tt> Payment Required</li>
+</ul>
+<p>指Consumer所执行的请求，超过约定的流量限额。</p>
+<ul class="simple">
+<li><tt class="docutils literal">403</tt> Forbidden</li>
+</ul>
+<p>指Consumer没有权限执行这项操作。</p>
+<ul class="simple">
+<li><tt class="docutils literal">404</tt> Not Found</li>
+</ul>
+<p>指Provider根据Consumer指定的RequestId没有找到相关的Commit请求。</p>
+<ul class="simple">
+<li><tt class="docutils literal">408</tt> Request Timeout</li>
+</ul>
+<p>指Consumer没有在Provider能够接受的请求报文接收时长内接收到完整报文。</p>
+<ul class="simple">
+<li><tt class="docutils literal">414</tt> URI Too Long</li>
+</ul>
+<p>指Client所提供的URI，超过Server能够接受的最大长度。</p>
+<ul class="simple">
+<li><tt class="docutils literal">500</tt> Internal Server Error</li>
+</ul>
+<p>指Server在处理过程中，发生了未知错误。</p>
+<ul class="simple">
+<li><tt class="docutils literal">503</tt> Service Unavailable</li>
+</ul>
+<p>指Provider在处理过程中，发生了未知错误。</p>
+</div>
+</div>
+</div>
+</div>
+    </div>
+        <hr>
+        </div>
+        <div class="col-md-3">
+<div class="sidebar">
+    <h2>目录</h2>
+    <div class="toc" id="">
+
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id16">阅读知识背景要求</a></li>
+<li><a class="reference internal" href="#id2" id="id17">修订历史</a></li>
+<li><a class="reference internal" href="#id3" id="id18">背景与目标</a><ul>
+<li><a class="reference internal" href="#id4" id="id19">编写背景</a></li>
+<li><a class="reference internal" href="#id5" id="id20">编写目标</a></li>
+<li><a class="reference internal" href="#id6" id="id21">基本约定</a></li>
+<li><a class="reference internal" href="#id7" id="id22">限制条件</a></li>
+<li><a class="reference internal" href="#id8" id="id23">修订计划</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9" id="id24">参考标准</a><ul>
+<li><a class="reference internal" href="#id10" id="id25">直接参考标准</a></li>
+<li><a class="reference internal" href="#id11" id="id26">间接参考标准</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rpc" id="id27">分布式事务的RPC模式简介</a><ul>
+<li><a class="reference internal" href="#commit-compensation-cc" id="id28">Commit-Compensation (CC)</a></li>
+<li><a class="reference internal" href="#try-confirm-cancel-tcc" id="id29">Try-Confirm/Cancel (TCC)</a></li>
+<li><a class="reference internal" href="#event-sourcing-es" id="id30">Event Sourcing (ES)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enhancedrest-cc" id="id31">EnhancedREST-CC模式</a><ul>
+<li><a class="reference internal" href="#client-side" id="id32">Client Side 技术标准</a><ul>
+<li><a class="reference internal" href="#id12" id="id33">Client Side 请求结构</a></li>
+<li><a class="reference internal" href="#id13" id="id34">Client Side 概念定义</a></li>
+<li><a class="reference internal" href="#http-1-1" id="id35">HTTP/1.1 协议映射</a><ul>
+<li><a class="reference internal" href="#http-method" id="id36">HTTP Method 概念映射</a></li>
+<li><a class="reference internal" href="#http-header" id="id37">HTTP Header 概念映射</a></li>
+<li><a class="reference internal" href="#url" id="id38">URL 概念映射</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-side" id="id39">Server Side 技术标准</a><ul>
+<li><a class="reference internal" href="#id14" id="id40">Server Side 响应结构</a></li>
+<li><a class="reference internal" href="#id15" id="id41">Server Side 概念定义</a></li>
+<li><a class="reference internal" href="#http-1-1-header" id="id42">HTTP/1.1 Header 概念映射</a></li>
+<li><a class="reference internal" href="#commit" id="id43">响应 Commit 操作</a></li>
+<li><a class="reference internal" href="#compensation" id="id44">响应 Compensation 操作</a></li>
+<li><a class="reference internal" href="#status" id="id45">响应 Status 操作</a></li>
+<li><a class="reference internal" href="#fetch" id="id46">响应 Fetch 操作</a></li>
+<li><a class="reference internal" href="#trace" id="id47">响应 Trace 操作</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+        </div>
+
+    </div> </div>
+
+<div class="footer">
+  <p><a rel="license" href="//creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/images/icons/cc-by-nc-nd-40-80x15.png" /></a>
+    <a href="/feeds/all.atom.xml"><img src="/theme/images/icons/rss.png"/></a>
+  </p>
+  <p>&copy; 2011-2016 <a href="//yanjiong.wang">王延炯博士</a>
+      <a href="//cn.linkedin.com/in/wangyanjiong"><img src="/theme/images/icons/linkedin.png"/></a>
+      <a href="//github.com/sinewang"><img src="/theme/images/icons/github.png"/></a>
+      <a href="/images/qrcode/qrcode_for_drwangyanjiong.jpg"><img src="/theme/images/icons/wechat.png"/></a>
+      <a href="//weibo.com/sinewang"><img src="/theme/images/icons/weibo.png"/></a>
+      <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
+       · <a href="//kii.one">Kii.ONE | 专业知识集成与创新</a>
+       · <a href="//smartea.org">SmartEA | 可持续企业架构研究</a>
+  </p>
+  <p>
+          <a href="/about">关于</a>
+          | <a href="/copyright">版权</a>
+  </p>
+  <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
+</body>
+</html>
