@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片的管理与运营  @ 王延炯 · 观世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+    <link href="/theme/timeline.css" rel="stylesheet">
+
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+            <li><a href="/categories/ideas">观点</a></li>
+            <li><a href="/categories/experiences">经验</a></li>
+        </ul>
+        <p class="navbar-text navbar-right">基于本质·懂得人性</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9">
+    <div class='article'>
+        <div class="article-title">
+            <h1>图片的管理与运营</h1>
+        </div>
+        <div class="article-metadata">
+<div class="text-center">
+  <p>
+    <span class="glyphicon">2017-01-12</span>
+
+          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/ideas">观点</a>
+
+  </p>
+</div>
+<div class="text-center">
+  <ul class="list-of-tags tags-in-article">
+      <li><a href="/tags/ban-ben-kong-zhi">版本控制
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/office-openxml">Office OpenXML
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/zhi-shi-fen-xiang">知识分享
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/zhi-shi-yin-yong">知识引用
+            <sup>1</sup></a>
+      </li>
+  </ul>
+</div>
+<div class="article-summary">
+  <p><p class="first last">现有的大部分商业、免费的绘图工具的基本假设是，图片的作者与图片的使用者，使用的是同一个工具，并没有考虑到图片的具体引用场景，并根据上下文环境进行自适应调整。</p>
+</p>
+</div>
+        </div>
+
+
+        <div class="article-content">
+<!-- -->
+<p>没错，这又是一个还没实现的理想，缺的是时间资源。</p>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id15">（工程设计）图的窘境</a></h2>
+<p>脑图、UML图、PPT中的图形，是经常用到的集中画图的方式。这些方式都会造成图片的绘制限制，或者使用限制。</p>
+<p>使用A工具绘制而成的图片，非常容易的在 B/C/D... 等工具和场景中被「引用」。</p>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id16">上下文无感知</a></h3>
+<p>一个图片不能在多个场合进行引用，主要体现在无法根据上下文条件进行自适应的调整，例如</p>
+<ul class="simple">
+<li>矢量缩放</li>
+<li>配色主题的更换</li>
+<li>格式的自动转换</li>
+<li>重构、抽取与局部引用</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id17">内容价值弱反馈，变更无感知</a></h3>
+<p>目前大部分的绘图工具的设计，都缺乏对「协作」的支持。</p>
+<p>也就是说，他们都假设了，「产物的作者 <strong>就是</strong> 使用者」。</p>
+<p>简而言之，就是用同一个工具进行编辑、修改和演示。</p>
+<p>从协作的角度来说，「产物的作者 <strong>不是</strong> 使用者」</p>
+<p>简而言之，就是进行编辑、修改的工具，和进行演示的工具不是同一个，是相互松耦合的。</p>
+<p>即便是实现了松耦合的工具设计，目前也缺乏 「使用者」 对于上游 「作者」 进行内容更新的通知与提醒。</p>
+<p>这些因素，导致了内容的分享变得困难，对内容的价值评价变得无法进行。</p>
+</div>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id18">二进制图片的内容管理</a></h3>
+<p>二进制图片，是没有办法采用面向文本的 <tt class="docutils literal">diff</tt> 工具，对的内容进行精准比较的。</p>
+<p>图的重度依赖者，又非常希望能够看到两张图片在内容上的细节差异，不想在一张图片的若干版本中，重复的进行着「找不同」的游戏。</p>
+<p>这也是二进制图片，表达「图意」的难点。在数据处理领域，称之为「无结构的数据」。</p>
+<p>这种称呼，其实是站在图片的使用者角度，无法用计算机直接理解图片的「图意」。</p>
+<p>目前的人工智能或者说是机器学习，对于图片的识别已经有了长足的进步，能够识别「日常」的一些「简单图片」。</p>
+<p>不过，对于「工程制图」的结构识别、模型还原的应用，还不多见。</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id19">图的制作</a></h2>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id20">商业或者封闭的绘制工具</a></h3>
+<p>一般，商业的绘制工具，对图的物理格式，都采用特有的方式进行编码，即便是基于 <tt class="docutils literal">XML</tt> 方式进行解析，大多数情况下，只能靠人猜测其含义。</p>
+<p>同时，商业工具，还会持有一些「布局算法」，并可能以专利的形式进行保护。</p>
+<p>这样，对于非官方的「图片浏览器」而言，则会产生布局效果差强人意的结果。</p>
+<p>很明显的例子是，对于 Office 系列文件的图形化渲染， 用A工具绘制的图片，在B工具内打开，可能就会发生剧烈的变形。</p>
+<p>也就是说，这些封闭的绘图工具，在产品设计的时候，有一个基本的假设，那么就是图片的绘制，与图片的浏览，都在本工具之内进行。
+这可能是增加产品「用户粘性」的一个手段？</p>
+</div>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id21">基于文本生成的例子</a></h3>
+<p>以git为代表的管理工具，是对文本文件，进行版本管理的最佳选择。</p>
+<p><tt class="docutils literal">SVG</tt> 等等以 <tt class="docutils literal">XML</tt> 为核心的文本格式矢量图，或者是以 <a class="reference external" href="http://plantuml.com/">PlantUML</a> 为代表的，有自己特有语法的描述语言，可以进行多种输出图片格式的图形转换。</p>
+<p>在软件领域，<a class="reference external" href="http://plantuml.com/">PlantUML</a> ，是在设计阶段，最为「淳朴」的UML绘制工具，也就是说，整体布局由 <a class="reference external" href="http://plantuml.com/">PlantUML</a> 自行通过算法完成，用户很多时候能够采取一些「小技巧」来实现布局上的「更高要求」。</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-5.png" style="width: 450px; height: 400px;"/>
+<p>可以说，<a class="reference external" href="http://plantuml.com/">PlantUML</a> 是可以解决一些小规模程序的设计图的绘制问题。 同时还能够以文本的形式，对内容进行版本管理。</p>
+</div>
+<div class="section" id="id9">
+<h3><a class="toc-backref" href="#id22">使用标记语言聚合内容</a></h3>
+<p>标记语言，是基于文本的，它很大程度上解决了内容与格式的紧耦合模式。</p>
+<p>这种方式，相比传统的 Office套件（无论那个厂商），放弃了一些「所见即所得」的撰写体验（其实也有热心群众提供非官方插件支持），但释放了内容的「复用、分享」能力。</p>
+<p>把修饰文字的「元信息」，通过简单的特殊符号，附加在特定的文字周围。</p>
+<p>比较简单的和典型的有（按学习难度排序）</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a></li>
+<li><a class="reference external" href="http://www.methods.co.nz/asciidoc/index.html">AsciiDoc</a></li>
+</ul>
+<p>这些标记语言，都是基于文本的，并且天然的支持以「URL」的方式对图片进行引用。</p>
+<p>例如，本文，就是用 <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> 编写的，引用图片时候，只需要写成：</p>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/2017/01-13/the-way-of-pubsub-diagram-4.png
+    <span class="nc">:height:</span> <span class="nf">400px</span>
+    <span class="nc">:width:</span> <span class="nf">450px</span>
+    <span class="nc">:align:</span> <span class="nf">center</span>
+</pre></div>
+<p>就能够完成对一个图片的引用，当然，还可以是外链的URL。</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id23">图的引用</a></h2>
+<p>对，我没写错，是「引用」，不是「应用」。</p>
+<p>也就是说，图的「作者」不是「引用者」，这种情况，在知识互连、知识共享、知识集成的时代，非常常见。</p>
+<p>图的引用场景是广泛的，常见的有：</p>
+<ul class="simple">
+<li>嵌入Office文件，例如Presentation</li>
+<li>PDF或者HTML格式的宣传册、白皮书、说明书</li>
+<li>网站、博客、微博</li>
+<li>微信公众号，还可能是多个</li>
+<li>可内置渠道信息、支持条件跳转与有效期的动态二维码</li>
+</ul>
+<div class="section" id="microsoft-office">
+<h3><a class="toc-backref" href="#id24">老态龙钟的 Microsoft Office</a></h3>
+<p>其实，Apple家的Keynote也类似。只是Microsoft Office市场占有率更高一些。</p>
+<ul class="simple">
+<li>Microsoft Word Version 15.30 (170107)</li>
+</ul>
+<p>不支持用URL引用一个「外部远程」图片。</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-1.png" style="width: 450px; height: 400px;"/>
+<ul class="simple">
+<li>Microsoft Powerpoint Version 15.30 (170107)</li>
+</ul>
+<p>不支持用URL引用一个「外部远程」Slide，图片也类似。</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-2.png" style="width: 450px; height: 400px;"/>
+</div>
+<div class="section" id="google-docs">
+<h3><a class="toc-backref" href="#id25">与时俱进的 Google Docs</a></h3>
+<p>在探查之前，就一定猜到，Google一定是支持引用「外部URL」的。</p>
+<p>例如，可以在Google Docs中，插入一个URL形式的图片。</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-3.png" style="width: 450px; height: 400px;"/>
+</div>
+<div class="section" id="office-365">
+<h3><a class="toc-backref" href="#id26">令人失望的 Office 365</a></h3>
+<p>可以看到，企业文化、产品理念的差异，很容易体现在「功能细节」上，用户的内心自然而然会有公道的评价。</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-4.png" style="width: 450px; height: 400px;"/>
+</div>
+<div class="section" id="id11">
+<h3><a class="toc-backref" href="#id27">意料之外的 PlantUML</a></h3>
+<p>可以说，<a class="reference external" href="http://plantuml.com/">PlantUML</a> 是工具解耦上做的最充分的一个工具了（虽然任然有缺陷，例如对于中文的处理）</p>
+<p><a class="reference external" href="http://plantuml.com/">PlantUML</a> 生成图片，可以基于「Web Service」进行。<a class="reference external" href="http://plantuml.com/">PlantUML</a> 官方提供了一个演示的例子：</p>
+<p><tt class="docutils literal"><span class="pre">http://www.plantuml.com/plantuml/proxy?src=&lt;your_puml_url&gt;</span></tt></p>
+<div class="highlight"><pre>http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/plantuml/plantuml-server/master/src/main/webapp/resource/test2diagrams.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id28">有潜力的开源项目</a></h2>
+<div class="section" id="presentation-slidehub">
+<h3><a class="toc-backref" href="#id29">Presentation领域的 SlideHub</a></h3>
+<p>虽然 <a class="reference external" href="https://github.com/ryuzee/SlideHub">SlideHub</a> 不是直接对图片进行的分享，但是它基本上已经是除了 <a class="reference external" href="http://www.slideshare.net/">SlideShare</a> 之外，自行搭建演示文稿分享的不二选择了。</p>
+<p><a class="reference external" href="http://www.slideshare.net/">SlideShare</a> 和 开源的 <a class="reference external" href="https://github.com/ryuzee/SlideHub">SlideHub</a> 都实现了对 <a class="reference external" href="https://en.wikipedia.org/wiki/Office_Open_XML">Office Open XML</a> 的解析，以及对于Slide的切片。</p>
+<p>在 <a class="reference external" href="http://www.slideshare.net/">SlideShare</a> 上，每个用户都可以收藏自己重点关注的 Slide ，而不用收藏 Presentation 的全文。</p>
+<p>实际上， <a class="reference external" href="https://en.wikipedia.org/wiki/Office_Open_XML">Office Open XML</a> 是一个开放的 Office 文件标准。</p>
+<p>Presentation的物理结构是基本上是这样的（用Zip解压工具，解压之后就能够看到，如果你不想看枯燥的标准的话）：</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-6.png" style="width: 400px; height: 450px;"/>
+<p>几个关键的目录：</p>
+<ul class="simple">
+<li><tt class="docutils literal">_rels</tt> : 组织整个Presentation的结构，完成内容的编排。</li>
+<li><tt class="docutils literal">diagrams</tt> : 是以 <tt class="docutils literal">XML</tt> 为物理结构的矢量图。</li>
+<li><tt class="docutils literal">media</tt>: 外部的二进制图片，或者视频。</li>
+<li><tt class="docutils literal">slideLayout</tt> : slide的基本布局模板。</li>
+<li><tt class="docutils literal">slideMaster</tt> : slide母版的基本布局模板。</li>
+<li><tt class="docutils literal">theme</tt>: 基本的矢量图配色方案。</li>
+</ul>
+<p>如果，一系列的 Presentation 作者，是同一个人或者组织，那么这些 Presentation 的风格、主题应当较为类似。并且能够有很多的 <tt class="docutils literal">diagrams</tt> 能够复用。</p>
+<p>再进一步地，应当能够基于已有的 Presentation 进行快速的内容编排，形成一份新的 Presentation 。</p>
+<p>另一方面，如果一些 Slide 发生了版本变更，那么那些引用这些发生变更的 Slide 的 Presentation的作者，也应当能够收到「变更提醒」，进一步的有帮助他们完成内容的自动更新。</p>
+<p>也许这是 <a class="reference external" href="http://www.slideshare.net/">SlideShare</a> 企业版所拥有的能力。（ <a class="reference external" href="http://www.slideshare.net/">SlideShare</a> 有企业版吗？）</p>
+<p>不过，Google Slides 已经支持了 Import , 它缺的一个社区，缺一个对 <tt class="docutils literal">diagram</tt> 这些素材的管理:</p>
+<img alt="" class="align-center" src="/images/2017/01-13/the-way-of-pubsub-diagram-7.png" style="width: 500px; height: 500px;"/>
+</div>
+<div class="section" id="document-mkdocs">
+<h3><a class="toc-backref" href="#id30">Document领域的 Mkdocs</a></h3>
+<p>企业，对于 Document 的需求是频繁的，例如：合同、使用说明书、设计说明书，或者出版物，都需要有「内容」与「排版」分离的素材管理模型。</p>
+<p><a class="reference external" href="http://www.mkdocs.org/">MkDocs</a> 是众多的「静态网站生成器」（SSG）中的一个 ( <a class="reference external" href="https://www.staticgen.com/">StaticGen</a> 对他们有个简要的介绍 ) 。</p>
+<p>另外，最著名的应当还要属于 <a class="reference external" href="https://www.gitbook.com">gitbook</a> ，但是它并不支持在企业中进行 on-premise 部署，只支持以 <tt class="docutils literal">SaaS</tt> 的云模式提供服务。</p>
+<p>它们好还是不好，这是个主观的判断，「合适」自身的特点，才是真的好。</p>
+</div>
+<div class="section" id="id13">
+<h3><a class="toc-backref" href="#id31">新媒体渠道</a></h3>
+<p>新媒体渠道，可能会包括企业「自运营」的网站，以及由第三方托管的「内容平台」，例如，微信公众平台。</p>
+<p>对于企业「自运营」的网站，可以使用一部分的 SSG 能力，实现对内容的版本化更新。</p>
+<p>对于类似于「微信公众平台」，则可以使用 <tt class="docutils literal">OpenAPI</tt> 进行素材的自动化管理。</p>
+<p>这类非官方的素材非常多，可以去 <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0&amp;type=Repositories&amp;ref=searchresults">GitHub</a> 上进行搜索。</p>
+</div>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id32">最后，还需要一个内容运营平台</a></h2>
+<p>这个内容管理平台应当具备几个要素</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>面向个体的素材管理</dt>
+<dd><ul class="first last simple">
+<li>基本形式与转换</li>
+<li>版本</li>
+<li>原作者</li>
+<li>演绎者</li>
+<li>发布与引用更新通知</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>面向平台的运营生态</dt>
+<dd><ul class="first last simple">
+<li>基于最小粒度的评价体系</li>
+<li>基于原作者的反馈评价</li>
+<li>为知识付费</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
+    </div>
+        <hr>
+        </div>
+        <div class="col-md-3">
+<div class="sidebar">
+    <h2>目录</h2>
+    <div class="toc" id="">
+
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id15">（工程设计）图的窘境</a><ul>
+<li><a class="reference internal" href="#id3" id="id16">上下文无感知</a></li>
+<li><a class="reference internal" href="#id4" id="id17">内容价值弱反馈，变更无感知</a></li>
+<li><a class="reference internal" href="#id5" id="id18">二进制图片的内容管理</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6" id="id19">图的制作</a><ul>
+<li><a class="reference internal" href="#id7" id="id20">商业或者封闭的绘制工具</a></li>
+<li><a class="reference internal" href="#id8" id="id21">基于文本生成的例子</a></li>
+<li><a class="reference internal" href="#id9" id="id22">使用标记语言聚合内容</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10" id="id23">图的引用</a><ul>
+<li><a class="reference internal" href="#microsoft-office" id="id24">老态龙钟的 Microsoft Office</a></li>
+<li><a class="reference internal" href="#google-docs" id="id25">与时俱进的 Google Docs</a></li>
+<li><a class="reference internal" href="#office-365" id="id26">令人失望的 Office 365</a></li>
+<li><a class="reference internal" href="#id11" id="id27">意料之外的 PlantUML</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12" id="id28">有潜力的开源项目</a><ul>
+<li><a class="reference internal" href="#presentation-slidehub" id="id29">Presentation领域的 SlideHub</a></li>
+<li><a class="reference internal" href="#document-mkdocs" id="id30">Document领域的 Mkdocs</a></li>
+<li><a class="reference internal" href="#id13" id="id31">新媒体渠道</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14" id="id32">最后，还需要一个内容运营平台</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+
+    </div> </div>
+
+<div class="footer">
+  <p><a rel="license" href="//creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/images/icons/cc-by-nc-nd-40-80x15.png" /></a>
+    <a href="/feeds/all.atom.xml"><img src="/theme/images/icons/rss.png"/></a>
+  </p>
+  <p>&copy; 2011-2016 <a href="//yanjiong.wang">王延炯博士</a>
+      <a href="//cn.linkedin.com/in/wangyanjiong"><img src="/theme/images/icons/linkedin.png"/></a>
+      <a href="//github.com/sinewang"><img src="/theme/images/icons/github.png"/></a>
+      <a href="/images/qrcode/qrcode_for_drwangyanjiong.jpg"><img src="/theme/images/icons/wechat.png"/></a>
+      <a href="//weibo.com/sinewang"><img src="/theme/images/icons/weibo.png"/></a>
+      <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
+       · <a href="//kii.one">Kii.ONE | 知识集成与创新</a>
+       · <a href="//smartea.org">SmartEA | 柔性企业架构研究</a>
+  </p>
+  <p>
+          <a href="/about">关于</a>
+          | <a href="/copyright">版权</a>
+  </p>
+  <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
+</body>
+</html>
