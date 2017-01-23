@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用Nexus3进行Snapshot和Release管理  @ 王延炯 · 观世界 | World Insight
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Wang YanJiong">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="/theme/sinestudio.css" rel="stylesheet">
+    <link href="/theme/timeline.css" rel="stylesheet">
+
+        <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
+        <ul class="nav navbar-nav">
+            <li><a href="/categories/ideas">观点</a></li>
+            <li><a href="/categories/experiences">经验</a></li>
+        </ul>
+        <p class="navbar-text navbar-right">基于本质·懂得人性</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9">
+    <div class='article'>
+        <div class="article-title">
+            <h1>使用Nexus3进行Snapshot和Release管理</h1>
+        </div>
+        <div class="article-metadata">
+<div class="text-center">
+  <p>
+    <span class="glyphicon">2017-01-23</span>
+
+          <span class="glyphicon glyphicon-book"></span> <a class="category-link" href="/categories/experiences">经验</a>
+
+  </p>
+</div>
+<div class="text-center">
+  <ul class="list-of-tags tags-in-article">
+      <li><a href="/tags/maven">maven
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/nexus3">nexus3
+            <sup>1</sup></a>
+      </li>
+      <li><a href="/tags/scm">scm
+            <sup>1</sup></a>
+      </li>
+  </ul>
+</div>
+<div class="article-summary">
+  <p><p class="first last">介绍 nexus3、parent pom以及 project pom的distribution management.</p>
+</p>
+</div>
+        </div>
+
+
+        <div class="article-content">
+<!-- -->
+<div class="section" id="nexus3">
+<h2><a class="toc-backref" href="#id1">Nexus3中的关键角色与用户</a></h2>
+<div class="section" id="snapshotdeploy">
+<h3><a class="toc-backref" href="#id2">Snapshot库的Deploy角色</a></h3>
+<ul class="simple">
+<li>nx-repository-view-maven2-maven-snapshots-edit</li>
+</ul>
+<p>在Nexus库中创建拥有以上角色的用户，例如 <cite>developer</cite>。</p>
+<p>这个角色，必须要包含 <cite>nx-anonymous</cite> 这个「匿名角色」，否则会被以 <cite>ReasonPhrase:Forbidden.</cite> 理由拒绝。</p>
+</div>
+<div class="section" id="releasedeploy">
+<h3><a class="toc-backref" href="#id3">Release库的Deploy角色</a></h3>
+<ul class="simple">
+<li>nx-repository-view-maven2-maven-releases-edit</li>
+</ul>
+<p>在Nexus库中创建拥有以上角色的用户，例如 <cite>publisher</cite>。</p>
+<p>这个角色，必须要包含 <cite>nx-anonymous</cite> 这个「匿名角色」，否则会被以 <cite>ReasonPhrase:Forbidden.</cite> 理由拒绝。</p>
+</div>
+</div>
+<div class="section" id="m2-settings-xmlservers">
+<h2><a class="toc-backref" href="#id4">.m2/settings.xml中servers的设置</a></h2>
+<pre class="code xml literal-block">
+<span class="nt">&lt;settings&gt;</span>
+    <span class="nt">&lt;servers&gt;</span>
+        <span class="nt">&lt;server&gt;</span>
+            <span class="nt">&lt;id&gt;</span>snapshot<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;username&gt;</span>developer<span class="nt">&lt;/username&gt;</span>
+            <span class="nt">&lt;password&gt;</span>password-of-developer-in-nexus<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;/server&gt;</span>
+        <span class="nt">&lt;server&gt;</span>
+            <span class="nt">&lt;id&gt;</span>release<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;username&gt;</span>publisher<span class="nt">&lt;/username&gt;</span>
+            <span class="nt">&lt;password&gt;</span>password-of-publisher-in-nexus<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;/server&gt;</span>
+    <span class="nt">&lt;/servers&gt;</span>
+...
+<span class="nt">&lt;/settings&gt;</span>
+</pre>
+</div>
+<div class="section" id="maven-project">
+<h2><a class="toc-backref" href="#id5">maven project</a></h2>
+<div class="section" id="super-parent-maven-project">
+<h3><a class="toc-backref" href="#id6">super-parent maven project</a></h3>
+<p>对于每个组织或者企业，使用一个顶级的、唯一的parent project是十分有必要的，这可以统一各级子工程的发布管理配置。</p>
+<div class="highlight"><pre><span class="nt">&lt;scm&gt;</span>
+    <span class="nt">&lt;url&gt;</span>http://your.domain/and-path<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;connection&gt;</span>scm:git:ssh://git@your.vcs.domain/your-path<span class="nt">&lt;/connection&gt;</span>
+<span class="nt">&lt;/scm&gt;</span>
+<span class="nt">&lt;distributionManagement&gt;</span>
+    <span class="nt">&lt;snapshotRepository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>snapshot<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>http://your.nexus/repository/maven-snapshots<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/snapshotRepository&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>release<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>http://your.nexus/repository/maven-releases<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/distributionManagement&gt;</span>
+<span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;pluginManagement&gt;</span>
+        <span class="nt">&lt;plugins&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>maven-release-plugin<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>2.5.3<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/pluginManagement&gt;</span>
+<span class="nt">&lt;/build&gt;</span>
+</pre></div>
+<p>其中，<tt class="docutils literal">snapshotRepository</tt> 中的 <tt class="docutils literal">id</tt> 与 <tt class="docutils literal">.m2/settings.xml</tt> 中的 <tt class="docutils literal">server/id</tt> 需要保持一致。</p>
+<p>在例子中，两处都都同时使用了 <tt class="docutils literal">snapshot` 以及 ``release</tt> 。</p>
+</div>
+<div class="section" id="snapshot-deploy">
+<h3><a class="toc-backref" href="#id7">snapshot deploy</a></h3>
+<p>snapshot deploy 是每个developer日常进行snapshot library发布的正常行为。</p>
+<p>在每个developer的本地，都可以针对一个 maven project 执行： <tt class="docutils literal">mvn deploy</tt> 操作，将任意的 <tt class="docutils literal">Version` 以 <span class="pre">``-SNAPSHOT</span></tt> 结尾的 <tt class="docutils literal">artifact</tt> 部署至 <tt class="docutils literal">snapshot</tt> 库中。</p>
+</div>
+<div class="section" id="release-publish">
+<h3><a class="toc-backref" href="#id8">release publish</a></h3>
+<p><tt class="docutils literal"><span class="pre">maven-release-plugin</span></tt> 是用作正式发布使用的maven插件。</p>
+<p>其中有两个关键的mvn 指令， <tt class="docutils literal">mvn release:prepare</tt> 以及 <tt class="docutils literal">mvn release:perform</tt></p>
+<ul class="simple">
+<li><tt class="docutils literal">mvn release:prepare</tt></li>
+</ul>
+<p>这个指令主要的操作目标是VCS (例如GitLab) ，它的执行条件有：</p>
+<ol class="arabic simple">
+<li>本地的所有代码已经提交，对于git而言，本地的所有代码，都已经经过 <tt class="docutils literal">git push</tt> ，也就是说stage区不存在修改过的文件。</li>
+</ol>
+<ol class="arabic simple">
+<li>mave坐标中的Version，必须以 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 结尾，否则该指令会罢工。</li>
+</ol>
+<p>这个指令的执行过程，是交互式的，它会询问三项内容：</p>
+<p>1. 指定要发布的Version值，一般来说，它会自动提示不包含 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 部分的版本号
+1. VCS的tag名称。例如，git分支上的tag。
+1. 下一个开发版，含的 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 版本号，一般来说，它会自动将最后一位数字版本号自动增加1。</p>
+<p>这个动作执行之后，会生成两个主要的文件：</p>
+<ol class="arabic simple">
+<li>原来pom.xml的备份文件</li>
+<li>release.properties，即本次release的相关信息。</li>
+</ol>
+<p>同时，这个指令还会对修改后的release版本进行</p>
+<ul class="simple">
+<li><tt class="docutils literal">mvn release:perform</tt></li>
+</ul>
+<p>这个指令主要的操作目标是仓库 (Repository，例如 Nexus)。</p>
+<p>它的主要目的，是把本地已经生成好的 release library 部署至仓库。并不会对 VCS 进行任何写操作。</p>
+</div>
+</div>
+</div>
+    </div>
+        <hr>
+        </div>
+        <div class="col-md-3">
+<div class="sidebar">
+    <h2>目录</h2>
+    <div class="toc" id="">
+
+<ul class="simple">
+<li><a class="reference internal" href="#nexus3" id="id1">Nexus3中的关键角色与用户</a><ul>
+<li><a class="reference internal" href="#snapshotdeploy" id="id2">Snapshot库的Deploy角色</a></li>
+<li><a class="reference internal" href="#releasedeploy" id="id3">Release库的Deploy角色</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#m2-settings-xmlservers" id="id4">.m2/settings.xml中servers的设置</a></li>
+<li><a class="reference internal" href="#maven-project" id="id5">maven project</a><ul>
+<li><a class="reference internal" href="#super-parent-maven-project" id="id6">super-parent maven project</a></li>
+<li><a class="reference internal" href="#snapshot-deploy" id="id7">snapshot deploy</a></li>
+<li><a class="reference internal" href="#release-publish" id="id8">release publish</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+        </div>
+
+    </div> </div>
+
+<div class="footer">
+  <p><a rel="license" href="//creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/images/icons/cc-by-nc-nd-40-80x15.png" /></a>
+    <a href="/feeds/all.atom.xml"><img src="/theme/images/icons/rss.png"/></a>
+  </p>
+  <p>&copy; 2011-2016 <a href="//yanjiong.wang">王延炯博士</a>
+      <a href="//cn.linkedin.com/in/wangyanjiong"><img src="/theme/images/icons/linkedin.png"/></a>
+      <a href="//github.com/sinewang"><img src="/theme/images/icons/github.png"/></a>
+      <a href="/images/qrcode/qrcode_for_drwangyanjiong.jpg"><img src="/theme/images/icons/wechat.png"/></a>
+      <a href="//weibo.com/sinewang"><img src="/theme/images/icons/weibo.png"/></a>
+      <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
+       · <a href="//kii.one">Kii.ONE | 知识集成与创新</a>
+       · <a href="//smartea.org">SmartEA | 柔性企业架构研究</a>
+  </p>
+  <p>
+          <a href="/about">关于</a>
+          | <a href="/copyright">版权</a>
+  </p>
+  <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
+</body>
+</html>
