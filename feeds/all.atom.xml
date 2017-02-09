@@ -88,14 +88,11 @@
 &lt;p&gt;这个指令主要的操作目标是VCS (例如GitLab) ，它的执行条件有：&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;本地的所有代码已经提交，对于git而言，本地的所有代码，都已经经过 &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt; ，也就是说stage区不存在修改过的文件。&lt;/li&gt;
+&lt;li&gt;mave坐标中的Version，必须以 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 结尾，否则该指令会罢工。这个指令的执行过程，是交互式的，它会询问三项内容：&lt;/li&gt;
+&lt;li&gt;指定要发布的Version值，一般来说，它会自动提示不包含 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 部分的版本号&lt;/li&gt;
+&lt;li&gt;VCS的tag名称。例如，git分支上的tag。&lt;/li&gt;
+&lt;li&gt;下一个开发版，含的 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 版本号，一般来说，它会自动将最后一位数字版本号自动增加1。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;mave坐标中的Version，必须以 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 结尾，否则该指令会罢工。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这个指令的执行过程，是交互式的，它会询问三项内容：&lt;/p&gt;
-&lt;p&gt;1. 指定要发布的Version值，一般来说，它会自动提示不包含 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 部分的版本号
-1. VCS的tag名称。例如，git分支上的tag。
-1. 下一个开发版，含的 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 版本号，一般来说，它会自动将最后一位数字版本号自动增加1。&lt;/p&gt;
 &lt;p&gt;这个动作执行之后，会生成两个主要的文件：&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;原来pom.xml的备份文件&lt;/li&gt;

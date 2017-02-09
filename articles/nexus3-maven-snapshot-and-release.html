@@ -172,14 +172,11 @@
 <p>这个指令主要的操作目标是VCS (例如GitLab) ，它的执行条件有：</p>
 <ol class="arabic simple">
 <li>本地的所有代码已经提交，对于git而言，本地的所有代码，都已经经过 <tt class="docutils literal">git push</tt> ，也就是说stage区不存在修改过的文件。</li>
+<li>mave坐标中的Version，必须以 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 结尾，否则该指令会罢工。这个指令的执行过程，是交互式的，它会询问三项内容：</li>
+<li>指定要发布的Version值，一般来说，它会自动提示不包含 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 部分的版本号</li>
+<li>VCS的tag名称。例如，git分支上的tag。</li>
+<li>下一个开发版，含的 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 版本号，一般来说，它会自动将最后一位数字版本号自动增加1。</li>
 </ol>
-<ol class="arabic simple">
-<li>mave坐标中的Version，必须以 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 结尾，否则该指令会罢工。</li>
-</ol>
-<p>这个指令的执行过程，是交互式的，它会询问三项内容：</p>
-<p>1. 指定要发布的Version值，一般来说，它会自动提示不包含 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 部分的版本号
-1. VCS的tag名称。例如，git分支上的tag。
-1. 下一个开发版，含的 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 版本号，一般来说，它会自动将最后一位数字版本号自动增加1。</p>
 <p>这个动作执行之后，会生成两个主要的文件：</p>
 <ol class="arabic simple">
 <li>原来pom.xml的备份文件</li>
