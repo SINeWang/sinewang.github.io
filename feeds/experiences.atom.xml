@@ -76,7 +76,7 @@
 &lt;div class="section" id="snapshot-deploy"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id7"&gt;snapshot deploy&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;snapshot deploy 是每个developer日常进行snapshot library发布的正常行为。&lt;/p&gt;
-&lt;p&gt;在每个developer的本地，都可以针对一个 maven project 执行： &lt;tt class="docutils literal"&gt;mvn deploy&lt;/tt&gt; 操作，将任意的 &lt;tt class="docutils literal"&gt;Version` 以 &lt;span class="pre"&gt;``-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 结尾的 &lt;tt class="docutils literal"&gt;artifact&lt;/tt&gt; 部署至 &lt;tt class="docutils literal"&gt;snapshot&lt;/tt&gt; 库中。&lt;/p&gt;
+&lt;p&gt;在每个developer的本地，都可以针对一个 maven project 执行： &lt;tt class="docutils literal"&gt;mvn deploy&lt;/tt&gt; 操作，将任意的 &lt;tt class="docutils literal"&gt;Version&lt;/tt&gt; 以 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 结尾的 &lt;tt class="docutils literal"&gt;artifact&lt;/tt&gt; 部署至 &lt;tt class="docutils literal"&gt;snapshot&lt;/tt&gt; 库中。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="release-publish"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;release publish&lt;/a&gt;&lt;/h3&gt;
