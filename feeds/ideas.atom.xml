@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2017-01-12T23:01:00+08:00</updated><entry><title>图片的管理与运营</title><link href="/articles/the-way-of-pubsub-diagram" rel="alternate"></link><updated>2017-01-12T23:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2017-01-12:articles/the-way-of-pubsub-diagram</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2017-01-12T23:01:00+08:00</updated><entry><title>图片的管理与运营</title><link href="/articles/the-way-of-pubsub-diagram" rel="alternate"></link><published>2017-01-12T23:01:00+08:00</published><updated>2017-01-12T23:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2017-01-12:/articles/the-way-of-pubsub-diagram</id><summary type="html">&lt;p class="first last"&gt;现有的大部分商业、免费的绘图工具的基本假设是，图片的作者与图片的使用者，使用的是同一个工具，并没有考虑到图片的具体引用场景，并根据上下文环境进行自适应调整。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;没错，这又是一个还没实现的理想，缺的是时间资源。&lt;/p&gt;
 &lt;div class="section" id="id2"&gt;
@@ -68,7 +69,7 @@
 &lt;/ul&gt;
 &lt;p&gt;这些标记语言，都是基于文本的，并且天然的支持以「URL」的方式对图片进行引用。&lt;/p&gt;
 &lt;p&gt;例如，本文，就是用 &lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt; 编写的，引用图片时候，只需要写成：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;image&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; /images/2017/01-13/the-way-of-pubsub-diagram-4.png
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;image&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; /images/2017/01-13/the-way-of-pubsub-diagram-4.png
     &lt;span class="nc"&gt;:height:&lt;/span&gt; &lt;span class="nf"&gt;400px&lt;/span&gt;
     &lt;span class="nc"&gt;:width:&lt;/span&gt; &lt;span class="nf"&gt;450px&lt;/span&gt;
     &lt;span class="nc"&gt;:align:&lt;/span&gt; &lt;span class="nf"&gt;center&lt;/span&gt;
@@ -118,7 +119,7 @@
 &lt;p&gt;可以说，&lt;a class="reference external" href="http://plantuml.com/"&gt;PlantUML&lt;/a&gt; 是工具解耦上做的最充分的一个工具了（虽然任然有缺陷，例如对于中文的处理）&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://plantuml.com/"&gt;PlantUML&lt;/a&gt; 生成图片，可以基于「Web Service」进行。&lt;a class="reference external" href="http://plantuml.com/"&gt;PlantUML&lt;/a&gt; 官方提供了一个演示的例子：&lt;/p&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;http://www.plantuml.com/plantuml/proxy?src=&amp;lt;your_puml_url&amp;gt;&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/plantuml/plantuml-server/master/src/main/webapp/resource/test2diagrams.txt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/plantuml/plantuml-server/master/src/main/webapp/resource/test2diagrams.txt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -166,10 +167,10 @@
 &lt;div class="section" id="id14"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id32"&gt;最后，还需要一个内容运营平台&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;这个内容管理平台应当具备几个要素&lt;/p&gt;
-&lt;ol class="arabic"&gt;
+&lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
 &lt;dt&gt;面向个体的素材管理&lt;/dt&gt;
-&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
 &lt;li&gt;基本形式与转换&lt;/li&gt;
 &lt;li&gt;版本&lt;/li&gt;
 &lt;li&gt;原作者&lt;/li&gt;
@@ -181,7 +182,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
 &lt;dt&gt;面向平台的运营生态&lt;/dt&gt;
-&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
 &lt;li&gt;基于最小粒度的评价体系&lt;/li&gt;
 &lt;li&gt;基于原作者的反馈评价&lt;/li&gt;
 &lt;li&gt;为知识付费&lt;/li&gt;
@@ -191,7 +192,8 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</summary><category term="Office OpenXML"></category><category term="版本控制"></category><category term="知识引用"></category><category term="知识分享"></category></entry><entry><title>EnhancedREST 1.0.0 规范</title><link href="/articles/enhanced-rest-1-0-0-specs" rel="alternate"></link><updated>2016-12-30T13:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-30:articles/enhanced-rest-1-0-0-specs</id><summary type="html">
+</content><category term="Office OpenXML"></category><category term="版本控制"></category><category term="知识引用"></category><category term="知识分享"></category></entry><entry><title>EnhancedREST 1.0.0 规范</title><link href="/articles/enhanced-rest-1-0-0-specs" rel="alternate"></link><published>2016-12-30T13:01:00+08:00</published><updated>2016-12-30T13:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-30:/articles/enhanced-rest-1-0-0-specs</id><summary type="html">&lt;p class="first last"&gt;RESTful 是一个将HTTP传输协议以及JSON报文体相结合的RPC通信风格，但目前并不存在一个得到普遍认可和约束的工业技术规范。由于RESTful风格形式简洁，工具链丰富，收到广大开发者的喜爱。同时也由于其落地实现的随意性，导致各大企业都有不同的落地实现方法，形成了不同形态的「方言」。无形之中增加了软件互联的成本，造成了有限的研发资源浪费。EnhancedREST规范了不同系统之间的技术标准，降低产品间的集成成本，提高研发效率。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;阅读知识背景要求&lt;/a&gt;&lt;/h2&gt;
@@ -476,7 +478,7 @@ Status 状态 * Fetch 获取 * Trace 跟踪&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Content-Type&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;lt;Serialization Method&amp;gt; &lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;lt;Serialization Method&amp;gt;&lt;/tt&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Referer Upstream&lt;/li&gt;
 &lt;/ul&gt;
@@ -674,7 +676,7 @@ Date时间之后提交Compensation操作，有可能得到的是Compensation操�
 &lt;ul class="simple"&gt;
 &lt;li&gt;Content-Type&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;lt;Serialization Method&amp;gt; &lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;lt;Serialization Method&amp;gt;&lt;/tt&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;X-RL-S-DSV&lt;/li&gt;
 &lt;/ul&gt;
@@ -782,7 +784,7 @@ HMAC不一致。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;处理提交操作，并成功。仅在Commit操作正常完整之后返回。&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;410 &lt;/tt&gt; Gone&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;410&lt;/tt&gt; Gone&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;处理补偿操作，并成功。仅在Compensation操作正常完整之后返回。&lt;/p&gt;
 &lt;/div&gt;
@@ -839,7 +841,7 @@ Compensation操作。因此，对于一次请求，处理的结果会产生一�
 &lt;ul class="simple"&gt;
 &lt;li&gt;Content-Type&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;lt;Serialization Method&amp;gt; &lt;/tt&gt; (Multipart Content-Type)&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;lt;Serialization Method&amp;gt;&lt;/tt&gt; (Multipart Content-Type)&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;200&lt;/tt&gt; OK&lt;/li&gt;
 &lt;/ul&gt;
@@ -883,7 +885,8 @@ Compensation操作。因此，对于一次请求，处理的结果会产生一�
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="EnhancedREST"></category><category term="REST"></category><category term="分布式系统"></category><category term="数据一致性"></category></entry><entry><title>企业软件是怎样炼成的 ，做软件的为什么总加班？</title><link href="/articles/how-to-build-enterprise-software" rel="alternate"></link><updated>2016-12-27T16:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-27:articles/how-to-build-enterprise-software</id><summary type="html">
+</content><category term="EnhancedREST"></category><category term="REST"></category><category term="分布式系统"></category><category term="数据一致性"></category></entry><entry><title>企业软件是怎样炼成的 ，做软件的为什么总加班？</title><link href="/articles/how-to-build-enterprise-software" rel="alternate"></link><published>2016-12-27T16:00:00+08:00</published><updated>2016-12-27T16:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-27:/articles/how-to-build-enterprise-software</id><summary type="html">&lt;p class="first last"&gt;从软件产品的生产关系，看软件是如何被制造出来的。程序员们为什么要加班？&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;企业软件产品的制造与消费&lt;/a&gt;&lt;/h2&gt;
@@ -986,7 +989,8 @@ Compensation操作。因此，对于一次请求，处理的结果会产生一�
 &lt;p&gt;交付「数字产品」企业，其生产力则直接依赖于企业IT生产系统，这一部分的软件产品，应当以自主研发为主，目的是保障商业模式所需要的专业知识与IT能力的高度一致。&lt;/p&gt;
 &lt;p&gt;与企业主要产品所需要的核心生产力不相关的软件，采购成熟商业产品（主要评估维护成本）。从0到1的学习知识，掌握知识的成本远比直接购买知识的成本高。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="软件"></category><category term="知识产品"></category><category term="生产关系"></category></entry><entry><title>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（下）</title><link href="/articles/design-an-rest-like-rpc-over-http11-part-2" rel="alternate"></link><updated>2016-12-21T23:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-21:articles/design-an-rest-like-rpc-over-http11-part-2</id><summary type="html">
+</content><category term="软件"></category><category term="知识产品"></category><category term="生产关系"></category></entry><entry><title>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（下）</title><link href="/articles/design-an-rest-like-rpc-over-http11-part-2" rel="alternate"></link><published>2016-12-21T23:18:00+08:00</published><updated>2016-12-21T23:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-21:/articles/design-an-rest-like-rpc-over-http11-part-2</id><summary type="html">&lt;p class="first last"&gt;REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文通过对HTTP/1.1协议的深入挖掘，设计一套设计REST-like的RPC通信协议。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="http-1-1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;HTTP/1.1 协议的潜力&lt;/a&gt;&lt;/h2&gt;
@@ -1103,23 +1107,23 @@ Compensation操作。因此，对于一次请求，处理的结果会产生一�
 &lt;ul class="simple"&gt;
 &lt;li&gt;C-C Commit Request cURL Syntax&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;curl -X PUT -H &lt;span class="s2"&gt;"Content-Type: application/json"&lt;/span&gt; -H &lt;span class="s2"&gt;"User-Agent: &amp;lt;ConsumerId&amp;gt;"&lt;/span&gt;  &lt;span class="se"&gt;\\&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -X PUT -H &lt;span class="s2"&gt;"Content-Type: application/json"&lt;/span&gt; -H &lt;span class="s2"&gt;"User-Agent: &amp;lt;ConsumerId&amp;gt;"&lt;/span&gt;  &lt;span class="se"&gt;\\&lt;/span&gt;
  -H &lt;span class="s2"&gt;"Referer: &amp;lt;TransactionId&amp;gt;"&lt;/span&gt; -d &amp;lt;RequestBody&amp;gt; &lt;span class="s2"&gt;"https://&amp;lt;domain&amp;gt;/&amp;lt;path&amp;gt;/&amp;lt;RequestId&amp;gt;[?v=&amp;lt;Version&amp;gt;]"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;C-C Commit Request cURL Example&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;curl -X PUT -H &lt;span class="s2"&gt;"Content-Type: application/json"&lt;/span&gt; -H &lt;span class="s2"&gt;"User-Agent: REST-like-Consumer"&lt;/span&gt; &lt;span class="se"&gt;\\&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -X PUT -H &lt;span class="s2"&gt;"Content-Type: application/json"&lt;/span&gt; -H &lt;span class="s2"&gt;"User-Agent: REST-like-Consumer"&lt;/span&gt; &lt;span class="se"&gt;\\&lt;/span&gt;
  -H &lt;span class="s2"&gt;"Referer: 0987654"&lt;/span&gt; -d &lt;span class="s1"&gt;'{ "title":"This is an request example." }'&lt;/span&gt; &lt;span class="s2"&gt;"https://api.yanjiong.wang/article/new/67890"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;C-C Commit Request HTTP/1.1 Example&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;PUT /article/new/67890 HTTP/1.1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;PUT /article/new/67890 HTTP/1.1
 Host: yanjiong.wang
 Content-Type: application/json
 User-Agent: REST-like-Consumer
-Referer: 0987654
+Referer: &lt;span class="m"&gt;0987654&lt;/span&gt;
 
 &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="s2"&gt;"title"&lt;/span&gt;:&lt;span class="s2"&gt;"This is an request example."&lt;/span&gt;
@@ -1131,7 +1135,7 @@ Referer: 0987654
 &lt;ul class="simple"&gt;
 &lt;li&gt;C-C Commit Response HTTP/1.1 Syntax&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;HTTP/1.1 &amp;lt;Status Code&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;HTTP/1.1 &amp;lt;Status Code&amp;gt;
 Server: &amp;lt;Provider&amp;gt;/&amp;lt;Version&amp;gt;
 Content-type: application/json
 &lt;span class="o"&gt;[&lt;/span&gt;Date: &amp;lt;Date&amp;gt;&lt;span class="o"&gt;]&lt;/span&gt;
@@ -1142,12 +1146,12 @@ Content-type: application/json
 &lt;ul class="simple"&gt;
 &lt;li&gt;C-C Commit Response HTTP/1.1 Example&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;HTTP/1.1 &lt;span class="m"&gt;200&lt;/span&gt; OK
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;HTTP/1.1 &lt;span class="m"&gt;200&lt;/span&gt; OK
 Server: REST-like-Provider/2.1
-Date: Wed, &lt;span class="m"&gt;21&lt;/span&gt; Dec &lt;span class="m"&gt;2016&lt;/span&gt; 15:03:33 GMT
-Last-Modified: Tue, &lt;span class="m"&gt;20&lt;/span&gt; Dec &lt;span class="m"&gt;2016&lt;/span&gt; 08:37:25 GMT
+Date: Wed, &lt;span class="m"&gt;21&lt;/span&gt; Dec &lt;span class="m"&gt;2016&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:03:33 GMT
+Last-Modified: Tue, &lt;span class="m"&gt;20&lt;/span&gt; Dec &lt;span class="m"&gt;2016&lt;/span&gt; &lt;span class="m"&gt;08&lt;/span&gt;:37:25 GMT
 ETag: W/&lt;span class="s2"&gt;"ebf-1591b60c988"&lt;/span&gt;
-X-CC-RequestId: 67890
+X-CC-RequestId: &lt;span class="m"&gt;67890&lt;/span&gt;
 
 &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="s2"&gt;"title"&lt;/span&gt;:&lt;span class="s2"&gt;"This is an response example."&lt;/span&gt;
@@ -1155,7 +1159,8 @@ X-CC-RequestId: 67890
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="架构"></category><category term="REST"></category><category term="HTTP/1.1"></category><category term="HTTP"></category><category term="分布式事务"></category></entry><entry><title>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）</title><link href="/articles/design-an-rest-like-rpc-over-http11-part-1" rel="alternate"></link><updated>2016-12-20T23:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-20:articles/design-an-rest-like-rpc-over-http11-part-1</id><summary type="html">
+</content><category term="架构"></category><category term="REST"></category><category term="HTTP/1.1"></category><category term="HTTP"></category><category term="分布式事务"></category></entry><entry><title>基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）</title><link href="/articles/design-an-rest-like-rpc-over-http11-part-1" rel="alternate"></link><published>2016-12-20T23:18:00+08:00</published><updated>2016-12-20T23:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-20:/articles/design-an-rest-like-rpc-over-http11-part-1</id><summary type="html">&lt;p class="first last"&gt;REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文对REST的不足进行了分析，对复杂场景下的RPC协议与报文的要求进行了梳理。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="rest"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;REST本身是风格，不是规范&lt;/a&gt;&lt;/h2&gt;
@@ -1282,7 +1287,8 @@ X-CC-RequestId: 67890
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="架构"></category><category term="REST"></category><category term="HTTP/1.1"></category><category term="HTTP"></category></entry><entry><title>PaaS 为什么至今没有成功的商业案例</title><link href="/articles/colorful-ball-the-paas-foundation" rel="alternate"></link><updated>2016-12-15T23:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-15:articles/colorful-ball-the-paas-foundation</id><summary type="html">
+</content><category term="架构"></category><category term="REST"></category><category term="HTTP/1.1"></category><category term="HTTP"></category></entry><entry><title>PaaS 为什么至今没有成功的商业案例</title><link href="/articles/colorful-ball-the-paas-foundation" rel="alternate"></link><published>2016-12-15T23:18:00+08:00</published><updated>2016-12-15T23:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-15:/articles/colorful-ball-the-paas-foundation</id><summary type="html">&lt;p class="first last"&gt;PaaS就像踩在海洋球上的空中楼阁.&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;海洋球是五颜六色，给儿童玩的一种游乐设施。海洋球的多变性，给孩子们带来了无穷的乐趣。当要用脚踩在上面的时候，海洋球都会由于受到外力，发生位移。对未来的无法预知，增加了这样一个简单娱乐项目的乐趣。&lt;/p&gt;
 &lt;div class="section" id="iaas-paas-saas-windows"&gt;
@@ -1351,7 +1357,8 @@ X-CC-RequestId: 67890
 &lt;p&gt;海洋球，应当是软件在应用层给人以随需而变的体验。&lt;/p&gt;
 &lt;p&gt;软件，应当代表最先进的生产力。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="软件"></category><category term="PaaS"></category></entry><entry><title>专业知识型产品的开发与价值体现</title><link href="/articles/the-development-of-professional-knowledge-products-and-value-representation" rel="alternate"></link><updated>2016-12-11T09:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-11:articles/the-development-of-professional-knowledge-products-and-value-representation</id><summary type="html">
+</content><category term="软件"></category><category term="PaaS"></category></entry><entry><title>专业知识型产品的开发与价值体现</title><link href="/articles/the-development-of-professional-knowledge-products-and-value-representation" rel="alternate"></link><published>2016-12-11T09:18:00+08:00</published><updated>2016-12-11T09:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-11:/articles/the-development-of-professional-knowledge-products-and-value-representation</id><summary type="html">&lt;p class="first last"&gt;软件源代码、学术论文和发明专利，都是专业知识工作的成果。它们的获得方法、价值的体现方式，都有着很多的相似之处。机器学习，让计算机从专业知识的价值放大器变为了开发器。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;专业知识的形态&lt;/a&gt;&lt;/h2&gt;
@@ -1436,7 +1443,8 @@ X-CC-RequestId: 67890
 &lt;p&gt;通过机器学习所获得的模型，是一种如何集成现有「神经元」，广义上是任何资源进行使用的集成知识。&lt;/p&gt;
 &lt;p&gt;有意思的是，当计算机成为知识生成器之后，也需要通过「训练集数据」，进行入门的学习和实践，才能产生实际价值。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="软件"></category><category term="知识型产品"></category><category term="机器学习"></category></entry><entry><title>理解软件</title><link href="/articles/understanding-software" rel="alternate"></link><updated>2016-12-10T09:44:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-10:articles/understanding-software</id><summary type="html">
+</content><category term="软件"></category><category term="知识型产品"></category><category term="机器学习"></category></entry><entry><title>理解软件</title><link href="/articles/understanding-software" rel="alternate"></link><published>2016-12-10T09:44:00+08:00</published><updated>2016-12-10T09:44:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-10:/articles/understanding-software</id><summary type="html">&lt;p class="first last"&gt;软件本质上是复杂的。但，软件表象上「应该」是简单的。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;软件的出现，是为了解决计算机本身硬件无法快速适配实际应用场景所提供的扩展能力。（虽然有FPGA，可以对硬件进行重复性的烧录定制）&lt;/p&gt;
 &lt;p&gt;软件本质上是复杂的。&lt;/p&gt;
@@ -1486,7 +1494,8 @@ X-CC-RequestId: 67890
 &lt;p&gt;因此，软件存在缺陷也是必然的。&lt;/p&gt;
 &lt;p&gt;软件，永远都不会到达一个没有缺陷的状态。未知相对应已知，太过于浩瀚。为此，为了使得现有的知识得以被使用，为软件标记一个「相对成熟」的稳定状态，人们采用了「版本」这个概念。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="软件"></category></entry><entry><title>软件结构的十个基本概念</title><link href="/articles/10-basic-concepts-of-software-structure" rel="alternate"></link><updated>2016-10-06T10:03:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-10-06:articles/10-basic-concepts-of-software-structure</id><summary type="html">
+</content><category term="软件"></category></entry><entry><title>软件结构的十个基本概念</title><link href="/articles/10-basic-concepts-of-software-structure" rel="alternate"></link><published>2016-10-06T10:03:00+08:00</published><updated>2016-10-06T10:03:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-10-06:/articles/10-basic-concepts-of-software-structure</id><summary type="html">&lt;p class="first last"&gt;从大局上，正确定义和理解软件结构上的基本概念，是深入理解软件，提升团队生产力和创造力的基础。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;概念的意义&lt;/a&gt;&lt;/h2&gt;
@@ -1602,7 +1611,8 @@ X-CC-RequestId: 67890
 &lt;p&gt;配置，同样不具备独立的功能，更多的使用场景，是由用户在使用过程中，自行设定的逻辑或者参数值。配置一般不需要编译。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="架构"></category><category term="软件"></category></entry><entry><title>软件，不简单</title><link href="/articles/software-is-not-simple" rel="alternate"></link><updated>2016-10-05T10:14:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-10-05:articles/software-is-not-simple</id><summary type="html">
+</content><category term="架构"></category><category term="软件"></category></entry><entry><title>软件，不简单</title><link href="/articles/software-is-not-simple" rel="alternate"></link><published>2016-10-05T10:14:00+08:00</published><updated>2016-10-05T10:14:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-10-05:/articles/software-is-not-simple</id><summary type="html">&lt;p class="first last"&gt;人们偏爱「娱乐化的图形、语音和视频」，计算机偏爱「严肃的数据和逻辑」。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;软件的鸿沟&lt;/a&gt;&lt;/h2&gt;
@@ -1717,7 +1727,8 @@ X-CC-RequestId: 67890
 &lt;p&gt;我们还不希望其他人通过这些影子，拼凑出现实世界中的自己。&lt;/p&gt;
 &lt;p&gt;我们还希望计算机帮助我们加速认知...&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="架构"></category><category term="软件"></category></entry><entry><title>标识与唯一标识概览</title><link href="/articles/id-and-unique-id-overview" rel="alternate"></link><updated>2016-09-28T22:42:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-09-28:articles/id-and-unique-id-overview</id><summary type="html">
+</content><category term="架构"></category><category term="软件"></category></entry><entry><title>标识与唯一标识概览</title><link href="/articles/id-and-unique-id-overview" rel="alternate"></link><published>2016-09-28T22:42:00+08:00</published><updated>2016-09-28T22:42:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-09-28:/articles/id-and-unique-id-overview</id><summary type="html">&lt;p class="first last"&gt;标识是无处不在的，生成标识的主体是人，那么它就是一个命名过程，如果是计算机，那么它就是一个生成过程。如何保证分布式系统下，并行生成标识的唯一与标识的命名空间有着密不可分的关系。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id45"&gt;无处不在的标识&lt;/a&gt;&lt;/h2&gt;
@@ -2210,7 +2221,8 @@ Google的 &lt;a class="reference external" href="https://developers.google.com/p
 &lt;li&gt;2016-11-02 13:34, 更新基于协调器生成的内容&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="架构"></category><category term="唯一性标识"></category><category term="分布式系统"></category></entry><entry><title>架构是一种解决问题的能力</title><link href="/articles/arch-is-to-solve-the-problem" rel="alternate"></link><updated>2016-08-16T13:05:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-08-16:articles/arch-is-to-solve-the-problem</id><summary type="html">
+</content><category term="架构"></category><category term="唯一性标识"></category><category term="分布式系统"></category></entry><entry><title>架构是一种解决问题的能力</title><link href="/articles/arch-is-to-solve-the-problem" rel="alternate"></link><published>2016-08-16T13:05:00+08:00</published><updated>2016-08-16T13:05:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-08-16:/articles/arch-is-to-solve-the-problem</id><summary type="html">&lt;p class="first last"&gt;2016年8月22日 发表于 InfoQ · 聊聊架构 「撇开代码不说，谈谈我对架构的6个冷思考」&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;计算机是个复杂的机器，相比普通的机器（比如小家电、汽车），它可以在使用过程中对其「工作行为」进行「再定义和场景适配」，以解决不同场景下的人的需求和问题，这种「定义的结果」，对于机器的最终用户来说，是「应用 / Application」。&lt;/p&gt;
 &lt;p&gt;对于非计算机相关的普通人而言，即便是有诸多对于职位头衔的描述：「程序员」、「软件工程师」、「架构师」、「首席技术官」，也离不开一个潜意识的印象：「做网站的」或者是「修电脑的」。&lt;/p&gt;
@@ -2334,7 +2346,8 @@ Google的 &lt;a class="reference external" href="https://developers.google.com/p
 &lt;p&gt;所谓结构化，其实是面向数据的下游处理者，可以与其内置的概念（数据模型）进行映射和处理。结构是一种「元信息」。&lt;/p&gt;
 &lt;p&gt;举个具体的例子，一张bitmap图片，它本身是有结构的。bitmap的图片是标明了每个像素点上的RGB颜色值具体是多少，这个数据结构，对于图片浏览器来说，是可以识别和解析成为一张人眼能够识别的图片的，而浏览器本身只负责每个像素点上的颜色还原。倘若这张图片里是一张「用户」写实头像，那么图片浏览器并不能够分析出这张头像具体是哪个自然人，也无法将这张图片作为一个API的入参，联合其他该用户的入参，进行内部业务逻辑的处理。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="架构"></category></entry><entry><title>API不适合做微服务数据同步</title><link href="/articles/api-is-not-suitable-for-microservice-data-sync" rel="alternate"></link><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-22:articles/api-is-not-suitable-for-microservice-data-sync</id><summary type="html">&lt;!--  --&gt;
+</content><category term="架构"></category></entry><entry><title>API不适合做微服务数据同步</title><link href="/articles/api-is-not-suitable-for-microservice-data-sync" rel="alternate"></link><published>2016-06-22T11:57:00+08:00</published><updated>2016-06-22T11:57:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-06-22:/articles/api-is-not-suitable-for-microservice-data-sync</id><summary type="html">&lt;p class="first last"&gt;API/SPI 的调用，有很大的一部分比例，都是为了做数据同步，很多场景这种用法是错误的。&lt;/p&gt;
+</summary><content type="html">&lt;!--  --&gt;
 &lt;p&gt;API SPI 的调用，有很大的一部分比例，都是为了做数据同步。&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;API / Application Programming Interface（应用程序接口）&lt;/li&gt;
@@ -2356,7 +2369,8 @@ Google的 &lt;a class="reference external" href="https://developers.google.com/p
 &lt;li&gt;避免出现多份数据的一致性问题&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;一个数据实体，映射的是一个物理上的实体，物理实体的复制是困难的，但相比之下，数据实体的映射是简单的，特别特别简单的。这也导致了，数据在经过多个处理环节的时候，每个环节都可以对其进行持久化（这里不考虑安全性的问题）。&lt;/p&gt;
-</summary><category term="API"></category><category term="SPI"></category><category term="数据同步"></category><category term="微服务"></category></entry><entry><title>平台运营的关键</title><link href="/articles/key-of-platform-operation" rel="alternate"></link><updated>2016-06-22T15:16:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-06-21:articles/key-of-platform-operation</id><summary type="html">
+</content><category term="API"></category><category term="SPI"></category><category term="数据同步"></category><category term="微服务"></category></entry><entry><title>平台运营的关键</title><link href="/articles/key-of-platform-operation" rel="alternate"></link><published>2016-06-21T11:18:00+08:00</published><updated>2016-06-22T15:16:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-06-21:/articles/key-of-platform-operation</id><summary type="html">&lt;p class="first last"&gt;平台运营首先需要帮助每个用户弥补短板，鼓励每个平台的参与者向平台贡献内容并得到广泛的认可、体现他们的价值，从而重点激发平台上的每个用户的自身潜力，同时也需要严格监管平台上的不良用户，保障一个健康、有序的生态环境。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;平台要服务于内容&lt;/a&gt;&lt;/h2&gt;
@@ -2421,7 +2435,8 @@ Google的 &lt;a class="reference external" href="https://developers.google.com/p
 &lt;p&gt;监管方更多的是从规范、法律层面，对其他三方的行为进行监管，在必要的情况下动用行政手段进行强制干预。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="平台"></category><category term="生态"></category><category term="内容"></category></entry><entry><title>DevOps对于企业IT的价值</title><link href="/articles/devops-value-towards-enterprise-it" rel="alternate"></link><updated>2016-06-01T09:32:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-05-19:articles/devops-value-towards-enterprise-it</id><summary type="html">
+</content><category term="平台"></category><category term="生态"></category><category term="内容"></category></entry><entry><title>DevOps对于企业IT的价值</title><link href="/articles/devops-value-towards-enterprise-it" rel="alternate"></link><published>2016-05-19T15:01:00+08:00</published><updated>2016-06-01T09:32:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-05-19:/articles/devops-value-towards-enterprise-it</id><summary type="html">&lt;p class="first last"&gt;其实从敏捷延展开的 &lt;em&gt;DevOps&lt;/em&gt; 概念很早就已经被提出，不过由于配套的技术成熟度水平层次不齐， &lt;em&gt;DevOps&lt;/em&gt; 的价值需一直没有有效的发挥出来。现如今随着容器技术的发展， &lt;em&gt;DevOps&lt;/em&gt; 在企业中的实践难度大幅降低，其价值也得以体现。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="devops"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;DevOps 概念的发展历史&lt;/a&gt;&lt;/h2&gt;
@@ -2515,7 +2530,8 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;li&gt;2016-06-01 09:51 补充价值链上的关系&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</summary><category term="DevOps"></category><category term="微服务"></category><category term="软件价值观"></category><category term="企业架构"></category><category term="云计算"></category></entry><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-29:articles/digitization-essence-and-foundation</id><summary type="html">
+</content><category term="DevOps"></category><category term="微服务"></category><category term="软件价值观"></category><category term="企业架构"></category><category term="云计算"></category></entry><entry><title>数字化的本质和基础</title><link href="/articles/digitization-essence-and-foundation" rel="alternate"></link><published>2016-04-29T11:01:00+08:00</published><updated>2016-04-29T11:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-04-29:/articles/digitization-essence-and-foundation</id><summary type="html">&lt;p class="first last"&gt;数字化是近期全球的热点，数字化与很多其他概念例如：「信息化」、「自动化」似曾相识。在追逐数字化这个概念之前，需要深入分析数字化的本质，以便找到数字化的正确应用路径。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id18"&gt;数字化的概念&lt;/a&gt;&lt;/h2&gt;
@@ -2554,7 +2570,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;ul class="simple"&gt;
 &lt;li&gt;我的实现&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic.Volt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic.Frequency&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -2571,7 +2587,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;ul class="simple"&gt;
 &lt;li&gt;其他人的实现&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;other.people.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;other.people.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;AC&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
@@ -2600,7 +2616,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;/ul&gt;
 &lt;p&gt;为例了便于表述，以两方为例：&lt;/p&gt;
 &lt;p&gt;提供方用 &lt;tt class="docutils literal"&gt;java&lt;/tt&gt; 代码声明了一个接口 (API, Applicaion Programming Interface)， 便于使用方获得全世界的各种 &lt;strong&gt;交流电&lt;/strong&gt; 信息：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.connect&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.connect&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wang.yanjiong.electronic.AlternatingCurrent&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -2612,7 +2628,7 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;使用方同样用 &lt;tt class="docutils literal"&gt;java&lt;/tt&gt; 完成了使用代码的编写：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;other.people.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nn"&gt;other.people.electronic&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ConsumerService&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
@@ -2714,7 +2730,8 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;li&gt;&lt;span class="target" id="atlas-transformation-language"&gt;ATLAS Transformation Language&lt;/span&gt;: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/ATLAS_Transformation_Language"&gt;https://en.wikipedia.org/wiki/ATLAS_Transformation_Language&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="数字化"></category><category term="标准"></category><category term="概念"></category><category term="MOF"></category><category term="MTL"></category></entry><entry><title>唯一性标识的生成策略</title><link href="/articles/UniqueIDGenerateStrategy" rel="alternate"></link><updated>2016-04-19T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-19:articles/UniqueIDGenerateStrategy</id><summary type="html">
+</content><category term="数字化"></category><category term="标准"></category><category term="概念"></category><category term="MOF"></category><category term="MTL"></category></entry><entry><title>唯一性标识的生成策略</title><link href="/articles/UniqueIDGenerateStrategy" rel="alternate"></link><published>2016-04-19T16:18:00+08:00</published><updated>2016-04-19T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-04-19:/articles/UniqueIDGenerateStrategy</id><summary type="html">&lt;p class="first last"&gt;面向操作型（交易型）和面向概念型（主数据型）的两类唯一性标识生成策略。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;「主数据」类型的生成策略&lt;/a&gt;&lt;/h2&gt;
@@ -2762,7 +2779,8 @@ At the Agile 2008 conference, Andrew Clay Shafer and Patrick Debois discussed "A
 &lt;p&gt;例如, 淘宝订单号「1799508888858080」,16个数字（16字节=128bit）, 后四位数字为分库分表策略,
 前12位与时间相关。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="唯一性标识"></category><category term="主数据"></category><category term="交易数据"></category></entry><entry><title>IETF HTTP 规范概览</title><link href="/articles/HTTPSpecsOverview" rel="alternate"></link><updated>2016-04-18T12:29:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-18:articles/HTTPSpecsOverview</id><summary type="html">
+</content><category term="唯一性标识"></category><category term="主数据"></category><category term="交易数据"></category></entry><entry><title>IETF HTTP 规范概览</title><link href="/articles/HTTPSpecsOverview" rel="alternate"></link><published>2016-04-18T12:29:00+08:00</published><updated>2016-04-18T12:29:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-04-18:/articles/HTTPSpecsOverview</id><summary type="html">&lt;p class="first last"&gt;IETF 从1996年至今，关于HTTP协议的定义超过17个，涵盖HTTP 1.0/1.1/2 。基于HTTP的RESTFul风格，是对HTTP协议的一次功能挖掘。&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;基于HTTP的RESTFul风格，是对HTTP协议的一次功能挖掘。&lt;/p&gt;
 &lt;div class="section" id="infomation"&gt;
@@ -2814,12 +2832,13 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;li&gt;&lt;a class="reference external" href="http://ipv6.com/articles/organizations/IETF-History-IPv6.htm"&gt;IPv6.com - The role of the Internet Engineering Task Force in IPv6 development.&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</summary><category term="HTTP"></category><category term="IETF"></category><category term="RFC"></category></entry><entry><title>唯一性标识的矛盾</title><link href="/articles/TheConflictionOfID" rel="alternate"></link><updated>2016-04-14T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-04-14:articles/TheConflictionOfID</id><summary type="html">&lt;p&gt;唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。&lt;/p&gt;
+</content><category term="HTTP"></category><category term="IETF"></category><category term="RFC"></category></entry><entry><title>唯一性标识的矛盾</title><link href="/articles/TheConflictionOfID" rel="alternate"></link><published>2016-04-14T16:18:00+08:00</published><updated>2016-04-14T16:18:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-04-14:/articles/TheConflictionOfID</id><summary type="html">&lt;p class="first last"&gt;生成不依赖运行环境、人可读、方便输入的全局唯一的标识是有多难。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;唯一性标识 (Identity) 的缩写有「ID/Id/id/I.D.」目的是在一定的范围内，标识一个对象的唯一性。&lt;/p&gt;
 &lt;p&gt;唯一性标识的生成方法众多，典型的有&lt;/p&gt;
-&lt;ul&gt;
+&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
 &lt;dt&gt;算法生成类&lt;/dt&gt;
-&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
 &lt;li&gt;数据库的自动生成，例如MySQL的Auto Increment自增特性&lt;/li&gt;
 &lt;li&gt;分布式的生成算法，例如Twitter的64bit自增 &lt;a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010"&gt;SnowFlake2010&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;128bit长的 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Universally_unique_identifier"&gt;UUID&lt;/a&gt;&lt;/li&gt;
@@ -2830,7 +2849,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;/li&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
 &lt;dt&gt;人工输入类&lt;/dt&gt;
-&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
 &lt;li&gt;纯字母&lt;/li&gt;
 &lt;li&gt;字母数字组合&lt;/li&gt;
 &lt;/ul&gt;
@@ -2860,7 +2879,8 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;li&gt;尽可能的短&lt;/li&gt;
 &lt;li&gt;简便的键盘输入，比如纯数字或纯小写字母&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="唯一性标识"></category></entry><entry><title>变是永远不变的现实情况</title><link href="/articles/Changing" rel="alternate"></link><updated>2016-03-30T08:41:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-30:articles/Changing</id><summary type="html">&lt;p&gt;系统的上线就意味着给业务带上了手铐。（已经忘了是从哪听来的这句话了）&lt;/p&gt;
+</content><category term="唯一性标识"></category></entry><entry><title>变是永远不变的现实情况</title><link href="/articles/Changing" rel="alternate"></link><published>2016-03-30T08:41:00+08:00</published><updated>2016-03-30T08:41:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-03-30:/articles/Changing</id><summary type="html">&lt;p class="first last"&gt;不要抱怨变化，变化是人的认知、社会进步的结果。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;系统的上线就意味着给业务带上了手铐。（已经忘了是从哪听来的这句话了）&lt;/p&gt;
 &lt;p&gt;变是永远不变的现实情况，因为变是源自于认知的升级。&lt;/p&gt;
 &lt;p&gt;变有哪几种类型呢？假设以纯人工方式进行一项业务：&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -2878,13 +2898,15 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;p&gt;一个微服务 ( Actor ) 应该是一个职能在虚拟世界中的投影，一组微服务构成的能力域 ( Domain ) 就应该是一个部门在虚拟世界中的投影。&lt;/p&gt;
 &lt;p&gt;一个职能对应于一个微服务 ( Actor ) ，是合理的。&lt;/p&gt;
 &lt;p&gt;微服务有多少种不同结构上的拓扑形态，应该是取决于自然社会的业务形态。&lt;/p&gt;
-</summary><category term="架构"></category><category term="微服务"></category></entry><entry><title>信息系统和平行宇宙</title><link href="/articles/ITTheMirrorOfParallelUniverses" rel="alternate"></link><updated>2016-03-18T21:26:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-18:articles/ITTheMirrorOfParallelUniverses</id><summary type="html">&lt;p&gt;信息系统（软件和硬件）就是从自然世界向虚拟世界的映射。&lt;/p&gt;
+</content><category term="架构"></category><category term="微服务"></category></entry><entry><title>信息系统和平行宇宙</title><link href="/articles/ITTheMirrorOfParallelUniverses" rel="alternate"></link><published>2016-03-18T21:26:00+08:00</published><updated>2016-03-18T21:26:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-03-18:/articles/ITTheMirrorOfParallelUniverses</id><summary type="html">&lt;p class="first last"&gt;对于信息技术的使用，都是意识决定形态，形态反作用意识的结果。只有电子游戏没有康威定律什么事。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;信息系统（软件和硬件）就是从自然世界向虚拟世界的映射。&lt;/p&gt;
 &lt;p&gt;每个企业，每个行业，都以唯心的方式（意识决定形态，用自己的意识决定自己虚拟世界的形态）向虚拟世界映射。&lt;/p&gt;
 &lt;p&gt;于是，这个自然世界形成了若干个、无数个虚拟世界，也就是自然世界的若干个平行宇宙。&lt;/p&gt;
 &lt;p&gt;每个IT系统的所有者，都在想尽办法，更快、更精准的去刻画自己的平行宇宙，并在自己的宇宙里，分析自然世界，并把结果反作用于自然世界。&lt;/p&gt;
 &lt;p&gt;任何一种依靠人类体力劳动和脑力劳动的方式，最终都会比不过以「智能信息系统」自己作为映射工具的方式。&lt;/p&gt;
 &lt;p&gt;也许，正在打开的是一扇门，通往平行宇宙的一扇门。&lt;/p&gt;
-</summary><category term="信息系统"></category><category term="平行宇宙"></category></entry><entry><title>好的架构师，挖空心思偷懒</title><link href="/articles/ArchitectArchitecture" rel="alternate"></link><updated>2016-03-11T21:11:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-03-11:articles/ArchitectArchitecture</id><summary type="html">&lt;p&gt;架构，是解决问题的模式。&lt;/p&gt;
+</content><category term="信息系统"></category><category term="平行宇宙"></category></entry><entry><title>好的架构师，挖空心思偷懒</title><link href="/articles/ArchitectArchitecture" rel="alternate"></link><published>2016-03-11T21:11:00+08:00</published><updated>2016-03-11T21:11:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-03-11:/articles/ArchitectArchitecture</id><summary type="html">&lt;p class="first last"&gt;架构师就是为了解决一个问题，发现这个问题背后的十个问题，最后发现世界全是问题。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;架构，是解决问题的模式。&lt;/p&gt;
 &lt;p&gt;架构师，是这个模式的设计者。&lt;/p&gt;
 &lt;p&gt;问题的出现，是因为人的贪婪。&lt;/p&gt;
 &lt;p&gt;架构的出现，是因为人的偷懒。&lt;/p&gt;
@@ -2896,7 +2918,8 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;p&gt;好的架构，省时省力省心。&lt;/p&gt;
 &lt;p&gt;好的架构，折射人的贪婪。&lt;/p&gt;
 &lt;p&gt;好的架构师，挖空心思偷懒。&lt;/p&gt;
-</summary><category term="架构师"></category><category term="架构"></category></entry><entry><title>从元宵节煮汤圆看架构的识别与设计</title><link href="/articles/TangYuanInsightArchitecture" rel="alternate"></link><updated>2016-02-22T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-02-22:articles/TangYuanInsightArchitecture</id><summary type="html">
+</content><category term="架构师"></category><category term="架构"></category></entry><entry><title>从元宵节煮汤圆看架构的识别与设计</title><link href="/articles/TangYuanInsightArchitecture" rel="alternate"></link><published>2016-02-22T16:33:00+08:00</published><updated>2016-02-22T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-02-22:/articles/TangYuanInsightArchitecture</id><summary type="html">&lt;p class="first last"&gt;煮汤圆不算是个很复杂的技术活，为什么没有煮汤圆机以及智能煮汤圆机这个产品出现呢？&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;架构定义&lt;/a&gt;&lt;/h2&gt;
@@ -3086,7 +3109,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;li&gt;消费者惊奇的发现，「智能煮汤圆机」其实还能煮馄饨、煮饺子...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="生活与架构"></category></entry><entry><title>从「差评级汽车4S店维修服务」看汽车服务行业的企业软件发展空间</title><link href="/articles/AutoRepair4SEnterpriseSoftwareEvolution" rel="alternate"></link><updated>2015-12-31T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-12-31:articles/AutoRepair4SEnterpriseSoftwareEvolution</id><summary type="html">
+</content><category term="生活与架构"></category></entry><entry><title>从「差评级汽车4S店维修服务」看汽车服务行业的企业软件发展空间</title><link href="/articles/AutoRepair4SEnterpriseSoftwareEvolution" rel="alternate"></link><published>2015-12-31T16:33:00+08:00</published><updated>2015-12-31T16:33:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-12-31:/articles/AutoRepair4SEnterpriseSoftwareEvolution</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;汽车已经成为中国大城市家庭出行主要方式之一，随之出现的大大小小事故，可能每位车主都会经历。&lt;/p&gt;
 &lt;p&gt;如果出现一次多方事故，责任方，交警，保险公司，一定会成为事故处理的必要成员，很多时候定损中心也是大概率出现的主角。&lt;/p&gt;
@@ -3120,7 +3143,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;p&gt;云计算与移动化，企业内部多系统实时数据互通，内部系统与互联网社交平台的集成，已经成为改善传统服务行业客户体验的必然之路。&lt;/p&gt;
 &lt;p&gt;传统企业的软件架构，背后折射的是企业整体的业务管理水平；企业业务的升级，需要背后企业软件架构的升级。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="企业架构"></category></entry><entry><title>可运营的企业IT平台</title><link href="/articles/TheOperationableEnterpriceITPlatform" rel="alternate"></link><updated>2015-11-09T11:24:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-11-09:articles/TheOperationableEnterpriceITPlatform</id><summary type="html">
+</content><category term="企业架构"></category></entry><entry><title>可运营的企业IT平台</title><link href="/articles/TheOperationableEnterpriceITPlatform" rel="alternate"></link><published>2015-11-09T11:24:00+08:00</published><updated>2015-11-09T11:24:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-11-09:/articles/TheOperationableEnterpriceITPlatform</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;平台生产力&lt;/a&gt;&lt;/h2&gt;
@@ -3169,7 +3192,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="企业架构"></category></entry><entry><title>传统企业与互联网企业的软件价值观</title><link href="/articles/TraditionalVsInternetEnterpriseSoftwareValues" rel="alternate"></link><updated>2015-10-20T22:52:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-19:articles/TraditionalVsInternetEnterpriseSoftwareValues</id><summary type="html">
+</content><category term="企业架构"></category></entry><entry><title>传统企业与互联网企业的软件价值观</title><link href="/articles/TraditionalVsInternetEnterpriseSoftwareValues" rel="alternate"></link><published>2015-10-19T20:07:00+08:00</published><updated>2015-10-20T22:52:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-19:/articles/TraditionalVsInternetEnterpriseSoftwareValues</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;从单个计算机到互联网&lt;/a&gt;&lt;/h2&gt;
@@ -3244,7 +3267,7 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;p&gt;直观的做法是以劳动人口数量直接来弥补社会劳动力的缺失，以创造足够的财富供养老人。&lt;/p&gt;
 &lt;p&gt;中国劳动人口基数庞大，如果信息化手段能够提高社会生产效率，也许能够降低延迟退休政策所引起的群体排斥心理。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="企业架构"></category><category term="互联网+"></category><category term="工业4.0"></category><category term="软件价值观"></category></entry><entry><title>把时间当做朋友</title><link href="/articles/TakeTimeAsAFriend" rel="alternate"></link><updated>2014-05-31T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2014-05-31:articles/TakeTimeAsAFriend</id><summary type="html">&lt;!--  --&gt;
+</content><category term="企业架构"></category><category term="互联网+"></category><category term="工业4.0"></category><category term="软件价值观"></category></entry><entry><title>把时间当做朋友</title><link href="/articles/TakeTimeAsAFriend" rel="alternate"></link><published>2014-05-31T00:00:00+08:00</published><updated>2014-05-31T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2014-05-31:/articles/TakeTimeAsAFriend</id><summary type="html"></summary><content type="html">&lt;!--  --&gt;
 &lt;p&gt;李笑来：《把时间当做朋友》&lt;/p&gt;
 &lt;p&gt;能力：&lt;strong&gt;我们要努力，我们要坚持，我们要学习，我们要有志向，即使不是那么远大&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;欲望：守住自己的心&lt;/p&gt;
@@ -3407,4 +3430,4 @@ A standards group or individual outside the &lt;a class="reference external" hre
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;表情和神态是一个人内心的折射，几十年积累足以是一个人的内心变得“不俗”，于是，表情跟着“从容”、神态跟着“睿智”。&lt;/p&gt;
 &lt;p&gt;//所以，与新人接触，第一要看面相。#面相很重要#&lt;/p&gt;
-</summary><category term="时间管理"></category><category term="价值观"></category><category term="书评"></category></entry></feed>
+</content><category term="时间管理"></category><category term="价值观"></category><category term="书评"></category></entry></feed>

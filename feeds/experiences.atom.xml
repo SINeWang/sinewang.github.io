@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight</title><link href="/" rel="alternate"></link><link href="/feeds/experiences.atom.xml" rel="self"></link><id>/</id><updated>2017-01-23T21:34:00+08:00</updated><entry><title>使用Nexus3进行Snapshot和Release管理</title><link href="/articles/nexus3-maven-snapshot-and-release" rel="alternate"></link><updated>2017-01-23T21:34:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2017-01-23:articles/nexus3-maven-snapshot-and-release</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - experiences</title><link href="/" rel="alternate"></link><link href="/feeds/experiences.atom.xml" rel="self"></link><id>/</id><updated>2017-01-23T21:34:00+08:00</updated><entry><title>使用Nexus3进行Snapshot和Release管理</title><link href="/articles/nexus3-maven-snapshot-and-release" rel="alternate"></link><published>2017-01-23T21:34:00+08:00</published><updated>2017-01-23T21:34:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2017-01-23:/articles/nexus3-maven-snapshot-and-release</id><summary type="html">&lt;p class="first last"&gt;介绍 nexus3、parent pom以及 project pom的distribution management.&lt;/p&gt;
+</summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="nexus3"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Nexus3中的关键角色与用户&lt;/a&gt;&lt;/h2&gt;
@@ -45,7 +46,7 @@
 &lt;div class="section" id="super-parent-maven-project"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;super-parent maven project&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;对于每个组织或者企业，使用一个顶级的、唯一的parent project是十分有必要的，这可以统一各级子工程的发布管理配置。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;scm&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;scm&amp;gt;&lt;/span&gt;
     &lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.domain/and-path&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
     &lt;span class="nt"&gt;&amp;lt;connection&amp;gt;&lt;/span&gt;scm:git:ssh://git@your.vcs.domain/your-path&lt;span class="nt"&gt;&amp;lt;/connection&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/scm&amp;gt;&lt;/span&gt;
@@ -106,7 +107,8 @@
 &lt;p&gt;它的主要目的，是把本地已经生成好的 release library 部署至仓库。并不会对 VCS 进行任何写操作。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="maven"></category><category term="nexus3"></category><category term="scm"></category></entry><entry><title>Happy Hacking Keyboard Professional 2 Type-S</title><link href="/articles/hhkb-pro2-type_s-cheat-sheet" rel="alternate"></link><updated>2016-12-05T21:12:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-12-05:articles/hhkb-pro2-type_s-cheat-sheet</id><summary type="html">&lt;div class="section" id="id1"&gt;
+</content><category term="maven"></category><category term="nexus3"></category><category term="scm"></category></entry><entry><title>Happy Hacking Keyboard Professional 2 Type-S</title><link href="/articles/hhkb-pro2-type_s-cheat-sheet" rel="alternate"></link><published>2016-12-05T21:12:00+08:00</published><updated>2016-12-05T21:12:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-05:/articles/hhkb-pro2-type_s-cheat-sheet</id><summary type="html">&lt;p class="first last"&gt;HHKB 在 macOS 上的使用速记&lt;/p&gt;
+</summary><content type="html">&lt;div class="section" id="id1"&gt;
 &lt;h2&gt;键帽&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;空格键的键帽，最好拆卸来之后反装，否则容易伤到大拇指&lt;/li&gt;
@@ -136,7 +138,7 @@
 &lt;li&gt;&lt;a class="reference external" href="https://support.apple.com/en-us/HT201236"&gt;https://support.apple.com/en-us/HT201236&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</summary><category term="HHKB"></category><category term="macOS"></category></entry><entry><title>用Atom在Mac OS X 下编辑PlantUML</title><link href="/articles/PUMLMacOSXAtomEditor" rel="alternate"></link><updated>2016-01-30T10:39:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2016-01-29:articles/PUMLMacOSXAtomEditor</id><summary type="html">
+</content><category term="HHKB"></category><category term="macOS"></category></entry><entry><title>用Atom在Mac OS X 下编辑PlantUML</title><link href="/articles/PUMLMacOSXAtomEditor" rel="alternate"></link><published>2016-01-29T15:18:00+08:00</published><updated>2016-01-30T10:39:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-01-29:/articles/PUMLMacOSXAtomEditor</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;Atom的插件: plantuml-viewer 它支持&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -197,7 +199,7 @@ brew cask install atom
 &lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;效果&lt;/a&gt;&lt;/h2&gt;
 &lt;img alt="AutoWithPlantUML ScreenShot" src="/images/2016/01-29/AtomWithPlantUML.png"/&gt;
 &lt;/div&gt;
-</summary><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/articles/RSTMacOSXAtomEditor" rel="alternate"></link><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-30:articles/RSTMacOSXAtomEditor</id><summary type="html">
+</content><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/articles/RSTMacOSXAtomEditor" rel="alternate"></link><published>2015-10-30T23:33:00+08:00</published><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-30:/articles/RSTMacOSXAtomEditor</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
@@ -269,7 +271,7 @@ process.env.PATH = ["/usr/bin",
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;效果&lt;/a&gt;&lt;/h2&gt;
 &lt;img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png"/&gt;
 &lt;/div&gt;
-</summary><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>Mac OS X环境</title><link href="/articles/MacOSXEnvironment" rel="alternate"></link><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-18:articles/MacOSXEnvironment</id><summary type="html">
+</content><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>Mac OS X环境</title><link href="/articles/MacOSXEnvironment" rel="alternate"></link><published>2015-10-18T00:00:00+08:00</published><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-18:/articles/MacOSXEnvironment</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="mail"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Mail&lt;/a&gt;&lt;/h2&gt;
@@ -352,20 +354,15 @@ process.env.PATH = ["/usr/bin",
 &lt;/div&gt;
 &lt;div class="section" id="efficiency"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;Efficiency&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://www.alfredapp.com/powerpack/"&gt;Alfred Powerpack&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://www.spectacleapp.com/"&gt;Spectacle&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://www.iterm2.com/"&gt;iTerm2&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.zsh.org/"&gt;zsh&lt;/a&gt; + &lt;a class="reference external" href="https://github.com/robbyrussell/oh-my-zsh"&gt;oh-my-zsh&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://brew.sh"&gt;Homebrew&lt;/a&gt; + &lt;a class="reference external" href="https://github.com/caskroom/homebrew-cask"&gt;homebrew cask&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.alfredapp.com/powerpack/"&gt;Alfred Powerpack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.spectacleapp.com/"&gt;Spectacle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.iterm2.com/"&gt;iTerm2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.zsh.org/"&gt;zsh&lt;/a&gt; + &lt;a class="reference external" href="https://github.com/robbyrussell/oh-my-zsh"&gt;oh-my-zsh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://brew.sh"&gt;Homebrew&lt;/a&gt; + &lt;a class="reference external" href="https://github.com/caskroom/homebrew-cask"&gt;homebrew cask&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
 &lt;dt&gt;RamDisk&lt;/dt&gt;
-&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
 &lt;li&gt;Automator&lt;/li&gt;
 &lt;li&gt;Shell&lt;/li&gt;
 &lt;/ul&gt;
@@ -374,7 +371,7 @@ process.env.PATH = ["/usr/bin",
 &lt;/li&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
 &lt;dt&gt;Socks5&lt;/dt&gt;
-&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
 &lt;li&gt;socat / netcat&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/dd&gt;
@@ -402,7 +399,7 @@ process.env.PATH = ["/usr/bin",
 &lt;li&gt;&lt;a class="reference external" href="http://cord.sourceforge.net/"&gt;CoRD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:,2015-10-16:articles/pelican-toc-plugin</id><summary type="html">
+</content><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><published>2015-10-16T00:00:00+08:00</published><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-16:/articles/pelican-toc-plugin</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
@@ -428,7 +425,7 @@ process.env.PATH = ["/usr/bin",
 &lt;ul class="simple"&gt;
 &lt;li&gt;插入 &lt;tt class="docutils literal"&gt;[TOC]&lt;/tt&gt; 标签，例如：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;title: Pelican TOC Plugin
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;title: Pelican TOC Plugin
 date: 2015-10-16
 modified: 2015-10-17
 tags: pelican
@@ -437,4 +434,4 @@ category: pelican
 ### 插件准备
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="Pelican"></category></entry></feed>
+</content><category term="Pelican"></category></entry></feed>

@@ -17,6 +17,15 @@
     <link href="/theme/timeline.css" rel="stylesheet">
 
         <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141804672-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141804672-1');
+    </script>
 
 </head>
 
@@ -128,7 +137,7 @@
 <ul class="simple">
 <li>我的实现</li>
 </ul>
-<div class="highlight"><pre><span class="kn">package</span> <span class="nn">wang.yanjiong.electronic</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">wang.yanjiong.electronic</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.Volt</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.Frequency</span><span class="o">;</span>
@@ -145,7 +154,7 @@
 <ul class="simple">
 <li>其他人的实现</li>
 </ul>
-<div class="highlight"><pre><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AC</span> <span class="o">{</span>
 
@@ -174,7 +183,7 @@
 </ul>
 <p>为例了便于表述，以两方为例：</p>
 <p>提供方用 <tt class="docutils literal">java</tt> 代码声明了一个接口 (API, Applicaion Programming Interface)， 便于使用方获得全世界的各种 <strong>交流电</strong> 信息：</p>
-<div class="highlight"><pre><span class="kn">package</span> <span class="nn">wang.yanjiong.connect</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">wang.yanjiong.connect</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.AlternatingCurrent</span><span class="o">;</span>
 
@@ -186,7 +195,7 @@
 <span class="o">}</span>
 </pre></div>
 <p>使用方同样用 <tt class="docutils literal">java</tt> 完成了使用代码的编写：</p>
-<div class="highlight"><pre><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConsumerService</span> <span class="o">{</span>
 
@@ -345,8 +354,6 @@
       <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
   </p>
   <p>
-          <a href="/about">关于</a>
-          | <a href="/copyright">版权</a>
   </p>
   <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
 </div>
@@ -355,6 +362,5 @@
 <script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
 </body>
 </html>

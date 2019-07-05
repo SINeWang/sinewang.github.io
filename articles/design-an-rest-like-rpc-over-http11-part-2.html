@@ -17,6 +17,15 @@
     <link href="/theme/timeline.css" rel="stylesheet">
 
         <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141804672-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141804672-1');
+    </script>
 
 </head>
 
@@ -206,23 +215,23 @@
 <ul class="simple">
 <li>C-C Commit Request cURL Syntax</li>
 </ul>
-<div class="highlight"><pre>curl -X PUT -H <span class="s2">"Content-Type: application/json"</span> -H <span class="s2">"User-Agent: &lt;ConsumerId&gt;"</span>  <span class="se">\\</span>
+<div class="highlight"><pre><span></span>curl -X PUT -H <span class="s2">"Content-Type: application/json"</span> -H <span class="s2">"User-Agent: &lt;ConsumerId&gt;"</span>  <span class="se">\\</span>
  -H <span class="s2">"Referer: &lt;TransactionId&gt;"</span> -d &lt;RequestBody&gt; <span class="s2">"https://&lt;domain&gt;/&lt;path&gt;/&lt;RequestId&gt;[?v=&lt;Version&gt;]"</span>
 </pre></div>
 <ul class="simple">
 <li>C-C Commit Request cURL Example</li>
 </ul>
-<div class="highlight"><pre>curl -X PUT -H <span class="s2">"Content-Type: application/json"</span> -H <span class="s2">"User-Agent: REST-like-Consumer"</span> <span class="se">\\</span>
+<div class="highlight"><pre><span></span>curl -X PUT -H <span class="s2">"Content-Type: application/json"</span> -H <span class="s2">"User-Agent: REST-like-Consumer"</span> <span class="se">\\</span>
  -H <span class="s2">"Referer: 0987654"</span> -d <span class="s1">'{ "title":"This is an request example." }'</span> <span class="s2">"https://api.yanjiong.wang/article/new/67890"</span>
 </pre></div>
 <ul class="simple">
 <li>C-C Commit Request HTTP/1.1 Example</li>
 </ul>
-<div class="highlight"><pre>PUT /article/new/67890 HTTP/1.1
+<div class="highlight"><pre><span></span>PUT /article/new/67890 HTTP/1.1
 Host: yanjiong.wang
 Content-Type: application/json
 User-Agent: REST-like-Consumer
-Referer: 0987654
+Referer: <span class="m">0987654</span>
 
 <span class="o">{</span>
     <span class="s2">"title"</span>:<span class="s2">"This is an request example."</span>
@@ -234,7 +243,7 @@ Referer: 0987654
 <ul class="simple">
 <li>C-C Commit Response HTTP/1.1 Syntax</li>
 </ul>
-<div class="highlight"><pre>HTTP/1.1 &lt;Status Code&gt;
+<div class="highlight"><pre><span></span>HTTP/1.1 &lt;Status Code&gt;
 Server: &lt;Provider&gt;/&lt;Version&gt;
 Content-type: application/json
 <span class="o">[</span>Date: &lt;Date&gt;<span class="o">]</span>
@@ -245,12 +254,12 @@ Content-type: application/json
 <ul class="simple">
 <li>C-C Commit Response HTTP/1.1 Example</li>
 </ul>
-<div class="highlight"><pre>HTTP/1.1 <span class="m">200</span> OK
+<div class="highlight"><pre><span></span>HTTP/1.1 <span class="m">200</span> OK
 Server: REST-like-Provider/2.1
-Date: Wed, <span class="m">21</span> Dec <span class="m">2016</span> 15:03:33 GMT
-Last-Modified: Tue, <span class="m">20</span> Dec <span class="m">2016</span> 08:37:25 GMT
+Date: Wed, <span class="m">21</span> Dec <span class="m">2016</span> <span class="m">15</span>:03:33 GMT
+Last-Modified: Tue, <span class="m">20</span> Dec <span class="m">2016</span> <span class="m">08</span>:37:25 GMT
 ETag: W/<span class="s2">"ebf-1591b60c988"</span>
-X-CC-RequestId: 67890
+X-CC-RequestId: <span class="m">67890</span>
 
 <span class="o">{</span>
     <span class="s2">"title"</span>:<span class="s2">"This is an response example."</span>
@@ -303,8 +312,6 @@ X-CC-RequestId: 67890
       <a href="//www.douban.com/people/sinewang"><img src="/theme/images/icons/douban.png"/></a>
   </p>
   <p>
-          <a href="/about">关于</a>
-          | <a href="/copyright">版权</a>
   </p>
   <p>Powered By <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
 </div>
@@ -313,6 +320,5 @@ X-CC-RequestId: 67890
 <script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script src="//s95.cnzz.com/z_stat.php?id=1256725324&web_id=1256725324" language="JavaScript"></script>
 </body>
 </html>
