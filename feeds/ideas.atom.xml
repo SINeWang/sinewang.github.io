@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2017-01-12T23:01:00+08:00</updated><entry><title>图片的管理与运营</title><link href="/articles/the-way-of-pubsub-diagram" rel="alternate"></link><published>2017-01-12T23:01:00+08:00</published><updated>2017-01-12T23:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2017-01-12:/articles/the-way-of-pubsub-diagram</id><summary type="html">&lt;p class="first last"&gt;现有的大部分商业、免费的绘图工具的基本假设是，图片的作者与图片的使用者，使用的是同一个工具，并没有考虑到图片的具体引用场景，并根据上下文环境进行自适应调整。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2019-07-08T14:00:00+08:00</updated><entry><title>正弦 (1)</title><link href="/articles/sine-1" rel="alternate"></link><published>2019-07-08T14:00:00+08:00</published><updated>2019-07-08T14:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2019-07-08:/articles/sine-1</id><summary type="html">&lt;p class="first last"&gt;所有完美的背后，都是残缺; 所有成功的背后，都是苦难; 所有得到的背后，都是失去&lt;/p&gt;
+</summary><content type="html">&lt;!--  --&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;完美的本质是一切符合预期，万事如意。&lt;/p&gt;
+&lt;p&gt;这需要很强的控制力。不仅对自己，也对周围环境。&lt;/p&gt;
+&lt;p&gt;这很难，因为一切都在变。&lt;/p&gt;
+&lt;p&gt;环境在变，与之相匹配的自适应性能力也要变。&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;我们总以为知道自己知道了一些”真相”，”看清了”一些本质，并且可以用逻辑去证明。&lt;/p&gt;
+&lt;p&gt;可这永远是源于我们自己的视角，&lt;/p&gt;
+&lt;p&gt;看到的不等于真相，理解的不等于本意。&lt;/p&gt;
+&lt;p&gt;我们终究还是生活在一个无知的世界里，看不清，也没有能力理解绝对全部。&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;沟壑永远存在。&lt;/p&gt;
+&lt;p&gt;因为弱小，我们需要安全感，以保证我们看不见的部分不会对自己造成伤害。&lt;/p&gt;
+&lt;p&gt;因为弱小，我们需要信任感，这并不源于ta自以为能做什么，而是ta过去做了什么。&lt;/p&gt;
+&lt;p&gt;我们用逻辑和推理去建立自己的安全感，以消除对未知的恐惧。&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;快乐是一种痛苦，就像没有苦并不知道什么是甜。&lt;/p&gt;
+&lt;p&gt;愤怒是一种弱小，因为不仅驾驭不了周围环境，而且也驾驭不了面对失望的情绪。&lt;/p&gt;
+</content><category term="正弦"></category></entry><entry><title>图片的管理与运营</title><link href="/articles/the-way-of-pubsub-diagram" rel="alternate"></link><published>2017-01-12T23:01:00+08:00</published><updated>2017-01-12T23:01:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2017-01-12:/articles/the-way-of-pubsub-diagram</id><summary type="html">&lt;p class="first last"&gt;现有的大部分商业、免费的绘图工具的基本假设是，图片的作者与图片的使用者，使用的是同一个工具，并没有考虑到图片的具体引用场景，并根据上下文环境进行自适应调整。&lt;/p&gt;
 </summary><content type="html">
 &lt;!-- --&gt;
 &lt;p&gt;没错，这又是一个还没实现的理想，缺的是时间资源。&lt;/p&gt;
