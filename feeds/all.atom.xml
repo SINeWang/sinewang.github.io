@@ -91,7 +91,7 @@
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;怎么办？”重构（知识结构）”&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;底线 - 丑化说前面，自己的代码记得写上 &lt;tt class="docutils literal"&gt;try - catch - finally&lt;/tt&gt;  兜底&lt;/li&gt;
+&lt;li&gt;底线 - 丑话说前面，自己的代码记得写上 &lt;tt class="docutils literal"&gt;try - catch - finally&lt;/tt&gt;  兜底&lt;/li&gt;
 &lt;li&gt;接纳 - 把处理异常（例外）的逻辑方法，从 &lt;tt class="docutils literal"&gt;catch - finally&lt;/tt&gt;，改写成到处理已知的逻辑 &lt;tt class="docutils literal"&gt;switch (case), default&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;放下成见 - 去接纳一些世界上更多不能用简单逻辑解释的事情，比如中医，比如一些神经网络。&lt;/li&gt;
 &lt;/ol&gt;
