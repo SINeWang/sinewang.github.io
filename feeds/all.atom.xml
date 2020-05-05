@@ -89,11 +89,13 @@
 &lt;/div&gt;
 &lt;div class="section" id="id3"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;怎么办？”重构（知识结构）”&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;底线 - 丑化说前面，自己的代码记得写上 &lt;tt class="docutils literal"&gt;try - catch - finally&lt;/tt&gt;  兜底&lt;/li&gt;
 &lt;li&gt;接纳 - 把处理异常（例外）的逻辑方法，从 &lt;tt class="docutils literal"&gt;catch - finally&lt;/tt&gt;，改写成到处理已知的逻辑 &lt;tt class="docutils literal"&gt;switch (case), default&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;放下成见 - 去接纳一些世界上更多不能用简单逻辑解释的事情，比如中医，比如一些神经网络。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这个过程叫——学习做最好的自己。&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="文化"></category></entry><entry><title>正弦 (1)</title><link href="/articles/sine-1" rel="alternate"></link><published>2019-07-08T14:00:00+08:00</published><updated>2019-07-08T14:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2019-07-08:/articles/sine-1</id><summary type="html">&lt;p class="first last"&gt;所有完美的背后，都是残缺; 所有成功的背后，都是苦难; 所有得到的背后，都是失去&lt;/p&gt;
