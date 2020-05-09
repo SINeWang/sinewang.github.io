@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2020-05-05T14:00:00+08:00</updated><entry><title>如果，把一个人看成一个HTTP Server</title><link href="/articles/if-consider-a-person-as-a-http-server" rel="alternate"></link><published>2020-05-05T14:00:00+08:00</published><updated>2020-05-05T14:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-05-05:/articles/if-consider-a-person-as-a-http-server</id><summary type="html">&lt;p class="first last"&gt;其实HTTP协议背后的设计理念，可以认为是在说一个人，挺有意思的。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2020-05-09T10:00:00+08:00</updated><entry><title>尊重，就是不要用自己的标准要求别人</title><link href="/articles/respect-dont-apply-your-standard-to-the-others" rel="alternate"></link><published>2020-05-09T10:00:00+08:00</published><updated>2020-05-09T10:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-05-09:/articles/respect-dont-apply-your-standard-to-the-others</id><summary type="html">&lt;p class="first last"&gt;每个人都不一样，和而不同。&lt;/p&gt;
+</summary><content type="html">&lt;!--  --&gt;
+&lt;p&gt;人和人都是不同的，视角、想法、诉求都不一样。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个人都在做自己认为「对」的事情。&lt;/p&gt;
+&lt;p&gt;如果用「非黑即白」的二元逻辑去看别人的想法。&lt;/p&gt;
+&lt;p&gt;只要和自己不一样，       那么别人都是「不对」的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因为不一样，所以有矛盾和冲突。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表达清楚自己的诉求和方法。&lt;/p&gt;
+&lt;p&gt;理解清楚别人的诉求和方法。&lt;/p&gt;
+&lt;p&gt;和而不同 — 从不同中找相同，形成共识，建立信任。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不要用自己的标准要求别人。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;共识越多，拉近距离。&lt;/p&gt;
+&lt;p&gt;共识越少，保持距离。&lt;/p&gt;
+&lt;p&gt;志同道合，或者，道不同不相为谋。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;「为你好」是一种自私的绑架&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「好」只是自己认为的「好」，还是别人的 「真正诉求」？&lt;/p&gt;
+&lt;p&gt;澄清自己认为好的标准，不要让别人欠下无法承受的人情债。&lt;/p&gt;
+&lt;p&gt;从别人真正的诉求角度，力所能及地去帮助别人才是真的好。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content><category term="文化"></category></entry><entry><title>如果，把一个人看成一个HTTP Server</title><link href="/articles/if-consider-a-person-as-a-http-server" rel="alternate"></link><published>2020-05-05T14:00:00+08:00</published><updated>2020-05-05T14:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-05-05:/articles/if-consider-a-person-as-a-http-server</id><summary type="html">&lt;p class="first last"&gt;其实HTTP协议背后的设计理念，可以认为是在说一个人，挺有意思的。&lt;/p&gt;
 </summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="http"&gt;
