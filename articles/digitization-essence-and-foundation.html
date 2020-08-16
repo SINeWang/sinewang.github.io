@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数字化的本质和基础  @ 王延炯 · 观世界 | World Insight
+    <title>数字化的本质和基础 @ 王延炯 · 观世界 | World Insight
 </title>
     <meta name="description" content="">
     <meta name="author" content="Wang YanJiong">
@@ -137,33 +137,33 @@
 <ul class="simple">
 <li>我的实现</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">wang.yanjiong.electronic</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">wang.yanjiong.electronic</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.Volt</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.Frequency</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.Volt</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.Frequency</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AlternatingCurrent</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AlternatingCurrent</span> <span class="p">{</span>
 
-  <span class="n">Volt</span> <span class="nf">getVolt</span><span class="o">();</span>
+  <span class="n">Volt</span> <span class="nf">getVolt</span><span class="p">();</span>
 
-  <span class="n">Frequency</span> <span class="nf">getFrequency</span><span class="o">()</span>
+  <span class="n">Frequency</span> <span class="nf">getFrequency</span><span class="p">()</span>
 
-  <span class="o">....</span>
-<span class="o">}</span>
+  <span class="p">....</span>
+<span class="p">}</span>
 </pre></div>
 <ul class="simple">
 <li>其他人的实现</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AC</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AC</span> <span class="p">{</span>
 
-  <span class="kt">int</span> <span class="nf">getVolt</span><span class="o">();</span>
+  <span class="kt">int</span> <span class="nf">getVolt</span><span class="p">();</span>
 
-  <span class="kt">int</span> <span class="nf">getFrequency</span><span class="o">()</span>
+  <span class="kt">int</span> <span class="nf">getFrequency</span><span class="p">()</span>
 
-  <span class="o">....</span>
-<span class="o">}</span>
+  <span class="p">....</span>
+<span class="p">}</span>
 </pre></div>
 <p>可以看到两者都通过代码描述了 <strong>交流电</strong> 这个概念，但在IT这个虚拟世界内，是截然不同的两个概念代码实现。</p>
 <p>在第一种 <tt class="docutils literal">wang.yanjiong.electronic</tt> 这种实现方法，是对电压 ( <tt class="docutils literal">Volt</tt> ) 和 电流 ( <tt class="docutils literal">Frequency</tt> ) 进行了更为复杂的定义。</p>
@@ -183,26 +183,26 @@
 </ul>
 <p>为例了便于表述，以两方为例：</p>
 <p>提供方用 <tt class="docutils literal">java</tt> 代码声明了一个接口 (API, Applicaion Programming Interface)， 便于使用方获得全世界的各种 <strong>交流电</strong> 信息：</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">wang.yanjiong.connect</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">wang.yanjiong.connect</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.AlternatingCurrent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">wang.yanjiong.electronic.AlternatingCurrent</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ProviderAPI</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ProviderAPI</span> <span class="p">{</span>
 
-  <span class="n">AlternatingCurrent</span><span class="o">[]</span> <span class="nf">getAlternatingCurrents</span><span class="o">();</span>
+  <span class="n">AlternatingCurrent</span><span class="o">[]</span> <span class="nf">getAlternatingCurrents</span><span class="p">();</span>
 
-  <span class="o">....</span>
-<span class="o">}</span>
+  <span class="p">....</span>
+<span class="p">}</span>
 </pre></div>
 <p>使用方同样用 <tt class="docutils literal">java</tt> 完成了使用代码的编写：</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">other.people.electronic</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConsumerService</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConsumerService</span> <span class="p">{</span>
 
-  <span class="n">AC</span><span class="o">[]</span> <span class="n">acs</span> <span class="o">=</span> <span class="n">ProviderAPI</span><span class="o">.</span><span class="na">getAlternatingCurrents</span><span class="o">();</span>
+  <span class="n">AC</span><span class="o">[]</span> <span class="n">acs</span> <span class="o">=</span> <span class="n">ProviderAPI</span><span class="p">.</span><span class="na">getAlternatingCurrents</span><span class="p">();</span>
 
-  <span class="o">....</span>
-<span class="o">}</span>
+  <span class="p">....</span>
+<span class="p">}</span>
 </pre></div>
 <p>很显然，使用方的代码，在编译的过程中就会出现错误，因为使用方没有 <tt class="docutils literal">引用</tt> 提供方关于 <tt class="docutils literal">ProviderAPI</tt> 的相关定义。</p>
 <p>通过对这个例子的分析，提供方和使用方不在同一个虚拟世界里，两者无法进行「连接」。</p>
@@ -305,7 +305,7 @@
 <div class="sidebar">
     <h2>目录</h2>
     <div class="toc" id="">
-
+<p class="topic-title">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id2" id="id18">数字化的概念</a></li>
 <li><a class="reference internal" href="#id3" id="id19">数字化的本质</a></li>
