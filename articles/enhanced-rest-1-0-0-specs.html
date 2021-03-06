@@ -96,8 +96,58 @@
         </div>
 
 
-        <div class="article-content">
-<!-- -->
+        <div class="article-content"><div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id16">阅读知识背景要求</a></li>
+<li><a class="reference internal" href="#id2" id="id17">修订历史</a></li>
+<li><a class="reference internal" href="#id3" id="id18">背景与目标</a><ul>
+<li><a class="reference internal" href="#id4" id="id19">编写背景</a></li>
+<li><a class="reference internal" href="#id5" id="id20">编写目标</a></li>
+<li><a class="reference internal" href="#id6" id="id21">基本约定</a></li>
+<li><a class="reference internal" href="#id7" id="id22">限制条件</a></li>
+<li><a class="reference internal" href="#id8" id="id23">修订计划</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9" id="id24">参考标准</a><ul>
+<li><a class="reference internal" href="#id10" id="id25">直接参考标准</a></li>
+<li><a class="reference internal" href="#id11" id="id26">间接参考标准</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rpc" id="id27">分布式事务的RPC模式简介</a><ul>
+<li><a class="reference internal" href="#commit-compensation-cc" id="id28">Commit-Compensation (CC)</a></li>
+<li><a class="reference internal" href="#try-confirm-cancel-tcc" id="id29">Try-Confirm/Cancel (TCC)</a></li>
+<li><a class="reference internal" href="#event-sourcing-es" id="id30">Event Sourcing (ES)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enhancedrest-cc" id="id31">EnhancedREST-CC模式</a><ul>
+<li><a class="reference internal" href="#client-side" id="id32">Client Side 技术标准</a><ul>
+<li><a class="reference internal" href="#id12" id="id33">Client Side 请求结构</a></li>
+<li><a class="reference internal" href="#id13" id="id34">Client Side 概念定义</a></li>
+<li><a class="reference internal" href="#http-1-1" id="id35">HTTP/1.1 协议映射</a><ul>
+<li><a class="reference internal" href="#http-method" id="id36">HTTP Method 概念映射</a></li>
+<li><a class="reference internal" href="#http-header" id="id37">HTTP Header 概念映射</a></li>
+<li><a class="reference internal" href="#url" id="id38">URL 概念映射</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-side" id="id39">Server Side 技术标准</a><ul>
+<li><a class="reference internal" href="#id14" id="id40">Server Side 响应结构</a></li>
+<li><a class="reference internal" href="#id15" id="id41">Server Side 概念定义</a></li>
+<li><a class="reference internal" href="#http-1-1-header" id="id42">HTTP/1.1 Header 概念映射</a></li>
+<li><a class="reference internal" href="#commit" id="id43">响应 Commit 操作</a></li>
+<li><a class="reference internal" href="#compensation" id="id44">响应 Compensation 操作</a></li>
+<li><a class="reference internal" href="#status" id="id45">响应 Status 操作</a></li>
+<li><a class="reference internal" href="#fetch" id="id46">响应 Fetch 操作</a></li>
+<li><a class="reference internal" href="#trace" id="id47">响应 Trace 操作</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!--  -->
 <div class="section" id="id1">
 <h2><a class="toc-backref" href="#id16">阅读知识背景要求</a></h2>
 <blockquote>
@@ -377,7 +427,7 @@ Status 状态 * Fetch 获取 * Trace 跟踪</p>
 <ul class="simple">
 <li>From</li>
 </ul>
-<p><tt class="docutils literal"><span class="pre">&lt;MessageId&gt;@&lt;InstanceId&gt;.&lt;Cluster</span> <span class="pre">Name&gt;.&lt;Cluster</span> Group&gt;</tt></p>
+<p><tt class="docutils literal"><span class="pre">&lt;MessageId&gt;&#64;&lt;InstanceId&gt;.&lt;Cluster</span> <span class="pre">Name&gt;.&lt;Cluster</span> Group&gt;</tt></p>
 <ul class="simple">
 <li>Content-Type</li>
 </ul>
@@ -563,7 +613,7 @@ Date时间之后提交Compensation操作，有可能得到的是Compensation操�
 <ul class="simple">
 <li>Server</li>
 </ul>
-<p><tt class="docutils literal">&lt;Server <span class="pre">Group&gt;-&lt;Server</span> <span class="pre">Name&gt;/&lt;Server</span> Version&gt;  &lt;Provider <span class="pre">Group&gt;-&lt;Provider</span> Name&gt; / &lt;Provider Version&gt; &lt;Cluster <span class="pre">Group&gt;-&lt;Cluster</span> <span class="pre">Name&gt;/&lt;InstanceId&gt;</span></tt></p>
+<p><tt class="docutils literal">&lt;Server <span class="pre">Group&gt;-&lt;Server</span> <span class="pre">Name&gt;/&lt;Server</span> Version&gt;&nbsp; &lt;Provider <span class="pre">Group&gt;-&lt;Provider</span> Name&gt; / &lt;Provider Version&gt; &lt;Cluster <span class="pre">Group&gt;-&lt;Cluster</span> <span class="pre">Name&gt;/&lt;InstanceId&gt;</span></tt></p>
 <ul class="simple">
 <li>X-RL-CC-S-MID</li>
 </ul>
@@ -794,58 +844,6 @@ Compensation操作。因此，对于一次请求，处理的结果会产生一�
         </div>
         <div class="col-md-3">
 <div class="sidebar">
-    <h2>目录</h2>
-    <div class="toc" id="">
-<p class="topic-title">Contents</p>
-<ul class="simple">
-<li><a class="reference internal" href="#id1" id="id16">阅读知识背景要求</a></li>
-<li><a class="reference internal" href="#id2" id="id17">修订历史</a></li>
-<li><a class="reference internal" href="#id3" id="id18">背景与目标</a><ul>
-<li><a class="reference internal" href="#id4" id="id19">编写背景</a></li>
-<li><a class="reference internal" href="#id5" id="id20">编写目标</a></li>
-<li><a class="reference internal" href="#id6" id="id21">基本约定</a></li>
-<li><a class="reference internal" href="#id7" id="id22">限制条件</a></li>
-<li><a class="reference internal" href="#id8" id="id23">修订计划</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id9" id="id24">参考标准</a><ul>
-<li><a class="reference internal" href="#id10" id="id25">直接参考标准</a></li>
-<li><a class="reference internal" href="#id11" id="id26">间接参考标准</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#rpc" id="id27">分布式事务的RPC模式简介</a><ul>
-<li><a class="reference internal" href="#commit-compensation-cc" id="id28">Commit-Compensation (CC)</a></li>
-<li><a class="reference internal" href="#try-confirm-cancel-tcc" id="id29">Try-Confirm/Cancel (TCC)</a></li>
-<li><a class="reference internal" href="#event-sourcing-es" id="id30">Event Sourcing (ES)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#enhancedrest-cc" id="id31">EnhancedREST-CC模式</a><ul>
-<li><a class="reference internal" href="#client-side" id="id32">Client Side 技术标准</a><ul>
-<li><a class="reference internal" href="#id12" id="id33">Client Side 请求结构</a></li>
-<li><a class="reference internal" href="#id13" id="id34">Client Side 概念定义</a></li>
-<li><a class="reference internal" href="#http-1-1" id="id35">HTTP/1.1 协议映射</a><ul>
-<li><a class="reference internal" href="#http-method" id="id36">HTTP Method 概念映射</a></li>
-<li><a class="reference internal" href="#http-header" id="id37">HTTP Header 概念映射</a></li>
-<li><a class="reference internal" href="#url" id="id38">URL 概念映射</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#server-side" id="id39">Server Side 技术标准</a><ul>
-<li><a class="reference internal" href="#id14" id="id40">Server Side 响应结构</a></li>
-<li><a class="reference internal" href="#id15" id="id41">Server Side 概念定义</a></li>
-<li><a class="reference internal" href="#http-1-1-header" id="id42">HTTP/1.1 Header 概念映射</a></li>
-<li><a class="reference internal" href="#commit" id="id43">响应 Commit 操作</a></li>
-<li><a class="reference internal" href="#compensation" id="id44">响应 Compensation 操作</a></li>
-<li><a class="reference internal" href="#status" id="id45">响应 Status 操作</a></li>
-<li><a class="reference internal" href="#fetch" id="id46">响应 Fetch 操作</a></li>
-<li><a class="reference internal" href="#trace" id="id47">响应 Trace 操作</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 
         </div>

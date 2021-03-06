@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - experiences</title><link href="/" rel="alternate"></link><link href="/feeds/experiences.atom.xml" rel="self"></link><id>/</id><updated>2017-01-23T21:34:00+08:00</updated><entry><title>使用Nexus3进行Snapshot和Release管理</title><link href="/articles/nexus3-maven-snapshot-and-release" rel="alternate"></link><published>2017-01-23T21:34:00+08:00</published><updated>2017-01-23T21:34:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2017-01-23:/articles/nexus3-maven-snapshot-and-release</id><summary type="html">&lt;p class="first last"&gt;介绍 nexus3、parent pom以及 project pom的distribution management.&lt;/p&gt;
-</summary><content type="html">
-&lt;!-- --&gt;
+</summary><content type="html">&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#nexus3" id="id1"&gt;Nexus3中的关键角色与用户&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#snapshotdeploy" id="id2"&gt;Snapshot库的Deploy角色&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#releasedeploy" id="id3"&gt;Release库的Deploy角色&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#m2-settings-xmlservers" id="id4"&gt;.m2/settings.xml中servers的设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#maven-project" id="id5"&gt;maven project&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#super-parent-maven-project" id="id6"&gt;super-parent maven project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#snapshot-deploy" id="id7"&gt;snapshot deploy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#release-publish" id="id8"&gt;release publish&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
 &lt;div class="section" id="nexus3"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Nexus3中的关键角色与用户&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="section" id="snapshotdeploy"&gt;
@@ -138,8 +154,16 @@
 &lt;li&gt;&lt;a class="reference external" href="https://support.apple.com/en-us/HT201236"&gt;https://support.apple.com/en-us/HT201236&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</content><category term="experiences"></category><category term="HHKB"></category><category term="macOS"></category></entry><entry><title>用Atom在Mac OS X 下编辑PlantUML</title><link href="/articles/PUMLMacOSXAtomEditor" rel="alternate"></link><published>2016-01-29T15:18:00+08:00</published><updated>2016-01-30T10:39:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-01-29:/articles/PUMLMacOSXAtomEditor</id><summary type="html"></summary><content type="html">
-&lt;!-- --&gt;
+</content><category term="experiences"></category><category term="HHKB"></category><category term="macOS"></category></entry><entry><title>用Atom在Mac OS X 下编辑PlantUML</title><link href="/articles/PUMLMacOSXAtomEditor" rel="alternate"></link><published>2016-01-29T15:18:00+08:00</published><updated>2016-01-30T10:39:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-01-29:/articles/PUMLMacOSXAtomEditor</id><summary type="html"></summary><content type="html">&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id1" id="id7"&gt;基础环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id2" id="id8"&gt;编写与预览&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id4" id="id9"&gt;其他相关&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id6" id="id10"&gt;效果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
 &lt;p&gt;Atom的插件: plantuml-viewer 它支持&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;对 &lt;code&gt;plantuml&lt;/code&gt; 文本直接进行进行预览，不需要依赖 &lt;code&gt;plantuml.jar&lt;/code&gt;&lt;/li&gt;
@@ -187,7 +211,7 @@ brew cask install atom
 &lt;ul class="simple"&gt;
 &lt;li&gt;Chome Extension: &lt;a class="reference external" href="https://chrome.google.com/webstore/detail/plantuml-viewer/legbfeljfbjgfifnkmpoajgpgejojooj"&gt;PlantUML Viewer&lt;/a&gt; ，它实际上使用的是 &lt;a class="reference external" href="http://www.plantuml.com/plantuml/"&gt;PlantUML Server&lt;/a&gt;  进行图片的实时生成&lt;ul&gt;
 &lt;li&gt;支持中文，但字体渲染不够好&lt;/li&gt;
-&lt;li&gt;首行必须是 &lt;code&gt;@startuml&lt;/code&gt;，否则无法阅览&lt;/li&gt;
+&lt;li&gt;首行必须是 &lt;code&gt;&amp;#64;startuml&lt;/code&gt;，否则无法阅览&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Firefox Add-ons: 暂时未找到&lt;/li&gt;
@@ -197,10 +221,19 @@ brew cask install atom
 &lt;/div&gt;
 &lt;div class="section" id="id6"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;效果&lt;/a&gt;&lt;/h2&gt;
-&lt;img alt="AutoWithPlantUML ScreenShot" src="/images/2016/01-29/AtomWithPlantUML.png"/&gt;
+&lt;img alt="AutoWithPlantUML ScreenShot" src="/images/2016/01-29/AtomWithPlantUML.png" /&gt;
 &lt;/div&gt;
-</content><category term="experiences"></category><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/articles/RSTMacOSXAtomEditor" rel="alternate"></link><published>2015-10-30T23:33:00+08:00</published><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-30:/articles/RSTMacOSXAtomEditor</id><summary type="html"></summary><content type="html">
-&lt;!-- --&gt;
+</content><category term="experiences"></category><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/articles/RSTMacOSXAtomEditor" rel="alternate"></link><published>2015-10-30T23:33:00+08:00</published><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-30:/articles/RSTMacOSXAtomEditor</id><summary type="html"></summary><content type="html">&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id1" id="id5"&gt;基础环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id2" id="id6"&gt;工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id3" id="id7"&gt;设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#bugfix" id="id8"&gt;Bugfix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id4" id="id9"&gt;效果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -245,7 +278,7 @@ brew cask install atom
 &lt;div class="section" id="bugfix"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;Bugfix&lt;/a&gt;&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;rst-preview&lt;/span&gt;&lt;/tt&gt; &lt;a class="reference external" href="https://github.com/lsegal/atom-rst-preview/issues/33"&gt;Live preview not working Atom 1.0.11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;rst-preview&lt;/span&gt;&lt;/tt&gt;  &lt;a class="reference external" href="https://github.com/lsegal/atom-rst-preview/issues/33"&gt;Live preview not working Atom 1.0.11&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.atom/packages/rst-preview/lib/rst-preview.coffee&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
@@ -261,18 +294,39 @@ brew cask install atom
 &lt;blockquote&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.atom/init.coffee&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-process.env.PATH = ["/usr/bin",
-            "/usr/local/bin",
-            ].join(":")
+process.env.PATH = [&amp;quot;/usr/bin&amp;quot;,
+            &amp;quot;/usr/local/bin&amp;quot;,
+            ].join(&amp;quot;:&amp;quot;)
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;效果&lt;/a&gt;&lt;/h2&gt;
-&lt;img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png"/&gt;
+&lt;img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png" /&gt;
 &lt;/div&gt;
-</content><category term="experiences"></category><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>Mac OS X环境</title><link href="/articles/MacOSXEnvironment" rel="alternate"></link><published>2015-10-18T00:00:00+08:00</published><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-18:/articles/MacOSXEnvironment</id><summary type="html"></summary><content type="html">
-&lt;!-- --&gt;
+</content><category term="experiences"></category><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>Mac OS X环境</title><link href="/articles/MacOSXEnvironment" rel="alternate"></link><published>2015-10-18T00:00:00+08:00</published><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-18:/articles/MacOSXEnvironment</id><summary type="html"></summary><content type="html">&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#mail" id="id1"&gt;Mail&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#browser" id="id2"&gt;Browser&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#chrome-extensions" id="id3"&gt;Chrome (Extensions)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#chrome-app" id="id4"&gt;Chrome (App)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#firefox-adds-on" id="id5"&gt;Firefox (Adds-on)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#rss" id="id6"&gt;RSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#editor-ide" id="id7"&gt;Editor &amp;amp; IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#version-control" id="id8"&gt;Version Control&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#database" id="id9"&gt;DataBase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#notebook" id="id10"&gt;Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#security" id="id11"&gt;Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#efficiency" id="id12"&gt;Efficiency&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#synchronize" id="id13"&gt;Synchronize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#calendar" id="id14"&gt;Calendar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#remote" id="id15"&gt;Remote&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
 &lt;div class="section" id="mail"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Mail&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -399,8 +453,15 @@ process.env.PATH = ["/usr/bin",
 &lt;li&gt;&lt;a class="reference external" href="http://cord.sourceforge.net/"&gt;CoRD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="experiences"></category><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><published>2015-10-16T00:00:00+08:00</published><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-16:/articles/pelican-toc-plugin</id><summary type="html"></summary><content type="html">
-&lt;!-- --&gt;
+</content><category term="experiences"></category><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><published>2015-10-16T00:00:00+08:00</published><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-16:/articles/pelican-toc-plugin</id><summary type="html"></summary><content type="html">&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id1" id="id3"&gt;插件准备&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#id2" id="id4"&gt;修改配置文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="#markdown" id="id5"&gt;Markdown标记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;

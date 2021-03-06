@@ -93,8 +93,67 @@
         </div>
 
 
-        <div class="article-content">
-<!-- -->
+        <div class="article-content"><div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id2" id="id45">无处不在的标识</a><ul>
+<li><a class="reference internal" href="#id3" id="id46">名称是一种相对唯一的标识</a></li>
+<li><a class="reference internal" href="#id5" id="id47">实体在不同命名空间的标识</a></li>
+<li><a class="reference internal" href="#id7" id="id48">小结</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8" id="id49">标识的使用</a><ul>
+<li><a class="reference internal" href="#id9" id="id50">在不同命名空间中实现标识的转换</a></li>
+<li><a class="reference internal" href="#id10" id="id51">结构化与别名效应</a></li>
+<li><a class="reference internal" href="#id11" id="id52">标识转换过程的两面性</a></li>
+<li><a class="reference internal" href="#id12" id="id53">小结</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13" id="id54">标识的生成</a><ul>
+<li><a class="reference internal" href="#id14" id="id55">人工生成</a></li>
+<li><a class="reference internal" href="#id15" id="id56">基于数据库生成</a></li>
+<li><a class="reference internal" href="#id17" id="id57">基于协调器生成</a></li>
+<li><a class="reference internal" href="#id18" id="id58">基于服务内置生成</a><ul>
+<li><a class="reference internal" href="#mongodb-objectid" id="id59">MongoDB ObjectId</a></li>
+<li><a class="reference internal" href="#twitter-snowflake" id="id60">Twitter Snowflake</a></li>
+<li><a class="reference internal" href="#noeqd" id="id61">noeqd</a></li>
+<li><a class="reference internal" href="#boundary-flake" id="id62">Boundary Flake</a></li>
+<li><a class="reference internal" href="#cruftflake" id="id63">CruftFlake</a></li>
+<li><a class="reference internal" href="#lableorg-java-uniqueid" id="id64">LableOrg/java-uniqueid</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25" id="id65">前台浏览器生成</a></li>
+<li><a class="reference internal" href="#id26" id="id66">全自主随机生成</a></li>
+<li><a class="reference internal" href="#id27" id="id67">小结</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28" id="id68">设计一个「合适」的标识</a><ul>
+<li><a class="reference internal" href="#id29" id="id69">区分实体和关系</a><ul>
+<li><a class="reference internal" href="#id30" id="id70">面向实体的标识</a></li>
+<li><a class="reference internal" href="#id31" id="id71">面向关系的标识</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id32" id="id72">标识的容量</a><ul>
+<li><a class="reference internal" href="#id33" id="id73">变长编码</a></li>
+<li><a class="reference internal" href="#id34" id="id74">定长编码</a></li>
+<li><a class="reference internal" href="#id36" id="id75">标识的命名空间</a></li>
+<li><a class="reference internal" href="#id37" id="id76">标识的冗余</a></li>
+<li><a class="reference internal" href="#id38" id="id77">小结</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id39" id="id78">标识的文本兼容</a></li>
+<li><a class="reference internal" href="#id40" id="id79">标识的安全性</a><ul>
+<li><a class="reference internal" href="#id41" id="id80">标识的信息泄露</a></li>
+<li><a class="reference internal" href="#id42" id="id81">标识的自校验能力</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id43" id="id82">扩展阅读</a></li>
+<li><a class="reference internal" href="#id44" id="id83">更新历史</a></li>
+</ul>
+</div>
+<!--  -->
 <div class="section" id="id2">
 <h2><a class="toc-backref" href="#id45">无处不在的标识</a></h2>
 <div class="section" id="id3">
@@ -255,15 +314,15 @@ machinePiece = sb.toString().hashCode();
 <pre class="literal-block">
 try {
     String processName = java.lang.management.ManagementFactory.getRuntimeMXBean().getName();
-    if (processName.contains("@")) {
-        processId = (short) Integer.parseInt(processName.substring(0, processName.indexOf('@')));
+    if (processName.contains(&quot;&#64;&quot;)) {
+        processId = (short) Integer.parseInt(processName.substring(0, processName.indexOf('&#64;')));
     } else {
         processId = (short) java.lang.management.ManagementFactory.getRuntimeMXBean().getName().hashCode();
     }
 
 } catch (Throwable t) {
     processId = (short) new SecureRandom().nextInt();
-    LOGGER.log(Level.WARNING, "Failed to get process identifier from JMX, using random number instead", t);
+    LOGGER.log(Level.WARNING, &quot;Failed to get process identifier from JMX, using random number instead&quot;, t);
 }
 </pre>
 <ul class="simple">
@@ -291,8 +350,8 @@ private static final AtomicInteger NEXT_COUNTER = new AtomicInteger(new SecureRa
 </ul>
 <p>在过了不到4年，2014年的5月31日，Twitter 更新了 Snowflake 的 README，其中陈述了两个容易被忽视的事实:</p>
 <ul class="simple">
-<li>"We have retired the initial release of Snowflake ..."</li>
-<li>"... heavily relies on existing infrastructure at Twitter to run. "</li>
+<li>&quot;We have retired the initial release of Snowflake ...&quot;</li>
+<li>&quot;... heavily relies on existing infrastructure at Twitter to run. &quot;</li>
 </ul>
 <p>可以看出，这个方案所支持的最小划分粒度是「毫秒 * 线程」，单线程（Snowflake 里对应的概念是 Worker）的每秒容量是12-bit，也就是接近4096。</p>
 <p>翻一下Snowflake的 <a class="reference external" href="https://github.com/twitter/snowflake/releases/tag/snowflake-2010">归档代码 (Scala)</a>，可以看到：</p>
@@ -399,7 +458,7 @@ function FlakeId(options) {
 $ python
 Python 2.7.12 (default, Jun 29 2016, 14:05:02)
 [GCC 4.2.1 Compatible Apple LLVM 7.3.0 (clang-703.0.31)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
 &gt;&gt;&gt; import uuid
 &gt;&gt;&gt; uuid.uuid1()
 UUID('d17c4397-830d-11e6-b62d-985aeb899615')
@@ -592,67 +651,6 @@ Google的 <a class="reference external" href="https://developers.google.com/prot
         </div>
         <div class="col-md-3">
 <div class="sidebar">
-    <h2>目录</h2>
-    <div class="toc" id="">
-<p class="topic-title">Contents</p>
-<ul class="simple">
-<li><a class="reference internal" href="#id2" id="id45">无处不在的标识</a><ul>
-<li><a class="reference internal" href="#id3" id="id46">名称是一种相对唯一的标识</a></li>
-<li><a class="reference internal" href="#id5" id="id47">实体在不同命名空间的标识</a></li>
-<li><a class="reference internal" href="#id7" id="id48">小结</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id8" id="id49">标识的使用</a><ul>
-<li><a class="reference internal" href="#id9" id="id50">在不同命名空间中实现标识的转换</a></li>
-<li><a class="reference internal" href="#id10" id="id51">结构化与别名效应</a></li>
-<li><a class="reference internal" href="#id11" id="id52">标识转换过程的两面性</a></li>
-<li><a class="reference internal" href="#id12" id="id53">小结</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id13" id="id54">标识的生成</a><ul>
-<li><a class="reference internal" href="#id14" id="id55">人工生成</a></li>
-<li><a class="reference internal" href="#id15" id="id56">基于数据库生成</a></li>
-<li><a class="reference internal" href="#id17" id="id57">基于协调器生成</a></li>
-<li><a class="reference internal" href="#id18" id="id58">基于服务内置生成</a><ul>
-<li><a class="reference internal" href="#mongodb-objectid" id="id59">MongoDB ObjectId</a></li>
-<li><a class="reference internal" href="#twitter-snowflake" id="id60">Twitter Snowflake</a></li>
-<li><a class="reference internal" href="#noeqd" id="id61">noeqd</a></li>
-<li><a class="reference internal" href="#boundary-flake" id="id62">Boundary Flake</a></li>
-<li><a class="reference internal" href="#cruftflake" id="id63">CruftFlake</a></li>
-<li><a class="reference internal" href="#lableorg-java-uniqueid" id="id64">LableOrg/java-uniqueid</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id25" id="id65">前台浏览器生成</a></li>
-<li><a class="reference internal" href="#id26" id="id66">全自主随机生成</a></li>
-<li><a class="reference internal" href="#id27" id="id67">小结</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id28" id="id68">设计一个「合适」的标识</a><ul>
-<li><a class="reference internal" href="#id29" id="id69">区分实体和关系</a><ul>
-<li><a class="reference internal" href="#id30" id="id70">面向实体的标识</a></li>
-<li><a class="reference internal" href="#id31" id="id71">面向关系的标识</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id32" id="id72">标识的容量</a><ul>
-<li><a class="reference internal" href="#id33" id="id73">变长编码</a></li>
-<li><a class="reference internal" href="#id34" id="id74">定长编码</a></li>
-<li><a class="reference internal" href="#id36" id="id75">标识的命名空间</a></li>
-<li><a class="reference internal" href="#id37" id="id76">标识的冗余</a></li>
-<li><a class="reference internal" href="#id38" id="id77">小结</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id39" id="id78">标识的文本兼容</a></li>
-<li><a class="reference internal" href="#id40" id="id79">标识的安全性</a><ul>
-<li><a class="reference internal" href="#id41" id="id80">标识的信息泄露</a></li>
-<li><a class="reference internal" href="#id42" id="id81">标识的自校验能力</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id43" id="id82">扩展阅读</a></li>
-<li><a class="reference internal" href="#id44" id="id83">更新历史</a></li>
-</ul>
-</div>
 </div>
 
         </div>
