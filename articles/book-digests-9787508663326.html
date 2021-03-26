@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>《穷查理宝典》  @ 王延炯 · 观世界 | World Insight
+    <title>    《穷查理宝典》  @
+    王延炯 · 观世界 | World Insight
 </title>
     <meta name="description" content="">
     <meta name="author" content="Wang YanJiong">
@@ -26,6 +27,7 @@
 
       gtag('config', 'UA-141804672-1');
     </script>
+    <script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
 
 </head>
 
@@ -1951,12 +1953,19 @@ Stone，古埃及石碑，因石碑上用希腊文字、古埃及文字和当时
 </div>
 </div>
     </div>
+    <script>
+        $(".page").each(function (index) {
+                const p = $(this).html();
+                $(this).attr("id", "page-" + p);
+            }
+        )
+    </script>
         <hr>
         </div>
         <div class="col-md-4">
-<div class="sidebar">
-    <h2>目录</h2>
-    <div class="toc" id="">
+    <div class="sidebar">
+            <h2>目录</h2>
+            <div class="toc" id="">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id2" id="id139">中文版序言 书中自有黄金屋</a><ul>
@@ -2162,8 +2171,7 @@ Stone，古埃及石碑，因石碑上用希腊文字、古埃及文字和当时
 </li>
 </ul>
 </div>
-</div>
-
+    </div>
         </div>
 
     </div> </div>
@@ -2185,7 +2193,6 @@ Stone，古埃及石碑，因石碑上用希腊文字、古埃及文字和当时
 </div>
 
 
-<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
 <script src="/theme/css/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </body>
