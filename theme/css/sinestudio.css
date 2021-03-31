@@ -15,6 +15,12 @@ span.hlr {
     color: #943126;
 }
 
+span.center-strong {
+    text-align: center;
+    font-weight: 900;
+    display: block;
+}
+
 span.page {
     color: #464a4a;
     font-style: italic;
@@ -32,7 +38,6 @@ span.pre-page {
     position: absolute;
     left: 0;
 }
-
 span.pre-page::before {
     content: "^";
 }
@@ -195,6 +200,8 @@ ul, ol {
 }
 
 .beapow-article li {
+    font-size: 1.1em;
+    line-height: 2.0;
     margin: 0;
 }
 
@@ -206,6 +213,7 @@ ul, ol {
 
 .beapow-article blockquote p {
     padding-left: 0;
+    font-size: 1em;
 }
 
 .beapow-article ul,
@@ -217,7 +225,9 @@ ul, ol {
     color: #1f2732;
     position: relative;
     text-align: justify;
-    padding: 0 0 0 30px;
+    line-height: 2.0;
+    font-size: 1.1em;
+    padding: 10px 0 10px 30px;
 }
 
 .beapow-book-digests li {
