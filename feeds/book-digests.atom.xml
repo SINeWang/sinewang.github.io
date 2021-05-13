@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - book-digests</title><link href="/" rel="alternate"></link><link href="/feeds/book-digests.atom.xml" rel="self"></link><id>/</id><updated>2021-05-13T00:00:00+08:00</updated><entry><title>《Find Your Why》</title><link href="/articles/book-digests-9780241279267" rel="alternate"></link><published>2021-04-29T00:00:00+08:00</published><updated>2021-04-29T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2021-04-29:/articles/book-digests-9780241279267</id><summary type="html">&lt;p class="first"&gt;Simon Sinek | Portfolio / Penguin | &lt;a class="reference external" href="https://douban.com/isbn/9780241279267"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - book-digests</title><link href="/" rel="alternate"></link><link href="/feeds/book-digests.atom.xml" rel="self"></link><id>/</id><updated>2021-05-14T00:00:00+08:00</updated><entry><title>《Find Your Why》</title><link href="/articles/book-digests-9780241279267" rel="alternate"></link><published>2021-04-29T00:00:00+08:00</published><updated>2021-04-29T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2021-04-29:/articles/book-digests-9780241279267</id><summary type="html">&lt;p class="first"&gt;Simon Sinek | Portfolio / Penguin | &lt;a class="reference external" href="https://douban.com/isbn/9780241279267"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Page 5: Your vision is only actionable if you say it out loud.&lt;/p&gt;
 &lt;p&gt;Page 19: The opportunity is to build the perfect company for each other.&lt;/p&gt;
 &lt;p&gt;Page 24: The opportunity is to make sure the right people are working in the right places in the right company.&lt;/p&gt;
@@ -12209,7 +12209,173 @@ Two Tats）的策略，允许对手连续两次背叛后才开始报复。&lt;/p
 &lt;p&gt;&lt;span class="page"&gt;202&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;他喜欢说精神病学的目的是灵魂的治疗，而灵魂的拯救是宗教的事情。&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="book-digests"></category><category term="2020阅读年"></category><category term="书-五星"></category></entry><entry><title>《幸福的婚姻》</title><link href="/articles/book-digests-9787213058417" rel="alternate"></link><published>2020-08-13T00:00:00+08:00</published><updated>2021-05-02T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-08-13:/articles/book-digests-9787213058417</id><summary type="html">&lt;p class="first"&gt;约翰·戈特曼 | 浙江人民出版社 | &lt;a class="reference external" href="https://douban.com/isbn/9787213058417"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
+</content><category term="book-digests"></category><category term="2020阅读年"></category><category term="书-五星"></category></entry><entry><title>《数学之美》</title><link href="/articles/book-digests-9787115282828" rel="alternate"></link><published>2020-08-13T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-08-13:/articles/book-digests-9787115282828</id><summary type="html">&lt;p class="first last"&gt;吴军 | 人民邮电出版社 | &lt;a class="reference external" href="https://douban.com/isbn/9787115282828"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;hr class="docutils"/&gt;
+
+&lt;div class="section" id="google-ak-47-amit-singhal"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;第14章 Google AK-47 的设计者 Amit Singhal&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;122&lt;/span&gt;
+辛格看了看结果说，“够好了，够好了，在工程上简单实用的方法最好”。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;123&lt;/span&gt;
+辛格这种做事情的哲学，即先帮助用户解决80%的问题，再慢慢解决剩下20%的问题，是在工业界成功的秘诀之一。许多失败并不是因为人不优秀，而是做事情的方法不对，一开始追求大而全的解决方案，之后长时间不能完成，最后不了了之。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;125&lt;/span&gt;
+其次，辛格坚持每天要分析一些搜索结果不好的例子，以掌握第一手的资料，即使他成为Google
+Fellow以后，依旧如此。这一点，非常值得从事搜索研究的年轻工程师学习。事实上，我发现中国大部分做搜索的工程师在分析不好的结果上花的时间远比功成名就的辛格要少。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;第14章 余弦定理和新闻的分类&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;133&lt;/span&gt;
+美国人总是倾向于用机器（计算机）代替人工来完成任务。虽然在短期内需要做一些额外的工作，但是从长远看可以节省很多时间和成本。&lt;/p&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id15"&gt;位置的加权&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="page"&gt;135&lt;/span&gt;
+阅读时要关注第一段和最后一段。以及每个段落的第一个句子。在自然语言处理中这个规律依然有用。因此，要对标题和重要位置的词进行额外的加权，以提高文本分类的准确性。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id16"&gt;第15章 矩阵运算和文本处理中的两个分类问题&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id17"&gt;文本和词汇的矩阵&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="page"&gt;137&lt;/span&gt;
+我们希望有一个办法，一次就能把所有新闻相关性算出来。这个一步到位的方法利用的是矩阵运算中的奇异值分解（SVD）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id18"&gt;第18章 闪光的不一定是金子&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;164&lt;/span&gt;
+做事情的方法有道和术两种境界，搜索反作弊也是如此。在“术”这个层面的方法大多是看作弊的例子，分析并清除之，这种方法能解决问题，而且不需要太动脑筋，但是工作量较大，难以从个别现象上升到普遍规律。很过崇尚“人工”的搜索引擎公司喜欢这样的方法。而在“道”这个层面解决反作弊问题，就要透过具体的作弊例子，找到作弊的动机和本质。进而从本质上解决问题。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;第19章 谈谈数学模型的重要性&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;177&lt;/span&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;一个正确的数学模型应当在形式上是简单的。&lt;/li&gt;
+&lt;li&gt;一个正确的模型一开始可能还不如一个精雕细琢的错误模型来的准确，但是，如果我们认为大方向是对的，就应该坚持下去。&lt;/li&gt;
+&lt;li&gt;大量准确的数据对研发很重要。&lt;/li&gt;
+&lt;li&gt;正确的模型也可能受到噪音干扰，而显得不准确：这时不应该用一种凑合的修正方法加以弥补，而是要找到噪音的根源，这也许能通往重大的发现。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id20"&gt;第20章 不要把鸡蛋放到一个篮子里 —— 谈谈最大熵模型&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;180&lt;/span&gt;
+最大熵原理指出，对一个随机事件的概率分布进行预测时，我们的预测应当满足全部已知的条件，而对未知的情况不要做任何主观假设。（不做主观假设这点很重要。）在这种情况下，概率分布均匀，预测的风险最小。因为这时概率分布的信息熵最大，所以人们把这种模型叫做“最大熵模型”。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id21"&gt;第21章 拼音输入法的数学模型&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;194&lt;/span&gt;
+从理论上讲，只要语言模型足够大，拼音书法的平均点击次数就可以接近信息论的极限值。如果把输入法放在云计算上，这是完全可以实现的，而在客户端上（比如个人电脑上）这样做不现实。好在客户端有客户端的优势，比如可以建立个性化的语言模型。&lt;/p&gt;
+&lt;p&gt;个性化的出发点是不同人平时写的东西主题不同，由于文化程度的差异，用词习惯的不同，说话和写作的水平也不同，因此，他们各自应该有各自的语言模型。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;196&lt;/span&gt;
+汉字的输入过程本身就是人和计算机的通信，好的输入法会自觉或者不自觉地遵循通信的数学模型。当然要做出最有效的输入法，应当自觉使用信息论做指导。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id10"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id22"&gt;第22章 自然语言处理的教父马库斯和他的优秀弟子们&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;199&lt;/span&gt;
+马库斯高屋建瓴，能够很快地判断一个研究方向是否正确，省去了博士生很多无畏尝试（Try-And-Error）的时间。因此他的博士毕业生质量非常高，而且有些很快拿到了博士学位。&lt;/p&gt;
+&lt;p&gt;由于马库斯宽松的管理方式，他培养的博士生在研究和生活上都是个性迥异。有些人善于找到间接快速的方法和容易做出成绩的题目，有的人习惯啃硬骨头；有些人三四年就拿到博士去当教授了，而有些人“赖在”学校里七八年不走，最后出一篇高质量的博士论文。这些各有特点的年轻学者，后来分别能适应文化迥异的各个大学和公司。&lt;/p&gt;
+&lt;p&gt;作为一个管理者，马库斯在专业设置方面显示出远见卓识，他将宾夕法尼亚大学规模很小的计算机系发展成在学术界具有盛名和影响力的强系。&lt;/p&gt;
+&lt;p&gt;马库斯的做法是把一个系变强而不是变大。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;200&lt;/span&gt;
+马库斯的主张一贯是建立几个世界上最好的专业，而不是专业最齐全的系。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;203&lt;/span&gt;
+布莱尔善于找到简单却有效的方法，而又从不隐瞒自己的方法，所以他总是很容易被包括我在内的很多人赶超。好在布莱尔对此毫不介意，而且总是很喜欢别人追赶他，因为，当人们在一个研究方向上超过他时，说明他开创的领域有意义，同时他已经调转船头驶往其他方向了。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id11"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id23"&gt;第24章 马尔科夫链的扩展 —— 贝叶斯网络&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;213&lt;/span&gt;
+如果把文本和关键词的关联矩阵转90度，进行奇异值分解，或者对每个词的文本作为维度，建立一个向量，再进行向量的聚类，那么得到的是对词的一个分类而不是对文本的分类。分出来的每一类我们称为一个概念。显然，一个概念可以包括多个词，一个词也可以属于多个概念。类似的，一篇文章可以对多个概念，而一个概念也对应多篇文章。现在可有用贝叶斯网络建立一个文章、概念和关键词之间的联系&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id12"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id24"&gt;第27章 上帝的算法——最大期望算法&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;242&lt;/span&gt;
+在一般性的问题中，如果有非常多的观测数据（点），类似上面的方法，让计算机不断迭代来学习一个模型。首先，根据现有的模型，计算各个观测数据输入到模型中的计算结果，这个过程称为期望值计算过程（Expectation），或者E过程；接下来，重新计算模型参数，以最大化期望值。在上面的例子中，我们最大化&lt;span class="math"&gt;\(D\)&lt;/span&gt;和&lt;span class="math"&gt;\(-d\)&lt;/span&gt;，这个过程称为最大化的过程（Maximization），或者M过程。这一类算法都称为EM算法。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="google"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id25"&gt;第30章 Google大脑和人工神经网络&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="page"&gt;263&lt;/span&gt;
+在人工神经网络中，需要设计的部分只有两个，一个是它的结构，既网络分几层、每层几个节点、节点之间如何连接，等等；第二就是非线性函数&lt;span class="math"&gt;\(f(·)\)&lt;/span&gt;的设计，常用的函数是指数型函数，即&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(f(G) = e^G = e^{w_0+x_1w_1,x_2w_2,...,x_nw_n}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;这时，它的模式分类能力等价于最大熵模型。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;265&lt;/span&gt;
+不过总体来讲，成本函数总是要遵循这样一个原则：既然人工神经网络解决的是分类问题，那么我们希望分完类之后，同一类样本（训练数据）应该相互比较接近，而不同类的样本应该尽可能地远。比如前面提到的多位空间里的模式分类问题，就可以把每一个样本点到训练出来的聚类中心（Centroid）的欧几里得距离的均值作为成本函数。对于语言模型的条件概率，就可以用熵作为成本函数。定了成本函数后，就可以用梯度下降法进行无监督的参数训练了。&lt;/p&gt;
+&lt;p&gt;&lt;span class="page"&gt;265&lt;/span&gt;
+人工神经网络和贝叶斯网络至少有这样几个共同点。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;他们都是有向图，每一个节点的取值只取决于前一级的节点，而与更前面的节点无关，也就是说遵循马尔科夫假设。&lt;/li&gt;
+&lt;li&gt;它们的训练方法相似，这一点从上面的介绍中就能够看出来了。&lt;/li&gt;
+&lt;li&gt;对于很多模式分类的问题，这两种方法在效果上相似，也就是说很多用人工神经网络解决的问题，也能用贝叶斯网络解决，反之亦然，但是他们的效率可能会不同。如果把人工神经网络和贝叶斯网络都看成是统计模型，那么这两种模型的准确性也是类似的。&lt;/li&gt;
+&lt;li&gt;它们的训练计算量都特别大，对此大家在使用人工神经网络时要有心理准备。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;不过，人工神经网络与贝叶斯网络还是有不少不同之处的。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;人工神经网络在结构上是完全标准化的，而贝叶斯网络更灵活。Google大脑选用人工神经网络，就是因为看中了它的标准化这一特点。&lt;/li&gt;
+&lt;li&gt;虽然神经元函数为非线性函数，但是各个变量只能先进行线性组合，最后对一个变量（即前面组合出来的结果）进行非线性变化，因此用计算机实现起来比较容易。而在贝叶斯网络中，变量可以组合成任意的函数，毫无限制，在获得灵活性的同时，也增加了复杂性。&lt;/li&gt;
+&lt;li&gt;贝叶斯网络更容易考虑（上下文）前后的相关性，因此可以解码一个输入的序列，比如将一段语音识别成文字，或者将一个英语句子翻译成中文。而人工神经网络的输出相对孤立，它可以识别一个个字，但是很难处理一个序列，因此它主要的应用常常是估计一个概率模型的参数，比如语音识别中声学模型参数的训练、机器翻译中语言模型参数的训练，等等，而不是作为解码器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;了解到人工神经网络和贝叶斯网络的异同，你会发现很多机器学习的数学工具其实是一通百题，并且可以根据实际问题找到方便的工具。&lt;/p&gt;
+&lt;/div&gt;
+&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js??config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="book-digests"></category><category term="2020阅读年"></category><category term="书-四星"></category></entry><entry><title>《幸福的婚姻》</title><link href="/articles/book-digests-9787213058417" rel="alternate"></link><published>2020-08-13T00:00:00+08:00</published><updated>2021-05-02T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-08-13:/articles/book-digests-9787213058417</id><summary type="html">&lt;p class="first"&gt;约翰·戈特曼 | 浙江人民出版社 | &lt;a class="reference external" href="https://douban.com/isbn/9787213058417"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;第23页：在最牢固的婚姻中，丈夫与妻子有着很强的共识，他们不仅相处融洽，而且还相互支持对方的希望和抱负，并将这作为他们共同生活的一个目标，这实际上就是我所说的“相互尊重”和“以对方为荣”的真正含义。&lt;/p&gt;
 &lt;p&gt;第171页：婚姻常常陷入“要是”困境，要是配偶再高一点、再富裕一点、再聪明一点、再整洁一点或再性感一点，你们所有的问题都会烟消云散。一旦这种心态占了上风，冲突就很难解决。在你接受配偶的缺点和不足之前，你不可能成功地向对方妥协，相反，你会一直想方设法地改变你的配偶。冲突的解决不在于改变一个人，而在于协商，寻找共同点，找到双方都能适应的方法。&lt;/p&gt;
 &lt;p class="last"&gt;第223页：任何婚姻都有一个重要目标，即营造一种氛围，鼓励每一个人坦诚地谈论自己的信念。说得越坦诚，越尊重对方，你们各自的意义感就越有可能混合在一起。&lt;/p&gt;
