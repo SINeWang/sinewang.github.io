@@ -12790,8 +12790,76 @@ Fellow以后，依旧如此。这一点，非常值得从事搜索研究的年�
 &lt;p&gt;我认为两个真正相爱的人在婚姻中应该会具有这些特点：有责任感、相互依赖、忠实可靠。如果不能处理好婚姻关系，他也不会好处理好自己的人生问题、社会角色。&lt;/p&gt;
 &lt;p&gt;（完）&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="book-digests"></category><category term="2020阅读年"></category><category term="书-五星"></category></entry><entry><title>《恰如其分的自尊》</title><link href="/articles/book-digests-9787807680932" rel="alternate"></link><published>2020-08-06T00:00:00+08:00</published><updated>2021-05-03T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-08-06:/articles/book-digests-9787807680932</id><summary type="html">&lt;p class="first last"&gt;克斯斯托弗·安德烈 | 生活·读书·新知三联书店 | &lt;a class="reference external" href="https://douban.com/isbn/9787807680932"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
-</summary><content type="html">&lt;hr class="docutils"/&gt;
+</content><category term="book-digests"></category><category term="2020阅读年"></category><category term="书-五星"></category></entry><entry><title>《恰如其分的自尊》</title><link href="/articles/book-digests-9787807680932" rel="alternate"></link><published>2020-08-06T00:00:00+08:00</published><updated>2021-05-03T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2020-08-06:/articles/book-digests-9787807680932</id><summary type="html">&lt;p class="first"&gt;克斯斯托弗·安德烈 | 生活·读书·新知三联书店 | &lt;a class="reference external" href="https://douban.com/isbn/9787807680932"&gt;ISBN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(自尊= \frac {成功}{自我要求}\)&lt;/span&gt;&lt;/p&gt;
+&lt;ul class="last simple"&gt;
+&lt;li&gt;&lt;p class="first"&gt;自尊取决于在我们眼中我们的行为与理想之间的距离：接近自己的理想时自尊水平偏高，远离自己的理想时自尊水平偏低。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;对于自尊来说，最理想的方式是培养出两种视角：往下看让自己安心，往上看激励自己努力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js??config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><content type="html">&lt;hr class="docutils"/&gt;
 
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id50"&gt;第一部分：你理解自己吗？请自测 第一章 自尊心的三大支柱&lt;/a&gt;&lt;/h2&gt;
