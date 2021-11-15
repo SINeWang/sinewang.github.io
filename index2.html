@@ -10,10 +10,9 @@
 
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href="/theme/css/sinestudio.css" rel="stylesheet">
-    <link href="/theme/css/carousel.css" rel="stylesheet">
     <link href="/theme/css/moments.css" rel="stylesheet">
 
         <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
@@ -22,10 +21,9 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="navbar-header">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -35,69 +33,88 @@
       <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
     </div>
 
-    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
-        <ul class="nav navbar-nav">
-            <li><a href="/categories/ideas">观点</a></li>
-            <li><a href="/categories/experiences">经验</a></li>
-            <li><a href="/categories/book-digests">书摘</a></li>
-            <li><a href="three">三</a></li>
-            <li><a href="mindset">~Mindset</a></li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/categories/ideas">观点</a></li>
+            <li class="nav-item"><a class="nav-link" href="/categories/experiences">经验</a></li>
+            <li class="nav-item"><a class="nav-link" href="/categories/book-digests">书摘</a></li>
+            <li class="nav-item"><a class="nav-link" href="three">三</a></li>
+            <li class="nav-item"><a class="nav-link" href="mindset">~Mindset</a></li>
         </ul>
-        <p class="navbar-text navbar-right">start with why, less is more.</p>
+        <span class="navbar-text">start with why, less is more.</span>
     </div>
-  </div>
 </nav>
 
 
 
-  <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#homeCarousel" data-slide-to="1"></li>
-              <li data-target="#homeCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active" onclick="location.href='/categories/ideas'">
-            <img src="/images/carousel/ideas.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">观点</span>
-                </p>
-              </div>
-            </div>
-        </div>
-        <div class="item" onclick="location.href='/categories/experiences'">
-            <img src="/images/carousel/experiences.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">经验</span>
-                </p>
-              </div>
-            </div>
-        </div>
-        <div class="item" onclick="location.href='/categories/book-digests'">
-            <img src="/images/carousel/book-digests.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">书摘</span>
-                </p>
-              </div>
-            </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
+<!--  <div id="homeCarousel" class="carousel slide" data-ride="carousel">-->
+<!--      &lt;!&ndash; Indicators &ndash;&gt;-->
+<!--      <ol class="carousel-indicators">-->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>-->
+<!--            -->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="1"></li>-->
+<!--            -->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="2"></li>-->
+<!--            -->
+<!--        -->
+<!--      </ol>-->
+<!--      <div class="carousel-inner" role="listbox">-->
+<!--        -->
+<!--            -->
+<!--        <div class="item active" onclick="location.href='/categories/ideas'">-->
+<!--            -->
+<!--            <img src="/images/carousel/ideas.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">观点</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--            -->
+<!--        <div class="item" onclick="location.href='/categories/experiences'">-->
+<!--            -->
+<!--            <img src="/images/carousel/experiences.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">经验</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--            -->
+<!--        <div class="item" onclick="location.href='/categories/book-digests'">-->
+<!--            -->
+<!--            <img src="/images/carousel/book-digests.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">书摘</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--      </div>-->
+<!--      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">-->
+<!--        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Previous</span>-->
+<!--      </a>-->
+<!--      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">-->
+<!--        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Next</span>-->
+<!--      </a>-->
+<!--    </div>&lt;!&ndash; /.carousel &ndash;&gt;-->
 
 
 
@@ -108,16 +125,24 @@
         <div class="separator text-muted">
           <time>2021-05-24</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787115234957">《聪明的投资者》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787115234957">《聪明的投资者》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787115234957'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787115234957'" style="cursor:pointer;">
                   <p>
                   <p class="first">Benjamin Graham | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115234957">ISBN</a></p>
 <p>第xiv页：要一生投资成功，只需要两个因素——有一个正确合理的思考框架让你能够做出正确的投资决策；有一种能力让你控制住自己的情绪以避免情绪破坏这个思考框架。</p>
@@ -145,7 +170,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -159,16 +184,24 @@
         <div class="separator text-muted">
           <time>2021-05-03</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787521712599">《文明、现代化、价值投资与中国》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787521712599">《文明、现代化、价值投资与中国》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787521712599'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787521712599'" style="cursor:pointer;">
                   <p>
                   <p class="first">李录 | 中信出版集团  |  <a class="reference external" href="https://douban.com/isbn/9787521712599">ISBN</a></p>
 <p>第66页：在塑造整个历史的过程里，人的动物本性起到了非常重要的作用，莫里斯把它叫做莫里斯定律（Morris Theorem）：&quot;历史、就是懒惰、贪婪、又充满恐惧的人类，在寻求让生活更容易、安全、有效的方式时创造的，而人类对此毫无意识。&quot;但同时人也显示出了强大的学习能力，一旦自然条件开始提供机会，他们很快就把自然资源条件转化成自己生存发展的巨大前进动力。</p>
@@ -177,7 +210,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -191,16 +224,24 @@
         <div class="separator text-muted">
           <time>2021-04-29</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9780241279267">《Find Your Why》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9780241279267">《Find Your Why》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9780241279267'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9780241279267'" style="cursor:pointer;">
                   <p>
                   <p class="first">Simon Sinek | Portfolio / Penguin | <a class="reference external" href="https://douban.com/isbn/9780241279267">ISBN</a></p>
 <p>Page 5: Your vision is only actionable if you say it out loud.</p>
@@ -212,7 +253,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -226,16 +267,24 @@
         <div class="separator text-muted">
           <time>2021-04-22</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787115490131">《具体生活》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787115490131">《具体生活》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787115490131'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787115490131'" style="cursor:pointer;">
                   <p>
                   <p class="first">吴军 | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115490131">ISBN</a></p>
 <p>第12页：今天很多人羡慕所谓的贵族生活，其实过去贵族的物质生活并不比今天的中产阶级好多少，但是他们整体上的生活质量远非今天一般意义上的富有家庭所能比。究其原因，是因为今天的人缺少了那份应有的从容和优雅。</p>
@@ -244,7 +293,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -258,16 +307,24 @@
         <div class="separator text-muted">
           <time>2021-04-17</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787508671499">《岁月凶猛》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787508671499">《岁月凶猛》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787508671499'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787508671499'" style="cursor:pointer;">
                   <p>
                   <p class="first">冯仑 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787508671499">ISBN</a></p>
 <p>一个人的高下，不是看他成功还是失败，而是看他失败以后的反弹力。</p>
@@ -280,7 +337,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -294,22 +351,30 @@
         <div class="separator text-muted">
           <time>2021-04-16</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787115483829">《即兴演讲》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787115483829">《即兴演讲》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787115483829'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787115483829'" style="cursor:pointer;">
                   <p>
                   <p class="first last">朱迪思·汉弗莱 | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115483829">ISBN</a></p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -323,22 +388,30 @@
         <div class="separator text-muted">
           <time>2021-04-14</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787308191524">《一本书读懂财报》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787308191524">《一本书读懂财报》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787308191524'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787308191524'" style="cursor:pointer;">
                   <p>
                   <p class="first last">肖星 | 浙江大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787308191524">ISBN</a></p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -352,16 +425,24 @@
         <div class="separator text-muted">
           <time>2021-04-07</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787111612100">《世界观》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787111612100">《世界观》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787111612100'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787111612100'" style="cursor:pointer;">
                   <p>
                   <p class="first">理查德·德威特 | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111612100">ISBN</a></p>
 <p>科学讲的是可证伪性（波普理论），如果一个理论不可证伪——比如算命——那么它就不是科学。</p>
@@ -374,7 +455,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -388,16 +469,24 @@
         <div class="separator text-muted">
           <time>2021-03-30</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787511701145">《正念的奇迹》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787511701145">《正念的奇迹》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787511701145'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787511701145'" style="cursor:pointer;">
                   <p>
                   <p class="first">一行禅师 | 中央编译出版社 | <a class="reference external" href="https://douban.com/isbn/9787511701145">ISBN</a></p>
 <p>第82页：记住，最重要的时刻永远只有一个，那就是现在。现在是我们唯一能主导的时间。 最重要的人永远就是那个当下和你在一起、在你面前的人，因为谁也不知道将来你是否还会与他人共处。最重要的事，就是让你身旁的人快乐，因为这就是人生所追求的。</p>
@@ -406,7 +495,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -420,16 +509,24 @@
         <div class="separator text-muted">
           <time>2021-03-28</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787559615268">《在远远的背后带领》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787559615268">《在远远的背后带领》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787559615268'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787559615268'" style="cursor:pointer;">
                   <p>
                   <p class="first">安心 | 北京联合出版公司 | <a class="reference external" href="https://douban.com/isbn/9787559615268">ISBN</a></p>
 <p>价值观的冲突是：不接纳对方的行为，但是对方的行为并没有带来具体明确的影响，是看法、观点、信念上的不同。</p>
@@ -448,7 +545,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -462,16 +559,24 @@
         <div class="separator text-muted">
           <time>2021-03-25</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787121364259">《有限与无限的游戏》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787121364259">《有限与无限的游戏》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787121364259'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787121364259'" style="cursor:pointer;">
                   <p>
                   <p class="first">James P. Carse | 电子工业出版社  | <a class="reference external" href="https://douban.com/isbn/9787121364259">ISBN</a></p>
 <p>第17页：我们过着一种人生，而表演者另一种或几种人生，并试图让自己一时的遗忘成真并一直以往下去，这个事实我们事实我们何时才会去面对呢？</p>
@@ -491,7 +596,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -505,22 +610,30 @@
         <div class="separator text-muted">
           <time>2021-03-22</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/environment-responsibility-and-authority">环境、责任与权利</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/environment-responsibility-and-authority">环境、责任与权利</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/environment-responsibility-and-authority'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/environment-responsibility-and-authority'" style="cursor:pointer;">
                   <p>
                   <p class="first last">科学讲因果，社会讲责任。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/wen-hua">文化
                               <sup>4</sup></a>
@@ -531,16 +644,24 @@
         <div class="separator text-muted">
           <time>2021-03-16</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9780241958223">《START WITH WHY》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9780241958223">《START WITH WHY》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9780241958223'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9780241958223'" style="cursor:pointer;">
                   <p>
                   <p class="first">Simon Sinek | Penguin Random House UK | <a class="reference external" href="https://douban.com/isbn/9780241958223">ISBN</a></p>
 <p>HOW GREAT LEADERS INSPIRE EVERYONE TO TAKE ACTION</p>
@@ -563,7 +684,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -577,22 +698,30 @@
         <div class="separator text-muted">
           <time>2021-03-13</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-wrench"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/always-keep-the-awareness-of-myself">时刻、不断保持对自己的觉知</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/experiences/">经验</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-wrench"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/always-keep-the-awareness-of-myself">时刻、不断保持对自己的觉知</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/experiences/">经验</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/always-keep-the-awareness-of-myself'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/always-keep-the-awareness-of-myself'" style="cursor:pointer;">
                   <p>
                   <p class="first last">保持对自己的觉知，才会有反省；养成习惯自律，才能拥有美德。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/gou-tong">沟通
                               <sup>1</sup></a>
@@ -609,16 +738,24 @@
         <div class="separator text-muted">
           <time>2021-03-13</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787559442253">《深奥的简洁》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787559442253">《深奥的简洁》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787559442253'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787559442253'" style="cursor:pointer;">
                   <p>
                   <p class="first">约翰·格里宾 | 江苏凤凰文艺出版社 | <a class="reference external" href="https://douban.com/isbn/9787559442253">ISBN</a></p>
 <p>不知道和「创新者的窘境」、「第二曲线创新」、「刻板印象」、「三岁看老」、「执着执念带来的痛苦」，相关的自然原理，是不是因为：</p>
@@ -632,7 +769,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                               <sup>36</sup></a>
@@ -644,11 +781,8 @@
               </div>
         </article>
 
-    <article class="panel panel-default panel-outline">
-        <div class="panel-heading icon">
-            <i class="glyphicon glyphicon-info-sign"></i>
-        </div>
-        <div class="panel-body">
+    <article class="card">
+        <div class="card-body">
             <i>以上是<a href="/articles">全部  101 篇文章</a>的最近的 15 次更新</i>
         </div>
     </article>
@@ -672,7 +806,8 @@
 
 </div>
 <script src="//cdn.bootcss.com/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>

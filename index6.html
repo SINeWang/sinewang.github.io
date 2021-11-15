@@ -10,10 +10,9 @@
 
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href="/theme/css/sinestudio.css" rel="stylesheet">
-    <link href="/theme/css/carousel.css" rel="stylesheet">
     <link href="/theme/css/moments.css" rel="stylesheet">
 
         <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
@@ -22,10 +21,9 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="navbar-header">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -35,69 +33,88 @@
       <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
     </div>
 
-    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
-        <ul class="nav navbar-nav">
-            <li><a href="/categories/ideas">观点</a></li>
-            <li><a href="/categories/experiences">经验</a></li>
-            <li><a href="/categories/book-digests">书摘</a></li>
-            <li><a href="three">三</a></li>
-            <li><a href="mindset">~Mindset</a></li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/categories/ideas">观点</a></li>
+            <li class="nav-item"><a class="nav-link" href="/categories/experiences">经验</a></li>
+            <li class="nav-item"><a class="nav-link" href="/categories/book-digests">书摘</a></li>
+            <li class="nav-item"><a class="nav-link" href="three">三</a></li>
+            <li class="nav-item"><a class="nav-link" href="mindset">~Mindset</a></li>
         </ul>
-        <p class="navbar-text navbar-right">start with why, less is more.</p>
+        <span class="navbar-text">start with why, less is more.</span>
     </div>
-  </div>
 </nav>
 
 
 
-  <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#homeCarousel" data-slide-to="1"></li>
-              <li data-target="#homeCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active" onclick="location.href='/categories/ideas'">
-            <img src="/images/carousel/ideas.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">观点</span>
-                </p>
-              </div>
-            </div>
-        </div>
-        <div class="item" onclick="location.href='/categories/experiences'">
-            <img src="/images/carousel/experiences.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">经验</span>
-                </p>
-              </div>
-            </div>
-        </div>
-        <div class="item" onclick="location.href='/categories/book-digests'">
-            <img src="/images/carousel/book-digests.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">书摘</span>
-                </p>
-              </div>
-            </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
+<!--  <div id="homeCarousel" class="carousel slide" data-ride="carousel">-->
+<!--      &lt;!&ndash; Indicators &ndash;&gt;-->
+<!--      <ol class="carousel-indicators">-->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>-->
+<!--            -->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="1"></li>-->
+<!--            -->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="2"></li>-->
+<!--            -->
+<!--        -->
+<!--      </ol>-->
+<!--      <div class="carousel-inner" role="listbox">-->
+<!--        -->
+<!--            -->
+<!--        <div class="item active" onclick="location.href='/categories/ideas'">-->
+<!--            -->
+<!--            <img src="/images/carousel/ideas.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">观点</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--            -->
+<!--        <div class="item" onclick="location.href='/categories/experiences'">-->
+<!--            -->
+<!--            <img src="/images/carousel/experiences.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">经验</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--            -->
+<!--        <div class="item" onclick="location.href='/categories/book-digests'">-->
+<!--            -->
+<!--            <img src="/images/carousel/book-digests.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">书摘</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--      </div>-->
+<!--      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">-->
+<!--        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Previous</span>-->
+<!--      </a>-->
+<!--      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">-->
+<!--        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Next</span>-->
+<!--      </a>-->
+<!--    </div>&lt;!&ndash; /.carousel &ndash;&gt;-->
 
 
 
@@ -108,22 +125,30 @@
         <div class="separator text-muted">
           <time>2016-12-11</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/the-development-of-professional-knowledge-products-and-value-representation">专业知识型产品的开发与价值体现</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/the-development-of-professional-knowledge-products-and-value-representation">专业知识型产品的开发与价值体现</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/the-development-of-professional-knowledge-products-and-value-representation'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/the-development-of-professional-knowledge-products-and-value-representation'" style="cursor:pointer;">
                   <p>
                   <p class="first last">软件源代码、学术论文和发明专利，都是专业知识工作的成果。它们的获得方法、价值的体现方式，都有着很多的相似之处。机器学习，让计算机从专业知识的价值放大器变为了开发器。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/ji-qi-xue-xi">机器学习
                               <sup>1</sup></a>
@@ -140,22 +165,30 @@
         <div class="separator text-muted">
           <time>2016-12-10</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/understanding-software">理解软件</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/understanding-software">理解软件</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/understanding-software'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/understanding-software'" style="cursor:pointer;">
                   <p>
                   <p class="first last">软件本质上是复杂的。但，软件表象上「应该」是简单的。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/ruan-jian">软件
                               <sup>6</sup></a>
@@ -166,22 +199,30 @@
         <div class="separator text-muted">
           <time>2016-12-05</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-wrench"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/hhkb-pro2-type_s-cheat-sheet">Happy Hacking Keyboard Professional 2 Type-S</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/experiences/">经验</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-wrench"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/hhkb-pro2-type_s-cheat-sheet">Happy Hacking Keyboard Professional 2 Type-S</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/experiences/">经验</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/hhkb-pro2-type_s-cheat-sheet'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/hhkb-pro2-type_s-cheat-sheet'" style="cursor:pointer;">
                   <p>
                   <p class="first last">HHKB 在 macOS 上的使用速记</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/hhkb">HHKB
                               <sup>1</sup></a>
@@ -195,22 +236,30 @@
         <div class="separator text-muted">
           <time>2016-10-06</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/10-basic-concepts-of-software-structure">软件结构的十个基本概念</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/10-basic-concepts-of-software-structure">软件结构的十个基本概念</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/10-basic-concepts-of-software-structure'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/10-basic-concepts-of-software-structure'" style="cursor:pointer;">
                   <p>
                   <p class="first last">从大局上，正确定义和理解软件结构上的基本概念，是深入理解软件，提升团队生产力和创造力的基础。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/jia-gou">架构
                               <sup>8</sup></a>
@@ -224,22 +273,30 @@
         <div class="separator text-muted">
           <time>2016-10-05</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/software-is-not-simple">软件，不简单</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/software-is-not-simple">软件，不简单</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/software-is-not-simple'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/software-is-not-simple'" style="cursor:pointer;">
                   <p>
                   <p class="first last">人们偏爱「娱乐化的图形、语音和视频」，计算机偏爱「严肃的数据和逻辑」。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/jia-gou">架构
                               <sup>8</sup></a>
@@ -253,22 +310,30 @@
         <div class="separator text-muted">
           <time>2016-09-28</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/id-and-unique-id-overview">标识与唯一标识概览</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/id-and-unique-id-overview">标识与唯一标识概览</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/id-and-unique-id-overview'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/id-and-unique-id-overview'" style="cursor:pointer;">
                   <p>
                   <p class="first last">标识是无处不在的，生成标识的主体是人，那么它就是一个命名过程，如果是计算机，那么它就是一个生成过程。如何保证分布式系统下，并行生成标识的唯一与标识的命名空间有着密不可分的关系。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/fen-bu-shi-xi-tong">分布式系统
                               <sup>2</sup></a>
@@ -285,22 +350,30 @@
         <div class="separator text-muted">
           <time>2016-08-16</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/arch-is-to-solve-the-problem">架构是一种解决问题的能力</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/arch-is-to-solve-the-problem">架构是一种解决问题的能力</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/arch-is-to-solve-the-problem'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/arch-is-to-solve-the-problem'" style="cursor:pointer;">
                   <p>
                   <p class="first last">2016年8月22日 发表于 InfoQ · 聊聊架构 「撇开代码不说，谈谈我对架构的6个冷思考」</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/jia-gou">架构
                               <sup>8</sup></a>
@@ -311,22 +384,30 @@
         <div class="separator text-muted">
           <time>2016-06-22</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/api-is-not-suitable-for-microservice-data-sync">API不适合做微服务数据同步</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/api-is-not-suitable-for-microservice-data-sync">API不适合做微服务数据同步</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/api-is-not-suitable-for-microservice-data-sync'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/api-is-not-suitable-for-microservice-data-sync'" style="cursor:pointer;">
                   <p>
                   <p class="first last">API/SPI 的调用，有很大的一部分比例，都是为了做数据同步，很多场景这种用法是错误的。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/api">API
                               <sup>1</sup></a>
@@ -346,22 +427,30 @@
         <div class="separator text-muted">
           <time>2016-06-21</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/key-of-platform-operation">平台运营的关键</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/key-of-platform-operation">平台运营的关键</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/key-of-platform-operation'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/key-of-platform-operation'" style="cursor:pointer;">
                   <p>
                   <p class="first last">平台运营首先需要帮助每个用户弥补短板，鼓励每个平台的参与者向平台贡献内容并得到广泛的认可、体现他们的价值，从而重点激发平台上的每个用户的自身潜力，同时也需要严格监管平台上的不良用户，保障一个健康、有序的生态环境。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/nei-rong">内容
                               <sup>1</sup></a>
@@ -378,22 +467,30 @@
         <div class="separator text-muted">
           <time>2016-05-19</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/devops-value-towards-enterprise-it">DevOps对于企业IT的价值</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/devops-value-towards-enterprise-it">DevOps对于企业IT的价值</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/devops-value-towards-enterprise-it'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/devops-value-towards-enterprise-it'" style="cursor:pointer;">
                   <p>
                   <p class="first last">其实从敏捷延展开的 <em>DevOps</em> 概念很早就已经被提出，不过由于配套的技术成熟度水平层次不齐， <em>DevOps</em> 的价值需一直没有有效的发挥出来。现如今随着容器技术的发展， <em>DevOps</em> 在企业中的实践难度大幅降低，其价值也得以体现。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/devops">DevOps
                               <sup>1</sup></a>
@@ -416,22 +513,30 @@
         <div class="separator text-muted">
           <time>2016-04-29</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/digitization-essence-and-foundation">数字化的本质和基础</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/digitization-essence-and-foundation">数字化的本质和基础</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/digitization-essence-and-foundation'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/digitization-essence-and-foundation'" style="cursor:pointer;">
                   <p>
                   <p class="first last">数字化是近期全球的热点，数字化与很多其他概念例如：「信息化」、「自动化」似曾相识。在追逐数字化这个概念之前，需要深入分析数字化的本质，以便找到数字化的正确应用路径。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/biao-zhun">标准
                               <sup>1</sup></a>
@@ -454,22 +559,30 @@
         <div class="separator text-muted">
           <time>2016-04-19</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/UniqueIDGenerateStrategy">唯一性标识的生成策略</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/UniqueIDGenerateStrategy">唯一性标识的生成策略</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/UniqueIDGenerateStrategy'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/UniqueIDGenerateStrategy'" style="cursor:pointer;">
                   <p>
                   <p class="first last">面向操作型（交易型）和面向概念型（主数据型）的两类唯一性标识生成策略。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/jiao-yi-shu-ju">交易数据
                               <sup>1</sup></a>
@@ -486,22 +599,30 @@
         <div class="separator text-muted">
           <time>2016-04-18</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/HTTPSpecsOverview">IETF HTTP 规范概览</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/HTTPSpecsOverview">IETF HTTP 规范概览</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/HTTPSpecsOverview'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/HTTPSpecsOverview'" style="cursor:pointer;">
                   <p>
                   <p class="first last">IETF 从1996年至今，关于HTTP协议的定义超过17个，涵盖HTTP 1.0/1.1/2 。基于HTTP的RESTFul风格，是对HTTP协议的一次功能挖掘。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/http">HTTP
                               <sup>3</sup></a>
@@ -518,22 +639,30 @@
         <div class="separator text-muted">
           <time>2016-04-14</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/TheConflictionOfID">唯一性标识的矛盾</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/TheConflictionOfID">唯一性标识的矛盾</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/TheConflictionOfID'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/TheConflictionOfID'" style="cursor:pointer;">
                   <p>
                   <p class="first last">生成不依赖运行环境、人可读、方便输入的全局唯一的标识是有多难。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/wei-yi-xing-biao-shi">唯一性标识
                               <sup>3</sup></a>
@@ -544,22 +673,30 @@
         <div class="separator text-muted">
           <time>2016-03-30</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/Changing">变是永远不变的现实情况</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/Changing">变是永远不变的现实情况</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/Changing'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/Changing'" style="cursor:pointer;">
                   <p>
                   <p class="first last">不要抱怨变化，变化是人的认知、社会进步的结果。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/jia-gou">架构
                               <sup>8</sup></a>
@@ -571,11 +708,8 @@
               </div>
         </article>
 
-    <article class="panel panel-default panel-outline">
-        <div class="panel-heading icon">
-            <i class="glyphicon glyphicon-info-sign"></i>
-        </div>
-        <div class="panel-body">
+    <article class="card">
+        <div class="card-body">
             <i>以上是<a href="/articles">全部  101 篇文章</a>的最近的 15 次更新</i>
         </div>
     </article>
@@ -599,7 +733,8 @@
 
 </div>
 <script src="//cdn.bootcss.com/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>

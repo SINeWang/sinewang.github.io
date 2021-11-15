@@ -10,10 +10,9 @@
 
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href="/theme/css/sinestudio.css" rel="stylesheet">
-    <link href="/theme/css/carousel.css" rel="stylesheet">
     <link href="/theme/css/moments.css" rel="stylesheet">
 
         <link href="feeds/all.atom.xml" rel="alternate" title="王延炯 · 观世界 | World Insight" type="application/atom+xml">
@@ -22,10 +21,9 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="navbar-header">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -35,69 +33,88 @@
       <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
     </div>
 
-    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
-        <ul class="nav navbar-nav">
-            <li><a href="/categories/ideas">观点</a></li>
-            <li><a href="/categories/experiences">经验</a></li>
-            <li><a href="/categories/book-digests">书摘</a></li>
-            <li><a href="three">三</a></li>
-            <li><a href="mindset">~Mindset</a></li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/categories/ideas">观点</a></li>
+            <li class="nav-item"><a class="nav-link" href="/categories/experiences">经验</a></li>
+            <li class="nav-item"><a class="nav-link" href="/categories/book-digests">书摘</a></li>
+            <li class="nav-item"><a class="nav-link" href="three">三</a></li>
+            <li class="nav-item"><a class="nav-link" href="mindset">~Mindset</a></li>
         </ul>
-        <p class="navbar-text navbar-right">start with why, less is more.</p>
+        <span class="navbar-text">start with why, less is more.</span>
     </div>
-  </div>
 </nav>
 
 
 
-  <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#homeCarousel" data-slide-to="1"></li>
-              <li data-target="#homeCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active" onclick="location.href='/categories/ideas'">
-            <img src="/images/carousel/ideas.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">观点</span>
-                </p>
-              </div>
-            </div>
-        </div>
-        <div class="item" onclick="location.href='/categories/experiences'">
-            <img src="/images/carousel/experiences.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">经验</span>
-                </p>
-              </div>
-            </div>
-        </div>
-        <div class="item" onclick="location.href='/categories/book-digests'">
-            <img src="/images/carousel/book-digests.png" class="slide-img">
-            <div class="container">
-              <div class="carousel-caption">
-                <p>
-                  <span class="pull-left">书摘</span>
-                </p>
-              </div>
-            </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
+<!--  <div id="homeCarousel" class="carousel slide" data-ride="carousel">-->
+<!--      &lt;!&ndash; Indicators &ndash;&gt;-->
+<!--      <ol class="carousel-indicators">-->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>-->
+<!--            -->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="1"></li>-->
+<!--            -->
+<!--        -->
+<!--            -->
+<!--              <li data-target="#homeCarousel" data-slide-to="2"></li>-->
+<!--            -->
+<!--        -->
+<!--      </ol>-->
+<!--      <div class="carousel-inner" role="listbox">-->
+<!--        -->
+<!--            -->
+<!--        <div class="item active" onclick="location.href='/categories/ideas'">-->
+<!--            -->
+<!--            <img src="/images/carousel/ideas.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">观点</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--            -->
+<!--        <div class="item" onclick="location.href='/categories/experiences'">-->
+<!--            -->
+<!--            <img src="/images/carousel/experiences.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">经验</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--            -->
+<!--        <div class="item" onclick="location.href='/categories/book-digests'">-->
+<!--            -->
+<!--            <img src="/images/carousel/book-digests.png" class="slide-img">-->
+<!--            <div class="container">-->
+<!--              <div class="carousel-caption">-->
+<!--                <p>-->
+<!--                  <span class="pull-left">书摘</span>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--      </div>-->
+<!--      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">-->
+<!--        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Previous</span>-->
+<!--      </a>-->
+<!--      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">-->
+<!--        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Next</span>-->
+<!--      </a>-->
+<!--    </div>&lt;!&ndash; /.carousel &ndash;&gt;-->
 
 
 
@@ -108,22 +125,30 @@
         <div class="separator text-muted">
           <time>2020-06-27</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787550297999">《胜者思维》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787550297999">《胜者思维》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787550297999'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787550297999'" style="cursor:pointer;">
                   <p>
                   <p class="first last">金一南 | 北京联合出版公司 | <a class="reference external" href="https://douban.com/isbn/9787550297999">ISBN</a></p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                               <sup>26</sup></a>
@@ -137,22 +162,30 @@
         <div class="separator text-muted">
           <time>2020-05-17</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787300158655">《动机与人格》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787300158655">《动机与人格》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787300158655'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787300158655'" style="cursor:pointer;">
                   <p>
                   <p class="first last">亚伯拉罕·马斯洛 | 中国人民大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787300158655">ISBN</a></p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                               <sup>26</sup></a>
@@ -166,22 +199,30 @@
         <div class="separator text-muted">
           <time>2020-05-09</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/respect-dont-apply-your-standard-to-the-others">尊重，就是不要用自己的标准要求别人</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/respect-dont-apply-your-standard-to-the-others">尊重，就是不要用自己的标准要求别人</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/respect-dont-apply-your-standard-to-the-others'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/respect-dont-apply-your-standard-to-the-others'" style="cursor:pointer;">
                   <p>
                   <p class="first last">每个人都不一样，和而不同。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/wen-hua">文化
                               <sup>4</sup></a>
@@ -192,22 +233,30 @@
         <div class="separator text-muted">
           <time>2020-05-05</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/if-consider-a-person-as-a-http-server">如果，把一个人看成一个HTTP Server</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/if-consider-a-person-as-a-http-server">如果，把一个人看成一个HTTP Server</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/if-consider-a-person-as-a-http-server'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/if-consider-a-person-as-a-http-server'" style="cursor:pointer;">
                   <p>
                   <p class="first last">其实HTTP协议背后的设计理念，可以认为是在说一个人，挺有意思的。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/wen-hua">文化
                               <sup>4</sup></a>
@@ -218,22 +267,30 @@
         <div class="separator text-muted">
           <time>2020-03-21</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787510420351">《喜怒哀乐经济学》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787510420351">《喜怒哀乐经济学》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787510420351'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787510420351'" style="cursor:pointer;">
                   <p>
                   <p class="first last">利玛窦·墨特里尼 | 新世界出版社 | <a class="reference external" href="https://douban.com/isbn/9787510420351">ISBN</a></p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                               <sup>26</sup></a>
@@ -247,22 +304,30 @@
         <div class="separator text-muted">
           <time>2020-03-18</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787308146586">《一位鬼才的经营自白》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787308146586">《一位鬼才的经营自白》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787308146586'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787308146586'" style="cursor:pointer;">
                   <p>
                   <p class="first last">铃木敏文 | 浙江大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787308146586">ISBN</a></p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                               <sup>26</sup></a>
@@ -276,16 +341,24 @@
         <div class="separator text-muted">
           <time>2020-01-22</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-book"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/book-digests-9787508658339">《商业的本质》</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/book-digests/">书摘</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-book"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/book-digests-9787508658339">《商业的本质》</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/book-digests/">书摘</a></span>-->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/book-digests-9787508658339'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/book-digests-9787508658339'" style="cursor:pointer;">
                   <p>
                   <p class="first">杰克·韦尔奇 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508658339">ISBN</a></p>
 <p>第11页： 最好的使命陈述就是要这样，既目标远大，能鼓舞人心，又切合实际。</p>
@@ -295,7 +368,7 @@
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                               <sup>26</sup></a>
@@ -309,22 +382,30 @@
         <div class="separator text-muted">
           <time>2019-07-08</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/sine-1">正弦 (1)</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/sine-1">正弦 (1)</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/sine-1'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/sine-1'" style="cursor:pointer;">
                   <p>
                   <p class="first last">所有完美的背后，都是残缺; 所有成功的背后，都是苦难; 所有得到的背后，都是失去</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/zheng-xian">正弦
                               <sup>1</sup></a>
@@ -335,22 +416,30 @@
         <div class="separator text-muted">
           <time>2017-01-23</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-wrench"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/nexus3-maven-snapshot-and-release">使用Nexus3进行Snapshot和Release管理</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/experiences/">经验</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-wrench"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/nexus3-maven-snapshot-and-release">使用Nexus3进行Snapshot和Release管理</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/experiences/">经验</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/nexus3-maven-snapshot-and-release'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/nexus3-maven-snapshot-and-release'" style="cursor:pointer;">
                   <p>
                   <p class="first last">介绍 nexus3、parent pom以及 project pom的distribution management.</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/maven">maven
                               <sup>1</sup></a>
@@ -367,22 +456,30 @@
         <div class="separator text-muted">
           <time>2017-01-12</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/the-way-of-pubsub-diagram">图片的管理与运营</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/the-way-of-pubsub-diagram">图片的管理与运营</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/the-way-of-pubsub-diagram'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/the-way-of-pubsub-diagram'" style="cursor:pointer;">
                   <p>
                   <p class="first last">现有的大部分商业、免费的绘图工具的基本假设是，图片的作者与图片的使用者，使用的是同一个工具，并没有考虑到图片的具体引用场景，并根据上下文环境进行自适应调整。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/ban-ben-kong-zhi">版本控制
                               <sup>1</sup></a>
@@ -402,22 +499,30 @@
         <div class="separator text-muted">
           <time>2016-12-30</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/enhanced-rest-1-0-0-specs">EnhancedREST 1.0.0 规范</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/enhanced-rest-1-0-0-specs">EnhancedREST 1.0.0 规范</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/enhanced-rest-1-0-0-specs'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/enhanced-rest-1-0-0-specs'" style="cursor:pointer;">
                   <p>
                   <p class="first last">RESTful 是一个将HTTP传输协议以及JSON报文体相结合的RPC通信风格，但目前并不存在一个得到普遍认可和约束的工业技术规范。由于RESTful风格形式简洁，工具链丰富，收到广大开发者的喜爱。同时也由于其落地实现的随意性，导致各大企业都有不同的落地实现方法，形成了不同形态的「方言」。无形之中增加了软件互联的成本，造成了有限的研发资源浪费。EnhancedREST规范了不同系统之间的技术标准，降低产品间的集成成本，提高研发效率。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/enhancedrest">EnhancedREST
                               <sup>1</sup></a>
@@ -437,22 +542,30 @@
         <div class="separator text-muted">
           <time>2016-12-27</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/how-to-build-enterprise-software">企业软件是怎样炼成的 ，做软件的为什么总加班？</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/how-to-build-enterprise-software">企业软件是怎样炼成的 ，做软件的为什么总加班？</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/how-to-build-enterprise-software'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/how-to-build-enterprise-software'" style="cursor:pointer;">
                   <p>
                   <p class="first last">从软件产品的生产关系，看软件是如何被制造出来的。程序员们为什么要加班？</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/ruan-jian">软件
                               <sup>6</sup></a>
@@ -469,22 +582,30 @@
         <div class="separator text-muted">
           <time>2016-12-21</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/design-an-rest-like-rpc-over-http11-part-2">基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（下）</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/design-an-rest-like-rpc-over-http11-part-2">基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（下）</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/design-an-rest-like-rpc-over-http11-part-2'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/design-an-rest-like-rpc-over-http11-part-2'" style="cursor:pointer;">
                   <p>
                   <p class="first last">REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文通过对HTTP/1.1协议的深入挖掘，设计一套设计REST-like的RPC通信协议。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/fen-bu-shi-shi-wu">分布式事务
                               <sup>1</sup></a>
@@ -507,22 +628,30 @@
         <div class="separator text-muted">
           <time>2016-12-20</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/design-an-rest-like-rpc-over-http11-part-1">基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/design-an-rest-like-rpc-over-http11-part-1">基于 HTTP/1.1 协议, 设计一个REST-like的RPC协议（上）</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/design-an-rest-like-rpc-over-http11-part-1'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/design-an-rest-like-rpc-over-http11-part-1'" style="cursor:pointer;">
                   <p>
                   <p class="first last">REST还是太过于简单，缺乏在众多复杂分布式应用场景下直接应用的能力。本文对REST的不足进行了分析，对复杂场景下的RPC协议与报文的要求进行了梳理。</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/http">HTTP
                               <sup>3</sup></a>
@@ -542,22 +671,30 @@
         <div class="separator text-muted">
           <time>2016-12-15</time>
         </div>
-        <article class="panel panel-default">
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-flash"></i>
-            </div>
-              <div class="panel-heading">
-                  <span class="panel-title"><a href="/articles/colorful-ball-the-paas-foundation">PaaS 为什么至今没有成功的商业案例</a></span>
-                  <span class="glyphicon glyphicon-book"></span>
-                  <span><a href="/categories/ideas/">观点</a></span>
+        <article class="card">
+<!--            <div class="card-header icon">-->
+<!--                <i class="glyphicon glyphicon-flash"></i>-->
+<!--            </div>-->
+              <div class="card-header">
+                  <span class="card-title"><a href="/articles/colorful-ball-the-paas-foundation">PaaS 为什么至今没有成功的商业案例</a></span>
+<!--                  <span class="glyphicon glyphicon-book"></span>-->
+<!--                  -->
+<!--                    -->
+<!--                  <span><a href="/categories/ideas/">观点</a></span>-->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
+<!--                    -->
+<!--                  -->
               </div>
-              <div class="panel-body"  onclick="location.href='/articles/colorful-ball-the-paas-foundation'" style="cursor:pointer;">
+              <div class="card-body"  onclick="location.href='/articles/colorful-ball-the-paas-foundation'" style="cursor:pointer;">
                   <p>
                   <p class="first last">PaaS就像踩在海洋球上的空中楼阁.</p>
 
                   </p>
               </div>
-              <div class="panel-footer">
+              <div class="card-footer">
                     <ul class="list-of-tags tags-in-article">
                         <li><a href="/tags/paas">PaaS
                               <sup>1</sup></a>
@@ -569,11 +706,8 @@
               </div>
         </article>
 
-    <article class="panel panel-default panel-outline">
-        <div class="panel-heading icon">
-            <i class="glyphicon glyphicon-info-sign"></i>
-        </div>
-        <div class="panel-body">
+    <article class="card">
+        <div class="card-body">
             <i>以上是<a href="/articles">全部  101 篇文章</a>的最近的 15 次更新</i>
         </div>
     </article>
@@ -597,7 +731,8 @@
 
 </div>
 <script src="//cdn.bootcss.com/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>
