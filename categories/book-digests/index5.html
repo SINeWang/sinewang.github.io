@@ -11,8 +11,9 @@
 
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
     <link href="/theme/css/sinestudio.css" rel="stylesheet">
     <link href="/theme/css/timeline.css" rel="stylesheet">
 
@@ -30,51 +31,41 @@
 
 </head>
 
-<body>
+    <body>
 
-<nav class="navbar navbar-inverse navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">王延炯 · 观世界 | World Insight</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/categories/ideas">观点</a></li>
+                <li class="nav-item"><a class="nav-link" href="/categories/experiences">经验</a></li>
+                <li class="nav-item"><a class="nav-link" href="/categories/book-digests">书摘</a></li>
+                <li class="nav-item"><a class="nav-link" href="/three">三</a></li>
+                <li class="nav-item"><a class="nav-link" href="/mindset">~Mindset</a></li>
+            </ul>
+            <span class="navbar-text">start with why, less is more.</span>
+        </div>
     </div>
-
-    <div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height:1px;">
-        <ul class="nav navbar-nav">
-            <li><a href="/categories/ideas">观点</a></li>
-            <li><a href="/categories/experiences">经验</a></li>
-            <li><a href="/categories/book-digests">书摘</a></li>
-            <li><a href="/three">三</a></li>
-            <li><a href="/mindset">~Mindset</a></li>
-        </ul>
-        <p class="navbar-text navbar-right">start with why, less is more.</p>
-    </div>
-  </div>
 </nav>
-
-<div class="container">
-
-    <div class="row">
-        <div class="col-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
             <h1 style="text-align:center;">书摘 <sup>62</sup></h1>
 
     <hr>
 
         <div class="container">
             <div class="moments">
-                <div class="line text-muted"></div>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787111498674">《认同》</a></span>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787111498674">《认同》</a></span>
                             <time>2021-08-08</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787111498674'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787111498674'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">John P. Kotter | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111498674">ISBN</a></p>
@@ -84,7 +75,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -94,13 +85,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787558328435">《你好，小孩》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787558328435">《你好，小孩》</a></span>
                             <time>2021-07-25</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787558328435'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787558328435'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">李小萌 | 新世纪出版社 | <a class="reference external" href="https://douban.com/isbn/9787558328435">ISBN</a></p>
@@ -134,7 +126,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -144,13 +136,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787521728248">《人生只有一件事》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787521728248">《人生只有一件事》</a></span>
                             <time>2021-07-19</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787521728248'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787521728248'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">金惟纯 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787521728248">ISBN</a></p>
@@ -188,7 +181,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -198,13 +191,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787521719482">《不拘一格》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787521719482">《不拘一格》</a></span>
                             <time>2021-07-08</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787521719482'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787521719482'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">里德·哈斯廷斯 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787521719482">ISBN</a></p>
@@ -215,7 +209,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -225,13 +219,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9780670923175">《LEADERS EAT LAST》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9780670923175">《LEADERS EAT LAST》</a></span>
                             <time>2021-07-05</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9780670923175'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9780670923175'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Simon Sinek | Penguin Random House UK | <a class="reference external" href="https://douban.com/isbn/9780670923175">ISBN</a></p>
@@ -246,7 +241,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -256,13 +251,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787521701531">《陈志武金融投资课》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787521701531">《陈志武金融投资课》</a></span>
                             <time>2021-07-05</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787521701531'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787521701531'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">陈志武 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787521701531">ISBN</a></p>
@@ -270,7 +266,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -280,13 +276,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787559636164">《洞见》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787559636164">《洞见》</a></span>
                             <time>2021-06-25</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787559636164'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787559636164'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">罗伯特·赖特 | 北京联合出版公司 | <a class="reference external" href="https://douban.com/isbn/9787559636164">ISBN</a></p>
@@ -315,7 +312,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -325,20 +322,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787521719314">《倾听》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787521719314">《倾听》</a></span>
                             <time>2021-06-19</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787521719314'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787521719314'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">美国卡内基训练机构 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787521719314">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -348,13 +346,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508695013">《奥格威弹广告》数字时代的广告秘密</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508695013">《奥格威弹广告》数字时代的广告秘密</a></span>
                             <time>2021-06-11</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508695013'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508695013'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">杨名浩 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787508695013">ISBN</a></p>
@@ -364,7 +363,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -374,20 +373,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508656311">《桥的故事》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508656311">《桥的故事》</a></span>
                             <time>2021-06-07</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508656311'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508656311'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">中野京子 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508656311">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -397,13 +397,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508693552">《茑屋经营哲学》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508693552">《茑屋经营哲学》</a></span>
                             <time>2021-06-06</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508693552'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508693552'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">增田宗昭 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508693552">ISBN</a></p>
@@ -423,7 +424,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -433,13 +434,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787111498247">《干法》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787111498247">《干法》</a></span>
                             <time>2021-06-05</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787111498247'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787111498247'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">稻盛和夫 | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111498247">ISBN</a></p>
@@ -450,7 +452,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -460,13 +462,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787521729764">《趋势的力量》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787521729764">《趋势的力量》</a></span>
                             <time>2021-05-31</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787521729764'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787521729764'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">李迅雷 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787521729764">ISBN</a></p>
@@ -544,7 +547,7 @@
 </script>
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -554,20 +557,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787500687962">《像格雷厄姆一样读财报》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787500687962">《像格雷厄姆一样读财报》</a></span>
                             <time>2021-05-29</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787500687962'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787500687962'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">格雷厄姆 | 中国青年出版社 | <a class="reference external" href="https://douban.com/isbn/9787500687962">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -577,13 +581,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787540486716">《陈志武金融通识课》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787540486716">《陈志武金融通识课》</a></span>
                             <time>2021-05-25</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787540486716'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787540486716'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">陈志武 | 湖南文艺出版社 | <a class="reference external" href="https://douban.com/isbn/9787540486716">ISBN</a></p>
@@ -600,7 +605,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -610,13 +615,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787115234957">《聪明的投资者》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787115234957">《聪明的投资者》</a></span>
                             <time>2021-05-24</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787115234957'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787115234957'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Benjamin Graham | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115234957">ISBN</a></p>
@@ -645,7 +651,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -655,13 +661,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787521712599">《文明、现代化、价值投资与中国》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787521712599">《文明、现代化、价值投资与中国》</a></span>
                             <time>2021-05-03</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787521712599'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787521712599'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">李录 | 中信出版集团  |  <a class="reference external" href="https://douban.com/isbn/9787521712599">ISBN</a></p>
@@ -671,7 +678,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -681,13 +688,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9780241279267">《Find Your Why》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9780241279267">《Find Your Why》</a></span>
                             <time>2021-04-29</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9780241279267'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9780241279267'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Simon Sinek | Portfolio / Penguin | <a class="reference external" href="https://douban.com/isbn/9780241279267">ISBN</a></p>
@@ -700,7 +708,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -710,13 +718,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787115490131">《具体生活》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787115490131">《具体生活》</a></span>
                             <time>2021-04-22</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787115490131'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787115490131'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">吴军 | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115490131">ISBN</a></p>
@@ -726,7 +735,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -736,13 +745,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508671499">《岁月凶猛》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508671499">《岁月凶猛》</a></span>
                             <time>2021-04-17</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508671499'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508671499'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">冯仑 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787508671499">ISBN</a></p>
@@ -756,7 +766,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -766,20 +776,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787115483829">《即兴演讲》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787115483829">《即兴演讲》</a></span>
                             <time>2021-04-16</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787115483829'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787115483829'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">朱迪思·汉弗莱 | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115483829">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -789,20 +800,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787308191524">《一本书读懂财报》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787308191524">《一本书读懂财报》</a></span>
                             <time>2021-04-14</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787308191524'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787308191524'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">肖星 | 浙江大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787308191524">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -812,13 +824,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787111612100">《世界观》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787111612100">《世界观》</a></span>
                             <time>2021-04-07</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787111612100'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787111612100'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">理查德·德威特 | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111612100">ISBN</a></p>
@@ -832,7 +845,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -842,13 +855,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787511701145">《正念的奇迹》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787511701145">《正念的奇迹》</a></span>
                             <time>2021-03-30</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787511701145'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787511701145'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">一行禅师 | 中央编译出版社 | <a class="reference external" href="https://douban.com/isbn/9787511701145">ISBN</a></p>
@@ -858,7 +872,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -868,13 +882,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787559615268">《在远远的背后带领》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787559615268">《在远远的背后带领》</a></span>
                             <time>2021-03-28</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787559615268'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787559615268'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">安心 | 北京联合出版公司 | <a class="reference external" href="https://douban.com/isbn/9787559615268">ISBN</a></p>
@@ -894,7 +909,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -904,13 +919,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787121364259">《有限与无限的游戏》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787121364259">《有限与无限的游戏》</a></span>
                             <time>2021-03-25</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787121364259'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787121364259'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">James P. Carse | 电子工业出版社  | <a class="reference external" href="https://douban.com/isbn/9787121364259">ISBN</a></p>
@@ -931,7 +947,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -941,13 +957,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9780241958223">《START WITH WHY》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9780241958223">《START WITH WHY》</a></span>
                             <time>2021-03-16</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9780241958223'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9780241958223'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Simon Sinek | Penguin Random House UK | <a class="reference external" href="https://douban.com/isbn/9780241958223">ISBN</a></p>
@@ -971,7 +988,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -981,13 +998,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787559442253">《深奥的简洁》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787559442253">《深奥的简洁》</a></span>
                             <time>2021-03-13</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787559442253'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787559442253'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">约翰·格里宾 | 江苏凤凰文艺出版社 | <a class="reference external" href="https://douban.com/isbn/9787559442253">ISBN</a></p>
@@ -1002,7 +1020,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1012,13 +1030,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787544750691">《富兰克林自传》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787544750691">《富兰克林自传》</a></span>
                             <time>2021-03-07</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787544750691'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787544750691'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">本杰明·富兰克林 | 译林出版社 | <a class="reference external" href="https://douban.com/isbn/9787544750691">ISBN</a></p>
@@ -1026,7 +1045,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1036,13 +1055,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787544334792">《次第花开》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787544334792">《次第花开》</a></span>
                             <time>2021-02-27</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787544334792'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787544334792'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">希阿荣博堪布 | 海南出版社 | <a class="reference external" href="https://douban.com/isbn/9787544334792">ISBN</a></p>
@@ -1051,7 +1071,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1061,13 +1081,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508663326">《穷查理宝典》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508663326">《穷查理宝典》</a></span>
                             <time>2021-02-21</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508663326'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508663326'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">彼得·考夫曼 | 中信出版集团 | <a class="reference external" href="https://douban.com/isbn/9787508663326">ISBN</a></p>
@@ -1075,7 +1096,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1085,20 +1106,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508633558">《思考，快与慢》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508633558">《思考，快与慢》</a></span>
                             <time>2021-02-17</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508633558'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508633558'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">Daniel Kahneman | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508633558">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1108,13 +1130,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787301277997">《舆论》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787301277997">《舆论》</a></span>
                             <time>2021-01-24</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787301277997'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787301277997'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">沃尔特·李普曼 | 北京大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787301277997">ISBN</a></p>
@@ -1125,7 +1148,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1135,20 +1158,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787504481696">《少有人走的路1》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787504481696">《少有人走的路1》</a></span>
                             <time>2021-01-10</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787504481696'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787504481696'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">M.Scott Peck | 中国商业出版社 | <a class="reference external" href="https://douban.com/isbn/9787504481696">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1158,20 +1182,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787559629852">《少有人走的路5：不一样的鼓声》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787559629852">《少有人走的路5：不一样的鼓声》</a></span>
                             <time>2020-12-13</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787559629852'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787559629852'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">M.Scott Peck | 北京联合出版有限公司 | <a class="reference external" href="https://douban.com/isbn/9787559629852">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1181,20 +1206,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787559446619">《孤独六讲》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787559446619">《孤独六讲》</a></span>
                             <time>2020-11-15</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787559446619'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787559446619'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">蒋勋 | 江苏凤凰文艺出版社 | <a class="reference external" href="https://douban.com/isbn/9787559446619">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1204,20 +1230,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787010147147">《乡土中国》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787010147147">《乡土中国》</a></span>
                             <time>2020-10-21</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787010147147'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787010147147'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">费孝通 | 人民出版社 | <a class="reference external" href="https://douban.com/isbn/9787010147147">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1227,13 +1254,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787515354712">《你要的是幸福还是对错》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787515354712">《你要的是幸福还是对错》</a></span>
                             <time>2020-10-09</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787515354712'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787515354712'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">金韵蓉 | 中国青年出版社 | <a class="reference external" href="https://douban.com/isbn/9787515354712">ISBN</a></p>
@@ -1243,7 +1271,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1253,20 +1281,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787511735140">《未发现的自我》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787511735140">《未发现的自我》</a></span>
                             <time>2020-10-04</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787511735140'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787511735140'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">荣格 | 中央编译出版社 | <a class="reference external" href="https://douban.com/isbn/9787511735140">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1276,20 +1305,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9789573287544">《導演功課》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9789573287544">《導演功課》</a></span>
                             <time>2020-10-01</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9789573287544'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9789573287544'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">David Mamet | 遠流 | <a class="reference external" href="https://douban.com/isbn/9789573287544">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1299,13 +1329,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787510071799">《人性能够到达的境界》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787510071799">《人性能够到达的境界》</a></span>
                             <time>2020-09-13</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787510071799'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787510071799'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">亚拉伯罕·马斯洛 | 世界图书出版公司北京公司 | <a class="reference external" href="https://douban.com/isbn/9787510071799">ISBN</a></p>
@@ -1314,7 +1345,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1324,20 +1355,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787516416921">《扫除道》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787516416921">《扫除道》</a></span>
                             <time>2020-09-06</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787516416921'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787516416921'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">键山秀三郎 | 企业管理出版社 | <a class="reference external" href="https://douban.com/isbn/9787516416921">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1347,13 +1379,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787541498411">《不管教的勇气》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787541498411">《不管教的勇气》</a></span>
                             <time>2020-09-06</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787541498411'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787541498411'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">岸见一郎 | 千寻·晨光出版社 | <a class="reference external" href="https://douban.com/isbn/9787541498411">ISBN</a></p>
@@ -1362,7 +1395,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1372,20 +1405,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508694498">《自私的基因》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508694498">《自私的基因》</a></span>
                             <time>2020-08-30</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508694498'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508694498'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">查理斯·道金斯 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508694498">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1395,13 +1429,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508058993">《活出生命的意义》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508058993">《活出生命的意义》</a></span>
                             <time>2020-08-16</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508058993'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508058993'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">维克多·弗兰克 | 华夏出版社 | <a class="reference external" href="https://douban.com/isbn/9787508058993">ISBN</a></p>
@@ -1409,7 +1444,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1419,20 +1454,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787115282828">《数学之美》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787115282828">《数学之美》</a></span>
                             <time>2020-08-13</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787115282828'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787115282828'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">吴军 | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115282828">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1442,13 +1478,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787213058417">《幸福的婚姻》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787213058417">《幸福的婚姻》</a></span>
                             <time>2020-08-13</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787213058417'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787213058417'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">约翰·戈特曼 | 浙江人民出版社 | <a class="reference external" href="https://douban.com/isbn/9787213058417">ISBN</a></p>
@@ -1458,7 +1495,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1468,20 +1505,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787553473857">《自卑与超越》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787553473857">《自卑与超越》</a></span>
                             <time>2020-08-09</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787553473857'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787553473857'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">阿尔弗雷德·阿德勒 | 吉林出版集团 | <a class="reference external" href="https://douban.com/isbn/9787553473857">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1491,13 +1529,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787807680932">《恰如其分的自尊》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787807680932">《恰如其分的自尊》</a></span>
                             <time>2020-08-06</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787807680932'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787807680932'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">克斯斯托弗·安德烈 | 生活·读书·新知三联书店 | <a class="reference external" href="https://douban.com/isbn/9787807680932">ISBN</a></p>
@@ -1572,7 +1611,7 @@
 </script>
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1582,20 +1621,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787111503293">《终结拖延症》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787111503293">《终结拖延症》</a></span>
                             <time>2020-08-04</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787111503293'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787111503293'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">William Knaus | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111503293">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1605,20 +1645,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787559629272">《能力陷阱》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787559629272">《能力陷阱》</a></span>
                             <time>2020-08-04</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787559629272'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787559629272'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">埃米尼亚•伊贝拉 | 北京联合出版公司 | <a class="reference external" href="https://douban.com/isbn/9787559629272">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1628,20 +1669,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787801555373">《一个广告人的自白》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787801555373">《一个广告人的自白》</a></span>
                             <time>2020-08-04</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787801555373'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787801555373'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">大卫·奥格威 | 中国物价出版社 | <a class="reference external" href="https://douban.com/isbn/9787801555373">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2021yue-du-nian">2021阅读年
                                                 <sup>36</sup></a>
@@ -1651,13 +1693,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787111564942">《关键对话：如何高效能沟通》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787111564942">《关键对话：如何高效能沟通》</a></span>
                             <time>2020-07-25</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787111564942'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787111564942'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Kerry Patterson | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111564942">ISBN</a></p>
@@ -1665,7 +1708,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1675,13 +1718,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508643076">《瞬变》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508643076">《瞬变》</a></span>
                             <time>2020-07-17</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508643076'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508643076'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Chip Heath, Dan Heath | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508643076">ISBN</a></p>
@@ -1697,7 +1741,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1707,20 +1751,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787115510235">《低风险创业》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787115510235">《低风险创业》</a></span>
                             <time>2020-07-10</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787115510235'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787115510235'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">樊登 | 人民邮电出版社 | <a class="reference external" href="https://douban.com/isbn/9787115510235">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1730,13 +1775,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787111601289">《你为什么不道歉》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787111601289">《你为什么不道歉》</a></span>
                             <time>2020-07-08</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787111601289'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787111601289'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">Harriet Lerner / 哈丽特·勒纳 | 机械工业出版社 | <a class="reference external" href="https://douban.com/isbn/9787111601289">ISBN</a></p>
@@ -1744,7 +1790,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1754,20 +1800,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508649351">《联盟》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508649351">《联盟》</a></span>
                             <time>2020-07-05</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508649351'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508649351'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">里德·霍夫曼 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508649351">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1777,20 +1824,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787550297999">《胜者思维》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787550297999">《胜者思维》</a></span>
                             <time>2020-06-27</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787550297999'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787550297999'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">金一南 | 北京联合出版公司 | <a class="reference external" href="https://douban.com/isbn/9787550297999">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1800,20 +1848,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787300158655">《动机与人格》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787300158655">《动机与人格》</a></span>
                             <time>2020-05-17</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787300158655'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787300158655'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">亚伯拉罕·马斯洛 | 中国人民大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787300158655">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1823,20 +1872,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787510420351">《喜怒哀乐经济学》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787510420351">《喜怒哀乐经济学》</a></span>
                             <time>2020-03-21</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787510420351'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787510420351'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">利玛窦·墨特里尼 | 新世界出版社 | <a class="reference external" href="https://douban.com/isbn/9787510420351">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1846,20 +1896,21 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787308146586">《一位鬼才的经营自白》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787308146586">《一位鬼才的经营自白》</a></span>
                             <time>2020-03-18</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787308146586'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787308146586'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first last">铃木敏文 | 浙江大学出版社 | <a class="reference external" href="https://douban.com/isbn/9787308146586">ISBN</a></p>
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1869,13 +1920,14 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
-                    <article class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="panel-title"><a href="/articles/book-digests-9787508658339">《商业的本质》</a></span>
+                    </div>
+                    <br>
+                    <div class="moments card">
+                        <div class="card-header">
+                            <span class="card-title"><a href="/articles/book-digests-9787508658339">《商业的本质》</a></span>
                             <time>2020-01-22</time>
                         </div>
-                        <div class="panel-body" onclick="location.href='/articles/book-digests-9787508658339'"
+                        <div class="card-body" onclick="location.href='/articles/book-digests-9787508658339'"
                              style="cursor:pointer;">
                             <p>
                                 <p class="first">杰克·韦尔奇 | 中信出版社 | <a class="reference external" href="https://douban.com/isbn/9787508658339">ISBN</a></p>
@@ -1886,7 +1938,7 @@
 
                             </p>
                         </div>
-                            <div class="panel-footer">
+                            <div class="card-footer text-muted">
                                 <ul class="list-of-tags tags-in-article">
                                         <li><a href="/tags/2020yue-du-nian">2020阅读年
                                                 <sup>26</sup></a>
@@ -1896,11 +1948,13 @@
                                         </li>
                                 </ul>
                             </div>
-                    </article>
+                    </div>
+                    <br>
             </div>
         </div>
 
-    </div> </div>
+                </div>
+            </div>         </div>
 
 <div class="footer">
   <p><a rel="license" href="//creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/images/icons/cc-by-nc-nd-40-80x15.png" /></a>
@@ -1917,9 +1971,7 @@
   </p>
   <p class="powered-by">POWERED BY <a href="//getpelican.com">Pelican</a> & <a href="//github.com/sinewang/pelican-beapow">beapow</a></p>
 </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
-</body>
+    </body>
 </html>
