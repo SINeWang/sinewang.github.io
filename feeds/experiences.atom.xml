@@ -175,7 +175,7 @@ bcmmcastctl mode -i br0 -p &lt;span class="m"&gt;1&lt;/span&gt; -m &lt;span clas
 &lt;/div&gt;
 &lt;div class="section" id="dhcp-option"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id27"&gt;4.3 DHCP Option的添加&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;注意，如果不添加 &lt;cite&gt;=&lt;/cite&gt; 号后面的 &lt;cite&gt;lan&lt;/cite&gt;，则有可能导致dnsmasq发出的DHCP数据包，在Wireshark解析下出现 Malformed 的情况。&lt;/p&gt;
+&lt;p&gt;注意，如果不添加 &lt;cite&gt;=&lt;/cite&gt; 号后面的 &lt;cite&gt;lan&lt;/cite&gt;，则有可能导致dnsmasq发出的DHCP数据包，在Wireshark解析下出现 &lt;cite&gt;Malformed Packet: DHCP/BOOTP&lt;/cite&gt; 的情况。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dhcp-option-force&lt;span class="o"&gt;=&lt;/span&gt;lan,125,00:00:00:00:10:02:06:48:47:57:2d:43:54:0a:02:20:00:0b:02:00:55
 dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;lan,15
 dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;lan,28
