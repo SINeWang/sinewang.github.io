@@ -180,10 +180,12 @@ bcmmcastctl mode -i br0 -p &lt;span class="m"&gt;1&lt;/span&gt; -m &lt;span clas
 &lt;div class="section" id="dhcp-option"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id27"&gt;4.3 DHCP Option的添加&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;注意，如果不添加 &lt;cite&gt;=&lt;/cite&gt; 号后面的 &lt;cite&gt;lan&lt;/cite&gt;，则有可能导致dnsmasq发出的DHCP数据包，在Wireshark解析下出现 &lt;cite&gt;Malformed Packet: DHCP/BOOTP&lt;/cite&gt; 的情况。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dhcp-option-force&lt;span class="o"&gt;=&lt;/span&gt;lan,125,00:00:00:00:10:02:06:48:47:57:2d:43:54:0a:02:20:00:0b:02:00:55
-dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;lan,15
-dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;lan,28
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dhcp-option-force&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;125&lt;/span&gt;,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:08:45:2d:31:34:30:57:2d:50:0b:02:00:55:0a:02:20:00
+dhcp-option-force&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;60&lt;/span&gt;,00:00:01:00:02:03:43:50:45:03:0e:45:38:20:47:50:4f:4e:20:52:4f:55:54:45:42:04:03:31:2e:30
+dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;15&lt;/span&gt;
+dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span class="hlr"&gt;注意：由于dhcp-option 15对应的是 Domain Name，所以在AC86U的主路由上，需要配置 RT-AC86U's Domain Name (RT-AC86U 的网域名称)。名称任意，但是不能为空，否则会导致B面地址无法获取的情况。&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="aimesh-1vlan"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id28"&gt;4.4 「AiMesh节点-1」的VLAN配置&lt;/a&gt;&lt;/h3&gt;
