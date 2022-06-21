@@ -10,7 +10,7 @@
 &lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;更新记录&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Semantic Version（语义版本）：A.B.C。 A - 对文章的内容有重大的结构性调整；B - 对文章的内容有删减；C - 对文章的内容有错误修正。&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;2022-06-21 / 0.1.1 / 当前最新 : 删除公路车不适用的避震概念。对脚踏加以区分：锁踏、平踏；修订轮胎分类：开口胎、真空胎、管胎；删除材质(&lt;a class="reference external" href="https://github.com/vanceji"&gt;@Vance.Ji&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;2022-06-20 / 0.1.1 / 当前最新 : 删除公路车不适用的避震概念。对脚踏加以区分：锁踏、平踏；修订轮胎分类：开口胎、真空胎、管胎；删除材质(&lt;a class="reference external" href="https://github.com/vanceji"&gt;@Vance.Ji&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;2022-06-20 / &lt;a class="reference external" href="/articles/assemble-a-road-bicycle-from-scratch-0.1.0"&gt;0.1.0&lt;/a&gt; : 首发&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
