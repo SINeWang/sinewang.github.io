@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2023-05-03T00:00:00+08:00</updated><entry><title>书的结构化设计</title><link href="/articles/the-structure-design-of-book" rel="alternate"></link><published>2023-05-03T00:00:00+08:00</published><updated>2023-05-03T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2023-05-03:/articles/the-structure-design-of-book</id><summary type="html">&lt;p class="first last"&gt;图书的结构化表达：段落、大纲、目录、图书和印刷坐标。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - ideas</title><link href="/" rel="alternate"></link><link href="/feeds/ideas.atom.xml" rel="self"></link><id>/</id><updated>2023-05-03T00:00:00+08:00</updated><entry><title>书的结构化摘要设计</title><link href="/articles/the-structuralized-digest-design-of-book" rel="alternate"></link><published>2023-05-03T00:00:00+08:00</published><updated>2023-05-03T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2023-05-03:/articles/the-structuralized-digest-design-of-book</id><summary type="html">&lt;p class="first last"&gt;图书的结构化表达：段落、大纲、目录、图书和印刷坐标。&lt;/p&gt;
 </summary><content type="html">
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;内容的基本单位&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="section" id="id3"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id10"&gt;正文&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;span class="center-strong"&gt;段落 Paragraph&lt;/span&gt;
-每个具体的段落，具备唯一的 &lt;tt class="docutils literal"&gt;Identifier (_id)&lt;/tt&gt; ，段落本身可以进行反复编辑。&lt;/p&gt;
+每个具体的段落，具备唯一的 &lt;tt class="docutils literal"&gt;Identifier (_id)&lt;/tt&gt; ，一个段落可以被反复编辑。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Paragraph = {_id, Text}&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="center-strong"&gt;链式 Linked&lt;/span&gt;
-段落之间以有向链的方式进行链接，在编辑时，可以对段落进行插入和删除。&lt;/p&gt;
+段落之间以有向链的方式进行链接，在对书的内容进行摘录时，可以对段落进行插入和删除。&lt;/p&gt;
 &lt;p&gt;&lt;span class="center-strong"&gt;链式段落 Linked Paragraph&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LinkedParagraph = {_id, This_id, Next_id}&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -65,7 +65,7 @@
 &lt;h3&gt;&lt;a class="toc-backref" href="#id17"&gt;电子书投影 (//To Do)&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="ideas"></category><category term="知识图谱"></category><category term="知识结构化"></category></entry><entry><title>差不多和差很多</title><link href="/articles/similar-different" rel="alternate"></link><published>2023-03-30T00:00:00+08:00</published><updated>2023-03-30T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2023-03-30:/articles/similar-different</id><summary type="html">&lt;p class="first last"&gt;似乎差不多，但又好像差很多&lt;/p&gt;
+</content><category term="ideas"></category><category term="知识图谱"></category><category term="知识结构化"></category><category term="观点博物馆"></category></entry><entry><title>差不多和差很多</title><link href="/articles/similar-different" rel="alternate"></link><published>2023-03-30T00:00:00+08:00</published><updated>2023-03-30T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2023-03-30:/articles/similar-different</id><summary type="html">&lt;p class="first last"&gt;似乎差不多，但又好像差很多&lt;/p&gt;
 </summary><content type="html">
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;两本书&lt;/a&gt;&lt;/h2&gt;
