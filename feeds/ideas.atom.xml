@@ -32,40 +32,45 @@
 }]
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;MongoDB 查询语句&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;db.paragraph.aggregate([
-    {   $match:{
-            "_id":ObjectId("6454c6b0280ed6fd73c3969d")
-        }
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[
+  {
+    $match: {
+      _id: ObjectId("6454c6b0280ed6fd73c3969d"),
     },
-    {   $graphLookup:{
-            from: "paragraph",
-            startWith: "$next_id",
-            connectFromField: "next_id",
-            connectToField: "_id",
-            maxDepth: 2
-            as: "contents"
-        }
-    }
-])
+  },
+  {
+    $graphLookup: {
+      from: "paragraph",
+      startWith: "$next_id",
+      connectFromField: "next_id",
+      connectToField: "_id",
+      as: "contents",
+      maxDepth: 2,
+    },
+  },
+  {
+    $project: {
+      text: 1,
+      contents: {
+        text: 1,
+      },
+    },
+  },
+]
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;查询结果&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[
   {
     _id: ObjectId("6454c6b0280ed6fd73c3969d"),
     text: '在本书中，我认为，西方缘何主宰世界的问题实际上是关于社会发展的问题。这里的社会发展是指社会达成目标的能力，即社会通过影响物理、经济、社会、智力等环境以达到相应目标。19~20世纪，西方观察家讲社会发展视为理所当然的好事。他们含蓄或者公开地说，发展就是进步（或者进化，或者历史），而进步——不管是向着上帝、富裕还是人民的天堂——是生活的意义。现在，这些意义似乎不那么显而易见了。很多人感到，社会发展过程中带来的种种弊端，如环境恶化、战争、不平等和幻想破灭，要远比收益多得多。',
-    next_id: ObjectId("6454c6e6280ed6fd73c396a0"),
     contents: [
       {
         _id: ObjectId("6454c6e6280ed6fd73c396a0"),
         text: '"历史：名词，指一种往往虚假的记录，记录的大多是无关紧要的事情。这些事情由统治者和军人引起，这统治者大多是无赖，而军人往往是傻子。"安布鲁斯·比尔斯（Ambrose Bierce）关于历史的这条风趣的定义，有时你不得不赞同：看起来历史似乎仅仅是一件讨厌的事情接着另一件，是天才和傻子，暴君和浪漫派、诗人和盗贼混杂在一起的一团乱麻，或创造非凡之举，或在堕落边缘挣扎。',
-        next_id: ObjectId("6454c716280ed6fd73c396a1"),
-        prev_id: ObjectId("6454c6b0280ed6fd73c3969d")
       },
       {
         _id: ObjectId("6454c716280ed6fd73c396a1"),
         text: '第一种工具是生物学，生物学告诉我们，真实的人类是什么——聪明的猿猴。我们是动物王国的一部分，而动物王国又是从大型人猿到变形虫的更为广袤的生命帝国的一部分，这一明显的事实带来了三个重要结果。第一个结果是，和所有生命形式一样，我们之所以能够生存是因为我们从环境中摄取能量，并且用此能量繁衍生息。第二个结果是，能像所有智慧的动物一样，我们有好奇心。我们总是在修修补补，思索着哪些东西能吃，哪些东西能玩，哪些东西能加以改进。',
-        next_id: ObjectId("6454c811280ed6fd73c396ae"),
-        prev_id: ObjectId("6454c6e6280ed6fd73c396a0")
       }
     ]
   }
