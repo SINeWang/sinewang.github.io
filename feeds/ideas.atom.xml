@@ -29,12 +29,12 @@
 &lt;p&gt;&lt;span class="center-strong"&gt;段落与标题（Outline）&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;r_outline_paragraph = {_id, paragraph_id, outline_id, next_paragraph_id, prev_paragraph_id}&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;例子&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
-  "_id": { "$oid": "645669da732b4449dc6f3a15" },
-  "paragraph_id": { "$oid": "6454c6b0280ed6fd73c3969d" },
-  "outline_id": { "$oid": "645602f4732b4449dc6f38e5" },
-  "next_paragraph_id": { "$oid": "6454c6e6280ed6fd73c396a0" }
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;"_id"&lt;/span&gt;: &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$oid&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;: &lt;span class="s2"&gt;"645669da732b4449dc6f3a15"&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;,
+  &lt;span class="s2"&gt;"paragraph_id"&lt;/span&gt;: &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$oid&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;: &lt;span class="s2"&gt;"6454c6b0280ed6fd73c3969d"&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;,
+  &lt;span class="s2"&gt;"outline_id"&lt;/span&gt;: &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$oid&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;: &lt;span class="s2"&gt;"645602f4732b4449dc6f38e5"&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;,
+  &lt;span class="s2"&gt;"next_paragraph_id"&lt;/span&gt;: &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$oid&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;: &lt;span class="s2"&gt;"6454c6e6280ed6fd73c396a0"&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;通过标题查询相关段落&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[

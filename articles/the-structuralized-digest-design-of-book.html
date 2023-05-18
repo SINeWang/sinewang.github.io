@@ -144,12 +144,12 @@
 <p><span class="center-strong">段落与标题（Outline）</span></p>
 <p><code>r_outline_paragraph = {_id, paragraph_id, outline_id, next_paragraph_id, prev_paragraph_id}</code></p>
 <p>例子</p>
-<div class="highlight"><pre><span></span>{
-  "_id": { "$oid": "645669da732b4449dc6f3a15" },
-  "paragraph_id": { "$oid": "6454c6b0280ed6fd73c3969d" },
-  "outline_id": { "$oid": "645602f4732b4449dc6f38e5" },
-  "next_paragraph_id": { "$oid": "6454c6e6280ed6fd73c396a0" }
-}
+<div class="highlight"><pre><span></span><span class="o">{</span>
+  <span class="s2">"_id"</span>: <span class="o">{</span> <span class="s2">"</span><span class="nv">$oid</span><span class="s2">"</span>: <span class="s2">"645669da732b4449dc6f3a15"</span> <span class="o">}</span>,
+  <span class="s2">"paragraph_id"</span>: <span class="o">{</span> <span class="s2">"</span><span class="nv">$oid</span><span class="s2">"</span>: <span class="s2">"6454c6b0280ed6fd73c3969d"</span> <span class="o">}</span>,
+  <span class="s2">"outline_id"</span>: <span class="o">{</span> <span class="s2">"</span><span class="nv">$oid</span><span class="s2">"</span>: <span class="s2">"645602f4732b4449dc6f38e5"</span> <span class="o">}</span>,
+  <span class="s2">"next_paragraph_id"</span>: <span class="o">{</span> <span class="s2">"</span><span class="nv">$oid</span><span class="s2">"</span>: <span class="s2">"6454c6e6280ed6fd73c396a0"</span> <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 <p>通过标题查询相关段落</p>
 <div class="highlight"><pre><span></span>[
