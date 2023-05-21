@@ -139,7 +139,7 @@
 &lt;div class="section" id="outline"&gt;
 &lt;h3&gt;&lt;a class="toc-backref" href="#id12"&gt;大纲（Outline）&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;大纲是在书的内部对内容的抽象，可以分多级，数字化的。具体的可以用名称对常用的级别进行命名。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Outline = {_id, Title}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Joint = {_id, Title}&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;但大纲本身没有分级，而是通过目录进行编排的。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
