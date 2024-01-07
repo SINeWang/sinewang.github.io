@@ -63,16 +63,16 @@
     <div class="toc" id="">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#nexus3" id="id1">Nexus3中的关键角色与用户</a><ul>
-<li><a class="reference internal" href="#snapshotdeploy" id="id2">Snapshot库的Deploy角色</a></li>
-<li><a class="reference internal" href="#releasedeploy" id="id3">Release库的Deploy角色</a></li>
+<li><a class="reference internal" href="#nexus3" id="toc-entry-1">Nexus3中的关键角色与用户</a><ul>
+<li><a class="reference internal" href="#snapshotdeploy" id="toc-entry-2">Snapshot库的Deploy角色</a></li>
+<li><a class="reference internal" href="#releasedeploy" id="toc-entry-3">Release库的Deploy角色</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#m2-settings-xmlservers" id="id4">.m2/settings.xml中servers的设置</a></li>
-<li><a class="reference internal" href="#maven-project" id="id5">maven project</a><ul>
-<li><a class="reference internal" href="#super-parent-maven-project" id="id6">super-parent maven project</a></li>
-<li><a class="reference internal" href="#snapshot-deploy" id="id7">snapshot deploy</a></li>
-<li><a class="reference internal" href="#release-publish" id="id8">release publish</a></li>
+<li><a class="reference internal" href="#m2-settings-xmlservers" id="toc-entry-4">.m2/settings.xml中servers的设置</a></li>
+<li><a class="reference internal" href="#maven-project" id="toc-entry-5">maven project</a><ul>
+<li><a class="reference internal" href="#super-parent-maven-project" id="toc-entry-6">super-parent maven project</a></li>
+<li><a class="reference internal" href="#snapshot-deploy" id="toc-entry-7">snapshot deploy</a></li>
+<li><a class="reference internal" href="#release-publish" id="toc-entry-8">release publish</a></li>
 </ul>
 </li>
 </ul>
@@ -114,9 +114,9 @@
         <div class="article-content beapow-article">
 <!-- -->
 <div class="section" id="nexus3">
-<h2><a class="toc-backref" href="#id1">Nexus3中的关键角色与用户</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Nexus3中的关键角色与用户</a></h2>
 <div class="section" id="snapshotdeploy">
-<h3><a class="toc-backref" href="#id2">Snapshot库的Deploy角色</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-2">Snapshot库的Deploy角色</a></h3>
 <ul class="simple">
 <li>nx-repository-view-maven2-maven-snapshots-edit</li>
 </ul>
@@ -124,7 +124,7 @@
 <p>这个角色，必须要包含 <cite>nx-anonymous</cite> 这个「匿名角色」，否则会被以 <cite>ReasonPhrase:Forbidden.</cite> 理由拒绝。</p>
 </div>
 <div class="section" id="releasedeploy">
-<h3><a class="toc-backref" href="#id3">Release库的Deploy角色</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-3">Release库的Deploy角色</a></h3>
 <ul class="simple">
 <li>nx-repository-view-maven2-maven-releases-edit</li>
 </ul>
@@ -133,65 +133,65 @@
 </div>
 </div>
 <div class="section" id="m2-settings-xmlservers">
-<h2><a class="toc-backref" href="#id4">.m2/settings.xml中servers的设置</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-4">.m2/settings.xml中servers的设置</a></h2>
 <pre class="code xml literal-block">
-<span class="nt">&lt;settings&gt;</span>
-    <span class="nt">&lt;servers&gt;</span>
-        <span class="nt">&lt;server&gt;</span>
-            <span class="nt">&lt;id&gt;</span>snapshot<span class="nt">&lt;/id&gt;</span>
-            <span class="nt">&lt;username&gt;</span>developer<span class="nt">&lt;/username&gt;</span>
-            <span class="nt">&lt;password&gt;</span>password-of-developer-in-nexus<span class="nt">&lt;/password&gt;</span>
-        <span class="nt">&lt;/server&gt;</span>
-        <span class="nt">&lt;server&gt;</span>
-            <span class="nt">&lt;id&gt;</span>release<span class="nt">&lt;/id&gt;</span>
-            <span class="nt">&lt;username&gt;</span>publisher<span class="nt">&lt;/username&gt;</span>
-            <span class="nt">&lt;password&gt;</span>password-of-publisher-in-nexus<span class="nt">&lt;/password&gt;</span>
-        <span class="nt">&lt;/server&gt;</span>
-    <span class="nt">&lt;/servers&gt;</span>
-...
-<span class="nt">&lt;/settings&gt;</span>
+<span class="nt">&lt;settings&gt;</span><span class="w">
+    </span><span class="nt">&lt;servers&gt;</span><span class="w">
+        </span><span class="nt">&lt;server&gt;</span><span class="w">
+            </span><span class="nt">&lt;id&gt;</span>snapshot<span class="nt">&lt;/id&gt;</span><span class="w">
+            </span><span class="nt">&lt;username&gt;</span>developer<span class="nt">&lt;/username&gt;</span><span class="w">
+            </span><span class="nt">&lt;password&gt;</span>password-of-developer-in-nexus<span class="nt">&lt;/password&gt;</span><span class="w">
+        </span><span class="nt">&lt;/server&gt;</span><span class="w">
+        </span><span class="nt">&lt;server&gt;</span><span class="w">
+            </span><span class="nt">&lt;id&gt;</span>release<span class="nt">&lt;/id&gt;</span><span class="w">
+            </span><span class="nt">&lt;username&gt;</span>publisher<span class="nt">&lt;/username&gt;</span><span class="w">
+            </span><span class="nt">&lt;password&gt;</span>password-of-publisher-in-nexus<span class="nt">&lt;/password&gt;</span><span class="w">
+        </span><span class="nt">&lt;/server&gt;</span><span class="w">
+    </span><span class="nt">&lt;/servers&gt;</span><span class="w">
+</span>...<span class="w">
+</span><span class="nt">&lt;/settings&gt;</span>
 </pre>
 </div>
 <div class="section" id="maven-project">
-<h2><a class="toc-backref" href="#id5">maven project</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-5">maven project</a></h2>
 <div class="section" id="super-parent-maven-project">
-<h3><a class="toc-backref" href="#id6">super-parent maven project</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-6">super-parent maven project</a></h3>
 <p>对于每个组织或者企业，使用一个顶级的、唯一的parent project是十分有必要的，这可以统一各级子工程的发布管理配置。</p>
 <div class="highlight"><pre><span></span><span class="nt">&lt;scm&gt;</span>
-    <span class="nt">&lt;url&gt;</span>http://your.domain/and-path<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;connection&gt;</span>scm:git:ssh://git@your.vcs.domain/your-path<span class="nt">&lt;/connection&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>http://your.domain/and-path<span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;connection&gt;</span>scm:git:ssh://git@your.vcs.domain/your-path<span class="nt">&lt;/connection&gt;</span>
 <span class="nt">&lt;/scm&gt;</span>
 <span class="nt">&lt;distributionManagement&gt;</span>
-    <span class="nt">&lt;snapshotRepository&gt;</span>
-        <span class="nt">&lt;id&gt;</span>snapshot<span class="nt">&lt;/id&gt;</span>
-        <span class="nt">&lt;url&gt;</span>http://your.nexus/repository/maven-snapshots<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;/snapshotRepository&gt;</span>
-    <span class="nt">&lt;repository&gt;</span>
-        <span class="nt">&lt;id&gt;</span>release<span class="nt">&lt;/id&gt;</span>
-        <span class="nt">&lt;url&gt;</span>http://your.nexus/repository/maven-releases<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;/repository&gt;</span>
+<span class="w">    </span><span class="nt">&lt;snapshotRepository&gt;</span>
+<span class="w">        </span><span class="nt">&lt;id&gt;</span>snapshot<span class="nt">&lt;/id&gt;</span>
+<span class="w">        </span><span class="nt">&lt;url&gt;</span>http://your.nexus/repository/maven-snapshots<span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/snapshotRepository&gt;</span>
+<span class="w">    </span><span class="nt">&lt;repository&gt;</span>
+<span class="w">        </span><span class="nt">&lt;id&gt;</span>release<span class="nt">&lt;/id&gt;</span>
+<span class="w">        </span><span class="nt">&lt;url&gt;</span>http://your.nexus/repository/maven-releases<span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/repository&gt;</span>
 <span class="nt">&lt;/distributionManagement&gt;</span>
 <span class="nt">&lt;build&gt;</span>
-    <span class="nt">&lt;pluginManagement&gt;</span>
-        <span class="nt">&lt;plugins&gt;</span>
-            <span class="nt">&lt;plugin&gt;</span>
-                <span class="nt">&lt;artifactId&gt;</span>maven-release-plugin<span class="nt">&lt;/artifactId&gt;</span>
-                <span class="nt">&lt;version&gt;</span>2.5.3<span class="nt">&lt;/version&gt;</span>
-            <span class="nt">&lt;/plugin&gt;</span>
-        <span class="nt">&lt;/plugins&gt;</span>
-    <span class="nt">&lt;/pluginManagement&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pluginManagement&gt;</span>
+<span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-release-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">                </span><span class="nt">&lt;version&gt;</span>2.5.3<span class="nt">&lt;/version&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/pluginManagement&gt;</span>
 <span class="nt">&lt;/build&gt;</span>
 </pre></div>
 <p>其中，<tt class="docutils literal">snapshotRepository</tt> 中的 <tt class="docutils literal">id</tt> 与 <tt class="docutils literal">.m2/settings.xml</tt> 中的 <tt class="docutils literal">server/id</tt> 需要保持一致。</p>
 <p>在例子中，两处都都同时使用了 <tt class="docutils literal">snapshot` 以及 ``release</tt> 。</p>
 </div>
 <div class="section" id="snapshot-deploy">
-<h3><a class="toc-backref" href="#id7">snapshot deploy</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-7">snapshot deploy</a></h3>
 <p>snapshot deploy 是每个developer日常进行snapshot library发布的正常行为。</p>
 <p>在每个developer的本地，都可以针对一个 maven project 执行： <tt class="docutils literal">mvn deploy</tt> 操作，将任意的 <tt class="docutils literal">Version</tt> 以 <tt class="docutils literal"><span class="pre">-SNAPSHOT</span></tt> 结尾的 <tt class="docutils literal">artifact</tt> 部署至 <tt class="docutils literal">snapshot</tt> 库中。</p>
 </div>
 <div class="section" id="release-publish">
-<h3><a class="toc-backref" href="#id8">release publish</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-8">release publish</a></h3>
 <p><tt class="docutils literal"><span class="pre">maven-release-plugin</span></tt> 是用作正式发布使用的maven插件。</p>
 <p>其中有两个关键的mvn 指令， <tt class="docutils literal">mvn release:prepare</tt> 以及 <tt class="docutils literal">mvn release:perform</tt></p>
 <ul class="simple">

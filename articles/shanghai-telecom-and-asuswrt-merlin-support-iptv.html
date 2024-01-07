@@ -63,31 +63,31 @@
     <div class="toc" id="">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#id1" id="id13">1. 前置条件与运行环境</a><ul>
-<li><a class="reference internal" href="#id2" id="id14">1.1 术语</a></li>
-<li><a class="reference internal" href="#id3" id="id15">1.1 前置条件</a></li>
-<li><a class="reference internal" href="#id4" id="id16">1.2 运行环境</a></li>
-<li><a class="reference internal" href="#rt-ac68urt-ac86u" id="id17">1.3 RT-AC68U与RT-AC86U的固件差异</a></li>
+<li><a class="reference internal" href="#section-1" id="toc-entry-1">1. 前置条件与运行环境</a><ul>
+<li><a class="reference internal" href="#section-2" id="toc-entry-2">1.1 术语</a></li>
+<li><a class="reference internal" href="#section-3" id="toc-entry-3">1.1 前置条件</a></li>
+<li><a class="reference internal" href="#section-4" id="toc-entry-4">1.2 运行环境</a></li>
+<li><a class="reference internal" href="#rt-ac68urt-ac86u" id="toc-entry-5">1.3 RT-AC68U与RT-AC86U的固件差异</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5" id="id18">2. 核心目标与关键步骤</a></li>
-<li><a class="reference internal" href="#id6" id="id19">3. 工具与基本命令</a><ul>
-<li><a class="reference internal" href="#vlan" id="id20">3.1 VLAN的添加与删除</a></li>
-<li><a class="reference internal" href="#id7" id="id21">3.2 网桥的添加、删除与关联VLAN</a></li>
-<li><a class="reference internal" href="#igmp-snooping" id="id22">3.3 IGMP snooping 控制</a></li>
-<li><a class="reference internal" href="#robocfg-vlan" id="id23">3.4 robocfg 配置物理端口与VLAN的映射</a></li>
+<li><a class="reference internal" href="#section-5" id="toc-entry-6">2. 核心目标与关键步骤</a></li>
+<li><a class="reference internal" href="#section-6" id="toc-entry-7">3. 工具与基本命令</a><ul>
+<li><a class="reference internal" href="#vlan" id="toc-entry-8">3.1 VLAN的添加与删除</a></li>
+<li><a class="reference internal" href="#vlan-1" id="toc-entry-9">3.2 网桥的添加、删除与关联VLAN</a></li>
+<li><a class="reference internal" href="#igmp-snooping" id="toc-entry-10">3.3 IGMP snooping 控制</a></li>
+<li><a class="reference internal" href="#robocfg-vlan" id="toc-entry-11">3.4 robocfg 配置物理端口与VLAN的映射</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8" id="id24">4. 实现方法</a><ul>
-<li><a class="reference internal" href="#id9" id="id25">4.1 主路由的VLAN与网桥</a></li>
-<li><a class="reference internal" href="#id10" id="id26">4.2 主路由的IGMP Snooping配置</a></li>
-<li><a class="reference internal" href="#dhcp-option" id="id27">4.3 DHCP Option的添加</a></li>
-<li><a class="reference internal" href="#aimesh-1vlan" id="id28">4.4 「AiMesh节点-1」的VLAN配置</a></li>
-<li><a class="reference internal" href="#id11" id="id29">4.5 主路由配置持久化</a></li>
-<li><a class="reference internal" href="#aimesh-robocfg" id="id30">4.6 AiMesh节点 <cite>robocfg</cite> 配置持久化</a></li>
+<li><a class="reference internal" href="#section-7" id="toc-entry-12">4. 实现方法</a><ul>
+<li><a class="reference internal" href="#vlan-2" id="toc-entry-13">4.1 主路由的VLAN与网桥</a></li>
+<li><a class="reference internal" href="#igmp-snooping-1" id="toc-entry-14">4.2 主路由的IGMP Snooping配置</a></li>
+<li><a class="reference internal" href="#dhcp-option" id="toc-entry-15">4.3 DHCP Option的添加</a></li>
+<li><a class="reference internal" href="#aimesh-1vlan" id="toc-entry-16">4.4 「AiMesh节点-1」的VLAN配置</a></li>
+<li><a class="reference internal" href="#section-8" id="toc-entry-17">4.5 主路由配置持久化</a></li>
+<li><a class="reference internal" href="#aimesh-robocfg" id="toc-entry-18">4.6 AiMesh节点 <cite>robocfg</cite> 配置持久化</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id12" id="id31">5. 实现结果</a></li>
+<li><a class="reference internal" href="#section-9" id="toc-entry-19">5. 实现结果</a></li>
 </ul>
 </div>
 </div>
@@ -134,10 +134,10 @@
 </div>
         </div>
         <div class="article-content beapow-article">
-<div class="section" id="id1">
-<h2><a class="toc-backref" href="#id13">1. 前置条件与运行环境</a></h2>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id14">1.1 术语</a></h3>
+<div class="section" id="section-1">
+<h2><a class="toc-backref" href="#toc-entry-1">1. 前置条件与运行环境</a></h2>
+<div class="section" id="section-2">
+<h3><a class="toc-backref" href="#toc-entry-2">1.1 术语</a></h3>
 <ol class="arabic simple">
 <li>光猫：是指由电信运营商安装在用户侧的网络设备。(在本文中，是E-140W-P)</li>
 <li>主路由器：是指用户自行购买的，具有PPPoE拨号功能，以及VLAN设置功能的网络设备。(在本文中，是以ASUS RT-AC86U为主节点)</li>
@@ -145,16 +145,16 @@
 <li>AiMesh 节点：是指由ASUS AiMesh主节点统一管理的接入点。（本文中，可以理解为具有有线与无线接入能力的AP）。</li>
 </ol>
 </div>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id15">1.1 前置条件</a></h3>
+<div class="section" id="section-3">
+<h3><a class="toc-backref" href="#toc-entry-3">1.1 前置条件</a></h3>
 <ol class="arabic simple">
 <li>光猫已经改成桥接，交由路由器拨号接入Internet。</li>
 <li>光猫的LAN3或LAN4 口上绑定了传输IPTV的 VLAN 51和VLAN 85</li>
 <li>主路由器的WAN口与光猫的LAN3或LAN4通过网线直连。</li>
 </ol>
 </div>
-<div class="section" id="id4">
-<h3><a class="toc-backref" href="#id16">1.2 运行环境</a></h3>
+<div class="section" id="section-4">
+<h3><a class="toc-backref" href="#toc-entry-4">1.2 运行环境</a></h3>
 <ol class="arabic simple">
 <li>网络设备</li>
 </ol>
@@ -184,7 +184,7 @@
 <p>由于光猫A面接入的是本地AiMesh网络，与Internet无关，所以A面的IP地址分配由主路由器（AiMesh主节点）完成，而AiMesh节点侧不分配IP地址，只透传DHCP数据包。</p>
 </div>
 <div class="section" id="rt-ac68urt-ac86u">
-<h3><a class="toc-backref" href="#id17">1.3 RT-AC68U与RT-AC86U的固件差异</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-5">1.3 RT-AC68U与RT-AC86U的固件差异</a></h3>
 <p>虽然AC68U与AC86U都是用了Koolcenter的386.5_0的固件，但是</p>
 <ul class="simple">
 <li>AC68U是基于Linux 2.6，支持 <cite>robocfg</cite> 配置VLAN且不需要额外配置IGMP Snooping</li>
@@ -192,8 +192,8 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id5">
-<h2><a class="toc-backref" href="#id18">2. 核心目标与关键步骤</a></h2>
+<div class="section" id="section-5">
+<h2><a class="toc-backref" href="#toc-entry-6">2. 核心目标与关键步骤</a></h2>
 <p><span class="center-strong">核心目标</span></p>
 <ol class="arabic simple">
 <li>保持AiMesh 网络的「一主四从」网络拓扑不变，Internet网络接入功能不变。</li>
@@ -208,10 +208,10 @@
 <li>在AiMesh节点上，实现节点本地的"上行WAN"与接到IPTV机顶盒的LAN的链路中，支持VLAN51,85，并将配置脚本持久化。</li>
 </ol>
 </div>
-<div class="section" id="id6">
-<h2><a class="toc-backref" href="#id19">3. 工具与基本命令</a></h2>
+<div class="section" id="section-6">
+<h2><a class="toc-backref" href="#toc-entry-7">3. 工具与基本命令</a></h2>
 <div class="section" id="vlan">
-<h3><a class="toc-backref" href="#id20">3.1 VLAN的添加与删除</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-8">3.1 VLAN的添加与删除</a></h3>
 <ul class="simple">
 <li>设置VLAN名称与类型</li>
 </ul>
@@ -226,8 +226,8 @@
 </ul>
 <p><cite>vconfig rem &lt;vlan_name&gt;</cite></p>
 </div>
-<div class="section" id="id7">
-<h3><a class="toc-backref" href="#id21">3.2 网桥的添加、删除与关联VLAN</a></h3>
+<div class="section" id="vlan-1">
+<h3><a class="toc-backref" href="#toc-entry-9">3.2 网桥的添加、删除与关联VLAN</a></h3>
 <ul class="simple">
 <li>添加网桥</li>
 </ul>
@@ -246,7 +246,7 @@
 <p><cite>brctl show [bridge_name]</cite></p>
 </div>
 <div class="section" id="igmp-snooping">
-<h3><a class="toc-backref" href="#id22">3.3 IGMP snooping 控制</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-10">3.3 IGMP snooping 控制</a></h3>
 <ul class="simple">
 <li>配置IGMP snooping</li>
 </ul>
@@ -257,7 +257,7 @@
 <p>用 <cite>bcmmcastctl show</cite> 查看全部interface 或者使用 <cite>bcmmcastctl show -p -1</cite> 仅查看IGMP相关的interface。</p>
 </div>
 <div class="section" id="robocfg-vlan">
-<h3><a class="toc-backref" href="#id23">3.4 robocfg 配置物理端口与VLAN的映射</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-11">3.4 robocfg 配置物理端口与VLAN的映射</a></h3>
 <p>(注意， <cite>robocfg</cite> 适用于AC68U等基于BCM4708芯片、Linux内核2.6的固件，不适用于AC86U这样基于BCM4906芯片、Linux 4.1内核的固件)</p>
 <ul class="simple">
 <li>VLAN标签的端口绑定</li>
@@ -269,39 +269,39 @@
 <p><cite>robocfg show</cite></p>
 </div>
 </div>
-<div class="section" id="id8">
-<h2><a class="toc-backref" href="#id24">4. 实现方法</a></h2>
-<div class="section" id="id9">
-<h3><a class="toc-backref" href="#id25">4.1 主路由的VLAN与网桥</a></h3>
+<div class="section" id="section-7">
+<h2><a class="toc-backref" href="#toc-entry-12">4. 实现方法</a></h2>
+<div class="section" id="vlan-2">
+<h3><a class="toc-backref" href="#toc-entry-13">4.1 主路由的VLAN与网桥</a></h3>
 <p>主路由的WAN为 <cite>eth0</cite> ，LAN为 <cite>br0</cite> 。</p>
-<div class="highlight"><pre><span></span>vconfig set_name_type DEV_PLUS_VID_NO_PAD
-vconfig add eth0 <span class="m">85</span>
-vconfig add eth0 <span class="m">51</span>
-vconfig add br0 <span class="m">85</span>
-vconfig add br0 <span class="m">51</span>
+<div class="highlight"><pre><span></span>vconfig<span class="w"> </span>set_name_type<span class="w"> </span>DEV_PLUS_VID_NO_PAD
+vconfig<span class="w"> </span>add<span class="w"> </span>eth0<span class="w"> </span><span class="m">85</span>
+vconfig<span class="w"> </span>add<span class="w"> </span>eth0<span class="w"> </span><span class="m">51</span>
+vconfig<span class="w"> </span>add<span class="w"> </span>br0<span class="w"> </span><span class="m">85</span>
+vconfig<span class="w"> </span>add<span class="w"> </span>br0<span class="w"> </span><span class="m">51</span>
 
-brctl addbr iptv
-brctl addif iptv eth0.85
-brctl addif iptv eth0.51
-brctl addif iptv br0.85
-brctl addif iptv br0.51
+brctl<span class="w"> </span>addbr<span class="w"> </span>iptv
+brctl<span class="w"> </span>addif<span class="w"> </span>iptv<span class="w"> </span>eth0.85
+brctl<span class="w"> </span>addif<span class="w"> </span>iptv<span class="w"> </span>eth0.51
+brctl<span class="w"> </span>addif<span class="w"> </span>iptv<span class="w"> </span>br0.85
+brctl<span class="w"> </span>addif<span class="w"> </span>iptv<span class="w"> </span>br0.51
 
-ifconfig eth0.85 up
-ifconfig eth0.51 up
-ifconfig br0.85 up
-ifconfig br0.51 up
-ifconfig iptv up
+ifconfig<span class="w"> </span>eth0.85<span class="w"> </span>up
+ifconfig<span class="w"> </span>eth0.51<span class="w"> </span>up
+ifconfig<span class="w"> </span>br0.85<span class="w"> </span>up
+ifconfig<span class="w"> </span>br0.51<span class="w"> </span>up
+ifconfig<span class="w"> </span>iptv<span class="w"> </span>up
 </pre></div>
 </div>
-<div class="section" id="id10">
-<h3><a class="toc-backref" href="#id26">4.2 主路由的IGMP Snooping配置</a></h3>
+<div class="section" id="igmp-snooping-1">
+<h3><a class="toc-backref" href="#toc-entry-14">4.2 主路由的IGMP Snooping配置</a></h3>
 <p>在当没有在主路由上配置IGMP snooping为standard(1)的结果，会导致IPTV的直播频道只能播放1分钟或2分钟，之后就会画面静止。</p>
-<div class="highlight"><pre><span></span>bcmmcastctl mode -i iptv -p <span class="m">1</span> -m <span class="m">1</span>
-bcmmcastctl mode -i br0 -p <span class="m">1</span> -m <span class="m">1</span>
+<div class="highlight"><pre><span></span>bcmmcastctl<span class="w"> </span>mode<span class="w"> </span>-i<span class="w"> </span>iptv<span class="w"> </span>-p<span class="w"> </span><span class="m">1</span><span class="w"> </span>-m<span class="w"> </span><span class="m">1</span>
+bcmmcastctl<span class="w"> </span>mode<span class="w"> </span>-i<span class="w"> </span>br0<span class="w"> </span>-p<span class="w"> </span><span class="m">1</span><span class="w"> </span>-m<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <div class="section" id="dhcp-option">
-<h3><a class="toc-backref" href="#id27">4.3 DHCP Option的添加</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-15">4.3 DHCP Option的添加</a></h3>
 <p>注意，如果不添加 <cite>=</cite> 号后面的 <cite>lan</cite>，则有可能导致dnsmasq发出的DHCP数据包，在Wireshark解析下出现 <cite>Malformed Packet: DHCP/BOOTP</cite> 的情况。</p>
 <div class="highlight"><pre><span></span>dhcp-option-force<span class="o">=</span><span class="m">125</span>,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:08:45:2d:31:34:30:57:2d:50:0b:02:00:55:0a:02:20:00
 dhcp-option-force<span class="o">=</span><span class="m">60</span>,00:00:01:00:02:03:43:50:45:03:0e:45:38:20:47:50:4f:4e:20:52:4f:55:54:45:42:04:03:31:2e:30
@@ -311,30 +311,30 @@ dhcp-option<span class="o">=</span><span class="m">28</span>
 <p><span class="hlr">注意：由于dhcp-option 15对应的是 Domain Name，所以在AC86U的主路由上，需要配置 RT-AC86U's Domain Name (RT-AC86U 的网域名称)。名称任意，但是不能为空，否则会导致B面地址无法获取的情况。</span></p>
 </div>
 <div class="section" id="aimesh-1vlan">
-<h3><a class="toc-backref" href="#id28">4.4 「AiMesh节点-1」的VLAN配置</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-16">4.4 「AiMesh节点-1」的VLAN配置</a></h3>
 <p>「AiMesh节点-1」不同于AC86U的主节点，是AC68U，所以可以使用 <cite>robocfg</cite>。另外，IPTV机顶盒通过网线插入在了LAN1口。</p>
-<div class="highlight"><pre><span></span>robocfg vlan <span class="m">85</span> ports <span class="s2">"0t 1t"</span> vlan <span class="m">51</span> ports <span class="s2">"0t 1t"</span>
+<div class="highlight"><pre><span></span>robocfg<span class="w"> </span>vlan<span class="w"> </span><span class="m">85</span><span class="w"> </span>ports<span class="w"> </span><span class="s2">"0t 1t"</span><span class="w"> </span>vlan<span class="w"> </span><span class="m">51</span><span class="w"> </span>ports<span class="w"> </span><span class="s2">"0t 1t"</span>
 </pre></div>
 <p>其中， <cite>0t</cite> 指的是WAN口要带上VLAN对于的标签， <cite>1t</cite> 指的是LAN1口要带上VLAN对应的标签，总共配置85和51两个端口。</p>
 <p>当然，也可以配置成：</p>
-<div class="highlight"><pre><span></span>robocfg vlan <span class="m">85</span> ports <span class="s2">"0t 1t 2t 3t 4t"</span> vlan <span class="m">51</span> ports <span class="s2">"0t 1t 2t 3t 4t"</span>
+<div class="highlight"><pre><span></span>robocfg<span class="w"> </span>vlan<span class="w"> </span><span class="m">85</span><span class="w"> </span>ports<span class="w"> </span><span class="s2">"0t 1t 2t 3t 4t"</span><span class="w"> </span>vlan<span class="w"> </span><span class="m">51</span><span class="w"> </span>ports<span class="w"> </span><span class="s2">"0t 1t 2t 3t 4t"</span>
 </pre></div>
 <p>在这种情况下，IPTV机顶盒可以插在任意的LAN口上了。</p>
 </div>
-<div class="section" id="id11">
-<h3><a class="toc-backref" href="#id29">4.5 主路由配置持久化</a></h3>
+<div class="section" id="section-8">
+<h3><a class="toc-backref" href="#toc-entry-17">4.5 主路由配置持久化</a></h3>
 <ol class="arabic simple">
 <li>在koolshare软件中心里，安装 「上海电信IPTV v1.2」插件。</li>
 <li>根据 4.1-4.3 的配置，修改和替换 <cite>/jffs/.koolshare/scripts/</cite>  目录下的 <cite>shiptv_config.sh</cite> 和 <cite>shiptv_status.sh</cite> 两个脚本，并将 <cite>/jffs/.koolshare/init.d/</cite> 目录下的 <cite>S95Shiptv.sh</cite> 内容，更新到与 <cite>shiptv_config.sh</cite> 一致。（ <cite>S95shiptv.sh</cite> 脚本如果存在，可以删除。）</li>
 </ol>
 </div>
 <div class="section" id="aimesh-robocfg">
-<h3><a class="toc-backref" href="#id30">4.6 AiMesh节点 <cite>robocfg</cite> 配置持久化</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-18">4.6 AiMesh节点 <cite>robocfg</cite> 配置持久化</a></h3>
 <p>由于在实例中，AiMesh节点所使用的是AC68U的固件，所以有 <cite>robocfg</cite> 的工具支持。另一方面，但由于其不是主路由。所以需要将 4.4 中的配置命令，追加到在 <cite>/jffs/scripts/services-start</cite> 的最后，而同一目录下的 <cite>wan-start</cite> 工作在AiMesh节点时，不会生效。</p>
 </div>
 </div>
-<div class="section" id="id12">
-<h2><a class="toc-backref" href="#id31">5. 实现结果</a></h2>
+<div class="section" id="section-9">
+<h2><a class="toc-backref" href="#toc-entry-19">5. 实现结果</a></h2>
 <ol class="arabic simple">
 <li>光猫到IPTV机顶盒的逻辑链路</li>
 </ol>

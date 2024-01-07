@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>王延炯 · 观世界 | World Insight - bicycles</title><link href="/" rel="alternate"></link><link href="/feeds/bicycles.atom.xml" rel="self"></link><id>/</id><updated>2022-07-03T00:00:00+08:00</updated><entry><title>从零到一组装一辆公路自行车</title><link href="/articles/assemble-a-road-bicycle-from-scratch" rel="alternate"></link><published>2022-07-03T00:00:00+08:00</published><updated>2022-07-03T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2022-07-03:/articles/assemble-a-road-bicycle-from-scratch</id><summary type="html">&lt;p class="first last"&gt;记录一个公路车小白，从不小心入坑到组装完一辆公路车的踩坑经历。&lt;/p&gt;
 </summary><content type="html">
-&lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;一辆公路车的结构&lt;/a&gt;&lt;/h2&gt;
-&lt;object class="align-center" data="../images/bicycles/2022/06-20/the-component-of-a-road-bicycle-0.2.0.svg" style="width: 750px;" type="image/svg+xml"&gt;
-&lt;/object&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;一辆公路车的结构&lt;/a&gt;&lt;/h2&gt;
+&lt;object class="align-center" data="../images/bicycles/2022/06-20/the-component-of-a-road-bicycle-0.2.0.svg" style="width: 750px;" type="image/svg+xml"&gt;&lt;/object&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;更新记录&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;更新记录&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Semantic Version（语义版本）：A.B.C。 A - 对文章的内容有重大的结构性调整；B - 对文章的内容有删减；C - 对文章的内容有错误修正。&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;2022-07-03 / 0.2.0 / 当前最新 : 添加气嘴、勾爪、碗组&lt;/li&gt;

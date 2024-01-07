@@ -63,13 +63,13 @@
     <div class="toc" id="">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#id2" id="id9">架构源于对实践的总结</a></li>
-<li><a class="reference internal" href="#id3" id="id10">架构是一个建模的过程</a></li>
-<li><a class="reference internal" href="#id4" id="id11">架构工作的核心是设计</a></li>
-<li><a class="reference internal" href="#id5" id="id12">架构需要作出一系列非技术选择</a></li>
-<li><a class="reference internal" href="#id6" id="id13">代码是架构设计的落地实现</a></li>
-<li><a class="reference internal" href="#id7" id="id14">其实，架构是一种用计算机解决问题的综合能力</a></li>
-<li><a class="reference internal" href="#id8" id="id15">发散性思考</a></li>
+<li><a class="reference internal" href="#section-2" id="toc-entry-1">架构源于对实践的总结</a></li>
+<li><a class="reference internal" href="#section-3" id="toc-entry-2">架构是一个建模的过程</a></li>
+<li><a class="reference internal" href="#section-4" id="toc-entry-3">架构工作的核心是设计</a></li>
+<li><a class="reference internal" href="#section-5" id="toc-entry-4">架构需要作出一系列非技术选择</a></li>
+<li><a class="reference internal" href="#section-6" id="toc-entry-5">代码是架构设计的落地实现</a></li>
+<li><a class="reference internal" href="#section-7" id="toc-entry-6">其实，架构是一种用计算机解决问题的综合能力</a></li>
+<li><a class="reference internal" href="#section-8" id="toc-entry-7">发散性思考</a></li>
 </ul>
 </div>
 </div>
@@ -106,14 +106,14 @@
 <p>对于非计算机相关的普通人而言，即便是有诸多对于职位头衔的描述：「程序员」、「软件工程师」、「架构师」、「首席技术官」，也离不开一个潜意识的印象：「做网站的」或者是「修电脑的」。</p>
 <p>很多「架构师」，都是从「软件工程师」开始，不知不觉的变成了一个「架构师」。对于我个人而言，当我还是一个实习生，被「升」为一个部门架构师带领一些正式员工干活的时候，对「架构师」这个概念居然是一片空白，甚至于不知道这是个「好消息」，还是个「坏消息」，当然也不知道「架构师」是干嘛的。</p>
 <p>所以，我一直以 <em>最简单的方式</em> 对架构进行定义：** 架构是一种用计算机解决问题的综合能力，与头衔无关**</p>
-<div class="section" id="id2">
-<h2><a class="toc-backref" href="#id9">架构源于对实践的总结</a></h2>
+<div class="section" id="section-2">
+<h2><a class="toc-backref" href="#toc-entry-1">架构源于对实践的总结</a></h2>
 <p>架构能力并不是与生俱来的，而是和具体经历强相关的，丰富的经验是形成架构能力的基础。</p>
 <p>很多时候我们强调「系统性思考」对于架构设计的重要性，希望从方法论上能够对正在从事或者即将从事架构工作的程序员在专业能力上进行提升。教条式、填鸭式的培训，是教不出架构能力的。理论的价值是能够帮助应用理论的人少走一部分的弯路，但不能够解决眼前的现实问题。</p>
 <p>在企业里，架构是一个实践结合非常紧密的领域，一切以解决实际问题为目标。由于问题是多种多样的，导致解决的方法也是多种多样的。踩过的雷，填过的坑，都需要进行总结和抽象，才能提升到架构层的高度，防止重蹈覆辙。</p>
 </div>
-<div class="section" id="id3">
-<h2><a class="toc-backref" href="#id10">架构是一个建模的过程</a></h2>
+<div class="section" id="section-3">
+<h2><a class="toc-backref" href="#toc-entry-2">架构是一个建模的过程</a></h2>
 <p>对于一个复杂问题，通常会对复杂问题按照能力领域进行分解，其目的是能够找到与现有能力相匹配的映射。这个映射，就是解决方案。它，不开人的「知识型劳动」，主要分解为三个方面：</p>
 <ul class="simple">
 <li>对于已知问题的抽象和建模</li>
@@ -128,8 +128,8 @@
 <p>说到底，建模是一种抽象能力，具体的说，是人对客观事物认知结果的理性提炼和总结，不可否认感性的部分太难以刻画和描述。很符合「庄子·天道」中所述：「意之所随者，不可以言传也」。</p>
 <p>如果要拿数学语言进行描述「建模的能力」，就是找到一组尽可能少的「特征向量」去表述这个空间，而找这组「特征向量」的能力，就是建模的能力。</p>
 </div>
-<div class="section" id="id4">
-<h2><a class="toc-backref" href="#id11">架构工作的核心是设计</a></h2>
+<div class="section" id="section-4">
+<h2><a class="toc-backref" href="#toc-entry-3">架构工作的核心是设计</a></h2>
 <p>没有软件的计算机，是「无法使用」的，因为没有办法帮助我们解决任何问题。计算机原本很「生硬」，无法很「柔软」的去直接适配所需要解决的问题。</p>
 <p>架构的核心工作是「设计」，设计计算机如何按照预期进行工作。</p>
 <p>架构设计中，建模的结果，是模型，它有着结构化、棱角分明的特质，因为这是计算机进行计算的最高效的方式：严格的告诉我们——两个数是相等还是不相等，及其衍生。正由于严格匹配，所以在很长的一段时间里，解决方案的制定和后续系统的交付运行，都围绕着如何严格按照实际场景进行模拟和落地。 很少以「按概率成功」对系统的业务功能进行设计和实现，一切都必须「绝对正确」。因为绝大部分的计算机系统，无法理解自然语意。只能根据人为设计的结构化信息，「按部就班」地完成重复性劳动。</p>
@@ -138,8 +138,8 @@
 <p>是的，计算机系统生来就是是不可靠的，它不可能像「算盘」一样在运行期不依赖任何的自然资源。断电了，会引发故障；光纤断了，会引发故障；磁盘满了，会引发故障。。。一系列的不确定因素，导致「分布式系统」架构设计比「主机系统」的架构设计复杂的多，原本不需要操心的事情，都需要从更上层的软件层加以解决了。</p>
 <p>所以，当前架构工作的很大一块，都随着分布式系统规模的增大而加大了比重。也许，导致世界上最聪明的一伙人都去解决计算机的问题了。</p>
 </div>
-<div class="section" id="id5">
-<h2><a class="toc-backref" href="#id12">架构需要作出一系列非技术选择</a></h2>
+<div class="section" id="section-5">
+<h2><a class="toc-backref" href="#toc-entry-4">架构需要作出一系列非技术选择</a></h2>
 <p>架构既然是个解决方案，自然有很多可以自由选择的领域，有很多的受限的前提条件。这些外围因素，往往还系统背后的个人、团队、企业的价值观、以及非IT能力有关，这是一个很容易被忽视的点。</p>
 <ul class="simple">
 <li>与人和团队的关系</li>
@@ -156,8 +156,8 @@
 <p>行业的快速发展，企业的快速发展，势必推动企业信息系统的快速发展。对于企业而言，其价值是能够找到感知行业、感知产品、感知用户、感知企业内部运营的触角，每个社会中的实体不管是个人，还是产品都能够在系统中找到它的影子。</p>
 <p>对企业主而言，IT是一个长期的投资行为。陈旧的、不符合时代背景的软件，是会变成降低企业生产力的绊脚石。</p>
 </div>
-<div class="section" id="id6">
-<h2><a class="toc-backref" href="#id13">代码是架构设计的落地实现</a></h2>
+<div class="section" id="section-6">
+<h2><a class="toc-backref" href="#toc-entry-5">代码是架构设计的落地实现</a></h2>
 <p>现今任何的计算机高级编程语言，例如Java/C/C++，或者更高层的DSL，都是人与计算机之间的「单向语言」。这些「单向语言」，并非自然语言，大多数由程序员编写，再交由计算机进行执行，在很长的一段时间内，信息系统都是以这种方式与人进行交互。 （当然，也可以慢慢的等待「Siri」之类的助手长大成人，成为一名架构师，也许那个时候，广大架构师需要转行了。）</p>
 <p>代码是架构实现的核心，通过代码可以完成对现实世界的「虚拟化」：</p>
 <ul class="simple">
@@ -178,8 +178,8 @@
 <p>是的，代码是计算机的指挥者，代码是把人类智慧「赋能」给计算机的一种语言。</p>
 <p>代码到不到位，写的好不好，对设计的落地实现会产生很大的影响。</p>
 </div>
-<div class="section" id="id7">
-<h2><a class="toc-backref" href="#id14">其实，架构是一种用计算机解决问题的综合能力</a></h2>
+<div class="section" id="section-7">
+<h2><a class="toc-backref" href="#toc-entry-6">其实，架构是一种用计算机解决问题的综合能力</a></h2>
 <p>很多时候我们看到的「系统架构图」，其实是针对目标问题所设计的「计算机领域的解决方案」，是一种设计图纸。</p>
 <p>可以说，「架构工作」不仅要能够交付「设计图纸」，还要能够「建地基、搭房梁」。</p>
 <ul class="simple">
@@ -195,8 +195,8 @@
 <li>具备一定的投资意识，从更高、更长远的视角，看待投入与产出</li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h2><a class="toc-backref" href="#id15">发散性思考</a></h2>
+<div class="section" id="section-8">
+<h2><a class="toc-backref" href="#toc-entry-7">发散性思考</a></h2>
 <ul class="simple">
 <li>在互联网公司出现之前，有没有「互联网公司」呢？他们和现如今的互联网公司的差别是什么？</li>
 </ul>

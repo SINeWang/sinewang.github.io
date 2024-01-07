@@ -7,10 +7,10 @@
 &lt;p&gt;ASUS AiMesh 节点[2,3,4]：Linksys EA6700 / RT-AC68U_386.5_0_0fd614b_koolcenter.trx&lt;/p&gt;
 &lt;p class="last"&gt;相关概念：dhcp-option, dnsmasq, ifconfig, [linux-kernel/4.1, vconfig, brctl, bcmmcastctl] , [BCM4708, robocfg]&lt;/p&gt;
 </summary><content type="html">
-&lt;div class="section" id="id1"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;1. 前置条件与运行环境&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="id2"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id14"&gt;1.1 术语&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;1. 前置条件与运行环境&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;1.1 术语&lt;/a&gt;&lt;/h3&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;光猫：是指由电信运营商安装在用户侧的网络设备。(在本文中，是E-140W-P)&lt;/li&gt;
 &lt;li&gt;主路由器：是指用户自行购买的，具有PPPoE拨号功能，以及VLAN设置功能的网络设备。(在本文中，是以ASUS RT-AC86U为主节点)&lt;/li&gt;
@@ -18,16 +18,16 @@
 &lt;li&gt;AiMesh 节点：是指由ASUS AiMesh主节点统一管理的接入点。（本文中，可以理解为具有有线与无线接入能力的AP）。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id15"&gt;1.1 前置条件&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;1.1 前置条件&lt;/a&gt;&lt;/h3&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;光猫已经改成桥接，交由路由器拨号接入Internet。&lt;/li&gt;
 &lt;li&gt;光猫的LAN3或LAN4 口上绑定了传输IPTV的 VLAN 51和VLAN 85&lt;/li&gt;
 &lt;li&gt;主路由器的WAN口与光猫的LAN3或LAN4通过网线直连。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id16"&gt;1.2 运行环境&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="section-4"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-4"&gt;1.2 运行环境&lt;/a&gt;&lt;/h3&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;网络设备&lt;/li&gt;
 &lt;/ol&gt;
@@ -57,7 +57,7 @@
 &lt;p&gt;由于光猫A面接入的是本地AiMesh网络，与Internet无关，所以A面的IP地址分配由主路由器（AiMesh主节点）完成，而AiMesh节点侧不分配IP地址，只透传DHCP数据包。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="rt-ac68urt-ac86u"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id17"&gt;1.3 RT-AC68U与RT-AC86U的固件差异&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-5"&gt;1.3 RT-AC68U与RT-AC86U的固件差异&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;虽然AC68U与AC86U都是用了Koolcenter的386.5_0的固件，但是&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;AC68U是基于Linux 2.6，支持 &lt;cite&gt;robocfg&lt;/cite&gt; 配置VLAN且不需要额外配置IGMP Snooping&lt;/li&gt;
@@ -65,8 +65,8 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id18"&gt;2. 核心目标与关键步骤&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-5"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-6"&gt;2. 核心目标与关键步骤&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;span class="center-strong"&gt;核心目标&lt;/span&gt;&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;保持AiMesh 网络的「一主四从」网络拓扑不变，Internet网络接入功能不变。&lt;/li&gt;
@@ -81,10 +81,10 @@
 &lt;li&gt;在AiMesh节点上，实现节点本地的"上行WAN"与接到IPTV机顶盒的LAN的链路中，支持VLAN51,85，并将配置脚本持久化。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id6"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id19"&gt;3. 工具与基本命令&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-6"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-7"&gt;3. 工具与基本命令&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="section" id="vlan"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id20"&gt;3.1 VLAN的添加与删除&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-8"&gt;3.1 VLAN的添加与删除&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;设置VLAN名称与类型&lt;/li&gt;
 &lt;/ul&gt;
@@ -99,8 +99,8 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;cite&gt;vconfig rem &amp;lt;vlan_name&amp;gt;&lt;/cite&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id7"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id21"&gt;3.2 网桥的添加、删除与关联VLAN&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="vlan-1"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-9"&gt;3.2 网桥的添加、删除与关联VLAN&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;添加网桥&lt;/li&gt;
 &lt;/ul&gt;
@@ -119,7 +119,7 @@
 &lt;p&gt;&lt;cite&gt;brctl show [bridge_name]&lt;/cite&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="igmp-snooping"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id22"&gt;3.3 IGMP snooping 控制&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-10"&gt;3.3 IGMP snooping 控制&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;配置IGMP snooping&lt;/li&gt;
 &lt;/ul&gt;
@@ -130,7 +130,7 @@
 &lt;p&gt;用 &lt;cite&gt;bcmmcastctl show&lt;/cite&gt; 查看全部interface 或者使用 &lt;cite&gt;bcmmcastctl show -p -1&lt;/cite&gt; 仅查看IGMP相关的interface。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="robocfg-vlan"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id23"&gt;3.4 robocfg 配置物理端口与VLAN的映射&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-11"&gt;3.4 robocfg 配置物理端口与VLAN的映射&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;(注意， &lt;cite&gt;robocfg&lt;/cite&gt; 适用于AC68U等基于BCM4708芯片、Linux内核2.6的固件，不适用于AC86U这样基于BCM4906芯片、Linux 4.1内核的固件)&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;VLAN标签的端口绑定&lt;/li&gt;
@@ -142,39 +142,39 @@
 &lt;p&gt;&lt;cite&gt;robocfg show&lt;/cite&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id8"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id24"&gt;4. 实现方法&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="section" id="id9"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id25"&gt;4.1 主路由的VLAN与网桥&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="section-7"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-12"&gt;4. 实现方法&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="vlan-2"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-13"&gt;4.1 主路由的VLAN与网桥&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;主路由的WAN为 &lt;cite&gt;eth0&lt;/cite&gt; ，LAN为 &lt;cite&gt;br0&lt;/cite&gt; 。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vconfig set_name_type DEV_PLUS_VID_NO_PAD
-vconfig add eth0 &lt;span class="m"&gt;85&lt;/span&gt;
-vconfig add eth0 &lt;span class="m"&gt;51&lt;/span&gt;
-vconfig add br0 &lt;span class="m"&gt;85&lt;/span&gt;
-vconfig add br0 &lt;span class="m"&gt;51&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vconfig&lt;span class="w"&gt; &lt;/span&gt;set_name_type&lt;span class="w"&gt; &lt;/span&gt;DEV_PLUS_VID_NO_PAD
+vconfig&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;eth0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;85&lt;/span&gt;
+vconfig&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;eth0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;51&lt;/span&gt;
+vconfig&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;br0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;85&lt;/span&gt;
+vconfig&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;br0&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;51&lt;/span&gt;
 
-brctl addbr iptv
-brctl addif iptv eth0.85
-brctl addif iptv eth0.51
-brctl addif iptv br0.85
-brctl addif iptv br0.51
+brctl&lt;span class="w"&gt; &lt;/span&gt;addbr&lt;span class="w"&gt; &lt;/span&gt;iptv
+brctl&lt;span class="w"&gt; &lt;/span&gt;addif&lt;span class="w"&gt; &lt;/span&gt;iptv&lt;span class="w"&gt; &lt;/span&gt;eth0.85
+brctl&lt;span class="w"&gt; &lt;/span&gt;addif&lt;span class="w"&gt; &lt;/span&gt;iptv&lt;span class="w"&gt; &lt;/span&gt;eth0.51
+brctl&lt;span class="w"&gt; &lt;/span&gt;addif&lt;span class="w"&gt; &lt;/span&gt;iptv&lt;span class="w"&gt; &lt;/span&gt;br0.85
+brctl&lt;span class="w"&gt; &lt;/span&gt;addif&lt;span class="w"&gt; &lt;/span&gt;iptv&lt;span class="w"&gt; &lt;/span&gt;br0.51
 
-ifconfig eth0.85 up
-ifconfig eth0.51 up
-ifconfig br0.85 up
-ifconfig br0.51 up
-ifconfig iptv up
+ifconfig&lt;span class="w"&gt; &lt;/span&gt;eth0.85&lt;span class="w"&gt; &lt;/span&gt;up
+ifconfig&lt;span class="w"&gt; &lt;/span&gt;eth0.51&lt;span class="w"&gt; &lt;/span&gt;up
+ifconfig&lt;span class="w"&gt; &lt;/span&gt;br0.85&lt;span class="w"&gt; &lt;/span&gt;up
+ifconfig&lt;span class="w"&gt; &lt;/span&gt;br0.51&lt;span class="w"&gt; &lt;/span&gt;up
+ifconfig&lt;span class="w"&gt; &lt;/span&gt;iptv&lt;span class="w"&gt; &lt;/span&gt;up
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id10"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id26"&gt;4.2 主路由的IGMP Snooping配置&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="igmp-snooping-1"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-14"&gt;4.2 主路由的IGMP Snooping配置&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;在当没有在主路由上配置IGMP snooping为standard(1)的结果，会导致IPTV的直播频道只能播放1分钟或2分钟，之后就会画面静止。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bcmmcastctl mode -i iptv -p &lt;span class="m"&gt;1&lt;/span&gt; -m &lt;span class="m"&gt;1&lt;/span&gt;
-bcmmcastctl mode -i br0 -p &lt;span class="m"&gt;1&lt;/span&gt; -m &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bcmmcastctl&lt;span class="w"&gt; &lt;/span&gt;mode&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;iptv&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+bcmmcastctl&lt;span class="w"&gt; &lt;/span&gt;mode&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;br0&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="dhcp-option"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id27"&gt;4.3 DHCP Option的添加&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-15"&gt;4.3 DHCP Option的添加&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;注意，如果不添加 &lt;cite&gt;=&lt;/cite&gt; 号后面的 &lt;cite&gt;lan&lt;/cite&gt;，则有可能导致dnsmasq发出的DHCP数据包，在Wireshark解析下出现 &lt;cite&gt;Malformed Packet: DHCP/BOOTP&lt;/cite&gt; 的情况。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dhcp-option-force&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;125&lt;/span&gt;,00:00:00:00:1a:02:06:48:47:57:2d:43:54:03:08:45:2d:31:34:30:57:2d:50:0b:02:00:55:0a:02:20:00
 dhcp-option-force&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;60&lt;/span&gt;,00:00:01:00:02:03:43:50:45:03:0e:45:38:20:47:50:4f:4e:20:52:4f:55:54:45:42:04:03:31:2e:30
@@ -184,30 +184,30 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;p&gt;&lt;span class="hlr"&gt;注意：由于dhcp-option 15对应的是 Domain Name，所以在AC86U的主路由上，需要配置 RT-AC86U's Domain Name (RT-AC86U 的网域名称)。名称任意，但是不能为空，否则会导致B面地址无法获取的情况。&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="aimesh-1vlan"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id28"&gt;4.4 「AiMesh节点-1」的VLAN配置&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-16"&gt;4.4 「AiMesh节点-1」的VLAN配置&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;「AiMesh节点-1」不同于AC86U的主节点，是AC68U，所以可以使用 &lt;cite&gt;robocfg&lt;/cite&gt;。另外，IPTV机顶盒通过网线插入在了LAN1口。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;robocfg vlan &lt;span class="m"&gt;85&lt;/span&gt; ports &lt;span class="s2"&gt;"0t 1t"&lt;/span&gt; vlan &lt;span class="m"&gt;51&lt;/span&gt; ports &lt;span class="s2"&gt;"0t 1t"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;robocfg&lt;span class="w"&gt; &lt;/span&gt;vlan&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;85&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ports&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"0t 1t"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;vlan&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;51&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ports&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"0t 1t"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;其中， &lt;cite&gt;0t&lt;/cite&gt; 指的是WAN口要带上VLAN对于的标签， &lt;cite&gt;1t&lt;/cite&gt; 指的是LAN1口要带上VLAN对应的标签，总共配置85和51两个端口。&lt;/p&gt;
 &lt;p&gt;当然，也可以配置成：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;robocfg vlan &lt;span class="m"&gt;85&lt;/span&gt; ports &lt;span class="s2"&gt;"0t 1t 2t 3t 4t"&lt;/span&gt; vlan &lt;span class="m"&gt;51&lt;/span&gt; ports &lt;span class="s2"&gt;"0t 1t 2t 3t 4t"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;robocfg&lt;span class="w"&gt; &lt;/span&gt;vlan&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;85&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ports&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"0t 1t 2t 3t 4t"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;vlan&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;51&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ports&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"0t 1t 2t 3t 4t"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;在这种情况下，IPTV机顶盒可以插在任意的LAN口上了。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id11"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id29"&gt;4.5 主路由配置持久化&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="section" id="section-8"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-17"&gt;4.5 主路由配置持久化&lt;/a&gt;&lt;/h3&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;在koolshare软件中心里，安装 「上海电信IPTV v1.2」插件。&lt;/li&gt;
 &lt;li&gt;根据 4.1-4.3 的配置，修改和替换 &lt;cite&gt;/jffs/.koolshare/scripts/&lt;/cite&gt;  目录下的 &lt;cite&gt;shiptv_config.sh&lt;/cite&gt; 和 &lt;cite&gt;shiptv_status.sh&lt;/cite&gt; 两个脚本，并将 &lt;cite&gt;/jffs/.koolshare/init.d/&lt;/cite&gt; 目录下的 &lt;cite&gt;S95Shiptv.sh&lt;/cite&gt; 内容，更新到与 &lt;cite&gt;shiptv_config.sh&lt;/cite&gt; 一致。（ &lt;cite&gt;S95shiptv.sh&lt;/cite&gt; 脚本如果存在，可以删除。）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="aimesh-robocfg"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id30"&gt;4.6 AiMesh节点 &lt;cite&gt;robocfg&lt;/cite&gt; 配置持久化&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-18"&gt;4.6 AiMesh节点 &lt;cite&gt;robocfg&lt;/cite&gt; 配置持久化&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;由于在实例中，AiMesh节点所使用的是AC68U的固件，所以有 &lt;cite&gt;robocfg&lt;/cite&gt; 的工具支持。另一方面，但由于其不是主路由。所以需要将 4.4 中的配置命令，追加到在 &lt;cite&gt;/jffs/scripts/services-start&lt;/cite&gt; 的最后，而同一目录下的 &lt;cite&gt;wan-start&lt;/cite&gt; 工作在AiMesh节点时，不会生效。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id12"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id31"&gt;5. 实现结果&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-9"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-19"&gt;5. 实现结果&lt;/a&gt;&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;光猫到IPTV机顶盒的逻辑链路&lt;/li&gt;
 &lt;/ol&gt;
@@ -251,8 +251,8 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="上海电信"></category><category term="IPTV"></category><category term="ASUS AiMesh"></category><category term="VLAN"></category></entry><entry><title>时刻、不断保持对自己的觉知</title><link href="/articles/always-keep-the-awareness-of-myself" rel="alternate"></link><published>2021-03-13T00:00:00+08:00</published><updated>2021-03-13T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2021-03-13:/articles/always-keep-the-awareness-of-myself</id><summary type="html">&lt;p class="first last"&gt;保持对自己的觉知，才会有反省；养成习惯自律，才能拥有美德。&lt;/p&gt;
 </summary><content type="html">
-&lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;没忍住，凶了保安一句&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;没忍住，凶了保安一句&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;办公室楼下的非机动车停车场，使用临时不锈钢的围栏拦起来的。这种围栏，可以经常在商场、机场、车站的地方看到，一般的用途是疏导人流。&lt;/p&gt;
 &lt;p&gt;也许是因为在规划的时候，开发商并没有考虑到非机动车的停车问题，所以才用临时围栏的办法，隔出了一个非机动车停车区域。&lt;/p&gt;
 &lt;p&gt;在工作日，会有两个出入口。类似于一个曰字的左上角和中右侧。而大家也会自动的把车停成两排，也就是曰字的上下两排。&lt;/p&gt;
@@ -265,8 +265,8 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;p&gt;说罢，锁上车就走了。只听见保安在背后唠叨道，"这就是高素质的人"。&lt;/p&gt;
 &lt;p&gt;不争辩，离开。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;反思&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;反思&lt;/a&gt;&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;还是没有很好的接受无常的不确定性，用惯性来生活永远是最舒适的。&lt;/li&gt;
 &lt;li&gt;没有仔细倾听保安大叔的实际诉求，即便是"堵住了通道"，在实际场景下并不成立。&lt;/li&gt;
@@ -283,17 +283,17 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;li&gt;也许在内心评判包含保安大叔的行为，也不是明智之举。因为，克里希那穆提说过"智慧的最高形式是不带评判的观察。"&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;能做些什么？&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;能做些什么？&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;span class="hlb"&gt;那么，需要道歉吗？&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="经验"></category><category term="沟通"></category><category term="自省"></category></entry><entry><title>使用Nexus3进行Snapshot和Release管理</title><link href="/articles/nexus3-maven-snapshot-and-release" rel="alternate"></link><published>2017-01-23T21:34:00+08:00</published><updated>2017-01-23T21:34:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2017-01-23:/articles/nexus3-maven-snapshot-and-release</id><summary type="html">&lt;p class="first last"&gt;介绍 nexus3、parent pom以及 project pom的distribution management.&lt;/p&gt;
 </summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="nexus3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Nexus3中的关键角色与用户&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;Nexus3中的关键角色与用户&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="section" id="snapshotdeploy"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id2"&gt;Snapshot库的Deploy角色&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;Snapshot库的Deploy角色&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;nx-repository-view-maven2-maven-snapshots-edit&lt;/li&gt;
 &lt;/ul&gt;
@@ -301,7 +301,7 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;p&gt;这个角色，必须要包含 &lt;cite&gt;nx-anonymous&lt;/cite&gt; 这个「匿名角色」，否则会被以 &lt;cite&gt;ReasonPhrase:Forbidden.&lt;/cite&gt; 理由拒绝。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="releasedeploy"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id3"&gt;Release库的Deploy角色&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;Release库的Deploy角色&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;nx-repository-view-maven2-maven-releases-edit&lt;/li&gt;
 &lt;/ul&gt;
@@ -310,65 +310,65 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="m2-settings-xmlservers"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;.m2/settings.xml中servers的设置&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-4"&gt;.m2/settings.xml中servers的设置&lt;/a&gt;&lt;/h2&gt;
 &lt;pre class="code xml literal-block"&gt;
-&lt;span class="nt"&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;servers&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;server&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;snapshot&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;username&amp;gt;&lt;/span&gt;developer&lt;span class="nt"&gt;&amp;lt;/username&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;password&amp;gt;&lt;/span&gt;password-of-developer-in-nexus&lt;span class="nt"&gt;&amp;lt;/password&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;/server&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;server&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;release&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;username&amp;gt;&lt;/span&gt;publisher&lt;span class="nt"&gt;&amp;lt;/username&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;password&amp;gt;&lt;/span&gt;password-of-publisher-in-nexus&lt;span class="nt"&gt;&amp;lt;/password&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;/server&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/servers&amp;gt;&lt;/span&gt;
-...
-&lt;span class="nt"&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;servers&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;server&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;snapshot&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;username&amp;gt;&lt;/span&gt;developer&lt;span class="nt"&gt;&amp;lt;/username&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;password&amp;gt;&lt;/span&gt;password-of-developer-in-nexus&lt;span class="nt"&gt;&amp;lt;/password&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/server&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;server&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;release&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;username&amp;gt;&lt;/span&gt;publisher&lt;span class="nt"&gt;&amp;lt;/username&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;password&amp;gt;&lt;/span&gt;password-of-publisher-in-nexus&lt;span class="nt"&gt;&amp;lt;/password&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/server&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/servers&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;...&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="maven-project"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;maven project&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-5"&gt;maven project&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="section" id="super-parent-maven-project"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;super-parent maven project&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-6"&gt;super-parent maven project&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;对于每个组织或者企业，使用一个顶级的、唯一的parent project是十分有必要的，这可以统一各级子工程的发布管理配置。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;scm&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.domain/and-path&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;connection&amp;gt;&lt;/span&gt;scm:git:ssh://git@your.vcs.domain/your-path&lt;span class="nt"&gt;&amp;lt;/connection&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.domain/and-path&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;connection&amp;gt;&lt;/span&gt;scm:git:ssh://git@your.vcs.domain/your-path&lt;span class="nt"&gt;&amp;lt;/connection&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/scm&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;distributionManagement&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;snapshotRepository&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;snapshot&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.nexus/repository/maven-snapshots&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/snapshotRepository&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;repository&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;release&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.nexus/repository/maven-releases&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/repository&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;snapshotRepository&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;snapshot&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.nexus/repository/maven-snapshots&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/snapshotRepository&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;repository&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;release&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://your.nexus/repository/maven-releases&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/repository&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/distributionManagement&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;pluginManagement&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
-                &lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-release-plugin&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-                &lt;span class="nt"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.5.3&lt;span class="nt"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/pluginManagement&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;pluginManagement&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-release-plugin&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.5.3&lt;span class="nt"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/pluginManagement&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;其中，&lt;tt class="docutils literal"&gt;snapshotRepository&lt;/tt&gt; 中的 &lt;tt class="docutils literal"&gt;id&lt;/tt&gt; 与 &lt;tt class="docutils literal"&gt;.m2/settings.xml&lt;/tt&gt; 中的 &lt;tt class="docutils literal"&gt;server/id&lt;/tt&gt; 需要保持一致。&lt;/p&gt;
 &lt;p&gt;在例子中，两处都都同时使用了 &lt;tt class="docutils literal"&gt;snapshot` 以及 ``release&lt;/tt&gt; 。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="snapshot-deploy"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id7"&gt;snapshot deploy&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-7"&gt;snapshot deploy&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;snapshot deploy 是每个developer日常进行snapshot library发布的正常行为。&lt;/p&gt;
 &lt;p&gt;在每个developer的本地，都可以针对一个 maven project 执行： &lt;tt class="docutils literal"&gt;mvn deploy&lt;/tt&gt; 操作，将任意的 &lt;tt class="docutils literal"&gt;Version&lt;/tt&gt; 以 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-SNAPSHOT&lt;/span&gt;&lt;/tt&gt; 结尾的 &lt;tt class="docutils literal"&gt;artifact&lt;/tt&gt; 部署至 &lt;tt class="docutils literal"&gt;snapshot&lt;/tt&gt; 库中。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="release-publish"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;release publish&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-8"&gt;release publish&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;maven-release-plugin&lt;/span&gt;&lt;/tt&gt; 是用作正式发布使用的maven插件。&lt;/p&gt;
 &lt;p&gt;其中有两个关键的mvn 指令， &lt;tt class="docutils literal"&gt;mvn release:prepare&lt;/tt&gt; 以及 &lt;tt class="docutils literal"&gt;mvn release:perform&lt;/tt&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -396,13 +396,13 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;/div&gt;
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="maven"></category><category term="nexus3"></category><category term="scm"></category></entry><entry><title>Happy Hacking Keyboard Professional 2 Type-S</title><link href="/articles/hhkb-pro2-type_s-cheat-sheet" rel="alternate"></link><published>2016-12-05T21:12:00+08:00</published><updated>2016-12-05T21:12:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2016-12-05:/articles/hhkb-pro2-type_s-cheat-sheet</id><summary type="html">&lt;p class="first last"&gt;HHKB 在 macOS 上的使用速记&lt;/p&gt;
-</summary><content type="html">&lt;div class="section" id="id1"&gt;
+</summary><content type="html">&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;键帽&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;空格键的键帽，最好拆卸来之后反装，否则容易伤到大拇指&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h2&gt;光标移动组合键&lt;/h2&gt;
 &lt;p&gt;其实下面这些快捷键，都是macOS自带的快捷键&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -419,7 +419,7 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;li&gt;括号匹配 &lt;tt class="docutils literal"&gt;CTRL&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;m&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-3"&gt;
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://kaochenlong.com/2013/06/29/about-hhkb-pro2/"&gt;http://kaochenlong.com/2013/06/29/about-hhkb-pro2/&lt;/a&gt;&lt;/li&gt;
@@ -433,8 +433,8 @@ dhcp-option&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;28&lt;/span
 &lt;li&gt;对 &lt;code&gt;plantuml&lt;/code&gt; 文本直接进行进行预览，不需要依赖 &lt;code&gt;plantuml.jar&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;支持另存为 &lt;code&gt;svg&lt;/code&gt; , &lt;code&gt;eps&lt;/code&gt; , &lt;code&gt;png&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="section" id="id1"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/caskroom/homebrew-cask"&gt;brew cask&lt;/a&gt;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
@@ -448,8 +448,8 @@ brew install graphviz
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;编写与预览&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;编写与预览&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://atom.io"&gt;Atom&lt;/a&gt;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
@@ -470,8 +470,8 @@ brew cask install atom
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;其他相关&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;其他相关&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Chome Extension: &lt;a class="reference external" href="https://chrome.google.com/webstore/detail/plantuml-viewer/legbfeljfbjgfifnkmpoajgpgejojooj"&gt;PlantUML Viewer&lt;/a&gt; ，它实际上使用的是 &lt;a class="reference external" href="http://www.plantuml.com/plantuml/"&gt;PlantUML Server&lt;/a&gt;  进行图片的实时生成&lt;ul&gt;
 &lt;li&gt;支持中文，但字体渲染不够好&lt;/li&gt;
@@ -483,14 +483,14 @@ brew cask install atom
 &lt;li&gt;&lt;a class="reference external" href="http://plantuml.com/eclipse.html"&gt;Eclipse Plugin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id6"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;效果&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-4"&gt;效果&lt;/a&gt;&lt;/h2&gt;
 &lt;img alt="AutoWithPlantUML ScreenShot" src="/images/2016/01-29/AtomWithPlantUML.png"/&gt;
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="PlantUML"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>用Atom在Mac OS X 下编辑reStructuredText</title><link href="/articles/RSTMacOSXAtomEditor" rel="alternate"></link><published>2015-10-30T23:33:00+08:00</published><updated>2015-10-31T16:13:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-30:/articles/RSTMacOSXAtomEditor</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
-&lt;div class="section" id="id1"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;基础环境&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/caskroom/homebrew-cask"&gt;brew cask&lt;/a&gt;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
@@ -504,8 +504,8 @@ brew install pandoc
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;工具&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;工具&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://atom.io"&gt;Atom&lt;/a&gt;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
@@ -521,8 +521,8 @@ brew cask install atom
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;设置&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;设置&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;rst-preview-pandoc&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;设置 &lt;tt class="docutils literal"&gt;pandoc path&lt;/tt&gt; , 通过 &lt;tt class="docutils literal"&gt;brew install&lt;/tt&gt; 的工具，一般都位于 &lt;tt class="docutils literal"&gt;/usr/local/bin&lt;/tt&gt;&lt;/li&gt;
@@ -531,7 +531,7 @@ brew cask install atom
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="bugfix"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;Bugfix&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-4"&gt;Bugfix&lt;/a&gt;&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;rst-preview&lt;/span&gt;&lt;/tt&gt; &lt;a class="reference external" href="https://github.com/lsegal/atom-rst-preview/issues/33"&gt;Live preview not working Atom 1.0.11&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -555,22 +555,22 @@ process.env.PATH = ["/usr/bin",
 &lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;效果&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-4"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-5"&gt;效果&lt;/a&gt;&lt;/h2&gt;
 &lt;img alt="AutoWithRST ScreenShot" src="/images/2015/10-30/AtomWithRST.png"/&gt;
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="reStructuredText"></category><category term="Atom"></category><category term="Mac OS X"></category><category term="效率"></category></entry><entry><title>Mac OS X环境</title><link href="/articles/MacOSXEnvironment" rel="alternate"></link><published>2015-10-18T00:00:00+08:00</published><updated>2015-10-30T21:17:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-18:/articles/MacOSXEnvironment</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
 &lt;div class="section" id="mail"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Mail&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;Mail&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Mail.app&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="browser"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Browser&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;Browser&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="section" id="chrome-extensions"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id3"&gt;Chrome (Extensions)&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;Chrome (Extensions)&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif"&gt;SwitchyOmega&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;1Password&lt;/li&gt;
@@ -579,7 +579,7 @@ process.env.PATH = ["/usr/bin",
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="chrome-app"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id4"&gt;Chrome (App)&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-4"&gt;Chrome (App)&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.getpostman.com/"&gt;Postman&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.gliffy.com/)"&gt;Gliffy&lt;/a&gt;&lt;/li&gt;
@@ -587,7 +587,7 @@ process.env.PATH = ["/usr/bin",
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="firefox-adds-on"&gt;
-&lt;h3&gt;&lt;a class="toc-backref" href="#id5"&gt;Firefox (Adds-on)&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#toc-entry-5"&gt;Firefox (Adds-on)&lt;/a&gt;&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Firebug&lt;/li&gt;
 &lt;li&gt;FoxyProxy&lt;/li&gt;
@@ -599,13 +599,13 @@ process.env.PATH = ["/usr/bin",
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="rss"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;RSS&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-6"&gt;RSS&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://reederapp.com/mac/"&gt;Reeder 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="editor-ide"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;Editor &amp;amp; IDE&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-7"&gt;Editor &amp;amp; IDE&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://sublimetext.com"&gt;Sublime Text&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://atom.io"&gt;Atom&lt;/a&gt;&lt;/li&gt;
@@ -616,32 +616,32 @@ process.env.PATH = ["/usr/bin",
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="version-control"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;Version Control&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-8"&gt;Version Control&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.sourcetreeapp.com/"&gt;SourceTree&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.zennaware.com/cornerstone/index.php"&gt;Cornerstone&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="database"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;DataBase&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-9"&gt;DataBase&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.navicat.com"&gt;Navicat&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notebook"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id10"&gt;Notebook&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-10"&gt;Notebook&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://evernote.com"&gt;Evernote&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="security"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id11"&gt;Security&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-11"&gt;Security&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://agilebits.com/onepassword"&gt;1password&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="efficiency"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;Efficiency&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-12"&gt;Efficiency&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.alfredapp.com/powerpack/"&gt;Alfred Powerpack&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.spectacleapp.com/"&gt;Spectacle&lt;/a&gt;&lt;/li&gt;
@@ -668,20 +668,20 @@ process.env.PATH = ["/usr/bin",
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="synchronize"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;Synchronize&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-13"&gt;Synchronize&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://dropbox.com"&gt;Dropbox&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="calendar"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Calendar&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-14"&gt;Calendar&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="www.galaworks.com/lunarcal/"&gt;LunarCal&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://flexibits.com/fantastical"&gt;Fantastical&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="remote"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;Remote&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-15"&gt;Remote&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.vandyke.com/products/securecrt/mac_osx.html"&gt;SecureCRT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://cord.sourceforge.net/"&gt;CoRD&lt;/a&gt;&lt;/li&gt;
@@ -689,15 +689,15 @@ process.env.PATH = ["/usr/bin",
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="效率"></category><category term="Mac OS X"></category></entry><entry><title>Pelican TOC Plugin</title><link href="/articles/pelican-toc-plugin" rel="alternate"></link><published>2015-10-16T00:00:00+08:00</published><updated>2015-10-17T00:00:00+08:00</updated><author><name>Wang YanJiong</name></author><id>tag:None,2015-10-16:/articles/pelican-toc-plugin</id><summary type="html"></summary><content type="html">
 &lt;!-- --&gt;
-&lt;div class="section" id="id1"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-1"&gt;插件准备&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;使用 &lt;a class="reference external" href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc"&gt;extract_toc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;执行 &lt;tt class="docutils literal"&gt;git clone &lt;span class="pre"&gt;https://github.com/getpelican/pelican-plugins.git&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;修改配置文件&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-2"&gt;修改配置文件&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;文件：&lt;tt class="docutils literal"&gt;pelicanconf.py&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;指定插件目录&lt;/li&gt;
@@ -709,7 +709,7 @@ process.env.PATH = ["/usr/bin",
 &lt;p&gt;&lt;tt class="docutils literal"&gt;PLUGINS = ['extract_toc']&lt;/tt&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="markdown"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Markdown标记&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#toc-entry-3"&gt;Markdown标记&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;插入 &lt;tt class="docutils literal"&gt;[TOC]&lt;/tt&gt; 标签，例如：&lt;/li&gt;
 &lt;/ul&gt;
@@ -719,7 +719,7 @@ modified: 2015-10-17
 tags: pelican
 category: pelican
 [TOC]
-### 插件准备
+&lt;span class="gu"&gt;### 插件准备&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="experiences"></category><category term="Pelican"></category></entry></feed>
